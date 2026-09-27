@@ -1092,6 +1092,18 @@
           "bytes": 3205232
         }
       ]
+    },
+    {
+      "id": "audio-dushevniy-20260927-e3de7914",
+      "releaseTag": "audio-dushevniy-20260927-e3de7914",
+      "recordings": 1,
+      "audioBytes": 1738417,
+      "assets": [
+        {
+          "sha256": "e3de791418e27e1b0414ff0ff1973e94c86507a9ecfb3c8037a81e9f212cfac1",
+          "bytes": 1738417
+        }
+      ]
     }
   ]
 }

@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 237,
-    "uniqueRecordings": 237,
+    "declaredTracks": 238,
+    "uniqueRecordings": 238,
     "duplicateAliases": 0,
-    "audioBytes": 1161984977
+    "audioBytes": 1163723394
   },
   "tracks": [
     {
@@ -11517,6 +11517,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-alexbust-co-20260927-3935a131/3935a1314f133f4b4e3029f27329e52eff72245e0961787cbdc2e48ad01b0783.mp3",
         "bytes": 3205232,
         "sha256": "3935a1314f133f4b4e3029f27329e52eff72245e0961787cbdc2e48ad01b0783"
+      },
+      "aliases": []
+    },
+    {
+      "id": "dushevniy.operator-fpv-drona-radio-edit",
+      "title": "Оператор FPV дрона (Radio Edit)",
+      "artist": "DUSHEVNIY",
+      "durationSeconds": 112.80254,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/channel/UCyfhGVJeiO6Rha5nhUzdxjg",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Оператор FPV дрона (Radio Edit) by DUSHEVNIY. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/channel/UCyfhGVJeiO6Rha5nhUzdxjg",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/channel/UCyfhGVJeiO6Rha5nhUzdxjg",
+        "attribution": "Оператор FPV дрона (Radio Edit) by DUSHEVNIY. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/channel/UCyfhGVJeiO6Rha5nhUzdxjg",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "DUSHEVNIY - Оператор FPV дрона (Radio Edit).mp3",
+      "archiveId": "dushevniy-20260927-e3de7914",
+      "collection": "Оператор FPV дрона (Radio Edit)",
+      "collections": [
+        "Оператор FPV дрона (Radio Edit)",
+        "DUSHEVNIY",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-dushevniy-20260927-e3de7914/e3de791418e27e1b0414ff0ff1973e94c86507a9ecfb3c8037a81e9f212cfac1.mp3",
+        "bytes": 1738417,
+        "sha256": "e3de791418e27e1b0414ff0ff1973e94c86507a9ecfb3c8037a81e9f212cfac1"
       },
       "aliases": []
     }
