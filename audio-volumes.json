@@ -1332,6 +1332,18 @@
           "bytes": 2625385
         }
       ]
+    },
+    {
+      "id": "audio-ukrayinski-pisni-pisni-ua-20260927-09bbee88",
+      "releaseTag": "audio-ukrayinski-pisni-pisni-ua-20260927-09bbee88",
+      "recordings": 1,
+      "audioBytes": 2420684,
+      "assets": [
+        {
+          "sha256": "09bbee881a6e655ca2c6edb49378502be95b37117d72a7a0232f44c1aaa98f0e",
+          "bytes": 2420684
+        }
+      ]
     }
   ]
 }
