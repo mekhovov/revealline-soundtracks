@@ -1832,3 +1832,9 @@ Licence: Unknown — uploader-confirmed rights
 
 
 Licence: Unknown — uploader-confirmed rights
+
+## Пісні дяді Сірожи. Дрони магічні дрони граційні. Початок кінця стратегічній авіації
+
+Пісні дяді Сірожи. Дрони магічні дрони граційні. Початок кінця стратегічній авіації by Дядя Сірожа. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@ДядяСірожаЯ
+
+Licence: Unknown — uploader-confirmed rights
