@@ -1677,3 +1677,9 @@ Licence: Unknown — uploader-confirmed rights
 НЕЙРОННИЙ ГУПАЧ - Хробаки (розширена джага-джага) by НЕЙРОННИЙ ГУПАЧ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@gupach
 
 Licence: Unknown — uploader-confirmed rights
+
+## Ницо Потворно — русні пізда
+
+Ницо Потворно — русні пізда by Ницо Потворно. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@potvorno
+
+Licence: Unknown — uploader-confirmed rights
