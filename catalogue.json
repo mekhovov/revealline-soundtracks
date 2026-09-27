@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 258,
-    "uniqueRecordings": 258,
+    "declaredTracks": 259,
+    "uniqueRecordings": 259,
     "duplicateAliases": 0,
-    "audioBytes": 1215478441
+    "audioBytes": 1218519617
   },
   "tracks": [
     {
@@ -12565,6 +12565,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-ukrayinski-pisni-pisni-ua-20260927-09bbee88/09bbee881a6e655ca2c6edb49378502be95b37117d72a7a0232f44c1aaa98f0e.mp3",
         "bytes": 2420684,
         "sha256": "09bbee881a6e655ca2c6edb49378502be95b37117d72a7a0232f44c1aaa98f0e"
+      },
+      "aliases": []
+    },
+    {
+      "id": "khvostati-lovelasy.drony-bdzholy-ofitsiynyy-klip-ukrayinska-satyra-pro-viynu-khvostati-lo",
+      "title": "ДРОНИ БДЖОЛИ – офіційний кліп | Українська сатира про війну | Хвостаті Ловеласи",
+      "artist": "Хвостаті Ловеласи",
+      "durationSeconds": 164.281179,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@KhvostatiLovelasy\n",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "ДРОНИ БДЖОЛИ – офіційний кліп | Українська сатира про війну | Хвостаті Ловеласи by Хвостаті Ловеласи. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@KhvostatiLovelasy\n",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@KhvostatiLovelasy\n",
+        "attribution": "ДРОНИ БДЖОЛИ – офіційний кліп | Українська сатира про війну | Хвостаті Ловеласи by Хвостаті Ловеласи. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@KhvostatiLovelasy\n",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Хвостаті Ловеласи - ДРОНИ БДЖОЛИ. Українська сатира про війну.mp3",
+      "archiveId": "khvostati-lovelasy-20260927-93ba351f",
+      "collection": "ДРОНИ БДЖОЛИ – офіційний кліп | Українська сатира про війну | Хвостаті Ловеласи",
+      "collections": [
+        "ДРОНИ БДЖОЛИ – офіційний кліп | Українська сатира про війну | Хвостаті Ловеласи",
+        "Хвостаті Ловеласи",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-khvostati-lovelasy-20260927-93ba351f/93ba351fb0cdafde13e33f30bc73e9ae357bb9e16ce94da25768ef839e450a38.mp3",
+        "bytes": 3041176,
+        "sha256": "93ba351fb0cdafde13e33f30bc73e9ae357bb9e16ce94da25768ef839e450a38"
       },
       "aliases": []
     }
