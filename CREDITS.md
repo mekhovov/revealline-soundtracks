@@ -1735,3 +1735,9 @@ Licence: Unknown — uploader-confirmed rights
 ШАЛЕНІЙ! (FPV-ВЕРСІЯ) — НИЦО ПОТВОРНО (ГАЙТАНА COVER) by Телебачення Торонто. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@uttoronto
 
 Licence: Unknown — uploader-confirmed rights
+
+## Ла-ла-ла летить мій дрон. Бампер, Янович, Громовий, Тимошенко, Байдак, Лиховида, Цимбалюк, Фелікс.
+
+Ла-ла-ла летить мій дрон. Бампер, Янович, Громовий, Тимошенко, Байдак, Лиховида, Цимбалюк, Фелікс. by Юрій Громовий. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@SuperGydron
+
+Licence: Unknown — uploader-confirmed rights

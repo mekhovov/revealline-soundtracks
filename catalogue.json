@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 233,
-    "uniqueRecordings": 233,
+    "declaredTracks": 234,
+    "uniqueRecordings": 234,
     "duplicateAliases": 0,
-    "audioBytes": 1151168656
+    "audioBytes": 1152249834
   },
   "tracks": [
     {
@@ -11313,6 +11313,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-telebachennya-toronto-20260927-417eea94/50869ac99f181aa46a0a8f0da99216bd45d342dc5fd5e9c8deba2c6f31c41555.mp3",
         "bytes": 2407272,
         "sha256": "50869ac99f181aa46a0a8f0da99216bd45d342dc5fd5e9c8deba2c6f31c41555"
+      },
+      "aliases": []
+    },
+    {
+      "id": "yuriy-hromovyy.la-la-la-letyt-miy-dron-bamper-yanovych-hromovyy-tymoshenko-baydak-lyk",
+      "title": "Ла-ла-ла летить мій дрон. Бампер, Янович, Громовий, Тимошенко, Байдак, Лиховида, Цимбалюк, Фелікс.",
+      "artist": "Юрій Громовий",
+      "durationSeconds": 60.000363,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@SuperGydron",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Ла-ла-ла летить мій дрон. Бампер, Янович, Громовий, Тимошенко, Байдак, Лиховида, Цимбалюк, Фелікс. by Юрій Громовий. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@SuperGydron",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@SuperGydron",
+        "attribution": "Ла-ла-ла летить мій дрон. Бампер, Янович, Громовий, Тимошенко, Байдак, Лиховида, Цимбалюк, Фелікс. by Юрій Громовий. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@SuperGydron",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Юрій Громовий - Ла-ла-ла летить мій дрон. Бампер, Янович, Громовий, Тимошенко, Байдак, Лиховида, Цимбалюк, Фелікс.mp3",
+      "archiveId": "yuriy-hromovyy-20260927-e2b921d9",
+      "collection": "Ла-ла-ла летить мій дрон. Бампер, Янович, Громовий, Тимошенко, Байдак, Лиховида, Цимбалюк, Фелікс.",
+      "collections": [
+        "Ла-ла-ла летить мій дрон. Бампер, Янович, Громовий, Тимошенко, Байдак, Лиховида, Цимбалюк, Фелікс.",
+        "Юрій Громовий",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-yuriy-hromovyy-20260927-e2b921d9/e2b921d96d021eb8199309a5cd7baed82e5ad2405673f16ee43b0366332d317a.mp3",
+        "bytes": 1081178,
+        "sha256": "e2b921d96d021eb8199309a5cd7baed82e5ad2405673f16ee43b0366332d317a"
       },
       "aliases": []
     }

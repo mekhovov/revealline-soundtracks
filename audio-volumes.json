@@ -1044,6 +1044,18 @@
           "bytes": 2407272
         }
       ]
+    },
+    {
+      "id": "audio-yuriy-hromovyy-20260927-e2b921d9",
+      "releaseTag": "audio-yuriy-hromovyy-20260927-e2b921d9",
+      "recordings": 1,
+      "audioBytes": 1081178,
+      "assets": [
+        {
+          "sha256": "e2b921d96d021eb8199309a5cd7baed82e5ad2405673f16ee43b0366332d317a",
+          "bytes": 1081178
+        }
+      ]
     }
   ]
 }
