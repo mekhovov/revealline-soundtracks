@@ -100,6 +100,14 @@ audio { align-self: center; width: 100%; }
 .transport span, #playback-status { color: var(--muted); }
 #playback-status { margin: .2rem 0 0; align-self: center; }
 #playback-status:empty { display: none; }
+.review-notice {
+  margin: 1.25rem 0 0;
+  padding: 1rem 1.2rem;
+  border: 1px solid #d38a37;
+  background: #2b2116;
+  color: #ffe0ad;
+  font-weight: 700;
+}
 .featured-collection {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -110,6 +118,7 @@ audio { align-self: center; width: 100%; }
   border: 1px solid #6d6729;
   background: linear-gradient(115deg, #202716, #141a21 70%);
 }
+.featured-collection[hidden] { display: none; }
 .featured-collection h2 { margin: .3rem 0; font-size: clamp(1.55rem, 3vw, 2.25rem); color: var(--signal); }
 .featured-collection p:not(.eyebrow) { margin: 0; max-width: 720px; color: #d5dce5; }
 .featured-actions { display: flex; flex-wrap: wrap; gap: .65rem; justify-content: flex-end; }

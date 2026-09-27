@@ -37,6 +37,16 @@
       "tracks": 1
     },
     {
+      "id": "Base Game Playlist",
+      "title": "Base Game Playlist",
+      "tracks": 33
+    },
+    {
+      "id": "Base Game Review",
+      "title": "Base Game Review",
+      "tracks": 37
+    },
+    {
       "id": "Blue Beat cyberpunk audition",
       "title": "Blue Beat cyberpunk audition",
       "tracks": 1
@@ -82,9 +92,9 @@
       "tracks": 2
     },
     {
-      "id": "Foundation collection",
-      "title": "Foundation collection",
-      "tracks": 70
+      "id": "Heavy Metal Review",
+      "title": "Heavy Metal Review",
+      "tracks": 6
     },
     {
       "id": "heavy-dungeon-audition-20260926",

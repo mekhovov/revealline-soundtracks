@@ -7,7 +7,7 @@
   <meta name="description" content="Search and play every published RevealLine soundtrack recording in one continuous player.">
   <title>RevealLine · All soundtracks</title>
   <link rel="stylesheet" href="style.css">
-  <script src="player.mjs?v=20260927-5" type="module"></script>
+  <script src="player.mjs?v=20260927-6" type="module"></script>
   <script src="intake-browser.mjs?v=20260927-3" type="module"></script>
 </head>
 <body>
@@ -56,15 +56,17 @@
       <p id="playback-status" role="status"></p>
     </section>
 
-    <section class="featured-collection" aria-labelledby="foundation-heading">
+    <p id="review-notice" class="review-notice" role="status" hidden>This unlisted review view contains recordings held out of the public catalogue and every default playlist.</p>
+
+    <section id="featured-collection" class="featured-collection" aria-labelledby="foundation-heading">
       <div>
         <p class="eyebrow">FEATURED COLLECTION</p>
-        <h2 id="foundation-heading">Foundation 70</h2>
-        <p><span id="foundation-count">70</span> preserved RevealLine recordings in one continuous playlist. Choose shuffle or sequential order above, then keep listening without leaving this page.</p>
+        <h2 id="foundation-heading">Base Game Playlist</h2>
+        <p><span id="foundation-count">0</span> selected RevealLine recordings in one continuous playlist. Choose shuffle or sequential order above, then keep listening without leaving this page.</p>
       </div>
       <div class="featured-actions">
-        <button id="play-foundation" type="button" disabled>▶ Play Foundation 70</button>
-        <button id="browse-foundation" type="button" disabled>Browse the 70 songs</button>
+        <button id="play-foundation" type="button" disabled>▶ Play Base Game Playlist</button>
+        <button id="browse-foundation" type="button" disabled>Browse Base Game Playlist</button>
       </div>
     </section>
 

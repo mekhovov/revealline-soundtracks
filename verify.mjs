@@ -42,7 +42,7 @@ const ROOT_STATIC_FILES = [
   'legacy/archive-02/CREDITS.md', 'legacy/archive-02/README.md',
   'legacy/archive-02/UPLOAD_GUIDE.md', 'legacy/archive-02/batches.json',
   'legacy/archive-02/catalogue.json', 'legacy/archive-02/deployment-manifest.json',
-  'playback-policy.mjs', 'player.mjs', 'style.css', 'upload-guide/index.html',
+  'playback-policy.mjs', 'player.mjs', 'review-policy.mjs', 'style.css', 'upload-guide/index.html',
 ];
 const digest = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const demand = (value, message) => { if (!value) throw new Error(message); };
@@ -150,7 +150,11 @@ export async function verifyArchive(base = root) {
     demand(typeof track.title === 'string' && track.title.trim() === track.title && track.title.length > 0, `Track title differs: ${track.id}`);
     demand(typeof track.artist === 'string' && track.artist.trim() === track.artist && track.artist.length > 0, `Track artist differs: ${track.id}`);
     demand(Array.isArray(track.tags) && track.tags.length > 0 && track.tags.length <= 32 && track.tags.every((tag) => typeof tag === 'string' && tag.trim() === tag && tag.length > 0), `Track tags differ: ${track.id}`);
-    demand(Array.isArray(track.collections) && track.collections.length > 0 && track.collections.length <= 16 && track.collections.includes(track.collection), `Collections differ: ${track.id}`);
+    demand(Array.isArray(track.collections) && track.collections.length > 0 && track.collections.length <= 16 && new Set(track.collections).size === track.collections.length, `Collections differ: ${track.id}`);
+    demand(track.visibility === undefined || track.visibility === 'review-only', `Visibility differs: ${track.id}`);
+    if (track.visibility === 'review-only') {
+      demand(track.collections.includes('Base Game Review') && !track.collections.includes('Base Game Playlist'), `Review collection differs: ${track.id}`);
+    } else demand(!track.collections.includes('Base Game Review') && !track.collections.includes('Heavy Metal Review'), `Public review boundary differs: ${track.id}`);
     demand(track.gameCatalogueAdmission === false && track.default !== true, `Admission boundary differs: ${track.id}`);
     verifyRights(track);
     const match = AUDIO_URL.exec(track.audio?.path ?? ''), asset = volumeAssets.get(track.audio?.sha256);

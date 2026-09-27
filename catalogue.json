@@ -73,8 +73,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -121,8 +120,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -169,8 +167,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -217,9 +214,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "holizna.night-life",
@@ -265,8 +262,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -313,8 +309,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -361,8 +356,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -409,9 +403,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "holizna.we-used-to-dance",
@@ -457,8 +451,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -505,8 +498,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -553,9 +545,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "holizna.50-over-the-speed-limit",
@@ -601,8 +593,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -649,9 +640,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "emma-ma.megasong",
@@ -697,8 +688,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -745,8 +735,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -793,8 +782,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -841,8 +829,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -889,8 +876,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -937,8 +923,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -985,8 +970,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -1033,8 +1017,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -1081,8 +1064,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -1129,8 +1111,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -1177,8 +1158,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -1225,8 +1205,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -1273,8 +1252,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -1321,9 +1299,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "ragnar-random.tower-of-the-vampire-fm",
@@ -1369,9 +1347,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "mintodog.heavy-battle-2",
@@ -1417,8 +1395,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -1465,9 +1442,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "zander-noriega.the-recon-mission",
@@ -1512,9 +1489,10 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review",
+        "Heavy Metal Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "zander-noriega.dragged-through-hellfire",
@@ -1559,9 +1537,10 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review",
+        "Heavy Metal Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "zander-noriega.the-wreck",
@@ -1606,9 +1585,10 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review",
+        "Heavy Metal Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "zander-noriega.stonemason",
@@ -1653,9 +1633,10 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review",
+        "Heavy Metal Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "zander-noriega.ironbound",
@@ -1700,9 +1681,10 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review",
+        "Heavy Metal Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "zander-noriega.abelian",
@@ -1747,8 +1729,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -1794,8 +1775,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -1841,8 +1821,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -1888,9 +1867,10 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review",
+        "Heavy Metal Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "peachtea.last-stand-lets-go",
@@ -1936,9 +1916,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "congusbongus.the-demon-king",
@@ -1984,9 +1964,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "ragnar-random.super-scary-cave-dragon",
@@ -2031,9 +2011,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "ragnar-random.dinosaur-spirit-guide",
@@ -2078,9 +2058,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "ragnar-random.helgi-the-hero-bold",
@@ -2125,9 +2105,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "ragnar-random.castle-of-the-goblin-queen",
@@ -2172,9 +2152,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "ragnar-random.hostile-planet",
@@ -2219,9 +2199,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "ragnar-random.the-creeper",
@@ -2266,9 +2246,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "ragnar-random.chick-with-weapon",
@@ -2313,9 +2293,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "ragnar-random.reason-of-the-itch",
@@ -2360,9 +2340,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "ragnar-random.this-mad-gnosis",
@@ -2407,9 +2387,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "ragnar-random.we-got-the-crud",
@@ -2454,9 +2434,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "ragnar-random.digestive-malady",
@@ -2501,9 +2481,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "ragnar-random.jonathan-livingston-sea-cucumber",
@@ -2548,9 +2528,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "ragnar-random.cassette-culture",
@@ -2595,9 +2575,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "ragnar-random.viroid-planet",
@@ -2642,9 +2622,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "congusbongus.rhythm-garden",
@@ -2689,8 +2669,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -2736,9 +2715,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "zane-little-music.rhythm-factory",
@@ -2783,9 +2762,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "snabisch.at-the-beginning",
@@ -2830,9 +2809,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "snabisch.the-organ",
@@ -2877,8 +2856,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -2924,8 +2902,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -2971,8 +2948,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -3018,8 +2994,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -3065,9 +3040,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "joth.bossa-nova",
@@ -3112,9 +3087,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "tricks-and-traps.experiment-g",
@@ -3159,8 +3134,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -3206,9 +3180,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "tricks-and-traps.simulation-unknown",
@@ -3253,9 +3227,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "tricks-and-traps.electric-stream",
@@ -3300,8 +3274,7 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
+        "Base Game Playlist"
       ]
     },
     {
@@ -3347,9 +3320,9 @@
         }
       },
       "collections": [
-        "Foundation 70",
-        "Foundation collection"
-      ]
+        "Base Game Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "vitalezzz.curse-of-the-moon",

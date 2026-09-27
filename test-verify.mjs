@@ -64,12 +64,29 @@ test("legacy archive compatibility objects remain exact canonical catalogue memb
     assert.equal(file.path, `objects/${file.sha256}.mp3`);
     assert.ok(canonicalHashes.has(file.sha256));
   }
-  const foundation = catalogue.tracks.filter(({ collections }) =>
-    collections.includes("Foundation 70"),
+  const baseGame = catalogue.tracks.filter(({ collections }) =>
+    collections.includes("Base Game Playlist"),
   );
-  assert.equal(foundation.length, 70);
+  const review = catalogue.tracks.filter(
+    ({ visibility }) => visibility === "review-only",
+  );
+  const preservedFoundation = [...baseGame, ...review];
+  assert.equal(baseGame.length, 33);
+  assert.equal(review.length, 37);
+  assert.equal(
+    review.filter(({ collections }) =>
+      collections.includes("Heavy Metal Review"),
+    ).length,
+    6,
+  );
+  assert.equal(
+    catalogue.tracks.some(({ collections }) =>
+      collections.some((name) => name.startsWith("Foundation")),
+    ),
+    false,
+  );
   assert.deepEqual(
-    new Set(foundation.map(({ audio }) => audio.sha256)),
+    new Set(preservedFoundation.map(({ audio }) => audio.sha256)),
     new Set(inventory.files.map(({ sha256 }) => sha256)),
   );
 });
@@ -81,10 +98,12 @@ test("archive player exposes metadata filters and keeps direct downloads hidden"
   assert.match(player, /facet\(tag, style \? showOnlyStyle : searchFor/);
   assert.match(player, /download\.hidden = true/);
   assert.doesNotMatch(player, /Try Next or download its MP3/);
-  assert.match(player, /FOUNDATION_COLLECTION = "Foundation 70"/);
+  assert.match(player, /FOUNDATION_COLLECTION = "Base Game Playlist"/);
+  assert.match(player, /tracksForView\(catalogue\.tracks, requestedReview\)/);
   const page = await readFile("index.html", "utf8");
   assert.match(page, /id="play-foundation"/);
-  assert.match(page, /Play Foundation 70/);
+  assert.match(page, /Play Base Game Playlist/);
+  assert.match(page, /id="review-notice"/);
 });
 
 test("deployment manifest is reproduced from the explicit public files", async () => {
