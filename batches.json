@@ -2,6 +2,11 @@
   "format": "revealline-soundtrack-collections.v2",
   "collections": [
     {
+      "id": "\"Дрон пес\" українські хіти 🇺🇦 українська музика",
+      "title": "\"Дрон пес\" українські хіти 🇺🇦 українська музика",
+      "tracks": 1
+    },
+    {
       "id": "(AI COVER) FPV  дрон. Сонет.",
       "title": "(AI COVER) FPV  дрон. Сонет.",
       "tracks": 1
@@ -64,6 +69,11 @@
     {
       "id": "DUSHEVNIY",
       "title": "DUSHEVNIY",
+      "tracks": 1
+    },
+    {
+      "id": "Expert-Ukrainian hits",
+      "title": "Expert-Ukrainian hits",
       "tracks": 1
     },
     {
@@ -359,7 +369,7 @@
     {
       "id": "ФПВ",
       "title": "ФПВ",
-      "tracks": 51
+      "tracks": 52
     },
     {
       "id": "Юрій Громовий",

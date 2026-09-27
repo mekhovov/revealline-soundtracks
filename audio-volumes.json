@@ -1104,6 +1104,18 @@
           "bytes": 1738417
         }
       ]
+    },
+    {
+      "id": "audio-expert-ukrainian-hits-20260927-00139528",
+      "releaseTag": "audio-expert-ukrainian-hits-20260927-00139528",
+      "recordings": 1,
+      "audioBytes": 1360427,
+      "assets": [
+        {
+          "sha256": "00139528c586b94a332b2038fce86a5f21f1bab25cd79145a705d6351f02eab6",
+          "bytes": 1360427
+        }
+      ]
     }
   ]
 }

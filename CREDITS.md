@@ -1765,3 +1765,9 @@ Licence: Unknown — uploader-confirmed rights
 Оператор FPV дрона (Radio Edit) by DUSHEVNIY. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/channel/UCyfhGVJeiO6Rha5nhUzdxjg
 
 Licence: Unknown — uploader-confirmed rights
+
+## "Дрон пес" українські хіти 🇺🇦 українська музика
+
+"Дрон пес" українські хіти 🇺🇦 українська музика by Expert-Ukrainian hits. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@Expert-UkrainianHits
+
+Licence: Unknown — uploader-confirmed rights
