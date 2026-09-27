@@ -1825,3 +1825,10 @@ Licence: Unknown — uploader-confirmed rights
 Дрон    @АндрійМацевко-о1т by Андрій Мацевко. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@АндрійМацевко-о1т
 
 Licence: Unknown — uploader-confirmed rights
+
+## гурт дно, медовий полин, муха мухич - регі дрон
+
+гурт дно, медовий полин, муха мухич - регі дрон by Гурт Дно, медовий полин, муха мухич. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@thednoband
+
+
+Licence: Unknown — uploader-confirmed rights

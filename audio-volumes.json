@@ -1224,6 +1224,18 @@
           "bytes": 4269235
         }
       ]
+    },
+    {
+      "id": "audio-hurt-dno-20260927-46a99517",
+      "releaseTag": "audio-hurt-dno-20260927-46a99517",
+      "recordings": 1,
+      "audioBytes": 2586200,
+      "assets": [
+        {
+          "sha256": "46a99517674d545cb85ba5400b3adc3e7f88ebf79caa79d4c2aa7e7bd9cccba8",
+          "bytes": 2586200
+        }
+      ]
     }
   ]
 }
