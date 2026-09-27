@@ -30,6 +30,11 @@ test("canonical archive preserves migrated identities and release-backed audio",
     ({ id }) => id === "trench-orderly.soundtrack.2",
   );
   assert.deepEqual(trench.collections, ["TRENCH ORDERLY", "ФПВ"]);
+  assert.equal(trench.source, "https://www.youtube.com/@TRENCH_ORDERLY");
+  assert.equal(
+    trench.rights.rightsEvidenceURL,
+    "https://www.youtube.com/@TRENCH_ORDERLY",
+  );
   assert.equal(trench.licenseURL, null);
   assert.equal(trench.rights.licenseId, "UNKNOWN");
   const duplicate = catalogue.tracks.find(

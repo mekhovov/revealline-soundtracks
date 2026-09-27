@@ -114,7 +114,7 @@ both `TRENCH ORDERLY` and `ФПВ` collection tags:
 
 ```sh
 node intake/add-music.mjs "/Users/oleksandr.mekhovov/work/my_projects/go_test/docs/research/dah-soundtracks/TRENCH ORDERLY/" \
-  --source "https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw" \
+  --source "https://www.youtube.com/@TRENCH_ORDERLY" \
   --artist "TRENCH ORDERLY" \
   --description "Пісні про ФПВ" \
   --styles "ФПВ,UA" \
