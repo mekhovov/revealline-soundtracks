@@ -1795,3 +1795,9 @@ Licence: Unknown — uploader-confirmed rights
 Ой летів до орків дрон by Ruslan Nota. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/channel/UCE7UN5L5TLd0Y-Vz_ASfllA
 
 Licence: Unknown — uploader-confirmed rights
+
+## SIVA - Москальський Череп (пісня Сергія Сіваченка)
+
+SIVA - Москальський Череп (пісня Сергія Сіваченка) by SIVA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@SIVA_UA
+
+Licence: Unknown — uploader-confirmed rights
