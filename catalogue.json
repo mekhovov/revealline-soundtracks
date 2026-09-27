@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 239,
-    "uniqueRecordings": 239,
+    "declaredTracks": 240,
+    "uniqueRecordings": 240,
     "duplicateAliases": 0,
-    "audioBytes": 1165083821
+    "audioBytes": 1169069499
   },
   "tracks": [
     {
@@ -11619,6 +11619,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-expert-ukrainian-hits-20260927-00139528/00139528c586b94a332b2038fce86a5f21f1bab25cd79145a705d6351f02eab6.mp3",
         "bytes": 1360427,
         "sha256": "00139528c586b94a332b2038fce86a5f21f1bab25cd79145a705d6351f02eab6"
+      },
+      "aliases": []
+    },
+    {
+      "id": "maestroshadow777.nova-avtorska-pisnya-oy-letily-drony-sbu-new-original-song-oh-the-ssu",
+      "title": "Нова авторська пісня Ой летіли дрони СБУ, New original song Oh, the SSU drones were flying",
+      "artist": "MaestroShadow777",
+      "durationSeconds": 233.685624,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@MaestroShadow777KWG",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Нова авторська пісня Ой летіли дрони СБУ, New original song Oh, the SSU drones were flying by MaestroShadow777. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MaestroShadow777KWG",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@MaestroShadow777KWG",
+        "attribution": "Нова авторська пісня Ой летіли дрони СБУ, New original song Oh, the SSU drones were flying by MaestroShadow777. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MaestroShadow777KWG",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "MaestroShadow777 -  Ой летіли дрони СБУ.mp3",
+      "archiveId": "maestroshadow777-20260927-cfaf7030",
+      "collection": "Нова авторська пісня Ой летіли дрони СБУ, New original song Oh, the SSU drones were flying",
+      "collections": [
+        "Нова авторська пісня Ой летіли дрони СБУ, New original song Oh, the SSU drones were flying",
+        "MaestroShadow777",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-maestroshadow777-20260927-cfaf7030/cfaf70305e6f9356f89b3696c7e30e746965275d592066f3108dc35edd8c1a1a.mp3",
+        "bytes": 3985678,
+        "sha256": "cfaf70305e6f9356f89b3696c7e30e746965275d592066f3108dc35edd8c1a1a"
       },
       "aliases": []
     }

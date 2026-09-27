@@ -1116,6 +1116,18 @@
           "bytes": 1360427
         }
       ]
+    },
+    {
+      "id": "audio-maestroshadow777-20260927-cfaf7030",
+      "releaseTag": "audio-maestroshadow777-20260927-cfaf7030",
+      "recordings": 1,
+      "audioBytes": 3985678,
+      "assets": [
+        {
+          "sha256": "cfaf70305e6f9356f89b3696c7e30e746965275d592066f3108dc35edd8c1a1a",
+          "bytes": 3985678
+        }
+      ]
     }
   ]
 }
