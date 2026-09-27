@@ -872,6 +872,22 @@
           "bytes": 3601638
         }
       ]
+    },
+    {
+      "id": "audio-s-20260927",
+      "releaseTag": "audio-s-20260927",
+      "recordings": 2,
+      "audioBytes": 4527118,
+      "assets": [
+        {
+          "sha256": "ed464d7cad5793b7c0197331644c52af6b614ee98e193ab7e30544790a35bdd9",
+          "bytes": 2463072
+        },
+        {
+          "sha256": "c73191d9e1a388fc8d0a42031e95d6722848c9a53e1ba585f32e32fc3e78cab8",
+          "bytes": 2064046
+        }
+      ]
     }
   ]
 }

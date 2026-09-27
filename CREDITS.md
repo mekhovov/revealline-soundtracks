@@ -1617,3 +1617,13 @@ Licence: Unknown — uploader-confirmed rights
 The Bloger UA — ХРОБАЧНЯ (Official Music Video) | Дрони, ЗСУ і Зимове Сафарі 🔞 by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA
 
 Licence: Unknown — uploader-confirmed rights
+
+## Гайs
+
+Гайs — Орки-помідорки (двісті тисяч) by Гайs. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@GuysUA
+
+Licence: Unknown — uploader-confirmed rights
+
+Гайs — ППО (Сам не літаю і москалям не даю) by Гайs. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@GuysUA
+
+Licence: Unknown — uploader-confirmed rights
