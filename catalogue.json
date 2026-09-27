@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 221,
-    "uniqueRecordings": 221,
+    "declaredTracks": 222,
+    "uniqueRecordings": 222,
     "duplicateAliases": 0,
-    "audioBytes": 1110685084
+    "audioBytes": 1114764695
   },
   "tracks": [
     {
@@ -10711,6 +10711,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-neyronnyy-hupach-20260927-0e70cd80/bbc8d3e40202d66388cabc8c3e416cf08af0b7b8531531361704323ba85b748c.mp3",
         "bytes": 1369404,
         "sha256": "bbc8d3e40202d66388cabc8c3e416cf08af0b7b8531531361704323ba85b748c"
+      },
+      "aliases": []
+    },
+    {
+      "id": "nytso-potvorno.nytso-potvorno-rusni-pizda",
+      "title": "Ницо Потворно — русні пізда",
+      "artist": "Ницо Потворно",
+      "durationSeconds": 245.086621,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@potvorno",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Ницо Потворно — русні пізда by Ницо Потворно. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@potvorno",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@potvorno",
+        "attribution": "Ницо Потворно — русні пізда by Ницо Потворно. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@potvorno",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Ницо Потворно — русні пізда.mp3",
+      "archiveId": "nytso-potvorno-20260927-edad4597",
+      "collection": "Ницо Потворно — русні пізда",
+      "collections": [
+        "Ницо Потворно — русні пізда",
+        "Ницо Потворно",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-nytso-potvorno-20260927-edad4597/edad4597c38ca22d295658d4cbe23bcf50399f0c16244b850a9383fe939124d1.mp3",
+        "bytes": 4079611,
+        "sha256": "edad4597c38ca22d295658d4cbe23bcf50399f0c16244b850a9383fe939124d1"
       },
       "aliases": []
     }
