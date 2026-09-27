@@ -1128,6 +1128,18 @@
           "bytes": 3985678
         }
       ]
+    },
+    {
+      "id": "audio-neuronenko-20260927-bc0a38df",
+      "releaseTag": "audio-neuronenko-20260927-bc0a38df",
+      "recordings": 1,
+      "audioBytes": 3692480,
+      "assets": [
+        {
+          "sha256": "bc0a38dfb8228dd25afd469c20b4d0471ba22bd9e3c4140736c8b5b13320d384",
+          "bytes": 3692480
+        }
+      ]
     }
   ]
 }

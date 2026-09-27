@@ -1777,3 +1777,9 @@ Licence: Unknown — uploader-confirmed rights
 Нова авторська пісня Ой летіли дрони СБУ, New original song Oh, the SSU drones were flying by MaestroShadow777. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MaestroShadow777KWG
 
 Licence: Unknown — uploader-confirmed rights
+
+## Neuronenko — Український FPV-дрон | Пісня про українських героїв і нищення ворога | Патріотичний хіт
+
+Neuronenko — Український FPV-дрон | Пісня про українських героїв і нищення ворога | Патріотичний хіт by Neuronenko. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@Neuronenko
+
+Licence: Unknown — uploader-confirmed rights

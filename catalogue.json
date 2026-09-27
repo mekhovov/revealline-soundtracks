@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 240,
-    "uniqueRecordings": 240,
+    "declaredTracks": 241,
+    "uniqueRecordings": 241,
     "duplicateAliases": 0,
-    "audioBytes": 1169069499
+    "audioBytes": 1172761979
   },
   "tracks": [
     {
@@ -11670,6 +11670,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-maestroshadow777-20260927-cfaf7030/cfaf70305e6f9356f89b3696c7e30e746965275d592066f3108dc35edd8c1a1a.mp3",
         "bytes": 3985678,
         "sha256": "cfaf70305e6f9356f89b3696c7e30e746965275d592066f3108dc35edd8c1a1a"
+      },
+      "aliases": []
+    },
+    {
+      "id": "neuronenko.neuronenko-ukrayinskyy-fpv-dron-pisnya-pro-ukrayinskykh-heroyiv-i-nysh",
+      "title": "Neuronenko — Український FPV-дрон | Пісня про українських героїв і нищення ворога | Патріотичний хіт",
+      "artist": "Neuronenko",
+      "durationSeconds": 214.018322,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@Neuronenko",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Neuronenko — Український FPV-дрон | Пісня про українських героїв і нищення ворога | Патріотичний хіт by Neuronenko. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@Neuronenko",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@Neuronenko",
+        "attribution": "Neuronenko — Український FPV-дрон | Пісня про українських героїв і нищення ворога | Патріотичний хіт by Neuronenko. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@Neuronenko",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Neuronenko — Український FPV-дрон.mp3",
+      "archiveId": "neuronenko-20260927-bc0a38df",
+      "collection": "Neuronenko — Український FPV-дрон | Пісня про українських героїв і нищення ворога | Патріотичний хіт",
+      "collections": [
+        "Neuronenko — Український FPV-дрон | Пісня про українських героїв і нищення ворога | Патріотичний хіт",
+        "Neuronenko",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-neuronenko-20260927-bc0a38df/bc0a38dfb8228dd25afd469c20b4d0471ba22bd9e3c4140736c8b5b13320d384.mp3",
+        "bytes": 3692480,
+        "sha256": "bc0a38dfb8228dd25afd469c20b4d0471ba22bd9e3c4140736c8b5b13320d384"
       },
       "aliases": []
     }
