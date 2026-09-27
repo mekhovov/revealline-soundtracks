@@ -1838,3 +1838,9 @@ Licence: Unknown — uploader-confirmed rights
 Пісні дяді Сірожи. Дрони магічні дрони граційні. Початок кінця стратегічній авіації by Дядя Сірожа. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@ДядяСірожаЯ
 
 Licence: Unknown — uploader-confirmed rights
+
+## Забавка і Дмитрик - Дронщик (home video)
+
+Забавка і Дмитрик - Дронщик (home video) by Забавка і Дмитрик. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@zabavka103
+
+Licence: Unknown — uploader-confirmed rights

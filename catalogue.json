@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 250,
-    "uniqueRecordings": 250,
+    "declaredTracks": 251,
+    "uniqueRecordings": 251,
     "duplicateAliases": 0,
-    "audioBytes": 1195696965
+    "audioBytes": 1196724800
   },
   "tracks": [
     {
@@ -12156,6 +12156,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-dyadya-sirozha-20260927-9555184a/9555184abb2a5430227b45410340911b1bdd18966d0ab7f3d4037f440092a09e.mp3",
         "bytes": 2648923,
         "sha256": "9555184abb2a5430227b45410340911b1bdd18966d0ab7f3d4037f440092a09e"
+      },
+      "aliases": []
+    },
+    {
+      "id": "zabavka-i-dmytryk.zabavka-i-dmytryk-dronshchyk-home-video",
+      "title": "Забавка і Дмитрик - Дронщик (home video)",
+      "artist": "Забавка і Дмитрик",
+      "durationSeconds": 57.167528,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@zabavka103",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Забавка і Дмитрик - Дронщик (home video) by Забавка і Дмитрик. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@zabavka103",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@zabavka103",
+        "attribution": "Забавка і Дмитрик - Дронщик (home video) by Забавка і Дмитрик. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@zabavka103",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Забавка і Дмитрик - Дронщик.mp3",
+      "archiveId": "zabavka-i-dmytryk-20260927-1e8a3540",
+      "collection": "Забавка і Дмитрик - Дронщик (home video)",
+      "collections": [
+        "Забавка і Дмитрик - Дронщик (home video)",
+        "Забавка і Дмитрик",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-zabavka-i-dmytryk-20260927-1e8a3540/1e8a3540686dd112920bb939bb8650d5f2dca08a3a609f3f5bd185b388aba08b.mp3",
+        "bytes": 1027835,
+        "sha256": "1e8a3540686dd112920bb939bb8650d5f2dca08a3a609f3f5bd185b388aba08b"
       },
       "aliases": []
     }
