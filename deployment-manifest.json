@@ -499,8 +499,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 913,
-      "sha256": "a1d57f66191a6abb3950b14fd060a77d8895798745ff5789e7b71ef834ac8ce4"
+      "bytes": 2758,
+      "sha256": "967549eeb80c62c06e917b3142581f2a303f184e2f637c7d53866fde4ca64a39"
     },
     {
       "path": "style.css",
@@ -509,8 +509,8 @@
     },
     {
       "path": "UPLOAD_GUIDE.md",
-      "bytes": 3433,
-      "sha256": "2b659983b9cebc9703749a1dab89bd9a59ff065662d930482e90448330c7c920"
+      "bytes": 7957,
+      "sha256": "1577552295d7e3cc70b349e732c1e62b3a2cf5b111baac68e9d67a178c7d57a5"
     }
   ]
 }
