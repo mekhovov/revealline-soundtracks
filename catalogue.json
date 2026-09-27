@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 200,
-    "uniqueRecordings": 200,
+    "declaredTracks": 208,
+    "uniqueRecordings": 208,
     "duplicateAliases": 0,
-    "audioBytes": 1051900933
+    "audioBytes": 1079392499
   },
   "tracks": [
     {
@@ -9660,6 +9660,406 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-tarko-20260927/4f70b5eccd5d055badc2a520e4e22c1d7019446486924cdd6347545a1f458d65.mp3",
         "bytes": 3147678,
         "sha256": "4f70b5eccd5d055badc2a520e4e22c1d7019446486924cdd6347545a1f458d65"
+      },
+      "aliases": []
+    },
+    {
+      "id": "the-bloger-ua.the-bloger-ua-official-video",
+      "title": "The Bloger UA - Останнє Фото (Official Video) | Саркастичний рок",
+      "artist": "The Bloger UA",
+      "durationSeconds": 139.737687,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@TheBlogerUA",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "The Bloger UA - Останнє Фото (Official Video) | Саркастичний рок by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@TheBlogerUA",
+        "attribution": "The Bloger UA - Останнє Фото (Official Video) | Саркастичний рок by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "The Bloger UA - Останнє Фото (Official Video) _ Саркастичний рок.mp3",
+      "archiveId": "the-bloger-ua-20260927",
+      "collection": "The Bloger UA",
+      "collections": [
+        "The Bloger UA",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-the-bloger-ua-20260927/bef1cece660fe28d3bcfcb0e11f7e1adfd47bb7f56948b836560056123a00094.mp3",
+        "bytes": 2250538,
+        "sha256": "bef1cece660fe28d3bcfcb0e11f7e1adfd47bb7f56948b836560056123a00094"
+      },
+      "aliases": []
+    },
+    {
+      "id": "the-bloger-ua.the-bloger-ua-fpv",
+      "title": "The Bloger UA - Пісенька про москаля | СКІНЧИЛАСЯ ГАСТРОЛЬ (FPV Кліп)",
+      "artist": "The Bloger UA",
+      "durationSeconds": 168.83229,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@TheBlogerUA",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "The Bloger UA - Пісенька про москаля | СКІНЧИЛАСЯ ГАСТРОЛЬ (FPV Кліп) by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@TheBlogerUA",
+        "attribution": "The Bloger UA - Пісенька про москаля | СКІНЧИЛАСЯ ГАСТРОЛЬ (FPV Кліп) by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "The Bloger UA - Пісенька про москаля _ СКІНЧИЛАСЯ ГАСТРОЛЬ (FPV Кліп).mp3",
+      "archiveId": "the-bloger-ua-20260927",
+      "collection": "The Bloger UA",
+      "collections": [
+        "The Bloger UA",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-the-bloger-ua-20260927/a108d139434b5cc6254cc25718ddf5059733e4d05d334ccabf3bedce87c68e71.mp3",
+        "bytes": 2586467,
+        "sha256": "a108d139434b5cc6254cc25718ddf5059733e4d05d334ccabf3bedce87c68e71"
+      },
+      "aliases": []
+    },
+    {
+      "id": "the-bloger-ua.the-bloger-ua-official-music-video",
+      "title": "The Bloger UA - Птахи СБС (Official Music Video) Присвята Силам безпілотних систем України",
+      "artist": "The Bloger UA",
+      "durationSeconds": 273.902585,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@TheBlogerUA",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "The Bloger UA - Птахи СБС (Official Music Video) Присвята Силам безпілотних систем України by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@TheBlogerUA",
+        "attribution": "The Bloger UA - Птахи СБС (Official Music Video) Присвята Силам безпілотних систем України by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "The Bloger UA - Птахи СБС (Official Music Video) Присвята Силам безпілотних систем України.mp3",
+      "archiveId": "the-bloger-ua-20260927",
+      "collection": "The Bloger UA",
+      "collections": [
+        "The Bloger UA",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-the-bloger-ua-20260927/4a0d62a1a78201a923f112dc0e695ac5537ae1444a96b4665fab62976c853dd7.mp3",
+        "bytes": 4092272,
+        "sha256": "4a0d62a1a78201a923f112dc0e695ac5537ae1444a96b4665fab62976c853dd7"
+      },
+      "aliases": []
+    },
+    {
+      "id": "the-bloger-ua.the-bloger-ua-official-music-video.2",
+      "title": "The Bloger UA – Боги Небесних Трас (Official Music Video) | Гімн воїнів неба",
+      "artist": "The Bloger UA",
+      "durationSeconds": 191.332426,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@TheBlogerUA",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "The Bloger UA – Боги Небесних Трас (Official Music Video) | Гімн воїнів неба by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@TheBlogerUA",
+        "attribution": "The Bloger UA – Боги Небесних Трас (Official Music Video) | Гімн воїнів неба by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "The Bloger UA – Боги Небесних Трас (Official Music Video) _ Гімн воїнів неба.mp3",
+      "archiveId": "the-bloger-ua-20260927",
+      "collection": "The Bloger UA",
+      "collections": [
+        "The Bloger UA",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-the-bloger-ua-20260927/f12db6a6b9b12cfe55f47fd8f7643a37a2cab275918a0eb5870a4806d43934dd.mp3",
+        "bytes": 3008964,
+        "sha256": "f12db6a6b9b12cfe55f47fd8f7643a37a2cab275918a0eb5870a4806d43934dd"
+      },
+      "aliases": []
+    },
+    {
+      "id": "the-bloger-ua.the-bloger-ua-2026-fpv",
+      "title": "The Bloger UA – ЙОБЛИК (Прем'єра 2026) | Гімн операторів FPV",
+      "artist": "The Bloger UA",
+      "durationSeconds": 234.428662,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@TheBlogerUA",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "The Bloger UA – ЙОБЛИК (Прем'єра 2026) | Гімн операторів FPV by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@TheBlogerUA",
+        "attribution": "The Bloger UA – ЙОБЛИК (Прем'єра 2026) | Гімн операторів FPV by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "The Bloger UA – ЙОБЛИК (Прем_єра 2026) _ Гімн операторів FPV.mp3",
+      "archiveId": "the-bloger-ua-20260927",
+      "collection": "The Bloger UA",
+      "collections": [
+        "The Bloger UA",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-the-bloger-ua-20260927/561e17ea45775729d4c164f62c9c9188fa75e18c14749c87e354d76028d59d0c.mp3",
+        "bytes": 3260192,
+        "sha256": "561e17ea45775729d4c164f62c9c9188fa75e18c14749c87e354d76028d59d0c"
+      },
+      "aliases": []
+    },
+    {
+      "id": "the-bloger-ua.the-bloger-ua",
+      "title": "The Bloger UA — Птахи назавжди. Присвята полеглим Героям",
+      "artist": "The Bloger UA",
+      "durationSeconds": 292.617868,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@TheBlogerUA",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "The Bloger UA — Птахи назавжди. Присвята полеглим Героям by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@TheBlogerUA",
+        "attribution": "The Bloger UA — Птахи назавжди. Присвята полеглим Героям by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "The Bloger UA — Птахи назавжди. Присвята полеглим Героям.mp3",
+      "archiveId": "the-bloger-ua-20260927",
+      "collection": "The Bloger UA",
+      "collections": [
+        "The Bloger UA",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-the-bloger-ua-20260927/28468f6e00c8cff1e8932cc3942a5f66b2d6dde33642b9016d62bc3dd3e8e9b8.mp3",
+        "bytes": 4630848,
+        "sha256": "28468f6e00c8cff1e8932cc3942a5f66b2d6dde33642b9016d62bc3dd3e8e9b8"
+      },
+      "aliases": []
+    },
+    {
+      "id": "the-bloger-ua.the-bloger-ua-official-music-video.3",
+      "title": "The Bloger UA — СТАЛЕВИЙ ПТАХ (Official Music Video) | Очі та Жало",
+      "artist": "The Bloger UA",
+      "durationSeconds": 253.840544,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@TheBlogerUA",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "The Bloger UA — СТАЛЕВИЙ ПТАХ (Official Music Video) | Очі та Жало by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@TheBlogerUA",
+        "attribution": "The Bloger UA — СТАЛЕВИЙ ПТАХ (Official Music Video) | Очі та Жало by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "The Bloger UA — СТАЛЕВИЙ ПТАХ (Official Music Video) _ Очі та Жало.mp3",
+      "archiveId": "the-bloger-ua-20260927",
+      "collection": "The Bloger UA",
+      "collections": [
+        "The Bloger UA",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-the-bloger-ua-20260927/49f1008bd27695434a717695b4bcc30bbab3e85f306bdb2b79462135db1760cc.mp3",
+        "bytes": 4060647,
+        "sha256": "49f1008bd27695434a717695b4bcc30bbab3e85f306bdb2b79462135db1760cc"
+      },
+      "aliases": []
+    },
+    {
+      "id": "the-bloger-ua.the-bloger-ua-official-music-video.4",
+      "title": "The Bloger UA — ХРОБАЧНЯ (Official Music Video) | Дрони, ЗСУ і Зимове Сафарі 🔞",
+      "artist": "The Bloger UA",
+      "durationSeconds": 237.168617,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@TheBlogerUA",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "The Bloger UA — ХРОБАЧНЯ (Official Music Video) | Дрони, ЗСУ і Зимове Сафарі 🔞 by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@TheBlogerUA",
+        "attribution": "The Bloger UA — ХРОБАЧНЯ (Official Music Video) | Дрони, ЗСУ і Зимове Сафарі 🔞 by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "The Bloger UA — ХРОБАЧНЯ (Official Music Video) _ Дрони, ЗСУ і Зимове Сафарі.mp3",
+      "archiveId": "the-bloger-ua-20260927",
+      "collection": "The Bloger UA",
+      "collections": [
+        "The Bloger UA",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-the-bloger-ua-20260927/328ef348415efca85f5323f380559ed42ab6b1904464f0331b9c6ec1fbac4802.mp3",
+        "bytes": 3601638,
+        "sha256": "328ef348415efca85f5323f380559ed42ab6b1904464f0331b9c6ec1fbac4802"
       },
       "aliases": []
     }
