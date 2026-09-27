@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 194,
-    "uniqueRecordings": 194,
+    "declaredTracks": 196,
+    "uniqueRecordings": 196,
     "duplicateAliases": 0,
-    "audioBytes": 1032879700
+    "audioBytes": 1037925884
   },
   "tracks": [
     {
@@ -9362,6 +9362,106 @@
         "TRENCH ORDERLY",
         "ФПВ"
       ]
+    },
+    {
+      "id": "probass-hardi.probass-hardi-drone",
+      "title": "PROBASS ∆ HARDI - DRONE (ВЕЛИКИЙ ЗБІР на 💯 ударних дронів камікадзе!)",
+      "artist": "PROBASS ∆ HARDI",
+      "durationSeconds": 179.11873,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@PROBASSHARDI",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "PROBASS ∆ HARDI - DRONE (ВЕЛИКИЙ ЗБІР на 💯 ударних дронів камікадзе!) by PROBASS ∆ HARDI. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@PROBASSHARDI",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@PROBASSHARDI",
+        "attribution": "PROBASS ∆ HARDI - DRONE (ВЕЛИКИЙ ЗБІР на 💯 ударних дронів камікадзе!) by PROBASS ∆ HARDI. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@PROBASSHARDI",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "PROBASS ∆ HARDI - DRONE (ВЕЛИКИЙ ЗБІР на 100_ ударних дронів камікадзе!).mp3",
+      "archiveId": "probass-hardi-20260927",
+      "collection": "PROBASS ∆ HARDI",
+      "collections": [
+        "PROBASS ∆ HARDI",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-probass-hardi-20260927/de54b41d16ff268fd61663a7d885efee321b25fcf5157bf9dbc6332d1f84a69c.mp3",
+        "bytes": 3219003,
+        "sha256": "de54b41d16ff268fd61663a7d885efee321b25fcf5157bf9dbc6332d1f84a69c"
+      },
+      "aliases": []
+    },
+    {
+      "id": "probass-hardi.singing-drones",
+      "title": "Singing Drones",
+      "artist": "PROBASS ∆ HARDI",
+      "durationSeconds": 96.060952,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@PROBASSHARDI",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Singing Drones by PROBASS ∆ HARDI. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@PROBASSHARDI",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@PROBASSHARDI",
+        "attribution": "Singing Drones by PROBASS ∆ HARDI. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@PROBASSHARDI",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "PROBASS ∆ HARDI - Singing Drones · Ubrave · Oleksandr Seleznov.mp3",
+      "archiveId": "probass-hardi-20260927",
+      "collection": "PROBASS ∆ HARDI",
+      "collections": [
+        "PROBASS ∆ HARDI",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-probass-hardi-20260927/22b22397afb79f27beb3af592a7e9c078b65c02df1b57865aeefb2a754d6e87a.mp3",
+        "bytes": 1827181,
+        "sha256": "22b22397afb79f27beb3af592a7e9c078b65c02df1b57865aeefb2a754d6e87a"
+      },
+      "aliases": []
     }
   ]
 }

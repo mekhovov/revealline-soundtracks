@@ -784,6 +784,22 @@
           "bytes": 2693052
         }
       ]
+    },
+    {
+      "id": "audio-probass-hardi-20260927",
+      "releaseTag": "audio-probass-hardi-20260927",
+      "recordings": 2,
+      "audioBytes": 5046184,
+      "assets": [
+        {
+          "sha256": "de54b41d16ff268fd61663a7d885efee321b25fcf5157bf9dbc6332d1f84a69c",
+          "bytes": 3219003
+        },
+        {
+          "sha256": "22b22397afb79f27beb3af592a7e9c078b65c02df1b57865aeefb2a754d6e87a",
+          "bytes": 1827181
+        }
+      ]
     }
   ]
 }

@@ -2,6 +2,11 @@
   "format": "revealline-soundtrack-collections.v2",
   "collections": [
     {
+      "id": "action-metal-electro-audition-20260926",
+      "title": "action-metal-electro-audition-20260926",
+      "tracks": 4
+    },
+    {
       "id": "Blue Beat cyberpunk audition",
       "title": "Blue Beat cyberpunk audition",
       "tracks": 1
@@ -17,6 +22,11 @@
       "tracks": 1
     },
     {
+      "id": "core-20260924",
+      "title": "core-20260924",
+      "tracks": 13
+    },
+    {
       "id": "Cyber Power electro audition",
       "title": "Cyber Power electro audition",
       "tracks": 1
@@ -27,9 +37,19 @@
       "tracks": 1
     },
     {
+      "id": "final-archive01-audition-20260926",
+      "title": "final-archive01-audition-20260926",
+      "tracks": 2
+    },
+    {
       "id": "Foundation collection",
       "title": "Foundation collection",
       "tracks": 70
+    },
+    {
+      "id": "heavy-dungeon-audition-20260926",
+      "title": "heavy-dungeon-audition-20260926",
+      "tracks": 1
     },
     {
       "id": "Hit the Womp electro audition",
@@ -49,86 +69,6 @@
     {
       "id": "Lost in the Snow Wave — synthwave audition",
       "title": "Lost in the Snow Wave — synthwave audition",
-      "tracks": 1
-    },
-    {
-      "id": "Metallic Mistress industrial-metal audition",
-      "title": "Metallic Mistress industrial-metal audition",
-      "tracks": 1
-    },
-    {
-      "id": "Red Dwarf EDM-metal audition",
-      "title": "Red Dwarf EDM-metal audition",
-      "tracks": 1
-    },
-    {
-      "id": "Ripped Apart — high-energy electro audition",
-      "title": "Ripped Apart — high-energy electro audition",
-      "tracks": 1
-    },
-    {
-      "id": "Sandblaster industrial-metal audition",
-      "title": "Sandblaster industrial-metal audition",
-      "tracks": 1
-    },
-    {
-      "id": "Sky Trance synthwave audition",
-      "title": "Sky Trance synthwave audition",
-      "tracks": 1
-    },
-    {
-      "id": "Space Odyssey EDM-metal audition",
-      "title": "Space Odyssey EDM-metal audition",
-      "tracks": 1
-    },
-    {
-      "id": "Space Shooter — 80s synth / 90s house audition",
-      "title": "Space Shooter — 80s synth / 90s house audition",
-      "tracks": 4
-    },
-    {
-      "id": "StarShooter — retro racing audition",
-      "title": "StarShooter — retro racing audition",
-      "tracks": 1
-    },
-    {
-      "id": "Stellar Confrontation EDM-metal audition",
-      "title": "Stellar Confrontation EDM-metal audition",
-      "tracks": 1
-    },
-    {
-      "id": "Synthwave Type audition",
-      "title": "Synthwave Type audition",
-      "tracks": 1
-    },
-    {
-      "id": "TRENCH ORDERLY",
-      "title": "TRENCH ORDERLY",
-      "tracks": 7
-    },
-    {
-      "id": "Techno DRIVE!!! V2 audition",
-      "title": "Techno DRIVE!!! V2 audition",
-      "tracks": 1
-    },
-    {
-      "id": "action-metal-electro-audition-20260926",
-      "title": "action-metal-electro-audition-20260926",
-      "tracks": 4
-    },
-    {
-      "id": "core-20260924",
-      "title": "core-20260924",
-      "tracks": 13
-    },
-    {
-      "id": "final-archive01-audition-20260926",
-      "title": "final-archive01-audition-20260926",
-      "tracks": 2
-    },
-    {
-      "id": "heavy-dungeon-audition-20260926",
-      "title": "heavy-dungeon-audition-20260926",
       "tracks": 1
     },
     {
@@ -182,13 +122,63 @@
       "tracks": 6
     },
     {
+      "id": "Metallic Mistress industrial-metal audition",
+      "title": "Metallic Mistress industrial-metal audition",
+      "tracks": 1
+    },
+    {
+      "id": "PROBASS ∆ HARDI",
+      "title": "PROBASS ∆ HARDI",
+      "tracks": 2
+    },
+    {
       "id": "racing-synth-final-audition-20260926",
       "title": "racing-synth-final-audition-20260926",
       "tracks": 3
     },
     {
+      "id": "Red Dwarf EDM-metal audition",
+      "title": "Red Dwarf EDM-metal audition",
+      "tracks": 1
+    },
+    {
+      "id": "Ripped Apart — high-energy electro audition",
+      "title": "Ripped Apart — high-energy electro audition",
+      "tracks": 1
+    },
+    {
       "id": "runner2088 retrowave audition",
       "title": "runner2088 retrowave audition",
+      "tracks": 1
+    },
+    {
+      "id": "Sandblaster industrial-metal audition",
+      "title": "Sandblaster industrial-metal audition",
+      "tracks": 1
+    },
+    {
+      "id": "Sky Trance synthwave audition",
+      "title": "Sky Trance synthwave audition",
+      "tracks": 1
+    },
+    {
+      "id": "Space Odyssey EDM-metal audition",
+      "title": "Space Odyssey EDM-metal audition",
+      "tracks": 1
+    },
+    {
+      "id": "Space Shooter — 80s synth / 90s house audition",
+      "title": "Space Shooter — 80s synth / 90s house audition",
+      "tracks": 4
+    },
+    {
+      "id": "StarShooter — retro racing audition",
+      "title": "StarShooter — retro racing audition",
+      "tracks": 1
+    },
+    {
+      "id": "Stellar Confrontation EDM-metal audition",
+      "title": "Stellar Confrontation EDM-metal audition",
       "tracks": 1
     },
     {
@@ -217,9 +207,24 @@
       "tracks": 4
     },
     {
+      "id": "Synthwave Type audition",
+      "title": "Synthwave Type audition",
+      "tracks": 1
+    },
+    {
       "id": "synthwave-type-audition-20260926",
       "title": "synthwave-type-audition-20260926",
       "tracks": 1
+    },
+    {
+      "id": "Techno DRIVE!!! V2 audition",
+      "title": "Techno DRIVE!!! V2 audition",
+      "tracks": 1
+    },
+    {
+      "id": "TRENCH ORDERLY",
+      "title": "TRENCH ORDERLY",
+      "tracks": 7
     },
     {
       "id": "ukrainian-commons-audition-20260925",
@@ -234,7 +239,7 @@
     {
       "id": "ФПВ",
       "title": "ФПВ",
-      "tracks": 7
+      "tracks": 9
     }
   ]
 }
