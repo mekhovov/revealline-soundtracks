@@ -980,6 +980,34 @@
           "bytes": 2848859
         }
       ]
+    },
+    {
+      "id": "audio-pisnya-dnya-20260927-bb25de89",
+      "releaseTag": "audio-pisnya-dnya-20260927-bb25de89",
+      "recordings": 5,
+      "audioBytes": 20912102,
+      "assets": [
+        {
+          "sha256": "bb25de89589df1a6623e80f71bc19137abe26b1b14796b3ff75af1a63d96cbd0",
+          "bytes": 3980495
+        },
+        {
+          "sha256": "a9c490400466be36b63133248b81910c5028ed297ab59f1a8e06609e421da469",
+          "bytes": 3903859
+        },
+        {
+          "sha256": "674925a9446876e6bd6a56e6019b854072e263b7975c3f2a59725f0fc10ea917",
+          "bytes": 3099933
+        },
+        {
+          "sha256": "c63b1118e49911fbf4a0091ea54867817c5dd6ff0a3f0877481ba1544ea8a7d3",
+          "bytes": 4889833
+        },
+        {
+          "sha256": "4befd36da5e444577da89a12e58914695bcaaaf703a2ef788e3a675b2324f2a4",
+          "bytes": 5037982
+        }
+      ]
     }
   ]
 }

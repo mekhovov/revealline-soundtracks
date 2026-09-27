@@ -1689,3 +1689,25 @@ Licence: Unknown — uploader-confirmed rights
 Північ - FPV by Північ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@EmmaPivnich
 
 Licence: Unknown — uploader-confirmed rights
+
+## Пісня дня
+
+🦅 Бойовий P1-Sun — Пісня дня (повна версія) by Пісня дня. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@pisnyadnya
+
+Licence: Unknown — uploader-confirmed rights
+
+🔥 На крок попереду - Гімн Сил безпілотних систем (СБС) — Пісня дня (повна версія) by Пісня дня. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@pisnyadnya
+
+Licence: Unknown — uploader-confirmed rights
+
+🕸️ "Павутина" Малюка — Пісня дня (повна версія) by Пісня дня. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@pisnyadnya
+
+Licence: Unknown — uploader-confirmed rights
+
+💥 Рецепт Бавовни - Відповідь тим, хто сміявся з нашого "Лего" — Пісня дня (повна версія) by Пісня дня. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@pisnyadnya
+
+Licence: Unknown — uploader-confirmed rights
+
+🔥 Шоу Мадяра — Пісня дня (повна версія) by Пісня дня. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@pisnyadnya
+
+Licence: Unknown — uploader-confirmed rights
