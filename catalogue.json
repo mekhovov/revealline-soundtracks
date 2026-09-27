@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 249,
-    "uniqueRecordings": 249,
+    "declaredTracks": 250,
+    "uniqueRecordings": 250,
     "duplicateAliases": 0,
-    "audioBytes": 1193048042
+    "audioBytes": 1195696965
   },
   "tracks": [
     {
@@ -12132,6 +12132,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-hurt-dno-20260927-46a99517/46a99517674d545cb85ba5400b3adc3e7f88ebf79caa79d4c2aa7e7bd9cccba8.mp3",
         "bytes": 2586200,
         "sha256": "46a99517674d545cb85ba5400b3adc3e7f88ebf79caa79d4c2aa7e7bd9cccba8"
+      },
+      "aliases": []
+    },
+    {
+      "id": "dyadya-sirozha.pisni-dyadi-sirozhy-drony-mahichni-drony-hratsiyni-pochatok-kintsya-st",
+      "title": "Пісні дяді Сірожи. Дрони магічні дрони граційні. Початок кінця стратегічній авіації",
+      "artist": "Дядя Сірожа",
+      "durationSeconds": 149.304308,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@ДядяСірожаЯ",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Пісні дяді Сірожи. Дрони магічні дрони граційні. Початок кінця стратегічній авіації by Дядя Сірожа. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@ДядяСірожаЯ",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@ДядяСірожаЯ",
+        "attribution": "Пісні дяді Сірожи. Дрони магічні дрони граційні. Початок кінця стратегічній авіації by Дядя Сірожа. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@ДядяСірожаЯ",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Дядя Сірожа - Дрони магічні дрони граційні. Початок кінця стратегічній авіації. Пісні дяді Сірожи.mp3",
+      "archiveId": "dyadya-sirozha-20260927-9555184a",
+      "collection": "Пісні дяді Сірожи. Дрони магічні дрони граційні. Початок кінця стратегічній авіації",
+      "collections": [
+        "Пісні дяді Сірожи. Дрони магічні дрони граційні. Початок кінця стратегічній авіації",
+        "Дядя Сірожа",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-dyadya-sirozha-20260927-9555184a/9555184abb2a5430227b45410340911b1bdd18966d0ab7f3d4037f440092a09e.mp3",
+        "bytes": 2648923,
+        "sha256": "9555184abb2a5430227b45410340911b1bdd18966d0ab7f3d4037f440092a09e"
       },
       "aliases": []
     }

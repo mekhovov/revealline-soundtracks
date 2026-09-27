@@ -1236,6 +1236,18 @@
           "bytes": 2586200
         }
       ]
+    },
+    {
+      "id": "audio-dyadya-sirozha-20260927-9555184a",
+      "releaseTag": "audio-dyadya-sirozha-20260927-9555184a",
+      "recordings": 1,
+      "audioBytes": 2648923,
+      "assets": [
+        {
+          "sha256": "9555184abb2a5430227b45410340911b1bdd18966d0ab7f3d4037f440092a09e",
+          "bytes": 2648923
+        }
+      ]
     }
   ]
 }
