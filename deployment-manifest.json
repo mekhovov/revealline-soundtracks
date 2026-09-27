@@ -524,13 +524,13 @@
     },
     {
       "path": "UPLOAD_GUIDE.md",
-      "bytes": 10049,
-      "sha256": "6261fde639695b8092cac01553a9a2144ce7c5398398f92a941539db15586ff3"
+      "bytes": 10285,
+      "sha256": "3b6e56823888d5f512987cff96072f75f72eed872fad0b6b006bda288de35b1f"
     },
     {
       "path": "upload-guide/index.html",
-      "bytes": 10094,
-      "sha256": "cdcc5c9ec981e83fdee3d3be2f9f141982ee59bf469918198f86230c2a1dd259"
+      "bytes": 10400,
+      "sha256": "3a9622b0e14ce4dd94b4c929243b6990be0a411c88bcb355a0fd632a921c9d2f"
     }
   ]
 }
