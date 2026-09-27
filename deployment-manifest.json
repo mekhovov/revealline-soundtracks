@@ -19,8 +19,8 @@
     },
     {
       "path": "catalogue.json",
-      "bytes": 405967,
-      "sha256": "ba6d802998754707b78635aeaddcb6261172afa904782fedc9fc6abf1ae9fa05"
+      "bytes": 407717,
+      "sha256": "02434a59c2ad865145de2ff17e4e617c2a7a50e0bf9cd2494d3f299056937865"
     },
     {
       "path": "CREDITS.md",
@@ -29,8 +29,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 10609,
-      "sha256": "607b0851fc02532da4a48ac59b39a8cad0f8de82b4de7dd7aef9ce3acc65734c"
+      "bytes": 12203,
+      "sha256": "15e91841f9b686ebf0c006562fba3da208214252f1a37c7594856fc5ee977e8e"
     },
     {
       "path": "intake-browser.mjs",
@@ -494,8 +494,8 @@
     },
     {
       "path": "player.mjs",
-      "bytes": 13004,
-      "sha256": "a52437fe68bb5c2df662858fddd6f6c37056971c4afd167b1d3ac679942c088d"
+      "bytes": 14007,
+      "sha256": "346370777f0c53cb13f88956a768705a6063f06420226ae356342d05b42b46fd"
     },
     {
       "path": "README.md",
@@ -504,8 +504,8 @@
     },
     {
       "path": "style.css",
-      "bytes": 8250,
-      "sha256": "6aee06323f925ba5fe8d6467d6416545b478a5dae3f6c0a29667b028fc53025a"
+      "bytes": 9670,
+      "sha256": "75e0de1860f67a81853981881c88d3f2b9c075e775f3a27abbd8c2d7297ef493"
     },
     {
       "path": "UPLOAD_GUIDE.md",

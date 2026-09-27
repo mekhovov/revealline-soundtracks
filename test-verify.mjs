@@ -59,6 +59,14 @@ test("legacy archive compatibility objects remain exact canonical catalogue memb
     assert.equal(file.path, `objects/${file.sha256}.mp3`);
     assert.ok(canonicalHashes.has(file.sha256));
   }
+  const foundation = catalogue.tracks.filter(({ collections }) =>
+    collections.includes("Foundation 70"),
+  );
+  assert.equal(foundation.length, 70);
+  assert.deepEqual(
+    new Set(foundation.map(({ audio }) => audio.sha256)),
+    new Set(inventory.files.map(({ sha256 }) => sha256)),
+  );
 });
 
 test("archive player exposes metadata filters and keeps direct downloads hidden", async () => {
@@ -68,6 +76,10 @@ test("archive player exposes metadata filters and keeps direct downloads hidden"
   assert.match(player, /facet\(tag, style \? showOnlyStyle : searchFor/);
   assert.match(player, /download\.hidden = true/);
   assert.doesNotMatch(player, /Try Next or download its MP3/);
+  assert.match(player, /FOUNDATION_COLLECTION = "Foundation 70"/);
+  const page = await readFile("index.html", "utf8");
+  assert.match(page, /id="play-foundation"/);
+  assert.match(page, /Play Foundation 70/);
 });
 
 test("deployment manifest is reproduced from the explicit public files", async () => {
