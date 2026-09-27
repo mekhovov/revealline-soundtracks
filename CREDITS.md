@@ -1771,3 +1771,9 @@ Licence: Unknown — uploader-confirmed rights
 "Дрон пес" українські хіти 🇺🇦 українська музика by Expert-Ukrainian hits. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@Expert-UkrainianHits
 
 Licence: Unknown — uploader-confirmed rights
+
+## Нова авторська пісня Ой летіли дрони СБУ, New original song Oh, the SSU drones were flying
+
+Нова авторська пісня Ой летіли дрони СБУ, New original song Oh, the SSU drones were flying by MaestroShadow777. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MaestroShadow777KWG
+
+Licence: Unknown — uploader-confirmed rights
