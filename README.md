@@ -5,6 +5,7 @@ RevealLine.
 
 - [Play all soundtracks](https://mekhovov.github.io/revealline-soundtracks/)
 - [Add music in the browser](https://mekhovov.github.io/revealline-soundtracks/#add-music)
+- [Read the web upload guide](https://mekhovov.github.io/revealline-soundtracks/upload-guide/)
 - [Complete upload and PR guide](UPLOAD_GUIDE.md)
 - [Public catalogue JSON](https://mekhovov.github.io/revealline-soundtracks/catalogue.json)
 

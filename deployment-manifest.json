@@ -29,8 +29,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 11270,
-      "sha256": "f58bcba42a9918d125a4d92f16788f5926b5244ff589d96c49b629f1bd1c2014"
+      "bytes": 11319,
+      "sha256": "185a7b5511009e216bc1c0e70bf477894b6317f8e739c4d79e2de1b9325db372"
     },
     {
       "path": "intake-browser.mjs",
@@ -499,8 +499,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2758,
-      "sha256": "967549eeb80c62c06e917b3142581f2a303f184e2f637c7d53866fde4ca64a39"
+      "bytes": 2853,
+      "sha256": "57cb2bb1562415fe05c1242c943164ea430d94dc98ec65d14844e1299b519c40"
     },
     {
       "path": "style.css",
@@ -509,8 +509,13 @@
     },
     {
       "path": "UPLOAD_GUIDE.md",
-      "bytes": 7957,
-      "sha256": "1577552295d7e3cc70b349e732c1e62b3a2cf5b111baac68e9d67a178c7d57a5"
+      "bytes": 8074,
+      "sha256": "9d49fc724d50da76a3eddbd10230b18fb491e62864306992e55c6ef15fb89666"
+    },
+    {
+      "path": "upload-guide/index.html",
+      "bytes": 9516,
+      "sha256": "4c6c36295a20143ba87e88f427bf0b057c31df033bd46605863b00c9a291d999"
     }
   ]
 }

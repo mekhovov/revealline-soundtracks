@@ -69,6 +69,7 @@ test("browser intake files are pinned in the public deployment manifest", async 
     "intake-browser.mjs",
     "intake/package.mjs",
     "style.css",
+    "upload-guide/index.html",
   ]) {
     const bytes = await readFile(name);
     const entry = manifest.files.find((candidate) => candidate.path === name);

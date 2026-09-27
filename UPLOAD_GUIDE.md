@@ -7,6 +7,9 @@ After the pull request is merged, GitHub verifies and publishes the songs and
 updates the public player automatically. The game reads that catalogue, so a
 separate game change is not required for each new batch.
 
+Prefer a styled page? Open the
+[web upload guide](https://mekhovov.github.io/revealline-soundtracks/upload-guide/).
+
 ## Before you start
 
 You need:
