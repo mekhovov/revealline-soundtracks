@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 257,
-    "uniqueRecordings": 257,
+    "declaredTracks": 258,
+    "uniqueRecordings": 258,
     "duplicateAliases": 0,
-    "audioBytes": 1213057757
+    "audioBytes": 1215478441
   },
   "tracks": [
     {
@@ -12514,6 +12514,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-surenzh-20260927-cdba5db4/cdba5db44c8417af7271bec25909ab1f0e40944ca7b530ed9c064aa3d7fcd3ed.mp3",
         "bytes": 2625385,
         "sha256": "cdba5db44c8417af7271bec25909ab1f0e40944ca7b530ed9c064aa3d7fcd3ed"
+      },
+      "aliases": []
+    },
+    {
+      "id": "ukrayinski-pisni-pisni-ua.pisnya-pro-dron-babka-yozhka",
+      "title": "Пісня про дрон - Бабка Йожка",
+      "artist": "Українські пісні - Pisni.ua",
+      "durationSeconds": 143.894059,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@-Pisniua",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Пісня про дрон - Бабка Йожка by Українські пісні - Pisni.ua. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@-Pisniua",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@-Pisniua",
+        "attribution": "Пісня про дрон - Бабка Йожка by Українські пісні - Pisni.ua. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@-Pisniua",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Українські пісні - Pisni.ua - Пісня про дрон - Бабка Йожка.mp3",
+      "archiveId": "ukrayinski-pisni-pisni-ua-20260927-09bbee88",
+      "collection": "Пісня про дрон - Бабка Йожка",
+      "collections": [
+        "Пісня про дрон - Бабка Йожка",
+        "Українські пісні - Pisni.ua",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-ukrayinski-pisni-pisni-ua-20260927-09bbee88/09bbee881a6e655ca2c6edb49378502be95b37117d72a7a0232f44c1aaa98f0e.mp3",
+        "bytes": 2420684,
+        "sha256": "09bbee881a6e655ca2c6edb49378502be95b37117d72a7a0232f44c1aaa98f0e"
       },
       "aliases": []
     }

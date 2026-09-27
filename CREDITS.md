@@ -1881,3 +1881,9 @@ Licence: Unknown — uploader-confirmed rights
 Ахіллес by Суренж. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/channel/UCWMXS83QUgIvzbTbsXjdnbQ
 
 Licence: Unknown — uploader-confirmed rights
+
+## Пісня про дрон - Бабка Йожка
+
+Пісня про дрон - Бабка Йожка by Українські пісні - Pisni.ua. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@-Pisniua
+
+Licence: Unknown — uploader-confirmed rights
