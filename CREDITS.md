@@ -1753,3 +1753,9 @@ Licence: Unknown — uploader-confirmed rights
 (AI COVER) FPV  дрон. Сонет. by A'm Ukrainian. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@amukrainian653
 
 Licence: Unknown — uploader-confirmed rights
+
+## Оператор "FPV"
+
+Оператор "FPV" by AlexBust & Co. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@AlexBustCompany
+
+Licence: Unknown — uploader-confirmed rights

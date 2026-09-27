@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 236,
-    "uniqueRecordings": 236,
+    "declaredTracks": 237,
+    "uniqueRecordings": 237,
     "duplicateAliases": 0,
-    "audioBytes": 1158779745
+    "audioBytes": 1161984977
   },
   "tracks": [
     {
@@ -11466,6 +11466,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-a-m-ukrainian-20260927-45812cca/45812cca6e1bf70fbf5f1df5f9c104730c9a88a89b26c284d83437d14c985b18.mp3",
         "bytes": 2297760,
         "sha256": "45812cca6e1bf70fbf5f1df5f9c104730c9a88a89b26c284d83437d14c985b18"
+      },
+      "aliases": []
+    },
+    {
+      "id": "alexbust-co.operator-fpv",
+      "title": "Оператор \"FPV\"",
+      "artist": "AlexBust & Co",
+      "durationSeconds": 184.52898,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@AlexBustCompany",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Оператор \"FPV\" by AlexBust & Co. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@AlexBustCompany",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@AlexBustCompany",
+        "attribution": "Оператор \"FPV\" by AlexBust & Co. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@AlexBustCompany",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "AlexBust & Co - Оператор FPV.mp3",
+      "archiveId": "alexbust-co-20260927-3935a131",
+      "collection": "Оператор \"FPV\"",
+      "collections": [
+        "Оператор \"FPV\"",
+        "AlexBust & Co",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-alexbust-co-20260927-3935a131/3935a1314f133f4b4e3029f27329e52eff72245e0961787cbdc2e48ad01b0783.mp3",
+        "bytes": 3205232,
+        "sha256": "3935a1314f133f4b4e3029f27329e52eff72245e0961787cbdc2e48ad01b0783"
       },
       "aliases": []
     }
