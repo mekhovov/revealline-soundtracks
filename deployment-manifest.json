@@ -14,13 +14,13 @@
     },
     {
       "path": "batches.json",
-      "bytes": 18232,
-      "sha256": "147024031d31207986a0fc31b04bd09c9ce56b8e697bd1ccf210ff503e19fa45"
+      "bytes": 18332,
+      "sha256": "a70fde779e09b644e95025b4a304b53399189979cbfd14707fd9fe237f58530c"
     },
     {
       "path": "catalogue.json",
-      "bytes": 573695,
-      "sha256": "93b732377914af8e45f5585bb52544ebc19315bbab32136f12fbfbd9bc08f51a"
+      "bytes": 574365,
+      "sha256": "3622f50d4741ebcf955b3479816a555a07f1b034216ba873b691acf5810e77e1"
     },
     {
       "path": "CREDITS.md",
