@@ -1789,3 +1789,9 @@ Licence: Unknown — uploader-confirmed rights
 Мільйон на дрон: діти разом з Іваном Маруничем та Олександром Положинським збирають на Перемогу by Postman, діти разом з Іваном Маруничем та Олександром Положинським. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@postmenUA
 
 Licence: Unknown — uploader-confirmed rights
+
+## Ой летів до орків дрон
+
+Ой летів до орків дрон by Ruslan Nota. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/channel/UCE7UN5L5TLd0Y-Vz_ASfllA
+
+Licence: Unknown — uploader-confirmed rights

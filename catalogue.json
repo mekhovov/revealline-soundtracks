@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 242,
-    "uniqueRecordings": 242,
+    "declaredTracks": 243,
+    "uniqueRecordings": 243,
     "duplicateAliases": 0,
-    "audioBytes": 1174941314
+    "audioBytes": 1177722103
   },
   "tracks": [
     {
@@ -11773,6 +11773,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-postman-20260927-0ebf9e84/0ebf9e84567743acd38453df6d8ce3d3800987ca7aa13a3374524e24902c3e83.mp3",
         "bytes": 2179335,
         "sha256": "0ebf9e84567743acd38453df6d8ce3d3800987ca7aa13a3374524e24902c3e83"
+      },
+      "aliases": []
+    },
+    {
+      "id": "ruslan-nota.oy-letiv-do-orkiv-dron",
+      "title": "Ой летів до орків дрон",
+      "artist": "Ruslan Nota",
+      "durationSeconds": 159.381769,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/channel/UCE7UN5L5TLd0Y-Vz_ASfllA",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Ой летів до орків дрон by Ruslan Nota. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/channel/UCE7UN5L5TLd0Y-Vz_ASfllA",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/channel/UCE7UN5L5TLd0Y-Vz_ASfllA",
+        "attribution": "Ой летів до орків дрон by Ruslan Nota. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/channel/UCE7UN5L5TLd0Y-Vz_ASfllA",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Ruslan Nota - Ой летів до орків дрон.mp3",
+      "archiveId": "ruslan-nota-20260927-e25a39ca",
+      "collection": "Ой летів до орків дрон",
+      "collections": [
+        "Ой летів до орків дрон",
+        "Ruslan Nota",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-ruslan-nota-20260927-e25a39ca/e25a39ca1833313f09bc9bcbd95e6e9214fa4f38707111f7cc0f2b3c1a1d20c8.mp3",
+        "bytes": 2780789,
+        "sha256": "e25a39ca1833313f09bc9bcbd95e6e9214fa4f38707111f7cc0f2b3c1a1d20c8"
       },
       "aliases": []
     }
