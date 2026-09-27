@@ -1176,6 +1176,30 @@
           "bytes": 3168560
         }
       ]
+    },
+    {
+      "id": "audio-ukrainian-tik-tok-20260927-3d8d157d",
+      "releaseTag": "audio-ukrainian-tik-tok-20260927-3d8d157d",
+      "recordings": 1,
+      "audioBytes": 340466,
+      "assets": [
+        {
+          "sha256": "3d8d157da92cc88668f0c661456e4f9239646dbf5a987dce17e010c86558a64b",
+          "bytes": 340466
+        }
+      ]
+    },
+    {
+      "id": "audio-vitold-ua-band-feat-black-d-20260927-ef37e316",
+      "releaseTag": "audio-vitold-ua-band-feat-black-d-20260927-ef37e316",
+      "recordings": 1,
+      "audioBytes": 3287583,
+      "assets": [
+        {
+          "sha256": "ef37e31610e6fd4723c82319f34cad07c4cbb902a494a1f468bf16990d1ed64a",
+          "bytes": 3287583
+        }
+      ]
     }
   ]
 }
