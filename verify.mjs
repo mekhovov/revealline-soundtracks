@@ -14,11 +14,23 @@ const LICENSES = new Map([
   ['https://creativecommons.org/licenses/by-sa/3.0/', { id: 'CC-BY-SA', version: '3.0', shareAlike: true }],
   ['https://creativecommons.org/licenses/by-sa/4.0/', { id: 'CC-BY-SA', version: '4.0', shareAlike: true }],
 ]);
+const CORRECTED_UNKNOWN_RIGHTS = new Set([
+  'trench-orderly.soundtrack', 'trench-orderly.drones-hunter',
+  'trench-orderly.vampire', 'trench-orderly.soundtrack.2',
+  'trench-orderly.soundtrack.3', 'trench-orderly.soundtrack.4',
+  'trench-orderly.soundtrack.5',
+]);
+const LEGACY_IDENTITY_FIELDS = [
+  'title', 'artist', 'durationSeconds', 'tags', 'source', 'fileName', 'archiveId',
+  'collection', 'status', 'listeningApproval', 'gameCatalogueAdmission', 'contentId',
+  'recordingModeEligible', 'default', 'aliases',
+];
 const ROOT_STATIC_FILES = [
   '.nojekyll', 'CREDITS.md', 'README.md', 'UPLOAD_GUIDE.md', 'audio-volumes.json',
   'batches.json', 'catalogue.json', 'index.html', 'intake-browser.mjs', 'intake/package.mjs',
   'inventory.json', 'legacy/README.md', 'legacy/archive-01/CREDITS.md',
-  'legacy/archive-01/README.md', 'legacy/archive-01/deployment-manifest.json',
+  'legacy/archive-01/README.md', 'legacy/archive-01/catalogue.json',
+  'legacy/archive-01/deployment-manifest.json',
   'legacy/archive-01/inventory.json', 'legacy/archive-01/preview-catalogue.json',
   'legacy/archive-01/release/CREDITS.md', 'legacy/archive-01/release/SHA256SUMS',
   'legacy/archive-01/release/assets.json',
@@ -55,6 +67,34 @@ function verifyRights(track) {
   const licence = LICENSES.get(track.licenseURL);
   demand(licence && track.rights?.licenseURL === track.licenseURL, `Rights identity differs: ${track.id}`);
   demand(track.rights?.licenseId === licence.id && track.rights?.licenseVersion === licence.version && track.rights?.shareAlike?.required === licence.shareAlike, `Rights policy differs: ${track.id}`);
+}
+async function verifyLegacyUnion(catalogue, base) {
+  const sources = [
+    JSON.parse(await readFile(path.join(base, 'legacy/archive-01/catalogue.json'), 'utf8')),
+    JSON.parse(await readFile(path.join(base, 'legacy/archive-02/catalogue.json'), 'utf8')),
+  ];
+  demand(sources.every(({ tracks }) => Array.isArray(tracks)) && sources[0].tracks.length === 163 && sources[1].tracks.length === 31, 'Legacy catalogue evidence differs.');
+  const canonical = new Map(catalogue.tracks.map((track) => [track.id, track]));
+  const mappedIds = new Set(), hashes = new Set(); let tracks = 0, audioBytes = 0;
+  for (const source of sources) {
+    for (const legacy of source.tracks) {
+      let id = legacy.id;
+      if (mappedIds.has(id)) id = `${id}.${legacy.audio.sha256.slice(0, 8)}`;
+      demand(!mappedIds.has(id), `Legacy migration identity collides: ${id}`); mappedIds.add(id);
+      const migrated = canonical.get(id);
+      demand(migrated, `Legacy recording is missing from canonical catalogue: ${id}`);
+      for (const field of LEGACY_IDENTITY_FIELDS) demand(JSON.stringify(migrated[field]) === JSON.stringify(legacy[field]), `Legacy recording metadata differs: ${id}.${field}`);
+      demand(migrated.audio?.bytes === legacy.audio?.bytes && migrated.audio?.sha256 === legacy.audio?.sha256, `Legacy recording bytes differ: ${id}`);
+      if (CORRECTED_UNKNOWN_RIGHTS.has(id)) {
+        demand(legacy.license === 'CC0 1.0 Universal' && migrated.license === 'Unknown — uploader-confirmed rights' && migrated.licenseURL === null && migrated.credit === migrated.rights?.attribution, `Legacy rights correction differs: ${id}`);
+      } else demand(migrated.license === legacy.license && migrated.licenseURL === legacy.licenseURL && migrated.credit === legacy.credit, `Legacy recording rights differ: ${id}`);
+      demand(!hashes.has(legacy.audio.sha256), `Legacy audio hash collides: ${id}`);
+      hashes.add(legacy.audio.sha256); audioBytes += legacy.audio.bytes; tracks += 1;
+    }
+  }
+  demand(tracks === catalogue.tracks.length && mappedIds.size === canonical.size && [...canonical.keys()].every((id) => mappedIds.has(id)), 'Canonical catalogue and legacy union differ.');
+  demand(hashes.size === catalogue.tracks.length && audioBytes === catalogue.counts?.audioBytes, 'Canonical audio and legacy union differ.');
+  return { tracks, audioBytes };
 }
 export async function buildManifest(base = root) {
   const files = [];
@@ -148,11 +188,12 @@ export async function verifyArchive(base = root) {
     );
     legacyReleaseNames.add(asset.name);
   }
+  const legacyUnion = await verifyLegacyUnion(catalogue, base);
   demand(catalogue.counts?.declaredTracks === catalogue.tracks.length && catalogue.counts?.uniqueRecordings === catalogue.tracks.length && catalogue.counts?.duplicateAliases === 0 && catalogue.counts?.audioBytes === audioBytes, 'Catalogue counts differ.');
   const expected = await buildManifest(base), manifest = JSON.parse(await readFile(path.join(base, 'deployment-manifest.json'), 'utf8'));
   demand(JSON.stringify(manifest) === JSON.stringify(expected), 'Deployment manifest is stale.');
   for (const entry of manifest.files) await exactFile(base, entry);
-  return { tracks: catalogue.tracks.length, compatibilityTracks: compatibilityHashes.size, audioBytes, publicBytes: manifest.files.reduce((sum,file)=>sum+file.bytes,0), manifest };
+  return { tracks: catalogue.tracks.length, compatibilityTracks: compatibilityHashes.size, legacyUnionTracks: legacyUnion.tracks, legacyUnionBytes: legacyUnion.audioBytes, audioBytes, publicBytes: manifest.files.reduce((sum,file)=>sum+file.bytes,0), manifest };
 }
 export async function stageArchive(destination, base = root) {
   const verified = await verifyArchive(base), target = path.resolve(destination);

@@ -48,6 +48,11 @@
       "sha256": "2706445dafe995f6c4dc044ad5e92031cae60627699f6a72985e67a972064ccd"
     },
     {
+      "path": "legacy/archive-01/catalogue.json",
+      "bytes": 237283,
+      "sha256": "37631eb8038637bf171e072c4d4336bc3ff704e7dbb75e4486017b2aed141281"
+    },
+    {
       "path": "legacy/archive-01/CREDITS.md",
       "bytes": 44099,
       "sha256": "04d711f986aaeeeef857679999c5dc2e26f87ea539b06b5a2cb2f8d20497f756"
