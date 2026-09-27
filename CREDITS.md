@@ -1563,3 +1563,13 @@ Licence: Unknown — uploader-confirmed rights
 Singing Drones by PROBASS ∆ HARDI. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@PROBASSHARDI
 
 Licence: Unknown — uploader-confirmed rights
+
+## Ribson
+
+Ribson -  FPV у справі by Ribson. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@ribson.official
+
+Licence: Unknown — uploader-confirmed rights
+
+Ribson - Дрони by Ribson. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@ribson.official
+
+Licence: Unknown — uploader-confirmed rights

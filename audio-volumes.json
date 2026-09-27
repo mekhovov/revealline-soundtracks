@@ -800,6 +800,22 @@
           "bytes": 1827181
         }
       ]
+    },
+    {
+      "id": "audio-ribson-20260927",
+      "releaseTag": "audio-ribson-20260927",
+      "recordings": 2,
+      "audioBytes": 7596961,
+      "assets": [
+        {
+          "sha256": "bd3c7a30c774c1265cc5a45b89f6c874291d01769bc5a010a039833928c54ae6",
+          "bytes": 3854407
+        },
+        {
+          "sha256": "17185c9266ed947e97ce954986eacdf2da36c836528945af2e41db0e7a5982f2",
+          "bytes": 3742554
+        }
+      ]
     }
   ]
 }
