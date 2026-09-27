@@ -1,138 +1,102 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="color-scheme" content="dark" />
-    <meta
-      name="description"
-      content="Search and play every published RevealLine soundtrack recording in one continuous player."
-    />
-    <title>RevealLine · All soundtracks</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="player.mjs?v=20260927-4" type="module"></script>
-    <script src="intake-browser.mjs?v=20260927-2" type="module"></script>
-  </head>
-  <body>
-    <a class="skip" href="#recordings">Skip to recordings</a>
-    <main>
-      <header>
-        <p class="eyebrow">REVEALLINE / SOUNDTRACK SIGNAL</p>
-        <h1>Every track.<br /><span>One player.</span></h1>
-        <p class="intro" id="catalogue-summary">
-          Loading the complete published soundtrack catalogue…
-        </p>
-        <p class="notice">
-          This is the canonical RevealLine soundtrack library. Exact MP3s live
-          in versioned, hash-addressed audio volumes; publication remains
-          separate from listening approval and game defaults.
-        </p>
-        <nav>
-          <a href="#recordings">Browse all songs</a>
-          <a href="#add-music">Add music</a>
-          <a href="https://mekhovov.github.io/revealline/game/"
-            >Play RevealLine ↗</a
-          >
-          <a href="https://github.com/mekhovov/revealline-soundtracks"
-            >Soundtrack repository ↗</a
-          >
-          <a href="catalogue.json">Public catalogue JSON</a>
-        </nav>
-      </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Search and play every published RevealLine soundtrack recording in one continuous player.">
+  <title>RevealLine · All soundtracks</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="player.mjs?v=20260927-4" type="module"></script>
+  <script src="intake-browser.mjs?v=20260927-2" type="module"></script>
+</head>
+<body>
+  <a class="skip" href="#recordings">Skip to recordings</a>
+  <main>
+    <header>
+      <p class="eyebrow">REVEALLINE / SOUNDTRACK SIGNAL</p>
+      <h1>Every track.<br><span>One player.</span></h1>
+      <p class="intro" id="catalogue-summary">Loading the complete published soundtrack catalogue…</p>
+      <p class="notice">This is the canonical RevealLine soundtrack library. Exact MP3s live in versioned, hash-addressed audio volumes; publication remains separate from listening approval and game defaults.</p>
+      <nav>
+        <a href="#recordings">Browse all songs</a>
+        <a href="#add-music">Add music</a>
+        <a href="https://mekhovov.github.io/revealline/game/">Play RevealLine ↗</a>
+        <a href="https://github.com/mekhovov/revealline-soundtracks">Soundtrack repository ↗</a>
+        <a href="catalogue.json">Public catalogue JSON</a>
+      </nav>
+    </header>
 
-      <section class="player" aria-labelledby="player-heading">
-        <div class="player-copy">
-          <p class="eyebrow" id="player-heading">NOW PLAYING</p>
-          <p id="now-playing" aria-live="polite">
-            Choose a recording, or play the current results.
-          </p>
-          <p id="now-source"></p>
-        </div>
-        <audio id="audio" controls preload="metadata"></audio>
-        <div class="transport">
-          <button id="play-results" type="button">▶ Play results</button>
-          <button id="pause" type="button" disabled>Pause</button>
-          <button id="next" type="button" disabled>Next →</button>
-          <label
-            >Order
-            <select id="order">
-              <option value="shuffle">Shuffle</option>
-              <option value="ordered">One after another</option>
-            </select>
-          </label>
-          <label
-            >Repeat
-            <select id="repeat">
-              <option value="all">All selected songs</option>
-              <option value="one">Current song</option>
-              <option value="off">Stop at the end</option>
-            </select>
-          </label>
-        </div>
-        <p id="playback-status" role="status"></p>
-      </section>
+    <section class="player" aria-labelledby="player-heading">
+      <div class="player-copy">
+        <p class="eyebrow" id="player-heading">NOW PLAYING</p>
+        <p id="now-playing" aria-live="polite">Choose a recording, or play the current results.</p>
+        <p id="now-source"></p>
+      </div>
+      <audio id="audio" controls preload="metadata"></audio>
+      <div class="transport">
+        <button id="play-results" type="button">▶ Play results</button>
+        <button id="pause" type="button" disabled>Pause</button>
+        <button id="next" type="button" disabled>Next →</button>
+        <label>Order
+          <select id="order">
+            <option value="shuffle">Shuffle</option>
+            <option value="ordered">One after another</option>
+          </select>
+        </label>
+        <label>Repeat
+          <select id="repeat">
+            <option value="all">All selected songs</option>
+            <option value="one">Current song</option>
+            <option value="off">Stop at the end</option>
+          </select>
+        </label>
+      </div>
+      <p id="playback-status" role="status"></p>
+    </section>
 
-      <section class="featured-collection" aria-labelledby="foundation-heading">
-        <div>
-          <p class="eyebrow">FEATURED COLLECTION</p>
-          <h2 id="foundation-heading">Foundation 70</h2>
-          <p>
-            <span id="foundation-count">70</span> preserved RevealLine
-            recordings in one continuous playlist. Choose shuffle or sequential
-            order above, then keep listening without leaving this page.
-          </p>
-        </div>
-        <div class="featured-actions">
-          <button id="play-foundation" type="button" disabled>
-            ▶ Play Foundation 70
-          </button>
-          <button id="browse-foundation" type="button" disabled>
-            Browse the 70 songs
-          </button>
-        </div>
-      </section>
+    <section class="featured-collection" aria-labelledby="foundation-heading">
+      <div>
+        <p class="eyebrow">FEATURED COLLECTION</p>
+        <h2 id="foundation-heading">Foundation 70</h2>
+        <p><span id="foundation-count">70</span> preserved RevealLine recordings in one continuous playlist. Choose shuffle or sequential order above, then keep listening without leaving this page.</p>
+      </div>
+      <div class="featured-actions">
+        <button id="play-foundation" type="button" disabled>▶ Play Foundation 70</button>
+        <button id="browse-foundation" type="button" disabled>Browse the 70 songs</button>
+      </div>
+    </section>
 
-      <section id="recordings" aria-label="All published recordings">
-        <div class="filters">
-          <label class="search-field"
-            >Find a song, artist, tag or collection
-            <input
-              id="search"
-              type="search"
-              placeholder="Try “metal”, “YannZ” or “Shchedryk”"
-              autocomplete="off"
-            />
-          </label>
-          <fieldset class="style-picker">
-            <legend>Music styles — choose any mix</legend>
-            <div id="styles"></div>
-            <div class="style-actions">
-              <button id="styles-all" type="button">All styles</button>
-              <button id="styles-none" type="button">Clear</button>
-            </div>
-          </fieldset>
-          <label
-            >Collection
-            <select id="collection">
-              <option value="">All collections</option>
-            </select>
-          </label>
-          <p id="count" role="status">Loading…</p>
-        </div>
-        <div id="tracks" aria-busy="true"></div>
-        <p id="empty" hidden>
-          No recordings match. Try another search, style or collection.
-        </p>
-      </section>
+    <section id="recordings" aria-label="All published recordings">
+      <div class="filters">
+        <label class="search-field">Find a song, artist, tag or collection
+          <input id="search" type="search" placeholder="Try “metal”, “YannZ” or “Shchedryk”" autocomplete="off">
+        </label>
+        <fieldset class="style-picker">
+          <legend>Music styles — choose any mix</legend>
+          <div id="styles"></div>
+          <div class="style-actions">
+            <button id="styles-all" type="button">All styles</button>
+            <button id="styles-none" type="button">Clear</button>
+          </div>
+        </fieldset>
+        <label>Collection
+          <select id="collection"><option value="">All collections</option></select>
+        </label>
+        <p id="count" role="status">Loading…</p>
+      </div>
+      <div id="tracks" aria-busy="true"></div>
+      <p id="empty" hidden>No recordings match. Try another search, style or collection.</p>
+    </section>
 
-      <section class="guide" id="add-music">
+    <section class="guide" id="add-music">
         <p class="eyebrow">CATALOGUE INTAKE</p>
         <h2>Add an MP3 once; play it everywhere</h2>
         <p>
           Prepare a rights-bound contribution entirely in this page. Files stay
           on your device until you download the resulting
-          <code>.rlintake</code> package. The canonical archive accepts it only
-          after the exact recording source, licence and credits are verified.
+          <code>.rlintake</code> package. The canonical archive accepts it only after the
+          exact recording source, licence and credits are verified.
         </p>
         <p>
           Artist names, collections and reviewed styles become searchable,
@@ -173,19 +137,11 @@
             <legend>2. Describe the recording and rights</legend>
             <label
               >Creator fallback <input name="artist" required maxlength="160" />
-              <span
-                >Used only when an MP3 has no artist tag; existing artist tags
-                are preserved.</span
-              >
+              <span>Used only when an MP3 has no artist tag; existing artist tags are preserved.</span>
             </label>
             <label
               >Exact creator/source page
-              <input
-                name="source"
-                type="url"
-                required
-                maxlength="2048"
-                placeholder="https://…"
+              <input name="source" type="url" required maxlength="2048" placeholder="https://…"
             /></label>
             <label
               >Licence
@@ -196,9 +152,7 @@
                 <option value="cc-by-4.0">CC BY 4.0</option>
                 <option value="cc-by-sa-3.0">CC BY-SA 3.0</option>
                 <option value="cc-by-sa-4.0">CC BY-SA 4.0</option>
-                <option value="unknown">
-                  Unknown — uploader-confirmed rights
-                </option>
+                <option value="unknown">Unknown — uploader-confirmed rights</option>
               </select>
             </label>
             <label
@@ -215,11 +169,7 @@
                 name="collections"
                 maxlength="1039"
                 placeholder="TRENCH ORDERLY, ФПВ"
-              /><span
-                >A song can appear in several collections. The batch title is
-                added automatically.</span
-              ></label
-            >
+            /><span>A song can appear in several collections. The batch title is added automatically.</span></label>
             <label
               >Exact rights evidence URL
               <input
@@ -265,15 +215,14 @@
                 placeholder="lowercase-and-hyphens"
             /></label>
             <label
-              >Description
-              <textarea name="description" rows="3" maxlength="1000"></textarea>
+              >Description <textarea name="description" rows="3" maxlength="1000"></textarea>
             </label>
           </fieldset>
           <label class="rights-confirm"
             ><input name="confirmRights" type="checkbox" required /> I verified
-            that the source, licence or uploader-confirmed permission, rights
-            evidence and styles above apply to every selected recording. Files
-            with different rights belong in separate packages.</label
+            that the source, licence or uploader-confirmed permission, rights evidence and styles above apply to
+            every selected recording. Files with different rights belong in
+            separate packages.</label
           >
           <button type="submit">Verify and prepare package</button>
           <p id="intake-status" role="status" aria-live="polite">
@@ -297,10 +246,9 @@
             duplicate hashes and catalogue output.
           </li>
           <li>
-            After merge, automation publishes and verifies the versioned audio
-            volume and deploys Pages. The recording then appears here and in
-            every game release that includes the canonical online-catalogue
-            integration.
+            After merge, automation publishes and verifies the versioned audio volume and
+            deploys Pages. The recording then appears here and in every game
+            release that includes the canonical online-catalogue integration.
           </li>
         </ol>
         <p>
@@ -310,17 +258,10 @@
         </p>
       </section>
 
-      <footer>
-        <p>
-          Third-party recordings remain credited to their creators. Public
-          availability is separate from listening approval and from the game’s
-          standard playlists.
-        </p>
-        <p>
-          Audio uses versioned SHA-256 object paths. The player requests only
-          the chosen recording; it does not download the whole catalogue.
-        </p>
-      </footer>
-    </main>
-  </body>
+    <footer>
+      <p>Third-party recordings remain credited to their creators. Public availability is separate from listening approval and from the game’s standard playlists.</p>
+      <p>Audio uses versioned SHA-256 object paths. The player requests only the chosen recording; it does not download the whole catalogue.</p>
+    </footer>
+  </main>
+</body>
 </html>

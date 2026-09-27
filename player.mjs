@@ -3,7 +3,7 @@ import {
   buildPlaybackQueue,
   matchesStyles,
   stylesOf,
-} from "./playback-policy.mjs";
+} from './playback-policy.mjs';
 
 const audio = document.querySelector("#audio");
 const now = document.querySelector("#now-playing");
@@ -128,7 +128,7 @@ function refill({ after = current } = {}) {
   queue = buildPlaybackQueue(visible(), {
     order: order.value,
     current: after,
-    wrap: repeat.value === "all",
+    wrap: repeat.value === 'all',
   });
 }
 
@@ -138,7 +138,7 @@ function updateMediaSession(track) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: track.title,
     artist: track.artist,
-    album: `RevealLine · ${(track.collections ?? [track.collection]).join(" · ")}`,
+    album: `RevealLine · ${(track.collections ?? [track.collection]).join(' · ')}`,
   });
 }
 
@@ -152,7 +152,7 @@ async function play(row) {
   nextButton.disabled = false;
   queue = queue.filter((candidate) => candidate !== row);
   audio.pause();
-  audio.removeAttribute("crossorigin");
+  audio.removeAttribute('crossorigin');
   audio.src = new URL(track.audio.path, catalogue.archive.baseURL).href;
   now.textContent = `${track.title} · ${track.artist}`;
   nowSource.replaceChildren();
@@ -177,14 +177,14 @@ async function play(row) {
 }
 
 function next({ natural = false } = {}) {
-  if (natural && repeat.value === "one" && current) return void play(current);
-  if (!queue.length && repeat.value === "all") refill();
+  if (natural && repeat.value === 'one' && current) return void play(current);
+  if (!queue.length && repeat.value === 'all') refill();
   const row = queue.shift();
   if (row) void play(row);
   else
     status.textContent = visible().length
-      ? "The selected queue has finished."
-      : "No recordings match the current filters.";
+      ? 'The selected queue has finished.'
+      : 'No recordings match the current filters.';
 }
 
 function renderTrack(track, index) {
@@ -238,7 +238,7 @@ function renderTrack(track, index) {
     ...(track.rights?.derivativeChangeNotice
       ? [element("p", "", `Changes: ${track.rights.derivativeChangeNotice}`)]
       : []),
-    element("p", "", `Collections: ${row.trackCollections.join(" · ")}`),
+    element("p", "", `Collections: ${row.trackCollections.join(' · ')}`),
     element(
       "p",
       "",
@@ -264,7 +264,7 @@ function renderTrack(track, index) {
     license.href = track.licenseURL;
     license.rel = "license";
     links.append(license);
-  } else links.append(element("span", "rights-label", track.license));
+  } else links.append(element('span', 'rights-label', track.license));
   row.append(playButton, main, links);
   return row;
 }
@@ -291,26 +291,26 @@ async function loadCatalogue() {
     for (const [name, total] of [...sourceCounts].sort(([left], [right]) =>
       left.localeCompare(right),
     )) {
-      const option = element("option", "", `${name} (${total})`);
+      const option = element(
+        "option",
+        "",
+        `${name} (${total})`,
+      );
       option.value = name;
       collection.append(option);
     }
     for (const [style, label] of STYLE_GROUPS) {
-      const choice = element("label", "style-choice");
-      const input = element("input");
-      input.type = "checkbox";
+      const choice = element('label', 'style-choice');
+      const input = element('input');
+      input.type = 'checkbox';
       input.value = style;
       input.checked = true;
-      input.addEventListener("change", refresh);
+      input.addEventListener('change', refresh);
       styleChecks.set(style, input);
       choice.append(input, document.createTextNode(label));
       stylesHost.append(choice);
     }
-    const collectionCount = new Set(
-      catalogue.tracks.flatMap(
-        (track) => track.collections ?? [track.collection],
-      ),
-    ).size;
+    const collectionCount = new Set(catalogue.tracks.flatMap((track) => track.collections ?? [track.collection])).size;
     summary.textContent = `${catalogue.counts.uniqueRecordings} unique recordings across ${collectionCount} collections. Search, filter and keep them playing in one endless queue.`;
     const foundationTracks = catalogue.tracks.filter((track) =>
       (track.collections ?? [track.collection]).includes(FOUNDATION_COLLECTION),
@@ -342,11 +342,11 @@ order.addEventListener("change", () => {
 repeat.addEventListener("change", () => {
   queue = [];
 });
-stylesAll.addEventListener("click", () => {
+stylesAll.addEventListener('click', () => {
   for (const input of styleChecks.values()) input.checked = true;
   refresh();
 });
-stylesNone.addEventListener("click", () => {
+stylesNone.addEventListener('click', () => {
   for (const input of styleChecks.values()) input.checked = false;
   refresh();
 });
