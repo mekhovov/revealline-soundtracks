@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 223,
-    "uniqueRecordings": 223,
+    "declaredTracks": 228,
+    "uniqueRecordings": 228,
     "duplicateAliases": 0,
-    "audioBytes": 1117613554
+    "audioBytes": 1138525656
   },
   "tracks": [
     {
@@ -10813,6 +10813,256 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-pivnich-20260927-9641f728/9641f728119b657b46d2e7b668e0d34d511fee75447cc133652cf98106992357.mp3",
         "bytes": 2848859,
         "sha256": "9641f728119b657b46d2e7b668e0d34d511fee75447cc133652cf98106992357"
+      },
+      "aliases": []
+    },
+    {
+      "id": "pisnya-dnya.boyovyy-p1-sun-pisnya-dnya-povna-versiya",
+      "title": "🦅 Бойовий P1-Sun — Пісня дня (повна версія)",
+      "artist": "Пісня дня",
+      "durationSeconds": 261.31737,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@pisnyadnya",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "🦅 Бойовий P1-Sun — Пісня дня (повна версія) by Пісня дня. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@pisnyadnya",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@pisnyadnya",
+        "attribution": "🦅 Бойовий P1-Sun — Пісня дня (повна версія) by Пісня дня. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@pisnyadnya",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Пісня дня - Бойовий P1-Sun.mp3",
+      "archiveId": "pisnya-dnya-20260927-bb25de89",
+      "collection": "Пісня дня",
+      "collections": [
+        "Пісня дня",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-pisnya-dnya-20260927-bb25de89/bb25de89589df1a6623e80f71bc19137abe26b1b14796b3ff75af1a63d96cbd0.mp3",
+        "bytes": 3980495,
+        "sha256": "bb25de89589df1a6623e80f71bc19137abe26b1b14796b3ff75af1a63d96cbd0"
+      },
+      "aliases": []
+    },
+    {
+      "id": "pisnya-dnya.na-krok-poperedu-himn-syl-bezpilotnykh-system-sbs-pisnya-dnya-povna-ve",
+      "title": "🔥 На крок попереду - Гімн Сил безпілотних систем (СБС) — Пісня дня (повна версія)",
+      "artist": "Пісня дня",
+      "durationSeconds": 255.442721,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@pisnyadnya",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "🔥 На крок попереду - Гімн Сил безпілотних систем (СБС) — Пісня дня (повна версія) by Пісня дня. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@pisnyadnya",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@pisnyadnya",
+        "attribution": "🔥 На крок попереду - Гімн Сил безпілотних систем (СБС) — Пісня дня (повна версія) by Пісня дня. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@pisnyadnya",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Пісня дня - На крок попереду - Гімн Сил безпілотних систем (СБС).mp3",
+      "archiveId": "pisnya-dnya-20260927-bb25de89",
+      "collection": "Пісня дня",
+      "collections": [
+        "Пісня дня",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-pisnya-dnya-20260927-bb25de89/a9c490400466be36b63133248b81910c5028ed297ab59f1a8e06609e421da469.mp3",
+        "bytes": 3903859,
+        "sha256": "a9c490400466be36b63133248b81910c5028ed297ab59f1a8e06609e421da469"
+      },
+      "aliases": []
+    },
+    {
+      "id": "pisnya-dnya.pavutyna-malyuka-pisnya-dnya-povna-versiya",
+      "title": "🕸️ \"Павутина\" Малюка — Пісня дня (повна версія)",
+      "artist": "Пісня дня",
+      "durationSeconds": 184.900499,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@pisnyadnya",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "🕸️ \"Павутина\" Малюка — Пісня дня (повна версія) by Пісня дня. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@pisnyadnya",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@pisnyadnya",
+        "attribution": "🕸️ \"Павутина\" Малюка — Пісня дня (повна версія) by Пісня дня. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@pisnyadnya",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Пісня дня - Павутина Малюка.mp3",
+      "archiveId": "pisnya-dnya-20260927-bb25de89",
+      "collection": "Пісня дня",
+      "collections": [
+        "Пісня дня",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-pisnya-dnya-20260927-bb25de89/674925a9446876e6bd6a56e6019b854072e263b7975c3f2a59725f0fc10ea917.mp3",
+        "bytes": 3099933,
+        "sha256": "674925a9446876e6bd6a56e6019b854072e263b7975c3f2a59725f0fc10ea917"
+      },
+      "aliases": []
+    },
+    {
+      "id": "pisnya-dnya.retsept-bavovny-vidpovid-tym-khto-smiyavsya-z-nashoho-leho-pisnya-dnya",
+      "title": "💥 Рецепт Бавовни - Відповідь тим, хто сміявся з нашого \"Лего\" — Пісня дня (повна версія)",
+      "artist": "Пісня дня",
+      "durationSeconds": 287.788118,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@pisnyadnya",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "💥 Рецепт Бавовни - Відповідь тим, хто сміявся з нашого \"Лего\" — Пісня дня (повна версія) by Пісня дня. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@pisnyadnya",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@pisnyadnya",
+        "attribution": "💥 Рецепт Бавовни - Відповідь тим, хто сміявся з нашого \"Лего\" — Пісня дня (повна версія) by Пісня дня. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@pisnyadnya",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Пісня дня - Рецепт Бавовни - Відповідь тим, хто сміявся з нашого Лего.mp3",
+      "archiveId": "pisnya-dnya-20260927-bb25de89",
+      "collection": "Пісня дня",
+      "collections": [
+        "Пісня дня",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-pisnya-dnya-20260927-bb25de89/c63b1118e49911fbf4a0091ea54867817c5dd6ff0a3f0877481ba1544ea8a7d3.mp3",
+        "bytes": 4889833,
+        "sha256": "c63b1118e49911fbf4a0091ea54867817c5dd6ff0a3f0877481ba1544ea8a7d3"
+      },
+      "aliases": []
+    },
+    {
+      "id": "pisnya-dnya.shou-madyara-pisnya-dnya-povna-versiya",
+      "title": "🔥 Шоу Мадяра — Пісня дня (повна версія)",
+      "artist": "Пісня дня",
+      "durationSeconds": 308.593197,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@pisnyadnya",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "🔥 Шоу Мадяра — Пісня дня (повна версія) by Пісня дня. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@pisnyadnya",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@pisnyadnya",
+        "attribution": "🔥 Шоу Мадяра — Пісня дня (повна версія) by Пісня дня. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@pisnyadnya",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Пісня дня - Шоу Мадяра - бадабум, джага-джага.mp3",
+      "archiveId": "pisnya-dnya-20260927-bb25de89",
+      "collection": "Пісня дня",
+      "collections": [
+        "Пісня дня",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-pisnya-dnya-20260927-bb25de89/4befd36da5e444577da89a12e58914695bcaaaf703a2ef788e3a675b2324f2a4.mp3",
+        "bytes": 5037982,
+        "sha256": "4befd36da5e444577da89a12e58914695bcaaaf703a2ef788e3a675b2324f2a4"
       },
       "aliases": []
     }

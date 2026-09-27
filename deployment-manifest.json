@@ -9,23 +9,23 @@
     },
     {
       "path": "audio-volumes.json",
-      "bytes": 32446,
-      "sha256": "085338d5d2ca1a506da857f88ecae150fc72e7f8043e2184f549f42ac1222408"
+      "bytes": 33327,
+      "sha256": "dd6ddb7a57ce49b080a8015facc934b7c72fa8efffb307cb6b5c63c9c47b733e"
     },
     {
       "path": "batches.json",
-      "bytes": 7557,
-      "sha256": "9622503c68beaa6cc5914a9f10266e98b826584e4ee5cf2887d457688c483a68"
+      "bytes": 7657,
+      "sha256": "cb8a0ac2d2519a3ee3d28b264e794a78674d6523a1c3b8f95ada67c73c127267"
     },
     {
       "path": "catalogue.json",
-      "bytes": 475195,
-      "sha256": "44a495dc94d1258f380db37b82debcb4c59ca51b3075a85a8df35012a27a43e5"
+      "bytes": 487611,
+      "sha256": "5a56e762d9dbc8b971ceaf2be255048fcba0a42ab1ab9ea9767cb35779ade68c"
     },
     {
       "path": "CREDITS.md",
-      "bytes": 60400,
-      "sha256": "b2300af804a0865aa2b4d4306d40b8edd41870cd0d3f5c0ec95df5c39dbe9974"
+      "bytes": 61929,
+      "sha256": "42ae174e6ca774cba665220d57a50d2112e860e4fdec46e3c24dfcb5f1a009c6"
     },
     {
       "path": "external-deliveries.json",
