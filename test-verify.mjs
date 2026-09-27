@@ -6,6 +6,7 @@ import { buildManifest, verifyArchive } from "./verify.mjs";
 test("canonical archive preserves migrated identities and release-backed audio", async () => {
   const result = await verifyArchive();
   assert.ok(result.tracks >= 1);
+  assert.equal(result.compatibilityTracks, 70);
   assert.ok(result.audioBytes >= 3_884_999);
   const catalogue = JSON.parse(await readFile("catalogue.json", "utf8"));
   const track = catalogue.tracks.find(({ id }) => id === "wekont.runner2088");
@@ -29,6 +30,18 @@ test("canonical archive preserves migrated identities and release-backed audio",
     assert.ok(recording.artist.trim(), `${recording.id} has an artist`);
     assert.ok(recording.collections.length, `${recording.id} has a collection`);
     assert.ok(recording.tags.length, `${recording.id} has searchable tags`);
+  }
+});
+
+test("legacy archive compatibility objects remain exact canonical catalogue members", async () => {
+  const inventory = JSON.parse(await readFile("inventory.json", "utf8"));
+  const catalogue = JSON.parse(await readFile("catalogue.json", "utf8"));
+  const canonicalHashes = new Set(catalogue.tracks.map(({ audio }) => audio.sha256));
+  assert.equal(inventory.id, "licensed-preview-01");
+  assert.equal(inventory.files.length, 70);
+  for (const file of inventory.files) {
+    assert.equal(file.path, `objects/${file.sha256}.mp3`);
+    assert.ok(canonicalHashes.has(file.sha256));
   }
 });
 

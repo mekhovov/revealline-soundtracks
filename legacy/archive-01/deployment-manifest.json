@@ -1,6 +1,10 @@
 {
-  "format": "revealline-soundtrack-catalogue-deployment.v2",
-  "archiveId": "revealline-soundtracks",
+  "format": "revealline-soundtrack-preview-deployment.v1",
+  "id": "licensed-preview-01",
+  "expected": {
+    "trackCount": 70,
+    "audioBytes": 354986122
+  },
   "files": [
     {
       "path": ".nojekyll",
@@ -8,39 +12,34 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "audio-volumes.json",
-      "bytes": 26651,
-      "sha256": "9f7b2ce63017708196e8985c04856842d2893def25c267be93c02ebe1adf7b24"
+      "path": "CREDITS.md",
+      "bytes": 44099,
+      "sha256": "04d711f986aaeeeef857679999c5dc2e26f87ea539b06b5a2cb2f8d20497f756"
     },
     {
-      "path": "batches.json",
-      "bytes": 6250,
-      "sha256": "1d243207df60febae270b544ab0f6eb2102e346b9348f209db050a23f718069e"
+      "path": "README.md",
+      "bytes": 5447,
+      "sha256": "fdba4c023a41acde647d061416ea78f350cd58376f9e884619885a42bddf0c17"
+    },
+    {
+      "path": "UPLOAD_GUIDE.md",
+      "bytes": 8640,
+      "sha256": "769b1420885b6de42f268c4eb3406ef71e830d90da7c8f906111c9a455b4bc8f"
     },
     {
       "path": "catalogue.json",
-      "bytes": 405967,
-      "sha256": "ba6d802998754707b78635aeaddcb6261172afa904782fedc9fc6abf1ae9fa05"
+      "bytes": 237283,
+      "sha256": "37631eb8038637bf171e072c4d4336bc3ff704e7dbb75e4486017b2aed141281"
     },
     {
-      "path": "CREDITS.md",
-      "bytes": 52605,
-      "sha256": "ee6d61e480003bbb5aeffa34cc679c3a566b336cb279d2dcf11a4cea3763b162"
+      "path": "archive-directory.json",
+      "bytes": 553,
+      "sha256": "fd37ac6d1d05d2f62a5f6de5b07caabb2eb010a16d1b193ddb2367dde58337fd"
     },
     {
       "path": "index.html",
-      "bytes": 10609,
-      "sha256": "607b0851fc02532da4a48ac59b39a8cad0f8de82b4de7dd7aef9ce3acc65734c"
-    },
-    {
-      "path": "intake-browser.mjs",
-      "bytes": 3752,
-      "sha256": "d3653975d2ec788fbe08b95d9b48356bf035be46b506ffd04bee4a3903237a33"
-    },
-    {
-      "path": "intake/package.mjs",
-      "bytes": 9810,
-      "sha256": "b09cae51fbbf1bd7bbdd46d11f3e9f3ae0494861b0670a7c26b1cb82701ab813"
+      "bytes": 4972,
+      "sha256": "3c1ec76d03266639e64123d1455d605036ed80ab33ac04162a8fae1dc31d121e"
     },
     {
       "path": "inventory.json",
@@ -48,89 +47,24 @@
       "sha256": "2706445dafe995f6c4dc044ad5e92031cae60627699f6a72985e67a972064ccd"
     },
     {
-      "path": "legacy/archive-01/CREDITS.md",
-      "bytes": 44099,
-      "sha256": "04d711f986aaeeeef857679999c5dc2e26f87ea539b06b5a2cb2f8d20497f756"
+      "path": "playback-policy.mjs",
+      "bytes": 1772,
+      "sha256": "96b80d084d2a0a1546e820d3fa278a9f2c5220f60e84886d06ab6c699ff4f59b"
     },
     {
-      "path": "legacy/archive-01/deployment-manifest.json",
-      "bytes": 18700,
-      "sha256": "8bdc97bd85ecc103d0564359ec77f956c178fd65df7cdcb8160c423bc150264b"
+      "path": "player.mjs",
+      "bytes": 10420,
+      "sha256": "cdff8ff75dd267219b6dcfdea7aee1420e07d23856208306d65c5661af1a1bd2"
     },
     {
-      "path": "legacy/archive-01/inventory.json",
-      "bytes": 15081,
-      "sha256": "2706445dafe995f6c4dc044ad5e92031cae60627699f6a72985e67a972064ccd"
-    },
-    {
-      "path": "legacy/archive-01/preview-catalogue.json",
+      "path": "preview-catalogue.json",
       "bytes": 103709,
       "sha256": "4d10e0cf9074c6d72c7896db9f6e1c9c8d132a34ac4eca0a7c5deeed6eb82950"
     },
     {
-      "path": "legacy/archive-01/README.md",
-      "bytes": 5447,
-      "sha256": "fdba4c023a41acde647d061416ea78f350cd58376f9e884619885a42bddf0c17"
-    },
-    {
-      "path": "legacy/archive-01/release/assets.json",
-      "bytes": 5555,
-      "sha256": "4686886f2bf9c33e6d5bcbf1bed8bc12d6e32ed723b1ae7c7cb1a4d931b1396d"
-    },
-    {
-      "path": "legacy/archive-01/release/CREDITS.md",
-      "bytes": 44099,
-      "sha256": "04d711f986aaeeeef857679999c5dc2e26f87ea539b06b5a2cb2f8d20497f756"
-    },
-    {
-      "path": "legacy/archive-01/release/preview-catalogue.json",
-      "bytes": 103709,
-      "sha256": "4d10e0cf9074c6d72c7896db9f6e1c9c8d132a34ac4eca0a7c5deeed6eb82950"
-    },
-    {
-      "path": "legacy/archive-01/release/public-albums.json",
-      "bytes": 17311,
-      "sha256": "0811669e2eca9b529ad5d9d00701dbd497e7652b5fb2c82a13ae249962b51842"
-    },
-    {
-      "path": "legacy/archive-01/release/SHA256SUMS",
-      "bytes": 1748,
-      "sha256": "64867b8038030a0da954d1ab20d30d474d30d31a6164f0cf73c6fc1fa691248f"
-    },
-    {
-      "path": "legacy/archive-02/batches.json",
-      "bytes": 4536,
-      "sha256": "1e5f2b0759276e02db034233620d4d5adbfa0c7a29210296776fe08ba95d18bc"
-    },
-    {
-      "path": "legacy/archive-02/catalogue.json",
-      "bytes": 72054,
-      "sha256": "8533c240f3ccb66253f8d5f095ae9ed13177d68a8b6f43d5e1e6662c31b7adfb"
-    },
-    {
-      "path": "legacy/archive-02/CREDITS.md",
-      "bytes": 5380,
-      "sha256": "305514683a9cb9b02581fe5f490733fc3e3d1ff1c7357e8ffaf3c7f9337ac0a0"
-    },
-    {
-      "path": "legacy/archive-02/deployment-manifest.json",
-      "bytes": 22505,
-      "sha256": "17b3b629af7f8272ed0c567961659ad0c1fa77b7fd65f31369d5ee38de19708b"
-    },
-    {
-      "path": "legacy/archive-02/README.md",
-      "bytes": 1042,
-      "sha256": "625cb1285af88bc518142f8f15b341e412ab9482641592571951d93a831a1dab"
-    },
-    {
-      "path": "legacy/archive-02/UPLOAD_GUIDE.md",
-      "bytes": 5239,
-      "sha256": "4fe2274d25cb3c6dc4ad5454b5a3e395998368fd9f66c0c95facd51f00de44f8"
-    },
-    {
-      "path": "legacy/README.md",
-      "bytes": 1114,
-      "sha256": "16f50945886218e45ee6c8e225e0fb8088d28af2861306134205409fc0d93c94"
+      "path": "style.css",
+      "bytes": 6606,
+      "sha256": "02c4a3dc9ac6ae9f59261f964cd7e5833b797a434a5bb7c994b8cb4acfff32bc"
     },
     {
       "path": "objects/00073ec8ed2031e75a72d11e4933fdef45ecd22930f0dbf6117447f9888dd539.mp3",
@@ -481,31 +415,50 @@
       "path": "objects/ffb085ff6ba6a0191a8bba10d71db94822a3c36f703a5fb5f33f4b3d80874c31.mp3",
       "bytes": 12039421,
       "sha256": "ffb085ff6ba6a0191a8bba10d71db94822a3c36f703a5fb5f33f4b3d80874c31"
-    },
-    {
-      "path": "playback-policy.mjs",
-      "bytes": 1981,
-      "sha256": "e2c9279927120aac6d1d5ff86ec6794829b543eb6ad03838eb5238bd9f399160"
-    },
-    {
-      "path": "player.mjs",
-      "bytes": 13004,
-      "sha256": "a52437fe68bb5c2df662858fddd6f6c37056971c4afd167b1d3ac679942c088d"
-    },
-    {
-      "path": "README.md",
-      "bytes": 913,
-      "sha256": "a1d57f66191a6abb3950b14fd060a77d8895798745ff5789e7b71ef834ac8ce4"
-    },
-    {
-      "path": "style.css",
-      "bytes": 8250,
-      "sha256": "6aee06323f925ba5fe8d6467d6416545b478a5dae3f6c0a29667b028fc53025a"
-    },
-    {
-      "path": "UPLOAD_GUIDE.md",
-      "bytes": 3433,
-      "sha256": "2b659983b9cebc9703749a1dab89bd9a59ff065662d930482e90448330c7c920"
     }
-  ]
+  ],
+  "provenance": {
+    "sourcesSha256": "7f738c8291a829eb87d03cc4f3317fe5babcc353845ba42073a9dcce71011982",
+    "productionRegisterSha256": "0173d83d022875c20d45a5c881719dde2a1e9dc121cbd4aa63a53a6d75cac287",
+    "authorizationSha256": "7920db5ae2cfe4e0b13f73c8e2a6ffeb2e09ca65ff20438caebfc0ac20a71da4",
+    "evidence": [
+      {
+        "path": "sources.json",
+        "bytes": 159672,
+        "sha256": "7f738c8291a829eb87d03cc4f3317fe5babcc353845ba42073a9dcce71011982"
+      },
+      {
+        "path": "production-register.json",
+        "bytes": 285022,
+        "sha256": "0173d83d022875c20d45a5c881719dde2a1e9dc121cbd4aa63a53a6d75cac287"
+      },
+      {
+        "path": "preview-authorization.json",
+        "bytes": 10810,
+        "sha256": "7920db5ae2cfe4e0b13f73c8e2a6ffeb2e09ca65ff20438caebfc0ac20a71da4"
+      },
+      {
+        "path": "provenance/license-revalidation.json",
+        "bytes": 30098,
+        "sha256": "3c0f26d136c5a0e36097e0f8ca67afa6d3f26a7f1d1b4a0d0980c5344b762626"
+      },
+      {
+        "path": "provenance/derivatives.json",
+        "bytes": 4798,
+        "sha256": "2d50dd3c92ab2fa3809c88cce5ec24a73c81239a7ce88d3cec03dc281228bdac"
+      },
+      {
+        "path": "provenance/additional-derivatives.json",
+        "bytes": 3572,
+        "sha256": "488ebc1c41159964bec37c63f51ca6d78e49fe1cc685d260248c582bbfb9d96d"
+      },
+      {
+        "path": "provenance/expansion-derivatives.json",
+        "bytes": 55945,
+        "sha256": "89b567003f9c20aa9578b0927eef0e5b6c37e8a561b578b346d99cbf97ad8d0f"
+      }
+    ],
+    "previewCatalogueSha256": "4d10e0cf9074c6d72c7896db9f6e1c9c8d132a34ac4eca0a7c5deeed6eb82950",
+    "userPublicationScope": "Exact licensed MP3 previews; no game-catalogue or listening approval."
+  }
 }

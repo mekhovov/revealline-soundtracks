@@ -1,0 +1,551 @@
+{
+  "format": "revealline-soundtrack-archive-deployment.v1",
+  "archiveId": "revealline-soundtracks-02",
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 5380,
+      "sha256": "305514683a9cb9b02581fe5f490733fc3e3d1ff1c7357e8ffaf3c7f9337ac0a0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1042,
+      "sha256": "625cb1285af88bc518142f8f15b341e412ab9482641592571951d93a831a1dab"
+    },
+    {
+      "path": "UPLOAD_GUIDE.md",
+      "bytes": 5239,
+      "sha256": "4fe2274d25cb3c6dc4ad5454b5a3e395998368fd9f66c0c95facd51f00de44f8"
+    },
+    {
+      "path": "batches.json",
+      "bytes": 4536,
+      "sha256": "1e5f2b0759276e02db034233620d4d5adbfa0c7a29210296776fe08ba95d18bc"
+    },
+    {
+      "path": "batches/electro-cyber-power-audition-20260926/CREDITS.md",
+      "bytes": 403,
+      "sha256": "b3332e68a9a463c316ea1e1dab63572fddab49b7d473064d2e5bfe76b1c4c11a"
+    },
+    {
+      "path": "batches/electro-cyber-power-audition-20260926/README.md",
+      "bytes": 267,
+      "sha256": "8e4099c98a7cc0b2a3ab2892c2f8e20fe2691a2bcbfbd0e2cda2edcb0fb4bbdf"
+    },
+    {
+      "path": "batches/electro-cyber-power-audition-20260926/index.html",
+      "bytes": 878,
+      "sha256": "6d794a65ca8d73213b7224956a2a2beca47a3fb2e039f274247761d2af28e525"
+    },
+    {
+      "path": "batches/electro-cyber-power-audition-20260926/objects/4ea29c2020d33963d801f508ca3d200d13639a34e5fbd052854233021c1d5f42.mp3",
+      "bytes": 5516662,
+      "sha256": "4ea29c2020d33963d801f508ca3d200d13639a34e5fbd052854233021c1d5f42"
+    },
+    {
+      "path": "batches/electro-hit-the-womp-audition-20260926/CREDITS.md",
+      "bytes": 526,
+      "sha256": "14a54124662853e07fd4923b9e8f9626b196dba2145ed0dd760503314902a765"
+    },
+    {
+      "path": "batches/electro-hit-the-womp-audition-20260926/README.md",
+      "bytes": 270,
+      "sha256": "7d896e77eece6aaf7a6d2166a1069fa95f3b895c26c5790ae6a71dcfaf8a394c"
+    },
+    {
+      "path": "batches/electro-hit-the-womp-audition-20260926/index.html",
+      "bytes": 933,
+      "sha256": "0657bca696b428d86c8fd9c430cb462ec420aad5069399730c19f9c1d47419da"
+    },
+    {
+      "path": "batches/electro-hit-the-womp-audition-20260926/objects/4aaf650c7982fc6e15fe96062a6f6e02ef6928a249cbecced4e5c17a7c43c221.mp3",
+      "bytes": 5805442,
+      "sha256": "4aaf650c7982fc6e15fe96062a6f6e02ef6928a249cbecced4e5c17a7c43c221"
+    },
+    {
+      "path": "batches/electro-hot-roadway-audition-20260926/CREDITS.md",
+      "bytes": 294,
+      "sha256": "449ece50f6352a94661b1bea2ecd2022aba901dc92feeaae462f6f35c0b10873"
+    },
+    {
+      "path": "batches/electro-hot-roadway-audition-20260926/README.md",
+      "bytes": 313,
+      "sha256": "6a4b17e82fd561f24e479ca845cf5e6bfd07fc1129aed648e557206f28dfb3d3"
+    },
+    {
+      "path": "batches/electro-hot-roadway-audition-20260926/index.html",
+      "bytes": 880,
+      "sha256": "7a6583f904f930b966fffb81a7aa1f8e9bf8ed308921d3fc71e107b6c81c969c"
+    },
+    {
+      "path": "batches/electro-hot-roadway-audition-20260926/objects/7c9f39fa14200745e26f7af5ee8fa086a7abda70c74aa6af090830b06036a5e2.mp3",
+      "bytes": 3841580,
+      "sha256": "7c9f39fa14200745e26f7af5ee8fa086a7abda70c74aa6af090830b06036a5e2"
+    },
+    {
+      "path": "batches/electro-neon-chase-audition-20260926/CREDITS.md",
+      "bytes": 270,
+      "sha256": "f3cf5cdf867b0ffa170cca6a475b46502cc577c03729790e0e73013171c9c792"
+    },
+    {
+      "path": "batches/electro-neon-chase-audition-20260926/README.md",
+      "bytes": 249,
+      "sha256": "4bedb08bb142629f37cf56da4a173e48fb34f2080d176bd00b7e01f1c087b91e"
+    },
+    {
+      "path": "batches/electro-neon-chase-audition-20260926/index.html",
+      "bytes": 800,
+      "sha256": "a71432002ad2e5e9707231cd84c706b0c98983e9a477b609ab36fead9db9d067"
+    },
+    {
+      "path": "batches/electro-neon-chase-audition-20260926/objects/979f4c72390bfe142f588e0cb8e87b34b5edb8db7c2824443b8767ad8121a598.mp3",
+      "bytes": 8383571,
+      "sha256": "979f4c72390bfe142f588e0cb8e87b34b5edb8db7c2824443b8767ad8121a598"
+    },
+    {
+      "path": "batches/electro-racing-bouncer-audition-20260926/CREDITS.md",
+      "bytes": 308,
+      "sha256": "a6aefebc3c2cb73db3e671146559257f258e166127c49306997311b17c91078b"
+    },
+    {
+      "path": "batches/electro-racing-bouncer-audition-20260926/README.md",
+      "bytes": 290,
+      "sha256": "95c12c3496484f36c6116c14f891253203383ef6d2979c6c59a6ae9c1c4bb1da"
+    },
+    {
+      "path": "batches/electro-racing-bouncer-audition-20260926/index.html",
+      "bytes": 862,
+      "sha256": "b599513158b1c51414b9d2c150c4c7ed9cb367092bdcbe183a9246dc97ed3bc3"
+    },
+    {
+      "path": "batches/electro-racing-bouncer-audition-20260926/objects/c6a1df8144d57402088198bdb2032dc682fde90e6946796931ee3e07053cc64e.mp3",
+      "bytes": 3753476,
+      "sha256": "c6a1df8144d57402088198bdb2032dc682fde90e6946796931ee3e07053cc64e"
+    },
+    {
+      "path": "batches/electro-racing-starshooter-audition-20260926/CREDITS.md",
+      "bytes": 308,
+      "sha256": "de1c9bac8753b806e362624c8dd45ada2e3dd2ab64bbb8672d5cfbf39281636a"
+    },
+    {
+      "path": "batches/electro-racing-starshooter-audition-20260926/README.md",
+      "bytes": 283,
+      "sha256": "b6493a2a28ee7aa416797b5a4c7bdcd5fb938a54e67ff47918a667537d56e309"
+    },
+    {
+      "path": "batches/electro-racing-starshooter-audition-20260926/index.html",
+      "bytes": 856,
+      "sha256": "6cbc4530e6dd7a907efd8ba383a3c93bebcb8c7c562befff039118ab50bc0fa5"
+    },
+    {
+      "path": "batches/electro-racing-starshooter-audition-20260926/objects/c6b7641b556e7f245681bee6a162703725c58bf591ba4ba548492f35a0d4486e.mp3",
+      "bytes": 2732726,
+      "sha256": "c6b7641b556e7f245681bee6a162703725c58bf591ba4ba548492f35a0d4486e"
+    },
+    {
+      "path": "batches/electro-racing-techno-drive-audition-20260926/CREDITS.md",
+      "bytes": 319,
+      "sha256": "f6ec804d64b4cf5c91249d96ec50038f77ccad07382f953bcfd085b120589bc8"
+    },
+    {
+      "path": "batches/electro-racing-techno-drive-audition-20260926/README.md",
+      "bytes": 252,
+      "sha256": "95bd42bd9fe715d2ddfc836d7bca4651e34d7285a44ce6d40561076077db1e6e"
+    },
+    {
+      "path": "batches/electro-racing-techno-drive-audition-20260926/index.html",
+      "bytes": 825,
+      "sha256": "235bce9776e1da4238b8763a77a5be38c21513a85c89728926b12be16a699469"
+    },
+    {
+      "path": "batches/electro-racing-techno-drive-audition-20260926/objects/2188a84b5628dbdf419126dbc243fbae0739b1d0327b1e22831852a954dc2290.mp3",
+      "bytes": 2254574,
+      "sha256": "2188a84b5628dbdf419126dbc243fbae0739b1d0327b1e22831852a954dc2290"
+    },
+    {
+      "path": "batches/electro-ripped-apart-audition-20260926/CREDITS.md",
+      "bytes": 350,
+      "sha256": "cb2ec994fa371e037f1ad2b2889c6a28f5cb2162a4852639992d053ac6cc884f"
+    },
+    {
+      "path": "batches/electro-ripped-apart-audition-20260926/README.md",
+      "bytes": 336,
+      "sha256": "9d339c80ce74234485439d39072d4778008e57cb2193681e62d5c97b99a241b6"
+    },
+    {
+      "path": "batches/electro-ripped-apart-audition-20260926/index.html",
+      "bytes": 938,
+      "sha256": "f03e2bf8c51a6e8ffbadd16ece2535162b3a66168a0ba47a5029fb5415f4c728"
+    },
+    {
+      "path": "batches/electro-ripped-apart-audition-20260926/objects/0b2881ef5ee345decc5361e6b5566db8738be6b18ba8fb55e90e683199b9a17e.mp3",
+      "bytes": 6313822,
+      "sha256": "0b2881ef5ee345decc5361e6b5566db8738be6b18ba8fb55e90e683199b9a17e"
+    },
+    {
+      "path": "batches/metal-deep-space-audition-20260926/CREDITS.md",
+      "bytes": 253,
+      "sha256": "a50caba3e1592de1fb6bf82c9b947399743ef15f9ee9ba56a5f7f45e7abbae89"
+    },
+    {
+      "path": "batches/metal-deep-space-audition-20260926/README.md",
+      "bytes": 236,
+      "sha256": "15bcbdda62fbd75b9d7a867097f6e180c0d61d1927a4f833b53f0ae03ec8d5ac"
+    },
+    {
+      "path": "batches/metal-deep-space-audition-20260926/index.html",
+      "bytes": 813,
+      "sha256": "152e22ba0897904e18fa570c4975c804fcf0cea04426be175198cf788be99985"
+    },
+    {
+      "path": "batches/metal-deep-space-audition-20260926/objects/d2e43220233114d41ad940791fc3d5a014f7c48074b63578d5e00cedc360e28b.mp3",
+      "bytes": 8395052,
+      "sha256": "d2e43220233114d41ad940791fc3d5a014f7c48074b63578d5e00cedc360e28b"
+    },
+    {
+      "path": "batches/metal-industrial-metallic-mistress-audition-20260926/CREDITS.md",
+      "bytes": 327,
+      "sha256": "5d4735e628b4317a2cb69f6109f9b580e79737c2a58b40f07c73157e1855cb25"
+    },
+    {
+      "path": "batches/metal-industrial-metallic-mistress-audition-20260926/README.md",
+      "bytes": 255,
+      "sha256": "7c3189185e0e04f76ca28b71304698055739d3e352922eb467e77b0b7cb07406"
+    },
+    {
+      "path": "batches/metal-industrial-metallic-mistress-audition-20260926/index.html",
+      "bytes": 835,
+      "sha256": "ca9c2392b0099d67c96111afcfae98bfaff65b40bc411284f8f82c161af111fa"
+    },
+    {
+      "path": "batches/metal-industrial-metallic-mistress-audition-20260926/objects/4d807399b7ceb8d45c79c44337769d305db6fda690072ecdb5eed7e99e06c1c0.mp3",
+      "bytes": 9588077,
+      "sha256": "4d807399b7ceb8d45c79c44337769d305db6fda690072ecdb5eed7e99e06c1c0"
+    },
+    {
+      "path": "batches/metal-red-dwarf-audition-20260926/CREDITS.md",
+      "bytes": 322,
+      "sha256": "996d089e4726310aff41cfb2fe318a0be537830d28e45b61c40672d81f4d96b3"
+    },
+    {
+      "path": "batches/metal-red-dwarf-audition-20260926/README.md",
+      "bytes": 256,
+      "sha256": "136dc5db4bd2dfdfe6227cab1e613e66556b43f1c5c6892c1d9301f9b3cae876"
+    },
+    {
+      "path": "batches/metal-red-dwarf-audition-20260926/index.html",
+      "bytes": 831,
+      "sha256": "90db72828cb6d0ec23ce92d3a3d2953581806219d9f7cfc99d810b068b2e57f1"
+    },
+    {
+      "path": "batches/metal-red-dwarf-audition-20260926/objects/76d2213342b6c6260f5410d792937345ad6730e05963643de81672b88f96a3d8.mp3",
+      "bytes": 6978092,
+      "sha256": "76d2213342b6c6260f5410d792937345ad6730e05963643de81672b88f96a3d8"
+    },
+    {
+      "path": "batches/metal-sandblaster-audition-20260926/CREDITS.md",
+      "bytes": 366,
+      "sha256": "406982a3a55d76b62cf3bdd58e6f57df7745eeb176bc55ba5ca5a1a9f3356037"
+    },
+    {
+      "path": "batches/metal-sandblaster-audition-20260926/README.md",
+      "bytes": 284,
+      "sha256": "04b35b4358b84febc4d553578195dcebe15a9743a8a170d72b813d268e1f1ef1"
+    },
+    {
+      "path": "batches/metal-sandblaster-audition-20260926/index.html",
+      "bytes": 883,
+      "sha256": "d3843abdfbe8659b597cad2e244052c3b1da623681d8c43b3abac6cdc1f23c58"
+    },
+    {
+      "path": "batches/metal-sandblaster-audition-20260926/objects/1ae7c00633f1bbcbfcb2334be9462699e12219d58779c3c9dd284386af5fe24c.mp3",
+      "bytes": 3821861,
+      "sha256": "1ae7c00633f1bbcbfcb2334be9462699e12219d58779c3c9dd284386af5fe24c"
+    },
+    {
+      "path": "batches/metal-space-odyssey-audition-20260926/CREDITS.md",
+      "bytes": 334,
+      "sha256": "9fd81781b159b5bcbfa052e76c6b338c6d95d6039f122e03f93b24727517980a"
+    },
+    {
+      "path": "batches/metal-space-odyssey-audition-20260926/README.md",
+      "bytes": 260,
+      "sha256": "12d76be8b9fb1deb086207d90139e479d7643f16d8939d19dee3da6cea7cef41"
+    },
+    {
+      "path": "batches/metal-space-odyssey-audition-20260926/index.html",
+      "bytes": 843,
+      "sha256": "5cc4d8efba68343823aa1026fc56d34725d41961e08db688e61c770cff63aac8"
+    },
+    {
+      "path": "batches/metal-space-odyssey-audition-20260926/objects/01dc95d198c0fcda7cf4dc2c4fb6d125b2153191efc342168592c05a7be5bc85.mp3",
+      "bytes": 7938092,
+      "sha256": "01dc95d198c0fcda7cf4dc2c4fb6d125b2153191efc342168592c05a7be5bc85"
+    },
+    {
+      "path": "batches/metal-stellar-confrontation-audition-20260926/CREDITS.md",
+      "bytes": 358,
+      "sha256": "13890f3ab6434c52ff78bf1fa41b2a2578b8b22d20b33f97a6e0b1d61100f8cc"
+    },
+    {
+      "path": "batches/metal-stellar-confrontation-audition-20260926/README.md",
+      "bytes": 241,
+      "sha256": "19415e474f51afc56b50073d4f6069ab966505db016e21bda9ad18c006c7f25a"
+    },
+    {
+      "path": "batches/metal-stellar-confrontation-audition-20260926/index.html",
+      "bytes": 840,
+      "sha256": "337502e0127c92842436f25b6ea468b3658ffb81e319909d48d920487cd83f49"
+    },
+    {
+      "path": "batches/metal-stellar-confrontation-audition-20260926/objects/ac8f7bff8a3ec6815601000a550be0ac7bf5aaaa27aa4e5ba0146db90eec7876.mp3",
+      "bytes": 7105580,
+      "sha256": "ac8f7bff8a3ec6815601000a550be0ac7bf5aaaa27aa4e5ba0146db90eec7876"
+    },
+    {
+      "path": "batches/synth-blue-beat-cyberpunk-audition-20260926/CREDITS.md",
+      "bytes": 649,
+      "sha256": "c105b2d14ad850ca58881a4911179e9bc575991922c7126da44bcb4c51bab906"
+    },
+    {
+      "path": "batches/synth-blue-beat-cyberpunk-audition-20260926/README.md",
+      "bytes": 258,
+      "sha256": "915afa3b6bb383d37288c1920ed0d024d083d497f3fe7317d0edf219f7b9ba2b"
+    },
+    {
+      "path": "batches/synth-blue-beat-cyberpunk-audition-20260926/index.html",
+      "bytes": 987,
+      "sha256": "36ce9281561ea7049a91db5409efc8f73df705c5f846af9ef531c4a1e9bb9504"
+    },
+    {
+      "path": "batches/synth-blue-beat-cyberpunk-audition-20260926/objects/2982c8a431aea2e2a16a2ba396bd35b9cc0ab9880261ad5c48b2f5059b3891fb.mp3",
+      "bytes": 5943722,
+      "sha256": "2982c8a431aea2e2a16a2ba396bd35b9cc0ab9880261ad5c48b2f5059b3891fb"
+    },
+    {
+      "path": "batches/synth-metal-last-stand-audition-20260926/CREDITS.md",
+      "bytes": 340,
+      "sha256": "dc4012f19d1204425bf3d7dba28eb9b3dbf9482b8e0e7c2b0439bb8820865ac1"
+    },
+    {
+      "path": "batches/synth-metal-last-stand-audition-20260926/README.md",
+      "bytes": 266,
+      "sha256": "533a9f7e0e73d0746f09a26809d2e61e5eda2a4f3a06e0a750a25f8ae068b82f"
+    },
+    {
+      "path": "batches/synth-metal-last-stand-audition-20260926/index.html",
+      "bytes": 851,
+      "sha256": "a18f8011b7b58482470c01f938325ab73b67214816d69cf07dcd89faab5bf9f2"
+    },
+    {
+      "path": "batches/synth-metal-last-stand-audition-20260926/objects/ee3bed8e7c91ab050ccd32bd469646153ffb6ead81d2d19f945c8384eb9cb99e.mp3",
+      "bytes": 2962988,
+      "sha256": "ee3bed8e7c91ab050ccd32bd469646153ffb6ead81d2d19f945c8384eb9cb99e"
+    },
+    {
+      "path": "batches/synth-runner2088-audition-20260925/CREDITS.md",
+      "bytes": 378,
+      "sha256": "86fca07e70a6a09d499dbcbaee1bb937122cf818e0304d92bb4d93eb264625cc"
+    },
+    {
+      "path": "batches/synth-runner2088-audition-20260925/README.md",
+      "bytes": 209,
+      "sha256": "6ff4790c7b3578c592b23bbed138cd82bad7025f8946abacaf19a3b7ff2f5a22"
+    },
+    {
+      "path": "batches/synth-runner2088-audition-20260925/index.html",
+      "bytes": 1134,
+      "sha256": "6869850098804120c1e1b16f1758b7efc3a8975d40405d49c251ecdf73f3c746"
+    },
+    {
+      "path": "batches/synth-runner2088-audition-20260925/objects/9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9.mp3",
+      "bytes": 3884999,
+      "sha256": "9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9"
+    },
+    {
+      "path": "batches/synth-sky-trance-audition-20260926/CREDITS.md",
+      "bytes": 484,
+      "sha256": "7e930e9547e8927c865e6c86644dae98bec658fe90b272e1db21b7f76d1b0f90"
+    },
+    {
+      "path": "batches/synth-sky-trance-audition-20260926/README.md",
+      "bytes": 256,
+      "sha256": "9dad05cf4f4489087684bb98f0c334efd60ddf881c9390facfc4c6abcf8852b2"
+    },
+    {
+      "path": "batches/synth-sky-trance-audition-20260926/index.html",
+      "bytes": 909,
+      "sha256": "d6ce9160d04458bea662316386a7bff177087970fe0b92618318059c5a1a0155"
+    },
+    {
+      "path": "batches/synth-sky-trance-audition-20260926/objects/a19d839209d6e84d2124fa9ecfe85d649a07ca7242b5bb2ccb656da1c92297f2.mp3",
+      "bytes": 7465719,
+      "sha256": "a19d839209d6e84d2124fa9ecfe85d649a07ca7242b5bb2ccb656da1c92297f2"
+    },
+    {
+      "path": "batches/synth-space-shooter-house-audition-20260927/CREDITS.md",
+      "bytes": 1808,
+      "sha256": "118bd6aad13a1c3c0e5b7d79a2f509f5895211e4f65d7240e02eff5dd57babc8"
+    },
+    {
+      "path": "batches/synth-space-shooter-house-audition-20260927/README.md",
+      "bytes": 1740,
+      "sha256": "75beaaf09ffe4d818b7028836ee532a23339bc60ce7efd6ea4b207730399847a"
+    },
+    {
+      "path": "batches/synth-space-shooter-house-audition-20260927/index.html",
+      "bytes": 4323,
+      "sha256": "563ece23d5c56ff974aba06665d3c0b97d914d7fad422ab4ec9e2657a0b92fed"
+    },
+    {
+      "path": "batches/synth-space-shooter-house-audition-20260927/objects/08d9699097c2ef32b5b4727f081df47dff04accca2a8010d0a66e8dd1151d126.mp3",
+      "bytes": 4061342,
+      "sha256": "08d9699097c2ef32b5b4727f081df47dff04accca2a8010d0a66e8dd1151d126"
+    },
+    {
+      "path": "batches/synth-space-shooter-house-audition-20260927/objects/61933057366cb3fc36296d23530359516fda1bf0da7d39f3a19c0fe89be87b37.mp3",
+      "bytes": 3449248,
+      "sha256": "61933057366cb3fc36296d23530359516fda1bf0da7d39f3a19c0fe89be87b37"
+    },
+    {
+      "path": "batches/synth-space-shooter-house-audition-20260927/objects/7b6222864ce408478d4552e6fb468366484546f77a3fd751f3cd0dfa07e6a26c.mp3",
+      "bytes": 3192734,
+      "sha256": "7b6222864ce408478d4552e6fb468366484546f77a3fd751f3cd0dfa07e6a26c"
+    },
+    {
+      "path": "batches/synth-space-shooter-house-audition-20260927/objects/ac703278d33c102ec4d404b088c5879a978f171cc3a52ec19215bcfec735d173.mp3",
+      "bytes": 3377061,
+      "sha256": "ac703278d33c102ec4d404b088c5879a978f171cc3a52ec19215bcfec735d173"
+    },
+    {
+      "path": "batches/synthwave-lost-snow-audition-20260926/CREDITS.md",
+      "bytes": 335,
+      "sha256": "a1f766c6be977ad7b5bb346bc4037ba5a3d7a0aea932095bc0990a1998a8c2a9"
+    },
+    {
+      "path": "batches/synthwave-lost-snow-audition-20260926/README.md",
+      "bytes": 308,
+      "sha256": "b53f2ee6f02ffda378000f1f083efd6186fa3c7b331abb5e256e2bae5ec7cd5a"
+    },
+    {
+      "path": "batches/synthwave-lost-snow-audition-20260926/index.html",
+      "bytes": 898,
+      "sha256": "3ba3e1bcadcabed664b62db916e379fbae107a1a291bac3efb89a7161284b14b"
+    },
+    {
+      "path": "batches/synthwave-lost-snow-audition-20260926/objects/91b75697c450b9d107ea0b66781bb9c3f736104476437c27e6295afbd409dc1f.mp3",
+      "bytes": 5521964,
+      "sha256": "91b75697c450b9d107ea0b66781bb9c3f736104476437c27e6295afbd409dc1f"
+    },
+    {
+      "path": "batches/synthwave-type-audition-20260926/CREDITS.md",
+      "bytes": 278,
+      "sha256": "2e40b93a0022b26c8235765a1ae07b1490c379dd561daa7fe7471fff945eaf4f"
+    },
+    {
+      "path": "batches/synthwave-type-audition-20260926/README.md",
+      "bytes": 226,
+      "sha256": "2add97b35f4aaba4f41d1bfd9385557d48bed9484c7a6b47a50022a3dc70152c"
+    },
+    {
+      "path": "batches/synthwave-type-audition-20260926/index.html",
+      "bytes": 777,
+      "sha256": "054518cdd5c5a36cdb1e7ded1c2f7f18e5a7946c703ea89f331c29f2cf37850c"
+    },
+    {
+      "path": "batches/synthwave-type-audition-20260926/objects/5e9521d353af87cb357e5077eec619fe3db10dc8a55ebf2978593285abc639ad.mp3",
+      "bytes": 3622954,
+      "sha256": "5e9521d353af87cb357e5077eec619fe3db10dc8a55ebf2978593285abc639ad"
+    },
+    {
+      "path": "batches/trench-orderly-20260927/CREDITS.md",
+      "bytes": 2025,
+      "sha256": "eec6bbceb596f7e2af8d649602b1f54615229d6f408d314151bc2edbc9a4c01d"
+    },
+    {
+      "path": "batches/trench-orderly-20260927/README.md",
+      "bytes": 142,
+      "sha256": "66e602ca5940b58f5697ab66b0cb3f3ade880fc28326a4b41e6fc38fcc15f93f"
+    },
+    {
+      "path": "batches/trench-orderly-20260927/index.html",
+      "bytes": 2894,
+      "sha256": "7f6771e280382c43557a6d4a89d27ac68af7eb0ea90c29b3a015a73aa5dfaf95"
+    },
+    {
+      "path": "batches/trench-orderly-20260927/objects/1d2614956debbbd54ce30bca449315f7771e84ac487d525333e23630ed54d9e3.mp3",
+      "bytes": 2817204,
+      "sha256": "1d2614956debbbd54ce30bca449315f7771e84ac487d525333e23630ed54d9e3"
+    },
+    {
+      "path": "batches/trench-orderly-20260927/objects/515f5806573a0737f3c609b48895a09137289e1510e673b66ecca72c574f7aa2.mp3",
+      "bytes": 2947481,
+      "sha256": "515f5806573a0737f3c609b48895a09137289e1510e673b66ecca72c574f7aa2"
+    },
+    {
+      "path": "batches/trench-orderly-20260927/objects/5e7b33426088ade0a9345102d3ceb1ec38c43c09535e2288c6e1e032e1cee5a0.mp3",
+      "bytes": 2070360,
+      "sha256": "5e7b33426088ade0a9345102d3ceb1ec38c43c09535e2288c6e1e032e1cee5a0"
+    },
+    {
+      "path": "batches/trench-orderly-20260927/objects/8ddb7eb4f274fa64e1ccc8f438f6483d80b755a04cc903079fd13474db11f0c7.mp3",
+      "bytes": 2851069,
+      "sha256": "8ddb7eb4f274fa64e1ccc8f438f6483d80b755a04cc903079fd13474db11f0c7"
+    },
+    {
+      "path": "batches/trench-orderly-20260927/objects/9d7e478a3682783da745f96b6c44864c2639a468bce7a24e8f5a8e7c6bf70e77.mp3",
+      "bytes": 2771102,
+      "sha256": "9d7e478a3682783da745f96b6c44864c2639a468bce7a24e8f5a8e7c6bf70e77"
+    },
+    {
+      "path": "batches/trench-orderly-20260927/objects/9eef10e0b20b4ef35341fd9f906a615a9f94c327ec7e57d25c939b13b9ec98f9.mp3",
+      "bytes": 3314294,
+      "sha256": "9eef10e0b20b4ef35341fd9f906a615a9f94c327ec7e57d25c939b13b9ec98f9"
+    },
+    {
+      "path": "batches/trench-orderly-20260927/objects/f8d1c2797031fdf2f673c798b0bb19b0ff0a0ba72212e9d8f577c5b625db0c6e.mp3",
+      "bytes": 2693052,
+      "sha256": "f8d1c2797031fdf2f673c798b0bb19b0ff0a0ba72212e9d8f577c5b625db0c6e"
+    },
+    {
+      "path": "catalogue.json",
+      "bytes": 72054,
+      "sha256": "8533c240f3ccb66253f8d5f095ae9ed13177d68a8b6f43d5e1e6662c31b7adfb"
+    },
+    {
+      "path": "index.html",
+      "bytes": 9578,
+      "sha256": "0e86f2e6328bc82d4e1be8f1a5494058ce253f170d62fb246f14c9949e5230a1"
+    },
+    {
+      "path": "intake-browser.mjs",
+      "bytes": 3700,
+      "sha256": "f27fc34196c01df2928711207afb0c0eaf0f9edabe226bf0e81a438cb8d2cbcf"
+    },
+    {
+      "path": "intake/package.mjs",
+      "bytes": 9537,
+      "sha256": "b16ae55fa27f4d004c2e3651d5af2c5efa42e1e17db53e50162c1b21ad1c9e8c"
+    },
+    {
+      "path": "playback-policy.mjs",
+      "bytes": 1772,
+      "sha256": "96b80d084d2a0a1546e820d3fa278a9f2c5220f60e84886d06ab6c699ff4f59b"
+    },
+    {
+      "path": "player.mjs",
+      "bytes": 10556,
+      "sha256": "f9704f556722514b4942bdc4449af02c0f7ff1d50bde738ef651fb2ee2423b22"
+    },
+    {
+      "path": "style.css",
+      "bytes": 7548,
+      "sha256": "76477ec25491812410b2faba8c006bb065d5228a8fe439844ac2a73c3f081526"
+    }
+  ]
+}
