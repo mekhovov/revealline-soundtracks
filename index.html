@@ -17,7 +17,7 @@
       <p class="eyebrow">REVEALLINE / SOUNDTRACK SIGNAL</p>
       <h1>Every track.<br><span>One player.</span></h1>
       <p class="intro" id="catalogue-summary">Loading the complete published soundtrack catalogue…</p>
-      <p class="notice">This is the canonical RevealLine soundtrack library. Exact MP3s live in immutable audio volumes; publication remains separate from listening approval and game defaults.</p>
+      <p class="notice">This is the canonical RevealLine soundtrack library. Exact MP3s live in versioned, hash-addressed audio volumes; publication remains separate from listening approval and game defaults.</p>
       <nav>
         <a href="#recordings">Browse all songs</a>
         <a href="#add-music">Add music</a>
@@ -227,7 +227,7 @@
             duplicate hashes and catalogue output.
           </li>
           <li>
-            After merge, automation publishes the immutable audio volume and
+            After merge, automation publishes and verifies the versioned audio volume and
             deploys Pages. The recording then appears here and in the game.
           </li>
         </ol>
@@ -240,7 +240,7 @@
 
     <footer>
       <p>Third-party recordings remain credited to their creators. Public availability is separate from listening approval and from the game’s standard playlists.</p>
-      <p>Audio uses immutable SHA-256 object paths. The player requests only the chosen recording; it does not download the whole catalogue.</p>
+      <p>Audio uses versioned SHA-256 object paths. The player requests only the chosen recording; it does not download the whole catalogue.</p>
     </footer>
   </main>
 </body>

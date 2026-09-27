@@ -250,7 +250,8 @@ async function loadCatalogue() {
       choice.append(input, document.createTextNode(label));
       stylesHost.append(choice);
     }
-    summary.textContent = `${catalogue.counts.uniqueRecordings} unique recordings across ${catalogue.sources.length} collections. Search, filter and keep them playing in one endless queue.`;
+    const collectionCount = new Set(catalogue.tracks.flatMap((track) => track.collections ?? [track.collection])).size;
+    summary.textContent = `${catalogue.counts.uniqueRecordings} unique recordings across ${collectionCount} collections. Search, filter and keep them playing in one endless queue.`;
     refresh();
     const requested = new URL(location.href).searchParams.get("track");
     const requestedRow = rows.find((row) => row.track.id === requested);

@@ -74,4 +74,4 @@ CC BY-SA requires `--derivative-notice`. Use `--rights-evidence` when the permis
 
 ## Storage model
 
-Git stores the catalogue, rights metadata, UI, tests and automation. MP3s are release assets named `<sha256>.mp3`, grouped into immutable audio volumes. This keeps clones and Pages deployments small while allowing hundreds of future songs. The player requests only the current recording, supports byte-range seeking, and never downloads the whole library.
+Git stores the catalogue, rights metadata, UI, tests and automation. MP3s are release assets named `<sha256>.mp3`, grouped into versioned, hash-addressed audio volumes. This keeps clones and Pages deployments small while allowing hundreds of future songs. The player requests only the current recording, supports byte-range seeking, and never downloads the whole library.
