@@ -1850,3 +1850,9 @@ Licence: Unknown — uploader-confirmed rights
 Весела пісенька українського дрона. Прем'єра 2024. Іван Ганзера. by Іван Ганзера. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@ivanganzeramusic
 
 Licence: Unknown — uploader-confirmed rights
+
+## Усюди, де не бачу, і-бачу хробаків. Знимкують Птахи Мадяра.
+
+Усюди, де не бачу, і-бачу хробаків. Знимкують Птахи Мадяра. by МАДЯР. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MAGYARBIRDS
+
+Licence: Unknown — uploader-confirmed rights
