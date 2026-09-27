@@ -1627,3 +1627,21 @@ Licence: Unknown — uploader-confirmed rights
 Гайs — ППО (Сам не літаю і москалям не даю) by Гайs. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@GuysUA
 
 Licence: Unknown — uploader-confirmed rights
+
+## МАДЯР
+
+Експрес-доставка квитків до кобзона на концерт. Знімкують пілоти 414 бригади «Птахи Мадяра». by МАДЯР. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MAGYARBIRDS
+
+Licence: Unknown — uploader-confirmed rights
+
+«Не хробаки, а тупо йоблики, ваша страна вас зняла з обліку». by МАДЯР. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MAGYARBIRDS
+
+Licence: Unknown — uploader-confirmed rights
+
+Пташині коломийки про хробаків.Трек «Коломийки», текст Bloger (414 обр ПМ) by МАДЯР. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MAGYARBIRDS
+
+Licence: Unknown — uploader-confirmed rights
+
+Нелегка доля хробака. Трек «Жест доброї волі» (автор Мос) by МАДЯР. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MAGYARBIRDS
+
+Licence: Unknown — uploader-confirmed rights
