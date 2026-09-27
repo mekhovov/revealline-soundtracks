@@ -1140,6 +1140,18 @@
           "bytes": 3692480
         }
       ]
+    },
+    {
+      "id": "audio-postman-20260927-0ebf9e84",
+      "releaseTag": "audio-postman-20260927-0ebf9e84",
+      "recordings": 1,
+      "audioBytes": 2179335,
+      "assets": [
+        {
+          "sha256": "0ebf9e84567743acd38453df6d8ce3d3800987ca7aa13a3374524e24902c3e83",
+          "bytes": 2179335
+        }
+      ]
     }
   ]
 }
