@@ -1651,3 +1651,29 @@ Licence: Unknown — uploader-confirmed rights
 Мос - Клоун by Мос. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@Mos_18000
 
 Licence: Unknown — uploader-confirmed rights
+
+## НЕЙРОННИЙ ГУПАЧ
+
+НЕЙРОННИЙ ГУПАЧ - Літали-літали (полька) by НЕЙРОННИЙ ГУПАЧ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@gupach
+
+Licence: Unknown — uploader-confirmed rights
+
+НЕЙРОННИЙ ГУПАЧ - Літали-літали II by НЕЙРОННИЙ ГУПАЧ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@gupach
+
+Licence: Unknown — uploader-confirmed rights
+
+НЕЙРОННИЙ ГУПАЧ - Літали-літали by НЕЙРОННИЙ ГУПАЧ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@gupach
+
+Licence: Unknown — uploader-confirmed rights
+
+НЕЙРОННИЙ ГУПАЧ - Пісенька Мадяра з мультфільму про бармалеїв by НЕЙРОННИЙ ГУПАЧ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@gupach
+
+Licence: Unknown — uploader-confirmed rights
+
+НЕЙРОННИЙ ГУПАЧ - Повітряна тривога by НЕЙРОННИЙ ГУПАЧ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@gupach
+
+Licence: Unknown — uploader-confirmed rights
+
+НЕЙРОННИЙ ГУПАЧ - Хробаки (розширена джага-джага) by НЕЙРОННИЙ ГУПАЧ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@gupach
+
+Licence: Unknown — uploader-confirmed rights

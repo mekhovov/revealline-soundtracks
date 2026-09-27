@@ -924,6 +924,38 @@
           "bytes": 3003695
         }
       ]
+    },
+    {
+      "id": "audio-neyronnyy-hupach-20260927-0e70cd80",
+      "releaseTag": "audio-neyronnyy-hupach-20260927-0e70cd80",
+      "recordings": 6,
+      "audioBytes": 12878061,
+      "assets": [
+        {
+          "sha256": "0e70cd808403487bce3b3898a3798099fd9b7b1e4477937603c816e7f3591b9c",
+          "bytes": 2484053
+        },
+        {
+          "sha256": "a7326eabe93d54a2d8606e978517034ba242fe30d39973fb24deea49c44c733d",
+          "bytes": 2708134
+        },
+        {
+          "sha256": "c98d235cb99ff5d4fb471c2b8377f135c9b7a82f1ec91a7c4df632c2aede59b6",
+          "bytes": 1870781
+        },
+        {
+          "sha256": "7fc1d588e5027bd4a1df5f7ff9b37d128a528300878e288b16a7da38c0f25ac9",
+          "bytes": 1392123
+        },
+        {
+          "sha256": "a45cb366d97648fa810a535dd29024cd45b929299b388d66d8007fd84795c49d",
+          "bytes": 3053566
+        },
+        {
+          "sha256": "bbc8d3e40202d66388cabc8c3e416cf08af0b7b8531531361704323ba85b748c",
+          "bytes": 1369404
+        }
+      ]
     }
   ]
 }
