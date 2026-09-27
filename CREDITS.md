@@ -1683,3 +1683,9 @@ Licence: Unknown — uploader-confirmed rights
 Ницо Потворно — русні пізда by Ницо Потворно. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@potvorno
 
 Licence: Unknown — uploader-confirmed rights
+
+## Північ - FPV
+
+Північ - FPV by Північ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@EmmaPivnich
+
+Licence: Unknown — uploader-confirmed rights
