@@ -888,6 +888,30 @@
           "bytes": 2064046
         }
       ]
+    },
+    {
+      "id": "audio-soundtrack-20260927",
+      "releaseTag": "audio-soundtrack-20260927",
+      "recordings": 4,
+      "audioBytes": 10883711,
+      "assets": [
+        {
+          "sha256": "0462b8ef82a8a9f86f20c2d36b191c9827a139185b87cd455346e576bc1af4fd",
+          "bytes": 3788242
+        },
+        {
+          "sha256": "5069168cc6e90c16c7765afb56fbce180e8144b63775ee2e0d839de4b85a80fe",
+          "bytes": 3562982
+        },
+        {
+          "sha256": "48b4cfb0075837a93fd0703dc28fbc19157f1d69e5ef69abed8ce0e833607f30",
+          "bytes": 1731778
+        },
+        {
+          "sha256": "9cf9912bbd80d3e304e555f45a33a94dc9cd0b8924e4bc4771e659e133422cc8",
+          "bytes": 1800709
+        }
+      ]
     }
   ]
 }

@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 210,
-    "uniqueRecordings": 210,
+    "declaredTracks": 214,
+    "uniqueRecordings": 214,
     "duplicateAliases": 0,
-    "audioBytes": 1083919617
+    "audioBytes": 1094803328
   },
   "tracks": [
     {
@@ -10160,6 +10160,206 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-s-20260927/c73191d9e1a388fc8d0a42031e95d6722848c9a53e1ba585f32e32fc3e78cab8.mp3",
         "bytes": 2064046,
         "sha256": "c73191d9e1a388fc8d0a42031e95d6722848c9a53e1ba585f32e32fc3e78cab8"
+      },
+      "aliases": []
+    },
+    {
+      "id": "soundtrack.414",
+      "title": "Експрес-доставка квитків до кобзона на концерт. Знімкують пілоти 414 бригади «Птахи Мадяра».",
+      "artist": "МАДЯР",
+      "durationSeconds": 246.131519,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@MAGYARBIRDS",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Експрес-доставка квитків до кобзона на концерт. Знімкують пілоти 414 бригади «Птахи Мадяра». by МАДЯР. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MAGYARBIRDS",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@MAGYARBIRDS",
+        "attribution": "Експрес-доставка квитків до кобзона на концерт. Знімкують пілоти 414 бригади «Птахи Мадяра». by МАДЯР. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MAGYARBIRDS",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "МАДЯР - Експрес-доставка квитків до кобзона на концерт. Знімкують пілоти 414 бригади «Птахи Мадяра».mp3",
+      "archiveId": "soundtrack-20260927",
+      "collection": "МАДЯР",
+      "collections": [
+        "МАДЯР",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-soundtrack-20260927/0462b8ef82a8a9f86f20c2d36b191c9827a139185b87cd455346e576bc1af4fd.mp3",
+        "bytes": 3788242,
+        "sha256": "0462b8ef82a8a9f86f20c2d36b191c9827a139185b87cd455346e576bc1af4fd"
+      },
+      "aliases": []
+    },
+    {
+      "id": "soundtrack.soundtrack",
+      "title": "«Не хробаки, а тупо йоблики, ваша страна вас зняла з обліку».",
+      "artist": "МАДЯР",
+      "durationSeconds": 242.532426,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@MAGYARBIRDS",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "«Не хробаки, а тупо йоблики, ваша страна вас зняла з обліку». by МАДЯР. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MAGYARBIRDS",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@MAGYARBIRDS",
+        "attribution": "«Не хробаки, а тупо йоблики, ваша страна вас зняла з обліку». by МАДЯР. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MAGYARBIRDS",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "МАДЯР - Не хробаки, а тупо йоблики, ваша страна вас зняла з обліку.mp3",
+      "archiveId": "soundtrack-20260927",
+      "collection": "МАДЯР",
+      "collections": [
+        "МАДЯР",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-soundtrack-20260927/5069168cc6e90c16c7765afb56fbce180e8144b63775ee2e0d839de4b85a80fe.mp3",
+        "bytes": 3562982,
+        "sha256": "5069168cc6e90c16c7765afb56fbce180e8144b63775ee2e0d839de4b85a80fe"
+      },
+      "aliases": []
+    },
+    {
+      "id": "soundtrack.bloger-414",
+      "title": "Пташині коломийки про хробаків.Трек «Коломийки», текст Bloger (414 обр ПМ)",
+      "artist": "МАДЯР",
+      "durationSeconds": 113.313379,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@MAGYARBIRDS",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Пташині коломийки про хробаків.Трек «Коломийки», текст Bloger (414 обр ПМ) by МАДЯР. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MAGYARBIRDS",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@MAGYARBIRDS",
+        "attribution": "Пташині коломийки про хробаків.Трек «Коломийки», текст Bloger (414 обр ПМ) by МАДЯР. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MAGYARBIRDS",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "МАДЯР, Bloger - Пташині коломийки про хробаків. Трек «Коломийки» (414 обр ПМ).mp3",
+      "archiveId": "soundtrack-20260927",
+      "collection": "МАДЯР",
+      "collections": [
+        "МАДЯР",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-soundtrack-20260927/48b4cfb0075837a93fd0703dc28fbc19157f1d69e5ef69abed8ce0e833607f30.mp3",
+        "bytes": 1731778,
+        "sha256": "48b4cfb0075837a93fd0703dc28fbc19157f1d69e5ef69abed8ce0e833607f30"
+      },
+      "aliases": []
+    },
+    {
+      "id": "soundtrack.soundtrack.2",
+      "title": "Нелегка доля хробака. Трек «Жест доброї волі» (автор Мос)",
+      "artist": "МАДЯР",
+      "durationSeconds": 105.581134,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@MAGYARBIRDS",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Нелегка доля хробака. Трек «Жест доброї волі» (автор Мос) by МАДЯР. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MAGYARBIRDS",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@MAGYARBIRDS",
+        "attribution": "Нелегка доля хробака. Трек «Жест доброї волі» (автор Мос) by МАДЯР. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MAGYARBIRDS",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "МАДЯР, Мос - Нелегка доля хробака. Трек «Жест доброї волі» (автор Мос).mp3",
+      "archiveId": "soundtrack-20260927",
+      "collection": "МАДЯР",
+      "collections": [
+        "МАДЯР",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-soundtrack-20260927/9cf9912bbd80d3e304e555f45a33a94dc9cd0b8924e4bc4771e659e133422cc8.mp3",
+        "bytes": 1800709,
+        "sha256": "9cf9912bbd80d3e304e555f45a33a94dc9cd0b8924e4bc4771e659e133422cc8"
       },
       "aliases": []
     }
