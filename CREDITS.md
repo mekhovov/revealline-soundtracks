@@ -1553,3 +1553,13 @@ Licence: Unknown — uploader-confirmed rights
 Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw
 
 Licence: Unknown — uploader-confirmed rights
+
+## PROBASS ∆ HARDI
+
+PROBASS ∆ HARDI - DRONE (ВЕЛИКИЙ ЗБІР на 💯 ударних дронів камікадзе!) by PROBASS ∆ HARDI. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@PROBASSHARDI
+
+Licence: Unknown — uploader-confirmed rights
+
+Singing Drones by PROBASS ∆ HARDI. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@PROBASSHARDI
+
+Licence: Unknown — uploader-confirmed rights
