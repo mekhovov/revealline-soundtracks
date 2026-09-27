@@ -1819,3 +1819,9 @@ Licence: Unknown — uploader-confirmed rights
 Zababura - Цей дрон, цей дрон (за мотивами пісні "Цей сон" Степана Гіги) by Zababura. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@zababura
 
 Licence: Unknown — uploader-confirmed rights
+
+## Дрон    @АндрійМацевко-о1т
+
+Дрон    @АндрійМацевко-о1т by Андрій Мацевко. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@АндрійМацевко-о1т
+
+Licence: Unknown — uploader-confirmed rights

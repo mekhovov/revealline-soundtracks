@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 247,
-    "uniqueRecordings": 247,
+    "declaredTracks": 248,
+    "uniqueRecordings": 248,
     "duplicateAliases": 0,
-    "audioBytes": 1186192607
+    "audioBytes": 1190461842
   },
   "tracks": [
     {
@@ -12028,6 +12028,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-zababura-20260927-222a3a77/222a3a770ba96401eab824e82b93c8a5d3ed2f7ae02730d83f232cff6e960b3e.mp3",
         "bytes": 1673895,
         "sha256": "222a3a770ba96401eab824e82b93c8a5d3ed2f7ae02730d83f232cff6e960b3e"
+      },
+      "aliases": []
+    },
+    {
+      "id": "andriy-matsevko.dron-andriymatsevko-o1t",
+      "title": "Дрон    @АндрійМацевко-о1т",
+      "artist": "Андрій Мацевко",
+      "durationSeconds": 218.685533,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@АндрійМацевко-о1т",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Дрон    @АндрійМацевко-о1т by Андрій Мацевко. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@АндрійМацевко-о1т",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@АндрійМацевко-о1т",
+        "attribution": "Дрон    @АндрійМацевко-о1т by Андрій Мацевко. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@АндрійМацевко-о1т",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Андрій Мацевко - Дрон.mp3",
+      "archiveId": "andriy-matsevko-20260927-7af03535",
+      "collection": "Дрон    @АндрійМацевко-о1т",
+      "collections": [
+        "Дрон    @АндрійМацевко-о1т",
+        "Андрій Мацевко",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-andriy-matsevko-20260927-7af03535/7af03535606e776b446ba77db57a184890b9094d3341b9a30660705c14fcf8e0.mp3",
+        "bytes": 4269235,
+        "sha256": "7af03535606e776b446ba77db57a184890b9094d3341b9a30660705c14fcf8e0"
       },
       "aliases": []
     }
