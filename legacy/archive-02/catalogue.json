@@ -1,0 +1,1672 @@
+{
+  "format": "revealline-public-soundtrack-catalogue.v1",
+  "archive": {
+    "id": "revealline-soundtracks-02",
+    "baseURL": "https://mekhovov.github.io/revealline-soundtracks-02/"
+  },
+  "sources": [
+    {
+      "id": "synth-runner2088-audition-20260925",
+      "path": "batches/synth-runner2088-audition-20260925/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "synth-sky-trance-audition-20260926",
+      "path": "batches/synth-sky-trance-audition-20260926/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "electro-cyber-power-audition-20260926",
+      "path": "batches/electro-cyber-power-audition-20260926/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "synth-blue-beat-cyberpunk-audition-20260926",
+      "path": "batches/synth-blue-beat-cyberpunk-audition-20260926/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "electro-hit-the-womp-audition-20260926",
+      "path": "batches/electro-hit-the-womp-audition-20260926/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "electro-ripped-apart-audition-20260926",
+      "path": "batches/electro-ripped-apart-audition-20260926/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "electro-hot-roadway-audition-20260926",
+      "path": "batches/electro-hot-roadway-audition-20260926/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "synthwave-lost-snow-audition-20260926",
+      "path": "batches/synthwave-lost-snow-audition-20260926/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "electro-racing-bouncer-audition-20260926",
+      "path": "batches/electro-racing-bouncer-audition-20260926/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "electro-racing-starshooter-audition-20260926",
+      "path": "batches/electro-racing-starshooter-audition-20260926/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "synth-metal-last-stand-audition-20260926",
+      "path": "batches/synth-metal-last-stand-audition-20260926/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "electro-neon-chase-audition-20260926",
+      "path": "batches/electro-neon-chase-audition-20260926/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "synthwave-type-audition-20260926",
+      "path": "batches/synthwave-type-audition-20260926/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "electro-racing-techno-drive-audition-20260926",
+      "path": "batches/electro-racing-techno-drive-audition-20260926/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "metal-industrial-metallic-mistress-audition-20260926",
+      "path": "batches/metal-industrial-metallic-mistress-audition-20260926/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "metal-sandblaster-audition-20260926",
+      "path": "batches/metal-sandblaster-audition-20260926/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "metal-space-odyssey-audition-20260926",
+      "path": "batches/metal-space-odyssey-audition-20260926/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "metal-red-dwarf-audition-20260926",
+      "path": "batches/metal-red-dwarf-audition-20260926/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "metal-stellar-confrontation-audition-20260926",
+      "path": "batches/metal-stellar-confrontation-audition-20260926/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "metal-deep-space-audition-20260926",
+      "path": "batches/metal-deep-space-audition-20260926/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 1
+    },
+    {
+      "id": "synth-space-shooter-house-audition-20260927",
+      "path": "batches/synth-space-shooter-house-audition-20260927/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 4
+    },
+    {
+      "id": "trench-orderly-20260927",
+      "path": "batches/trench-orderly-20260927/",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "declaredTracks": 7
+    }
+  ],
+  "counts": {
+    "declaredTracks": 31,
+    "uniqueRecordings": 31,
+    "duplicateAliases": 0,
+    "audioBytes": 145375900
+  },
+  "tracks": [
+    {
+      "id": "wekont.runner2088",
+      "title": "runner2088",
+      "artist": "wekont",
+      "durationSeconds": 97.12325,
+      "tags": [
+        "synth90s",
+        "retrowave",
+        "outrun",
+        "electronic",
+        "gameplay",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://freemusicarchive.org/music/wekont/single/runner2088mp3/",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "runner2088 by wekont. CC BY 4.0 International. Source: https://freemusicarchive.org/music/wekont/single/runner2088mp3/",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://freemusicarchive.org/music/wekont/single/runner2088mp3/",
+        "attribution": "runner2088 by wekont. CC BY 4.0 International. Source: https://freemusicarchive.org/music/wekont/single/runner2088mp3/",
+        "derivativeChangeNotice": "No audio changes; exact creator-published MP3 bytes retained.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "runner2088.mp3",
+      "archiveId": "synth-runner2088-audition-20260925",
+      "collection": "runner2088 retrowave audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/synth-runner2088-audition-20260925/objects/9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9.mp3",
+        "bytes": 3884999,
+        "sha256": "9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9"
+      },
+      "aliases": []
+    },
+    {
+      "id": "glitchart-mintodog-zodik.sky-trance-cyborg-destiny-low-pridox",
+      "title": "Sky Trance, Cyborg Destiny & Low Pridox",
+      "artist": "glitchart; Mintodog; Zodik",
+      "durationSeconds": 233.228662,
+      "tags": [
+        "synth90s",
+        "synthwave",
+        "outrun",
+        "trance",
+        "electronic",
+        "gameplay",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://opengameart.org/content/sky-trance-ciborg-destiny-low-pridox-mintodog-vs-zodik-remixed",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "Sky Trance by Mintodog (CC0); Cyborg Destiny and Low Pridox by Zodik (CC BY 3.0); remix by glitchart. Source: https://opengameart.org/content/sky-trance-ciborg-destiny-low-pridox-mintodog-vs-zodik-remixed",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "3.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/sky-trance-ciborg-destiny-low-pridox-mintodog-vs-zodik-remixed",
+        "attribution": "Sky Trance by Mintodog (CC0); Cyborg Destiny and Low Pridox by Zodik (CC BY 3.0); remix by glitchart. Source: https://opengameart.org/content/sky-trance-ciborg-destiny-low-pridox-mintodog-vs-zodik-remixed",
+        "derivativeChangeNotice": "Converted from the creator-published stereo OGG to 256 kbps MP3 and loudness-normalized for RevealLine web playback; source OGG SHA-256 c783ffbce5fb81097293b0a67a08e67203055b5cc6c1776a4599825cf5926428.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "sky-trance-cyborg-destiny-low-pridox.mp3",
+      "archiveId": "synth-sky-trance-audition-20260926",
+      "collection": "Sky Trance synthwave audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/synth-sky-trance-audition-20260926/objects/a19d839209d6e84d2124fa9ecfe85d649a07ca7242b5bb2ccb656da1c92297f2.mp3",
+        "bytes": 7465719,
+        "sha256": "a19d839209d6e84d2124fa9ecfe85d649a07ca7242b5bb2ccb656da1c92297f2"
+      },
+      "aliases": []
+    },
+    {
+      "id": "glitchart-bogart-vgm-tricksntraps.cyber-power-mix",
+      "title": "Cyber Power Mix",
+      "artist": "glitchart; Bogart VGM; TricksNTraps",
+      "durationSeconds": 172.341333,
+      "tags": [
+        "synth90s",
+        "electro",
+        "techno",
+        "trance",
+        "action",
+        "gameplay",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://opengameart.org/content/cyber-power-bogart-vgm-tricksntraps",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Cyber Power by Bogart VGM (CC BY 4.0); Zen Devils by TricksNTraps (CC0); mix by glitchart. Source: https://opengameart.org/content/cyber-power-bogart-vgm-tricksntraps",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/cyber-power-bogart-vgm-tricksntraps",
+        "attribution": "Cyber Power by Bogart VGM (CC BY 4.0); Zen Devils by TricksNTraps (CC0); mix by glitchart. Source: https://opengameart.org/content/cyber-power-bogart-vgm-tricksntraps",
+        "derivativeChangeNotice": "Converted from the creator-published stereo OGG to 256 kbps MP3, resampled to 48 kHz and loudness-normalized for RevealLine web playback; source OGG SHA-256 9ad54b89aa2342aff1f416c114f31b2a5ee0b930bdfc6f2bcd768404cab9de44.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "cyber-power-mix.mp3",
+      "archiveId": "electro-cyber-power-audition-20260926",
+      "collection": "Cyber Power electro audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/electro-cyber-power-audition-20260926/objects/4ea29c2020d33963d801f508ca3d200d13639a34e5fbd052854233021c1d5f42.mp3",
+        "bytes": 5516662,
+        "sha256": "4ea29c2020d33963d801f508ca3d200d13639a34e5fbd052854233021c1d5f42"
+      },
+      "aliases": []
+    },
+    {
+      "id": "glitchart-erh-technodono-zodik-vitalezzz.blue-beat-electronic-escape-cyborg-destiny-singularity",
+      "title": "Blue Beat, Electronic Escape, Cyborg Destiny & Singularity",
+      "artist": "glitchart; ERH; Technodono; Zodik; Vitalezzz",
+      "durationSeconds": 185.665875,
+      "tags": [
+        "synth90s",
+        "synthwave",
+        "outrun",
+        "cyberpunk",
+        "electronic",
+        "gameplay",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://opengameart.org/content/blue-beat-loop-electronic-escape-cyborg-destiny-singularity-calm-erh-vs-technodono-vs-zodik",
+      "license": "CC BY-SA 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Blue Beat by ERH (CC BY 3.0); Electronic Escape by Technodono (CC BY-SA 4.0); Cyborg Destiny by Zodik (CC BY 3.0); Singularity Calm by Vitalezzz (CC0); mix by glitchart. Source: https://opengameart.org/content/blue-beat-loop-electronic-escape-cyborg-destiny-singularity-calm-erh-vs-technodono-vs-zodik",
+      "rights": {
+        "licenseId": "CC-BY-SA",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/blue-beat-loop-electronic-escape-cyborg-destiny-singularity-calm-erh-vs-technodono-vs-zodik",
+        "attribution": "Blue Beat by ERH (CC BY 3.0); Electronic Escape by Technodono (CC BY-SA 4.0); Cyborg Destiny by Zodik (CC BY 3.0); Singularity Calm by Vitalezzz (CC0); mix by glitchart. Source: https://opengameart.org/content/blue-beat-loop-electronic-escape-cyborg-destiny-singularity-calm-erh-vs-technodono-vs-zodik",
+        "derivativeChangeNotice": "Converted from the creator-published stereo OGG to 256 kbps MP3, resampled to 48 kHz and loudness-normalized for RevealLine web playback. This derivative remains CC BY-SA 4.0; source OGG SHA-256 a9971c24075803a00db33b3f51e6c536ed331670680aca399010f3088bca422b.",
+        "shareAlike": {
+          "required": true,
+          "deliveryLicenseId": "CC-BY-SA",
+          "deliveryLicenseVersion": "4.0",
+          "deliveryLicenseURL": "https://creativecommons.org/licenses/by-sa/4.0/"
+        }
+      },
+      "fileName": "blue-beat-electronic-escape-cyborg-destiny-singularity.mp3",
+      "archiveId": "synth-blue-beat-cyberpunk-audition-20260926",
+      "collection": "Blue Beat cyberpunk audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/synth-blue-beat-cyberpunk-audition-20260926/objects/2982c8a431aea2e2a16a2ba396bd35b9cc0ab9880261ad5c48b2f5059b3891fb.mp3",
+        "bytes": 5943722,
+        "sha256": "2982c8a431aea2e2a16a2ba396bd35b9cc0ab9880261ad5c48b2f5059b3891fb"
+      },
+      "aliases": []
+    },
+    {
+      "id": "glitchart-technodono-tricksntraps-davidkbd.hit-the-womp-mix",
+      "title": "Hit the Womp! Mix",
+      "artist": "glitchart; Technodono; TricksNTraps; DavidKBD",
+      "durationSeconds": 181.365375,
+      "tags": [
+        "synth90s",
+        "electro",
+        "edm",
+        "techno",
+        "breakbeat",
+        "cyberpunk",
+        "gameplay",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://opengameart.org/content/hit-the-womp-by-technodono-featuring-tracks-by-tricksntraps-davidkbd",
+      "license": "CC BY-SA 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Hit the Womp! by Technodono (CC BY-SA 4.0); Lost Utopia by TricksNTraps (CC0); Underbeat by DavidKBD (CC BY 4.0); mix by glitchart. Source: https://opengameart.org/content/hit-the-womp-by-technodono-featuring-tracks-by-tricksntraps-davidkbd",
+      "rights": {
+        "licenseId": "CC-BY-SA",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/hit-the-womp-by-technodono-featuring-tracks-by-tricksntraps-davidkbd",
+        "attribution": "Hit the Womp! by Technodono (CC BY-SA 4.0); Lost Utopia by TricksNTraps (CC0); Underbeat by DavidKBD (CC BY 4.0); mix by glitchart. Source: https://opengameart.org/content/hit-the-womp-by-technodono-featuring-tracks-by-tricksntraps-davidkbd",
+        "derivativeChangeNotice": "Converted from the creator-published stereo OGG to 256 kbps MP3, resampled to 48 kHz and loudness-normalized for RevealLine web playback. This derivative remains CC BY-SA 4.0; source OGG SHA-256 63839775f1561551e0587efc7e07db5b1153fd658d80b8cb64bd647e5fdf99de.",
+        "shareAlike": {
+          "required": true,
+          "deliveryLicenseId": "CC-BY-SA",
+          "deliveryLicenseVersion": "4.0",
+          "deliveryLicenseURL": "https://creativecommons.org/licenses/by-sa/4.0/"
+        }
+      },
+      "fileName": "hit-the-womp-mix.mp3",
+      "archiveId": "electro-hit-the-womp-audition-20260926",
+      "collection": "Hit the Womp electro audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/electro-hit-the-womp-audition-20260926/objects/4aaf650c7982fc6e15fe96062a6f6e02ef6928a249cbecced4e5c17a7c43c221.mp3",
+        "bytes": 5805442,
+        "sha256": "4aaf650c7982fc6e15fe96062a6f6e02ef6928a249cbecced4e5c17a7c43c221"
+      },
+      "aliases": []
+    },
+    {
+      "id": "tricks-traps.ripped-apart",
+      "title": "Ripped Apart",
+      "artist": "Tricks & Traps",
+      "durationSeconds": 197.244979,
+      "tags": [
+        "electronic",
+        "hardcore",
+        "techno",
+        "rhythm",
+        "fast",
+        "174 BPM",
+        "gameplay",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://opengameart.org/content/free-rhythm-game-music-pack-2",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Ripped Apart by Tricks & Traps. CC0 1.0 Universal. Source: https://opengameart.org/content/free-rhythm-game-music-pack-2",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/free-rhythm-game-music-pack-2",
+        "attribution": "Ripped Apart by Tricks & Traps. CC0 1.0 Universal. Source: https://opengameart.org/content/free-rhythm-game-music-pack-2",
+        "derivativeChangeNotice": "Converted from the creator-published stereo WAV to 256 kbps MP3, resampled to 48 kHz and loudness-normalized for RevealLine web playback.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "ripped_apart.mp3",
+      "archiveId": "electro-ripped-apart-audition-20260926",
+      "collection": "Ripped Apart — high-energy electro audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/electro-ripped-apart-audition-20260926/objects/0b2881ef5ee345decc5361e6b5566db8738be6b18ba8fb55e90e683199b9a17e.mp3",
+        "bytes": 6313822,
+        "sha256": "0b2881ef5ee345decc5361e6b5566db8738be6b18ba8fb55e90e683199b9a17e"
+      },
+      "aliases": []
+    },
+    {
+      "id": "mintodog.hot-roadway",
+      "title": "Hot Roadway",
+      "artist": "MintoDog",
+      "durationSeconds": 120,
+      "tags": [
+        "electronic",
+        "techno",
+        "racing",
+        "synth",
+        "action",
+        "160 BPM",
+        "gameplay",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://opengameart.org/content/hot-roadway",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Hot Roadway by MintoDog. CC0 1.0 Universal. Source: https://opengameart.org/content/hot-roadway",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/hot-roadway",
+        "attribution": "Hot Roadway by MintoDog. CC0 1.0 Universal. Source: https://opengameart.org/content/hot-roadway",
+        "derivativeChangeNotice": "Converted from the creator-published stereo Ogg Vorbis file to 256 kbps MP3, resampled to 48 kHz and loudness-normalized for RevealLine web playback.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "revealline-hot-roadway-20260926.mp3",
+      "archiveId": "electro-hot-roadway-audition-20260926",
+      "collection": "Hot Roadway — racing electro audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/electro-hot-roadway-audition-20260926/objects/7c9f39fa14200745e26f7af5ee8fa086a7abda70c74aa6af090830b06036a5e2.mp3",
+        "bytes": 3841580,
+        "sha256": "7c9f39fa14200745e26f7af5ee8fa086a7abda70c74aa6af090830b06036a5e2"
+      },
+      "aliases": []
+    },
+    {
+      "id": "hatmix.lost-in-the-snow-wave",
+      "title": "Lost in the Snow Wave",
+      "artist": "hatmix",
+      "durationSeconds": 172.5,
+      "tags": [
+        "synthwave",
+        "electronic",
+        "night drive",
+        "gameplay",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://opengameart.org/content/lost-in-the-snow-wave",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Lost in the Snow Wave by hatmix. CC0 1.0 Universal. Source: https://opengameart.org/content/lost-in-the-snow-wave",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/lost-in-the-snow-wave",
+        "attribution": "Lost in the Snow Wave by hatmix. CC0 1.0 Universal. Source: https://opengameart.org/content/lost-in-the-snow-wave",
+        "derivativeChangeNotice": "Converted from the creator-published stereo Ogg Vorbis file to 256 kbps MP3, resampled to 48 kHz and loudness-normalized for RevealLine web playback.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "lost-in-the-snow-wave.mp3",
+      "archiveId": "synthwave-lost-snow-audition-20260926",
+      "collection": "Lost in the Snow Wave — synthwave audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/synthwave-lost-snow-audition-20260926/objects/91b75697c450b9d107ea0b66781bb9c3f736104476437c27e6295afbd409dc1f.mp3",
+        "bytes": 5521964,
+        "sha256": "91b75697c450b9d107ea0b66781bb9c3f736104476437c27e6295afbd409dc1f"
+      },
+      "aliases": []
+    },
+    {
+      "id": "of-far-different-nature.bouncer",
+      "title": "Bouncer",
+      "artist": "Of Far Different Nature",
+      "durationSeconds": 93.759615,
+      "tags": [
+        "synth90s",
+        "electro",
+        "techno",
+        "racing",
+        "gameplay",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://opengameart.org/content/bouncer-0",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Bouncer by Of Far Different Nature. CC0 1.0 Universal. Source: https://opengameart.org/content/bouncer-0",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/bouncer-0",
+        "attribution": "Bouncer by Of Far Different Nature. CC0 1.0 Universal. Source: https://opengameart.org/content/bouncer-0",
+        "derivativeChangeNotice": "Loudness-normalized from the creator-published 320 kbps MP3 to −16.0 LUFS at 320 kbps; native SHA-256 453f703d5b3fdb6045078c446ff82bad97b19eb6b660ed2da76b64dd971bfcba.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "bouncer-revealline.mp3",
+      "archiveId": "electro-racing-bouncer-audition-20260926",
+      "collection": "Bouncer — electro racing audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/electro-racing-bouncer-audition-20260926/objects/c6a1df8144d57402088198bdb2032dc682fde90e6946796931ee3e07053cc64e.mp3",
+        "bytes": 3753476,
+        "sha256": "c6a1df8144d57402088198bdb2032dc682fde90e6946796931ee3e07053cc64e"
+      },
+      "aliases": []
+    },
+    {
+      "id": "centurion-of-war.starshooter",
+      "title": "StarShooter",
+      "artist": "Centurion_of_war",
+      "durationSeconds": 85.333333,
+      "tags": [
+        "synth90s",
+        "retrowave",
+        "electro",
+        "techno",
+        "chiptune",
+        "racing",
+        "gameplay",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://opengameart.org/content/starshooter",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "StarShooter by Centurion_of_war. CC0 1.0 Universal. Source: https://opengameart.org/content/starshooter",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/starshooter",
+        "attribution": "StarShooter by Centurion_of_war. CC0 1.0 Universal. Source: https://opengameart.org/content/starshooter",
+        "derivativeChangeNotice": "Converted from the creator-published OGG v2.1 to 256 kbps MP3, resampled to 48 kHz and loudness-normalized for RevealLine playback; native SHA-256 457b662361847137c28a92b6acd60f03d77f0e522a5c73b02c9f04cf792a2e9a.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "starshooter-revealline.mp3",
+      "archiveId": "electro-racing-starshooter-audition-20260926",
+      "collection": "StarShooter — retro racing audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/electro-racing-starshooter-audition-20260926/objects/c6b7641b556e7f245681bee6a162703725c58bf591ba4ba548492f35a0d4486e.mp3",
+        "bytes": 2732726,
+        "sha256": "c6b7641b556e7f245681bee6a162703725c58bf591ba4ba548492f35a0d4486e"
+      },
+      "aliases": []
+    },
+    {
+      "id": "peachtea.last-stand-lets-go",
+      "title": "Last Stand Lets Go",
+      "artist": "Peachtea",
+      "durationSeconds": 92.532979,
+      "tags": [
+        "metal",
+        "electro",
+        "fusion",
+        "gameplay",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://opengameart.org/content/last-stand-lets-go",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Last Stand Lets Go by Noah Cedeno (Peachtea). CC0 1.0 Universal. Source: https://opengameart.org/content/last-stand-lets-go",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/last-stand-lets-go",
+        "attribution": "Last Stand Lets Go by Noah Cedeno (Peachtea). CC0 1.0 Universal. Source: https://opengameart.org/content/last-stand-lets-go",
+        "derivativeChangeNotice": "Loudness-normalized from the creator-published MP3 to -16.0 LUFS, encoded at 256 kbps and resampled to 48 kHz; native SHA-256 94a15e5c78640ca23410acfdbf65b9ab4a6a26d93534ec973b4aa6ed1bddf6af.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "last-stand-lets-go-revealline.mp3",
+      "archiveId": "synth-metal-last-stand-audition-20260926",
+      "collection": "Last Stand Lets Go — synth-metal audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/synth-metal-last-stand-audition-20260926/objects/ee3bed8e7c91ab050ccd32bd469646153ffb6ead81d2d19f945c8384eb9cb99e.mp3",
+        "bytes": 2962988,
+        "sha256": "ee3bed8e7c91ab050ccd32bd469646153ffb6ead81d2d19f945c8384eb9cb99e"
+      },
+      "aliases": []
+    },
+    {
+      "id": "adiutorium.chase",
+      "title": "Chase",
+      "artist": "Adiutorium",
+      "durationSeconds": 261.936,
+      "tags": [
+        "synth",
+        "electro",
+        "edm",
+        "gameplay",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://opengameart.org/content/chase-2",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Chase by Adiutorium. CC0 1.0 Universal. Source: https://opengameart.org/content/chase-2",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/chase-2",
+        "attribution": "Chase by Adiutorium. CC0 1.0 Universal. Source: https://opengameart.org/content/chase-2",
+        "derivativeChangeNotice": "Loudness-normalized from the creator-published MP3 to -16.0 LUFS, encoded at 256 kbps and retained at 48 kHz; native SHA-256 f033d26bb2bb2e6b3fb7db60e491b4dbea0c32f3ac92e8c9b18718759410a601.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "chase-revealline.mp3",
+      "archiveId": "electro-neon-chase-audition-20260926",
+      "collection": "Chase — neon electro audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/electro-neon-chase-audition-20260926/objects/979f4c72390bfe142f588e0cb8e87b34b5edb8db7c2824443b8767ad8121a598.mp3",
+        "bytes": 8383571,
+        "sha256": "979f4c72390bfe142f588e0cb8e87b34b5edb8db7c2824443b8767ad8121a598"
+      },
+      "aliases": []
+    },
+    {
+      "id": "g-p.synthwave-type",
+      "title": "Synthwave Type",
+      "artist": "G_P",
+      "durationSeconds": 113.162449,
+      "tags": [
+        "90s Synth",
+        "Synthwave",
+        "Electro",
+        "Gameplay",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://opengameart.org/content/synthwavetype",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Synthwave Type by G_P. CC0 1.0 Universal. Source: https://opengameart.org/content/synthwavetype",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/synthwavetype",
+        "attribution": "Synthwave Type by G_P. CC0 1.0 Universal. Source: https://opengameart.org/content/synthwavetype",
+        "derivativeChangeNotice": "Converted from the creator-published MP3 to a 256 kbps MP3 with loudness normalization to the RevealLine target; native source SHA-256 and measurements are preserved in intake evidence.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "revealline-synthwave-type-public.mp3",
+      "archiveId": "synthwave-type-audition-20260926",
+      "collection": "Synthwave Type audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/synthwave-type-audition-20260926/objects/5e9521d353af87cb357e5077eec619fe3db10dc8a55ebf2978593285abc639ad.mp3",
+        "bytes": 3622954,
+        "sha256": "5e9521d353af87cb357e5077eec619fe3db10dc8a55ebf2978593285abc639ad"
+      },
+      "aliases": []
+    },
+    {
+      "id": "centurion-of-war.techno-drive-v2",
+      "title": "Techno DRIVE!!! (V2)",
+      "artist": "Centurion_of_war",
+      "durationSeconds": 70.4,
+      "tags": [
+        "90s Synth",
+        "Electro",
+        "Racing",
+        "Gameplay",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://opengameart.org/content/techno-drive",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Techno DRIVE!!! (V2) by Centurion_of_war. Licensed under CC BY 4.0. Source: https://opengameart.org/content/techno-drive",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/techno-drive",
+        "attribution": "Techno DRIVE!!! (V2) by Centurion_of_war. Licensed under CC BY 4.0. Source: https://opengameart.org/content/techno-drive",
+        "derivativeChangeNotice": "Converted from the creator-published OGG to a 256 kbps MP3 with loudness normalization to the RevealLine target; native source SHA-256 and measurements are preserved in intake evidence.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "revealline-techno-drive-v2-public.mp3",
+      "archiveId": "electro-racing-techno-drive-audition-20260926",
+      "collection": "Techno DRIVE!!! V2 audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/electro-racing-techno-drive-audition-20260926/objects/2188a84b5628dbdf419126dbc243fbae0739b1d0327b1e22831852a954dc2290.mp3",
+        "bytes": 2254574,
+        "sha256": "2188a84b5628dbdf419126dbc243fbae0739b1d0327b1e22831852a954dc2290"
+      },
+      "aliases": []
+    },
+    {
+      "id": "foxsynergy.metallic-mistress",
+      "title": "Metallic Mistress",
+      "artist": "FoxSynergy",
+      "durationSeconds": 299.572245,
+      "tags": [
+        "Metal",
+        "Industrial",
+        "Rock",
+        "Gameplay",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://opengameart.org/content/metallic-mistress",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "Metallic Mistress by FoxSynergy. Licensed under CC BY 3.0. Source: https://opengameart.org/content/metallic-mistress",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "3.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/metallic-mistress",
+        "attribution": "Metallic Mistress by FoxSynergy. Licensed under CC BY 3.0. Source: https://opengameart.org/content/metallic-mistress",
+        "derivativeChangeNotice": "Converted from the creator-published MP3 to a 256 kbps MP3 with loudness normalization to the RevealLine target; native source SHA-256 and measurements are preserved in intake evidence.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "revealline-metallic-mistress-public.mp3",
+      "archiveId": "metal-industrial-metallic-mistress-audition-20260926",
+      "collection": "Metallic Mistress industrial-metal audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/metal-industrial-metallic-mistress-audition-20260926/objects/4d807399b7ceb8d45c79c44337769d305db6fda690072ecdb5eed7e99e06c1c0.mp3",
+        "bytes": 9588077,
+        "sha256": "4d807399b7ceb8d45c79c44337769d305db6fda690072ecdb5eed7e99e06c1c0"
+      },
+      "aliases": []
+    },
+    {
+      "id": "clearside.sandblaster",
+      "title": "Sandblaster",
+      "artist": "Clearside",
+      "durationSeconds": 119.379592,
+      "tags": [
+        "metal",
+        "industrial",
+        "electronic",
+        "gameplay",
+        "high-energy",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://opengameart.org/content/dark-electronic-rock-instrumental-nin-style",
+      "license": "CC BY-SA 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "Sandblaster by Clearside (www.clearsidemusic.com and soundcloud.com/clearside), submitted on OpenGameArt by the creator under CC BY-SA 3.0.",
+      "rights": {
+        "licenseId": "CC-BY-SA",
+        "licenseVersion": "3.0",
+        "licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/dark-electronic-rock-instrumental-nin-style",
+        "attribution": "Sandblaster by Clearside (www.clearsidemusic.com and soundcloud.com/clearside), submitted on OpenGameArt by the creator under CC BY-SA 3.0.",
+        "derivativeChangeNotice": "Converted from the creator-published 320 kbps MP3 to a 256 kbps MP3 with two-pass loudness normalization; title/artist metadata removed. Exact source hash is retained in the intake receipt.",
+        "shareAlike": {
+          "required": true,
+          "deliveryLicenseId": "CC-BY-SA",
+          "deliveryLicenseVersion": "3.0",
+          "deliveryLicenseURL": "https://creativecommons.org/licenses/by-sa/3.0/"
+        }
+      },
+      "fileName": "sandblaster-normalized.mp3",
+      "archiveId": "metal-sandblaster-audition-20260926",
+      "collection": "Sandblaster industrial-metal audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/metal-sandblaster-audition-20260926/objects/1ae7c00633f1bbcbfcb2334be9462699e12219d58779c3c9dd284386af5fe24c.mp3",
+        "bytes": 3821861,
+        "sha256": "1ae7c00633f1bbcbfcb2334be9462699e12219d58779c3c9dd284386af5fe24c"
+      },
+      "aliases": []
+    },
+    {
+      "id": "david-kbd.space-odyssey",
+      "title": "Space Odyssey",
+      "artist": "David KBD",
+      "durationSeconds": 248,
+      "tags": [
+        "metal",
+        "electronic",
+        "edm",
+        "space",
+        "gameplay",
+        "high-energy",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Space Odyssey by David KBD. Licensed under CC BY 4.0. Source: https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+        "attribution": "Space Odyssey by David KBD. Licensed under CC BY 4.0. Source: https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+        "derivativeChangeNotice": "Converted from the creator-published OGG to a 256 kbps MP3 with two-pass loudness normalization; metadata removed.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "space-odyssey-normalized.mp3",
+      "archiveId": "metal-space-odyssey-audition-20260926",
+      "collection": "Space Odyssey EDM-metal audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/metal-space-odyssey-audition-20260926/objects/01dc95d198c0fcda7cf4dc2c4fb6d125b2153191efc342168592c05a7be5bc85.mp3",
+        "bytes": 7938092,
+        "sha256": "01dc95d198c0fcda7cf4dc2c4fb6d125b2153191efc342168592c05a7be5bc85"
+      },
+      "aliases": []
+    },
+    {
+      "id": "david-kbd.red-dwarf",
+      "title": "Red Dwarf",
+      "artist": "David KBD",
+      "durationSeconds": 218,
+      "tags": [
+        "metal",
+        "electronic",
+        "edm",
+        "space",
+        "gameplay",
+        "high-energy",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Red Dwarf by David KBD. Licensed under CC BY 4.0. Source: https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+        "attribution": "Red Dwarf by David KBD. Licensed under CC BY 4.0. Source: https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+        "derivativeChangeNotice": "Converted from the creator-published OGG to a 256 kbps MP3 with two-pass loudness normalization; metadata removed.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "red-dwarf-normalized.mp3",
+      "archiveId": "metal-red-dwarf-audition-20260926",
+      "collection": "Red Dwarf EDM-metal audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/metal-red-dwarf-audition-20260926/objects/76d2213342b6c6260f5410d792937345ad6730e05963643de81672b88f96a3d8.mp3",
+        "bytes": 6978092,
+        "sha256": "76d2213342b6c6260f5410d792937345ad6730e05963643de81672b88f96a3d8"
+      },
+      "aliases": []
+    },
+    {
+      "id": "david-kbd.stellar-confrontation",
+      "title": "Stellar Confrontation",
+      "artist": "David KBD",
+      "durationSeconds": 222,
+      "tags": [
+        "metal",
+        "edm",
+        "industrial",
+        "gameplay",
+        "fusion",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Stellar Confrontation by David KBD. Licensed under CC BY 4.0. Source: https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+        "attribution": "Stellar Confrontation by David KBD. Licensed under CC BY 4.0. Source: https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+        "derivativeChangeNotice": "Converted from the creator-published OGG to a 256 kbps MP3 with two-pass loudness normalization; metadata removed.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "revealline-stellar-confrontation.mp3",
+      "archiveId": "metal-stellar-confrontation-audition-20260926",
+      "collection": "Stellar Confrontation EDM-metal audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/metal-stellar-confrontation-audition-20260926/objects/ac8f7bff8a3ec6815601000a550be0ac7bf5aaaa27aa4e5ba0146db90eec7876.mp3",
+        "bytes": 7105580,
+        "sha256": "ac8f7bff8a3ec6815601000a550be0ac7bf5aaaa27aa4e5ba0146db90eec7876"
+      },
+      "aliases": []
+    },
+    {
+      "id": "david-kbd.deep-space",
+      "title": "Deep Space",
+      "artist": "David KBD",
+      "durationSeconds": 262.285729,
+      "tags": [
+        "metal",
+        "electronic",
+        "edm",
+        "space",
+        "gameplay",
+        "high-energy",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Deep Space by David KBD, licensed under CC BY 4.0.",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://davidkbd.itch.io/interstellar-vol2-edm-metal-music-pack",
+        "attribution": "Deep Space by David KBD, licensed under CC BY 4.0.",
+        "derivativeChangeNotice": "Converted from the exact creator OGG to a 256 kbps 48 kHz MP3 with two-pass EBU R128 loudness normalization to -16.0 LUFS; metadata stripped.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "revealline-deep-space.mp3",
+      "archiveId": "metal-deep-space-audition-20260926",
+      "collection": "Deep Space EDM-metal audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/metal-deep-space-audition-20260926/objects/d2e43220233114d41ad940791fc3d5a014f7c48074b63578d5e00cedc360e28b.mp3",
+        "bytes": 8395052,
+        "sha256": "d2e43220233114d41ad940791fc3d5a014f7c48074b63578d5e00cedc360e28b"
+      },
+      "aliases": []
+    },
+    {
+      "id": "oblidivm.battle-in-the-stars",
+      "title": "Battle in the Stars",
+      "artist": "Oblidivm",
+      "durationSeconds": 105.473854,
+      "tags": [
+        "synth90s",
+        "synthwave",
+        "house",
+        "electronic",
+        "gameplay",
+        "mid-energy",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://opengameart.org/content/space-shooter-music",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "MUSIC BY OBLIDIVM http://oblidivmmusic.blogspot.com.es/ · CC BY 3.0 · Source: https://opengameart.org/content/space-shooter-music",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "3.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/space-shooter-music",
+        "attribution": "MUSIC BY OBLIDIVM http://oblidivmmusic.blogspot.com.es/ · CC BY 3.0 · Source: https://opengameart.org/content/space-shooter-music",
+        "derivativeChangeNotice": "Converted from the exact creator-published OGG to a tagged 256 kbps 48 kHz MP3 with EBU R128 loudness normalization for RevealLine web playback.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "Battle in the Stars.mp3",
+      "archiveId": "synth-space-shooter-house-audition-20260927",
+      "collection": "Space Shooter — 80s synth / 90s house audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/synth-space-shooter-house-audition-20260927/objects/ac703278d33c102ec4d404b088c5879a978f171cc3a52ec19215bcfec735d173.mp3",
+        "bytes": 3377061,
+        "sha256": "ac703278d33c102ec4d404b088c5879a978f171cc3a52ec19215bcfec735d173"
+      },
+      "aliases": []
+    },
+    {
+      "id": "oblidivm.rain-of-lasers",
+      "title": "Rain of Lasers",
+      "artist": "Oblidivm",
+      "durationSeconds": 107.716542,
+      "tags": [
+        "synth90s",
+        "synthwave",
+        "house",
+        "electronic",
+        "gameplay",
+        "mid-energy",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://opengameart.org/content/space-shooter-music",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "MUSIC BY OBLIDIVM http://oblidivmmusic.blogspot.com.es/ · CC BY 3.0 · Source: https://opengameart.org/content/space-shooter-music",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "3.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/space-shooter-music",
+        "attribution": "MUSIC BY OBLIDIVM http://oblidivmmusic.blogspot.com.es/ · CC BY 3.0 · Source: https://opengameart.org/content/space-shooter-music",
+        "derivativeChangeNotice": "Converted from the exact creator-published OGG to a tagged 256 kbps 48 kHz MP3 with EBU R128 loudness normalization for RevealLine web playback.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "Rain of Lasers.mp3",
+      "archiveId": "synth-space-shooter-house-audition-20260927",
+      "collection": "Space Shooter — 80s synth / 90s house audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/synth-space-shooter-house-audition-20260927/objects/61933057366cb3fc36296d23530359516fda1bf0da7d39f3a19c0fe89be87b37.mp3",
+        "bytes": 3449248,
+        "sha256": "61933057366cb3fc36296d23530359516fda1bf0da7d39f3a19c0fe89be87b37"
+      },
+      "aliases": []
+    },
+    {
+      "id": "oblidivm.space-heroes",
+      "title": "Space Heroes",
+      "artist": "Oblidivm",
+      "durationSeconds": 126.857146,
+      "tags": [
+        "synth90s",
+        "synthwave",
+        "house",
+        "electronic",
+        "gameplay",
+        "mid-energy",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://opengameart.org/content/space-shooter-music",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "MUSIC BY OBLIDIVM http://oblidivmmusic.blogspot.com.es/ · CC BY 3.0 · Source: https://opengameart.org/content/space-shooter-music",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "3.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/space-shooter-music",
+        "attribution": "MUSIC BY OBLIDIVM http://oblidivmmusic.blogspot.com.es/ · CC BY 3.0 · Source: https://opengameart.org/content/space-shooter-music",
+        "derivativeChangeNotice": "Converted from the exact creator-published OGG to a tagged 256 kbps 48 kHz MP3 with EBU R128 loudness normalization for RevealLine web playback.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "Space Heroes.mp3",
+      "archiveId": "synth-space-shooter-house-audition-20260927",
+      "collection": "Space Shooter — 80s synth / 90s house audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/synth-space-shooter-house-audition-20260927/objects/08d9699097c2ef32b5b4727f081df47dff04accca2a8010d0a66e8dd1151d126.mp3",
+        "bytes": 4061342,
+        "sha256": "08d9699097c2ef32b5b4727f081df47dff04accca2a8010d0a66e8dd1151d126"
+      },
+      "aliases": []
+    },
+    {
+      "id": "oblidivm.without-fear",
+      "title": "Without Fear",
+      "artist": "Oblidivm",
+      "durationSeconds": 99.700896,
+      "tags": [
+        "synth90s",
+        "synthwave",
+        "house",
+        "electronic",
+        "gameplay",
+        "mid-energy",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://opengameart.org/content/space-shooter-music",
+      "license": "CC BY 3.0 Unported",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "credit": "MUSIC BY OBLIDIVM http://oblidivmmusic.blogspot.com.es/ · CC BY 3.0 · Source: https://opengameart.org/content/space-shooter-music",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "3.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+        "rightsEvidenceURL": "https://opengameart.org/content/space-shooter-music",
+        "attribution": "MUSIC BY OBLIDIVM http://oblidivmmusic.blogspot.com.es/ · CC BY 3.0 · Source: https://opengameart.org/content/space-shooter-music",
+        "derivativeChangeNotice": "Converted from the exact creator-published OGG to a tagged 256 kbps 48 kHz MP3 with EBU R128 loudness normalization for RevealLine web playback.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "Without Fear.mp3",
+      "archiveId": "synth-space-shooter-house-audition-20260927",
+      "collection": "Space Shooter — 80s synth / 90s house audition",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/synth-space-shooter-house-audition-20260927/objects/7b6222864ce408478d4552e6fb468366484546f77a3fd751f3cd0dfa07e6a26c.mp3",
+        "bytes": 3192734,
+        "sha256": "7b6222864ce408478d4552e6fb468366484546f77a3fd751f3cd0dfa07e6a26c"
+      },
+      "aliases": []
+    },
+    {
+      "id": "trench-orderly.soundtrack",
+      "title": "Збий дрон",
+      "artist": "TRENCH ORDERLY",
+      "durationSeconds": 164.861678,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Збий дрон by TRENCH ORDERLY. CC0 1.0 Universal. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+        "attribution": "Збий дрон by TRENCH ORDERLY. CC0 1.0 Universal. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "TRENCH ORDERLY -  Збий дрон.mp3",
+      "archiveId": "trench-orderly-20260927",
+      "collection": "TRENCH ORDERLY",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/trench-orderly-20260927/objects/8ddb7eb4f274fa64e1ccc8f438f6483d80b755a04cc903079fd13474db11f0c7.mp3",
+        "bytes": 2851069,
+        "sha256": "8ddb7eb4f274fa64e1ccc8f438f6483d80b755a04cc903079fd13474db11f0c7"
+      },
+      "aliases": []
+    },
+    {
+      "id": "trench-orderly.drones-hunter",
+      "title": "Drones hunter",
+      "artist": "TRENCH ORDERLY",
+      "durationSeconds": 127.80263,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Drones hunter by TRENCH ORDERLY. CC0 1.0 Universal. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+        "attribution": "Drones hunter by TRENCH ORDERLY. CC0 1.0 Universal. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "TRENCH ORDERLY - Drones hunter.mp3",
+      "archiveId": "trench-orderly-20260927",
+      "collection": "TRENCH ORDERLY",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/trench-orderly-20260927/objects/5e7b33426088ade0a9345102d3ceb1ec38c43c09535e2288c6e1e032e1cee5a0.mp3",
+        "bytes": 2070360,
+        "sha256": "5e7b33426088ade0a9345102d3ceb1ec38c43c09535e2288c6e1e032e1cee5a0"
+      },
+      "aliases": []
+    },
+    {
+      "id": "trench-orderly.vampire",
+      "title": "Vampire",
+      "artist": "TRENCH ORDERLY",
+      "durationSeconds": 164.977778,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Vampire by TRENCH ORDERLY. CC0 1.0 Universal. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+        "attribution": "Vampire by TRENCH ORDERLY. CC0 1.0 Universal. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "TRENCH ORDERLY - Vampire.mp3",
+      "archiveId": "trench-orderly-20260927",
+      "collection": "TRENCH ORDERLY",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/trench-orderly-20260927/objects/9d7e478a3682783da745f96b6c44864c2639a468bce7a24e8f5a8e7c6bf70e77.mp3",
+        "bytes": 2771102,
+        "sha256": "9d7e478a3682783da745f96b6c44864c2639a468bce7a24e8f5a8e7c6bf70e77"
+      },
+      "aliases": []
+    },
+    {
+      "id": "trench-orderly.soundtrack.2",
+      "title": "Літунам",
+      "artist": "TRENCH ORDERLY",
+      "durationSeconds": 158.56907,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Літунам by TRENCH ORDERLY. CC0 1.0 Universal. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+        "attribution": "Літунам by TRENCH ORDERLY. CC0 1.0 Universal. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "TRENCH ORDERLY - Літунам.mp3",
+      "archiveId": "trench-orderly-20260927",
+      "collection": "TRENCH ORDERLY",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/trench-orderly-20260927/objects/1d2614956debbbd54ce30bca449315f7771e84ac487d525333e23630ed54d9e3.mp3",
+        "bytes": 2817204,
+        "sha256": "1d2614956debbbd54ce30bca449315f7771e84ac487d525333e23630ed54d9e3"
+      },
+      "aliases": []
+    },
+    {
+      "id": "trench-orderly.soundtrack.3",
+      "title": "Пройобщик мавіків",
+      "artist": "TRENCH ORDERLY",
+      "durationSeconds": 203.662222,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Пройобщик мавіків by TRENCH ORDERLY. CC0 1.0 Universal. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+        "attribution": "Пройобщик мавіків by TRENCH ORDERLY. CC0 1.0 Universal. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "TRENCH ORDERLY - Пройобщик мавіків.mp3",
+      "archiveId": "trench-orderly-20260927",
+      "collection": "TRENCH ORDERLY",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/trench-orderly-20260927/objects/9eef10e0b20b4ef35341fd9f906a615a9f94c327ec7e57d25c939b13b9ec98f9.mp3",
+        "bytes": 3314294,
+        "sha256": "9eef10e0b20b4ef35341fd9f906a615a9f94c327ec7e57d25c939b13b9ec98f9"
+      },
+      "aliases": []
+    },
+    {
+      "id": "trench-orderly.soundtrack.4",
+      "title": "РЕБ",
+      "artist": "TRENCH ORDERLY",
+      "durationSeconds": 194.4439,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "РЕБ by TRENCH ORDERLY. CC0 1.0 Universal. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+        "attribution": "РЕБ by TRENCH ORDERLY. CC0 1.0 Universal. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "TRENCH ORDERLY - РЕБ.mp3",
+      "archiveId": "trench-orderly-20260927",
+      "collection": "TRENCH ORDERLY",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/trench-orderly-20260927/objects/515f5806573a0737f3c609b48895a09137289e1510e673b66ecca72c574f7aa2.mp3",
+        "bytes": 2947481,
+        "sha256": "515f5806573a0737f3c609b48895a09137289e1510e673b66ecca72c574f7aa2"
+      },
+      "aliases": []
+    },
+    {
+      "id": "trench-orderly.soundtrack.5",
+      "title": "Шахеди",
+      "artist": "TRENCH ORDERLY",
+      "durationSeconds": 170.179048,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+      "license": "CC0 1.0 Universal",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "Шахеди by TRENCH ORDERLY. CC0 1.0 Universal. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+      "rights": {
+        "licenseId": "CC0",
+        "licenseVersion": "1.0",
+        "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "rightsEvidenceURL": "https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+        "attribution": "Шахеди by TRENCH ORDERLY. CC0 1.0 Universal. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "TRENCH ORDERLY - Шахеди.mp3",
+      "archiveId": "trench-orderly-20260927",
+      "collection": "TRENCH ORDERLY",
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "batches/trench-orderly-20260927/objects/f8d1c2797031fdf2f673c798b0bb19b0ff0a0ba72212e9d8f577c5b625db0c6e.mp3",
+        "bytes": 2693052,
+        "sha256": "f8d1c2797031fdf2f673c798b0bb19b0ff0a0ba72212e9d8f577c5b625db0c6e"
+      },
+      "aliases": []
+    }
+  ]
+}

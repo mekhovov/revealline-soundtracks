@@ -17,6 +17,16 @@ const LICENSES = new Map([
 const ROOT_STATIC_FILES = [
   '.nojekyll', 'CREDITS.md', 'README.md', 'UPLOAD_GUIDE.md', 'audio-volumes.json',
   'batches.json', 'catalogue.json', 'index.html', 'intake-browser.mjs', 'intake/package.mjs',
+  'inventory.json', 'legacy/README.md', 'legacy/archive-01/CREDITS.md',
+  'legacy/archive-01/README.md', 'legacy/archive-01/deployment-manifest.json',
+  'legacy/archive-01/inventory.json', 'legacy/archive-01/preview-catalogue.json',
+  'legacy/archive-01/release/CREDITS.md', 'legacy/archive-01/release/SHA256SUMS',
+  'legacy/archive-01/release/assets.json',
+  'legacy/archive-01/release/preview-catalogue.json',
+  'legacy/archive-01/release/public-albums.json',
+  'legacy/archive-02/CREDITS.md', 'legacy/archive-02/README.md',
+  'legacy/archive-02/UPLOAD_GUIDE.md', 'legacy/archive-02/batches.json',
+  'legacy/archive-02/catalogue.json', 'legacy/archive-02/deployment-manifest.json',
   'playback-policy.mjs', 'player.mjs', 'style.css',
 ];
 const digest = (bytes) => createHash('sha256').update(bytes).digest('hex');
@@ -48,7 +58,9 @@ function verifyRights(track) {
 }
 export async function buildManifest(base = root) {
   const files = [];
-  for (const relative of ROOT_STATIC_FILES) {
+  const inventory = JSON.parse(await readFile(path.join(base, 'inventory.json'), 'utf8'));
+  const publicFiles = [...ROOT_STATIC_FILES, ...inventory.files.map(({ path: relative }) => relative)];
+  for (const relative of publicFiles) {
     const file = await ordinaryFile(base, relative), bytes = await readFile(file.absolute);
     files.push({ path: relative, bytes: file.bytes, sha256: digest(bytes) });
   }
@@ -86,11 +98,61 @@ export async function verifyArchive(base = root) {
     hashes.add(track.audio.sha256); audioBytes += track.audio.bytes;
   }
   demand(hashes.size === volumeAssets.size, 'Audio volumes and catalogue differ.');
+  const inventory = JSON.parse(await readFile(path.join(base, 'inventory.json'), 'utf8'));
+  demand(
+    inventory.format === 'revealline-soundtrack-archive.v1' &&
+      inventory.id === 'licensed-preview-01' &&
+      Array.isArray(inventory.files) &&
+      inventory.files.length === 70,
+    'Legacy compatibility inventory differs.',
+  );
+  const compatibilityHashes = new Set();
+  for (const file of inventory.files) {
+    demand(
+      HASH.test(file.sha256) &&
+        file.path === `objects/${file.sha256}.mp3` &&
+        Number.isSafeInteger(file.bytes) &&
+        file.bytes > 0 &&
+        !compatibilityHashes.has(file.sha256) &&
+        hashes.has(file.sha256),
+      'Legacy compatibility object differs.',
+    );
+    compatibilityHashes.add(file.sha256);
+    await exactFile(base, file);
+  }
+  const legacyRelease = JSON.parse(
+    await readFile(path.join(base, 'legacy/archive-01/release/assets.json'), 'utf8'),
+  );
+  demand(
+    legacyRelease.sourceRepository ===
+      'https://github.com/mekhovov/revealline-soundtracks-01' &&
+      legacyRelease.sourceTag === 'preview-playlists-2026-09-21' &&
+      legacyRelease.immutableSource === true &&
+      Array.isArray(legacyRelease.assets) &&
+      legacyRelease.assets.length === 19 &&
+      legacyRelease.assets.filter(({ name }) => name.endsWith('.rlsound')).length === 15,
+    'Legacy release inventory differs.',
+  );
+  const legacyReleaseNames = new Set();
+  for (const asset of legacyRelease.assets) {
+    demand(
+      typeof asset.name === 'string' &&
+        asset.name.length > 0 &&
+        !legacyReleaseNames.has(asset.name) &&
+        Number.isSafeInteger(asset.size) &&
+        asset.size > 0 &&
+        /^sha256:[a-f0-9]{64}$/.test(asset.digest) &&
+        asset.url ===
+          `https://github.com/mekhovov/revealline-soundtracks-01/releases/download/preview-playlists-2026-09-21/${asset.name}`,
+      'Legacy release asset evidence differs.',
+    );
+    legacyReleaseNames.add(asset.name);
+  }
   demand(catalogue.counts?.declaredTracks === catalogue.tracks.length && catalogue.counts?.uniqueRecordings === catalogue.tracks.length && catalogue.counts?.duplicateAliases === 0 && catalogue.counts?.audioBytes === audioBytes, 'Catalogue counts differ.');
   const expected = await buildManifest(base), manifest = JSON.parse(await readFile(path.join(base, 'deployment-manifest.json'), 'utf8'));
   demand(JSON.stringify(manifest) === JSON.stringify(expected), 'Deployment manifest is stale.');
   for (const entry of manifest.files) await exactFile(base, entry);
-  return { tracks: catalogue.tracks.length, audioBytes, publicBytes: manifest.files.reduce((sum,file)=>sum+file.bytes,0), manifest };
+  return { tracks: catalogue.tracks.length, compatibilityTracks: compatibilityHashes.size, audioBytes, publicBytes: manifest.files.reduce((sum,file)=>sum+file.bytes,0), manifest };
 }
 export async function stageArchive(destination, base = root) {
   const verified = await verifyArchive(base), target = path.resolve(destination);

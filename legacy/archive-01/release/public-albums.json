@@ -1,0 +1,365 @@
+{
+  "format": "revealline-public-preview-albums.v1",
+  "status": "unreviewed-manual-import-preview",
+  "gameCatalogueAdmission": false,
+  "listeningApproval": false,
+  "release": {
+    "repository": "mekhovov/revealline-soundtracks-01",
+    "tag": "preview-playlists-2026-09-21",
+    "prerelease": true
+  },
+  "audio": {
+    "tracks": 70,
+    "uniqueMP3s": 70,
+    "bytes": 354986122
+  },
+  "bundleBytes": 355060503,
+  "formatRequirement": "RLSTB3 / soundtrack library v3 (PR209 or v0.78.0+); v0.77.0 cannot import these albums",
+  "albums": [
+    {
+      "id": "holizna.retro-wave-1",
+      "title": "Holizna — Retro Wave 1",
+      "genre": "Synthwave / electronic",
+      "description": "Seven tracks from Holizna’s Retro Wave Collection.",
+      "fileName": "holizna.retro-wave-1.rlsound",
+      "bytes": 52543047,
+      "sha256": "cf60d209bfd611935574797f007a20a8f5d6c236c241e93ab019a9fa62ad0ae5",
+      "tracks": 7,
+      "trackIds": [
+        "holizna.drama",
+        "holizna.retro-soundtrack",
+        "holizna.cyber-anxiety",
+        "holizna.lost-in-the-jungle",
+        "holizna.night-life",
+        "holizna.day-dreams",
+        "holizna.fires-uptown"
+      ],
+      "downloadURL": "https://github.com/mekhovov/revealline-soundtracks-01/releases/download/preview-playlists-2026-09-21/holizna.retro-wave-1.rlsound",
+      "originalPrivateSha256": "7340581bae2f3d3d4a257b2c7669669b7f43cd2b95fd3852126e0356b5e73513",
+      "onlyRightsTextChanged": true,
+      "exactAudioVerified": true,
+      "structuralImportAndAdditiveMergePassed": true
+    },
+    {
+      "id": "holizna.retro-wave-2",
+      "title": "Holizna — Retro Wave 2",
+      "genre": "Synthwave / electronic",
+      "description": "Six more tracks from Holizna’s Retro Wave Collection.",
+      "fileName": "holizna.retro-wave-2.rlsound",
+      "bytes": 41486795,
+      "sha256": "60cf6572acc20b252737c2d5c80f41a8337500e949dbd8a6a247da0a2500f9a7",
+      "tracks": 6,
+      "trackIds": [
+        "holizna.mutant-club",
+        "holizna.we-used-to-dance",
+        "holizna.machines-with-feelings",
+        "holizna.retro-synths",
+        "holizna.50-over-the-speed-limit",
+        "holizna.dear-mr-super-computer"
+      ],
+      "downloadURL": "https://github.com/mekhovov/revealline-soundtracks-01/releases/download/preview-playlists-2026-09-21/holizna.retro-wave-2.rlsound",
+      "originalPrivateSha256": "d547c8b2236e492512e83804f8fe097579717e56da0feb5da5d096441ed8d9dd",
+      "onlyRightsTextChanged": true,
+      "exactAudioVerified": true,
+      "structuralImportAndAdditiveMergePassed": true
+    },
+    {
+      "id": "licensed.rock-metal",
+      "title": "Rock & Metal",
+      "genre": "Rock / metal",
+      "description": "Four guitar-led tracks by Emma_MA, HydroGene and Vitalezzz.",
+      "fileName": "licensed.rock-metal.rlsound",
+      "bytes": 24069279,
+      "sha256": "696b3ee0a7bf476ec6a2cc41de99ccde43654a9f1de001d993cf80cb971d45f9",
+      "tracks": 4,
+      "trackIds": [
+        "emma-ma.megasong",
+        "hydrogene.determination",
+        "vitalezzz.silver-bullet",
+        "vitalezzz.devoted-guard"
+      ],
+      "downloadURL": "https://github.com/mekhovov/revealline-soundtracks-01/releases/download/preview-playlists-2026-09-21/licensed.rock-metal.rlsound",
+      "originalPrivateSha256": "29dfd9e01adb8bbdc1e5a0c7b7a86d1cb852e8c41564c1ec95551d06cf958cdb",
+      "onlyRightsTextChanged": true,
+      "exactAudioVerified": true,
+      "structuralImportAndAdditiveMergePassed": true
+    },
+    {
+      "id": "3xblast.pop-punk-chiptune",
+      "title": "3xBlast — Pop-Punk Chiptune",
+      "genre": "Pop-punk / chiptune",
+      "description": "Seven instrumental tracks from 3xBlast’s Babe, You Look Poggers Tonight! album.",
+      "fileName": "3xblast.pop-punk-chiptune.rlsound",
+      "bytes": 27159694,
+      "sha256": "3c1acde42712aff251895f82164383f61db33fde4cfbbfb398569dfca5f87801",
+      "tracks": 7,
+      "trackIds": [
+        "3xblast.a-band-of-jellyfish",
+        "3xblast.babe-you-look-poggers-tonight",
+        "3xblast.if-you-re-thinking-about-giving-up-think-again-beause-i-believe-in-you",
+        "3xblast.let-s-go-olive-boy",
+        "3xblast.now-this-is-a-waterpark",
+        "3xblast.thanks-for-listening",
+        "3xblast.the-best-move-is-to-keep-going"
+      ],
+      "downloadURL": "https://github.com/mekhovov/revealline-soundtracks-01/releases/download/preview-playlists-2026-09-21/3xblast.pop-punk-chiptune.rlsound",
+      "originalPrivateSha256": "200c8efbf3548b528dc62a6482063b9455b4e058e2f4a165b29e0ded24b10a9c",
+      "onlyRightsTextChanged": true,
+      "exactAudioVerified": true,
+      "structuralImportAndAdditiveMergePassed": true
+    },
+    {
+      "id": "retro90s.tracker-fm",
+      "title": "Tracker & FM Arcade",
+      "genre": "90s tracker / FM synthesis",
+      "description": "Four creator-declared tracker and Sega-style FM recordings; source OGGs retained with documented MP3 conversions. Listening review pending.",
+      "fileName": "retro90s.tracker-fm.rlsound",
+      "bytes": 18792304,
+      "sha256": "d0c7ef77ad9c737c81cba58718498d4e6499b81f388fd0090170fab54b528af5",
+      "tracks": 4,
+      "trackIds": [
+        "congusbongus.raspberry-jam",
+        "congusbongus.escalate",
+        "ragnar-random.castle-nosferatu-fm",
+        "ragnar-random.tower-of-the-vampire-fm"
+      ],
+      "downloadURL": "https://github.com/mekhovov/revealline-soundtracks-01/releases/download/preview-playlists-2026-09-21/retro90s.tracker-fm.rlsound",
+      "originalPrivateSha256": "21e6d227a1d2df5b3c1dc8c7588037ed17690d9af3526579c45764fc6dc23666",
+      "onlyRightsTextChanged": true,
+      "exactAudioVerified": true,
+      "structuralImportAndAdditiveMergePassed": true
+    },
+    {
+      "id": "metal.extra-battles",
+      "title": "Metal — Extra Battles",
+      "genre": "Rock / metal",
+      "description": "Two exact creator MP3 recordings by MintoDog and Kistol. Listening review pending.",
+      "fileName": "metal.extra-battles.rlsound",
+      "bytes": 7146783,
+      "sha256": "77e3320bb43d829a7a3bb5a28cb3c5002c6d3c735f9767507f104ee933a18741",
+      "tracks": 2,
+      "trackIds": [
+        "mintodog.heavy-battle-2",
+        "kistol.untitled-metal-track"
+      ],
+      "downloadURL": "https://github.com/mekhovov/revealline-soundtracks-01/releases/download/preview-playlists-2026-09-21/metal.extra-battles.rlsound",
+      "originalPrivateSha256": "cfe0bfbc4b330a011ab56076728629443e423389a33143329fe0bdb32656372d",
+      "onlyRightsTextChanged": true,
+      "exactAudioVerified": true,
+      "structuralImportAndAdditiveMergePassed": true
+    },
+    {
+      "id": "preview.expansion-metal",
+      "title": "Metal & Synth-Metal — Preview",
+      "genre": "Metal & Synth-Metal",
+      "description": "6 creator-licensed recordings, each at least 90 seconds. Listening, loop and in-game mix review pending; not quality-approved.",
+      "fileName": "preview.expansion-metal.rlsound",
+      "bytes": 39700472,
+      "sha256": "8d63c3f951d5f7a26c412f57f0977ef6bea26a2a4b634c43711489f54d692e53",
+      "tracks": 6,
+      "trackIds": [
+        "zander-noriega.the-recon-mission",
+        "zander-noriega.dragged-through-hellfire",
+        "zander-noriega.the-wreck",
+        "zander-noriega.abelian",
+        "zander-noriega.fight-them-until-we-cant",
+        "peachtea.last-stand-lets-go"
+      ],
+      "downloadURL": "https://github.com/mekhovov/revealline-soundtracks-01/releases/download/preview-playlists-2026-09-21/preview.expansion-metal.rlsound",
+      "originalPrivateSha256": "ae657f55f5901f64f9248ad4270ac0bec325b373c63803a7c691a6de3bb00392",
+      "onlyRightsTextChanged": true,
+      "exactAudioVerified": true,
+      "structuralImportAndAdditiveMergePassed": true
+    },
+    {
+      "id": "preview.expansion-rock",
+      "title": "Instrumental Rock — Preview",
+      "genre": "Instrumental Rock",
+      "description": "3 creator-licensed recordings, each at least 90 seconds. Listening, loop and in-game mix review pending; not quality-approved.",
+      "fileName": "preview.expansion-rock.rlsound",
+      "bytes": 25970988,
+      "sha256": "048d6ac66963a5c2361ceeb008f225393708ecfda18571049a8b1fe100ae72de",
+      "tracks": 3,
+      "trackIds": [
+        "zander-noriega.stonemason",
+        "zander-noriega.ironbound",
+        "zander-noriega.blinding-lights"
+      ],
+      "downloadURL": "https://github.com/mekhovov/revealline-soundtracks-01/releases/download/preview-playlists-2026-09-21/preview.expansion-rock.rlsound",
+      "originalPrivateSha256": "13dc63b7c2b43175d7d59c848f928b9ea1d7b4927b5ef83930655df6358d246f",
+      "onlyRightsTextChanged": true,
+      "exactAudioVerified": true,
+      "structuralImportAndAdditiveMergePassed": true
+    },
+    {
+      "id": "preview.expansion-electronic",
+      "title": "Electronic & Dance — Preview",
+      "genre": "Electronic & Dance",
+      "description": "10 creator-licensed recordings, each at least 90 seconds. Listening, loop and in-game mix review pending; not quality-approved.",
+      "fileName": "preview.expansion-electronic.rlsound",
+      "bytes": 52326852,
+      "sha256": "93e4c3a95642446394cff4aa697aef549b79f3577b1064969dacc2aeec53d79b",
+      "tracks": 10,
+      "trackIds": [
+        "zander-noriega.darker-waves",
+        "congusbongus.rhythm-garden",
+        "congusbongus.second-cruise",
+        "zane-little-music.rhythm-factory",
+        "joth.black-diamond",
+        "joth.party-sector",
+        "tricks-and-traps.experiment-g",
+        "tricks-and-traps.space-collisions",
+        "tricks-and-traps.simulation-unknown",
+        "tricks-and-traps.new-factory"
+      ],
+      "downloadURL": "https://github.com/mekhovov/revealline-soundtracks-01/releases/download/preview-playlists-2026-09-21/preview.expansion-electronic.rlsound",
+      "originalPrivateSha256": "14f64c1aaaf6acaeeab1a80542fd5848e9d2b9faabb2f55c0802729e454bd6c6",
+      "onlyRightsTextChanged": true,
+      "exactAudioVerified": true,
+      "structuralImportAndAdditiveMergePassed": true
+    },
+    {
+      "id": "preview.expansion-synth90s",
+      "title": "90s Synth & FM — Preview",
+      "genre": "90s Synth & FM",
+      "description": "4 creator-licensed recordings, each at least 90 seconds. Listening, loop and in-game mix review pending; not quality-approved.",
+      "fileName": "preview.expansion-synth90s.rlsound",
+      "bytes": 28217910,
+      "sha256": "3ca306b6664aa8bc73b0762fe6c1d79332e8e6d9b1b8db3161e00749f7d07231",
+      "tracks": 4,
+      "trackIds": [
+        "congusbongus.the-demon-king",
+        "ragnar-random.castle-of-the-goblin-queen",
+        "snabisch.at-the-beginning",
+        "snabisch.the-organ"
+      ],
+      "downloadURL": "https://github.com/mekhovov/revealline-soundtracks-01/releases/download/preview-playlists-2026-09-21/preview.expansion-synth90s.rlsound",
+      "originalPrivateSha256": "57c4bc1e155e25e939e5327843ef934c14034233c21d8211b601326eabd3dcbd",
+      "onlyRightsTextChanged": true,
+      "exactAudioVerified": true,
+      "structuralImportAndAdditiveMergePassed": true
+    },
+    {
+      "id": "preview.expansion-synth90s-cues",
+      "title": "90s Synth & FM — Short Cues — Preview",
+      "genre": "90s Synth & FM",
+      "description": "4 creator-licensed short cues, each under 90 seconds. Listening, loop and in-game mix review pending; not quality-approved.",
+      "fileName": "preview.expansion-synth90s-cues.rlsound",
+      "bytes": 7293670,
+      "sha256": "41639b02423e4ec722f9477ef6496f8cb6ce84781d10f074a88d23fece23e246",
+      "tracks": 4,
+      "trackIds": [
+        "ragnar-random.super-scary-cave-dragon",
+        "ragnar-random.dinosaur-spirit-guide",
+        "ragnar-random.helgi-the-hero-bold",
+        "snabisch.adn"
+      ],
+      "downloadURL": "https://github.com/mekhovov/revealline-soundtracks-01/releases/download/preview-playlists-2026-09-21/preview.expansion-synth90s-cues.rlsound",
+      "originalPrivateSha256": "bda5240221b8329e7f5291303e9dd4859962b838101f63557c30ade9cc17bd83",
+      "onlyRightsTextChanged": true,
+      "exactAudioVerified": true,
+      "structuralImportAndAdditiveMergePassed": true
+    },
+    {
+      "id": "preview.expansion-chiptune-cues",
+      "title": "Fakebit & Chiptune — Short Cues — Preview",
+      "genre": "Fakebit & Chiptune",
+      "description": "7 creator-licensed short cues, each under 90 seconds. Listening, loop and in-game mix review pending; not quality-approved.",
+      "fileName": "preview.expansion-chiptune-cues.rlsound",
+      "bytes": 11569039,
+      "sha256": "b3ee38dc7629ecd51875e7076acd2ae74765a2079e84859e4b32501a2d7b6cf1",
+      "tracks": 7,
+      "trackIds": [
+        "ragnar-random.hostile-planet",
+        "ragnar-random.reason-of-the-itch",
+        "ragnar-random.we-got-the-crud",
+        "ragnar-random.digestive-malady",
+        "ragnar-random.jonathan-livingston-sea-cucumber",
+        "ragnar-random.cassette-culture",
+        "joth.bossa-nova"
+      ],
+      "downloadURL": "https://github.com/mekhovov/revealline-soundtracks-01/releases/download/preview-playlists-2026-09-21/preview.expansion-chiptune-cues.rlsound",
+      "originalPrivateSha256": "3d23a7207a0963919f315d02865cf723b96b1b2fb7a2f5b5225bf773a1d5355a",
+      "onlyRightsTextChanged": true,
+      "exactAudioVerified": true,
+      "structuralImportAndAdditiveMergePassed": true
+    },
+    {
+      "id": "preview.expansion-chiptune",
+      "title": "Fakebit & Chiptune — Preview",
+      "genre": "Fakebit & Chiptune",
+      "description": "4 creator-licensed recordings, each at least 90 seconds. Listening, loop and in-game mix review pending; not quality-approved.",
+      "fileName": "preview.expansion-chiptune.rlsound",
+      "bytes": 13345671,
+      "sha256": "5ec279ef15d7e2b6fa592a878886c44155d68d607140cfe1c68a3e46adb6a005",
+      "tracks": 4,
+      "trackIds": [
+        "ragnar-random.the-creeper",
+        "ragnar-random.chick-with-weapon",
+        "ragnar-random.this-mad-gnosis",
+        "ragnar-random.viroid-planet"
+      ],
+      "downloadURL": "https://github.com/mekhovov/revealline-soundtracks-01/releases/download/preview-playlists-2026-09-21/preview.expansion-chiptune.rlsound",
+      "originalPrivateSha256": "9813ccd339156e2fb16c8938127b21ff6a78539cb70df8c9106e13034f4a5f06",
+      "onlyRightsTextChanged": true,
+      "exactAudioVerified": true,
+      "structuralImportAndAdditiveMergePassed": true
+    },
+    {
+      "id": "preview.expansion-ambient-cues",
+      "title": "Ambient — Short Cues — Preview",
+      "genre": "Ambient",
+      "description": "1 creator-licensed short cues, each under 90 seconds. Listening, loop and in-game mix review pending; not quality-approved.",
+      "fileName": "preview.expansion-ambient-cues.rlsound",
+      "bytes": 2862528,
+      "sha256": "0107e6e333d1298596e77bea033c2f38601593f608ab34b460a9eeaf3e599ac8",
+      "tracks": 1,
+      "trackIds": [
+        "snabisch.where-i-am"
+      ],
+      "downloadURL": "https://github.com/mekhovov/revealline-soundtracks-01/releases/download/preview-playlists-2026-09-21/preview.expansion-ambient-cues.rlsound",
+      "originalPrivateSha256": "1c60e41b84210c08ae028f3e8c7cb399ead7cc42c5995189c5128b5e398195a7",
+      "onlyRightsTextChanged": true,
+      "exactAudioVerified": true,
+      "structuralImportAndAdditiveMergePassed": true
+    },
+    {
+      "id": "preview.expansion-electronic-cues",
+      "title": "Electronic & Dance — Short Cues — Preview",
+      "genre": "Electronic & Dance",
+      "description": "1 creator-licensed short cues, each under 90 seconds. Listening, loop and in-game mix review pending; not quality-approved.",
+      "fileName": "preview.expansion-electronic-cues.rlsound",
+      "bytes": 2575471,
+      "sha256": "b721e730885d44cb53905beaaff8bee41d4a66f39f7c0b018e0b4afb29069ac8",
+      "tracks": 1,
+      "trackIds": [
+        "tricks-and-traps.electric-stream"
+      ],
+      "downloadURL": "https://github.com/mekhovov/revealline-soundtracks-01/releases/download/preview-playlists-2026-09-21/preview.expansion-electronic-cues.rlsound",
+      "originalPrivateSha256": "edaaa8fe15d8b4488c2cac175a0f511e3abbdad6b66db8cb755000e08be95a83",
+      "onlyRightsTextChanged": true,
+      "exactAudioVerified": true,
+      "structuralImportAndAdditiveMergePassed": true
+    }
+  ],
+  "companions": {
+    "credits": {
+      "fileName": "CREDITS.md",
+      "url": "https://github.com/mekhovov/revealline-soundtracks-01/releases/download/preview-playlists-2026-09-21/CREDITS.md",
+      "sha256": "04d711f986aaeeeef857679999c5dc2e26f87ea539b06b5a2cb2f8d20497f756"
+    },
+    "previewCatalogue": {
+      "fileName": "preview-catalogue.json",
+      "url": "https://github.com/mekhovov/revealline-soundtracks-01/releases/download/preview-playlists-2026-09-21/preview-catalogue.json",
+      "sha256": "4d10e0cf9074c6d72c7896db9f6e1c9c8d132a34ac4eca0a7c5deeed6eb82950"
+    }
+  },
+  "capacity": {
+    "customTracks": 123,
+    "customPlaylists": 26,
+    "sharedManagedBytes": 268435456,
+    "allAlbumsFitSimultaneously": false
+  },
+  "import": "Add album file to draft, then Save all changes. Do not use replacement import to add albums.",
+  "existingPrivateImports": "If an older preview copy is already installed, keep it and its backup: changed credits can trigger an identity conflict. Do not use replacement import just to add an album."
+}
