@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 251,
-    "uniqueRecordings": 251,
+    "declaredTracks": 252,
+    "uniqueRecordings": 252,
     "duplicateAliases": 0,
-    "audioBytes": 1196724800
+    "audioBytes": 1198708289
   },
   "tracks": [
     {
@@ -12207,6 +12207,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-zabavka-i-dmytryk-20260927-1e8a3540/1e8a3540686dd112920bb939bb8650d5f2dca08a3a609f3f5bd185b388aba08b.mp3",
         "bytes": 1027835,
         "sha256": "1e8a3540686dd112920bb939bb8650d5f2dca08a3a609f3f5bd185b388aba08b"
+      },
+      "aliases": []
+    },
+    {
+      "id": "ivan-hanzera.vesela-pisenka-ukrayinskoho-drona-prem-yera-2024-ivan-hanzera",
+      "title": "Весела пісенька українського дрона. Прем'єра 2024. Іван Ганзера.",
+      "artist": "Іван Ганзера",
+      "durationSeconds": 114.985215,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@ivanganzeramusic",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Весела пісенька українського дрона. Прем'єра 2024. Іван Ганзера. by Іван Ганзера. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@ivanganzeramusic",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@ivanganzeramusic",
+        "attribution": "Весела пісенька українського дрона. Прем'єра 2024. Іван Ганзера. by Іван Ганзера. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@ivanganzeramusic",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Іван Ганзера - Весела пісенька українського дрона.mp3",
+      "archiveId": "ivan-hanzera-20260927-56ccb8cf",
+      "collection": "Весела пісенька українського дрона. Прем'єра 2024. Іван Ганзера.",
+      "collections": [
+        "Весела пісенька українського дрона. Прем'єра 2024. Іван Ганзера.",
+        "Іван Ганзера",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-ivan-hanzera-20260927-56ccb8cf/56ccb8cf806d141b891f1febe44e3261227ddcf010a4dba172fc94be51c37b49.mp3",
+        "bytes": 1983489,
+        "sha256": "56ccb8cf806d141b891f1febe44e3261227ddcf010a4dba172fc94be51c37b49"
       },
       "aliases": []
     }

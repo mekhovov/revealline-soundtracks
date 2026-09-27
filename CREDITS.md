@@ -1844,3 +1844,9 @@ Licence: Unknown — uploader-confirmed rights
 Забавка і Дмитрик - Дронщик (home video) by Забавка і Дмитрик. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@zabavka103
 
 Licence: Unknown — uploader-confirmed rights
+
+## Весела пісенька українського дрона. Прем'єра 2024. Іван Ганзера.
+
+Весела пісенька українського дрона. Прем'єра 2024. Іван Ганзера. by Іван Ганзера. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@ivanganzeramusic
+
+Licence: Unknown — uploader-confirmed rights
