@@ -1500,57 +1500,57 @@ Licence: CC BY 3.0 Unported
 
 ## Збий дрон — TRENCH ORDERLY
 
-Збий дрон by TRENCH ORDERLY. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw
+Збий дрон by TRENCH ORDERLY. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TRENCH_ORDERLY
 
-Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw
+Source: https://www.youtube.com/@TRENCH_ORDERLY
 
 Licence: Unknown — uploader-confirmed rights
 
 ## Drones hunter — TRENCH ORDERLY
 
-Drones hunter by TRENCH ORDERLY. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw
+Drones hunter by TRENCH ORDERLY. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TRENCH_ORDERLY
 
-Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw
+Source: https://www.youtube.com/@TRENCH_ORDERLY
 
 Licence: Unknown — uploader-confirmed rights
 
 ## Vampire — TRENCH ORDERLY
 
-Vampire by TRENCH ORDERLY. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw
+Vampire by TRENCH ORDERLY. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TRENCH_ORDERLY
 
-Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw
+Source: https://www.youtube.com/@TRENCH_ORDERLY
 
 Licence: Unknown — uploader-confirmed rights
 
 ## Літунам — TRENCH ORDERLY
 
-Літунам by TRENCH ORDERLY. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw
+Літунам by TRENCH ORDERLY. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TRENCH_ORDERLY
 
-Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw
+Source: https://www.youtube.com/@TRENCH_ORDERLY
 
 Licence: Unknown — uploader-confirmed rights
 
 ## Пройобщик мавіків — TRENCH ORDERLY
 
-Пройобщик мавіків by TRENCH ORDERLY. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw
+Пройобщик мавіків by TRENCH ORDERLY. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TRENCH_ORDERLY
 
-Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw
+Source: https://www.youtube.com/@TRENCH_ORDERLY
 
 Licence: Unknown — uploader-confirmed rights
 
 ## РЕБ — TRENCH ORDERLY
 
-РЕБ by TRENCH ORDERLY. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw
+РЕБ by TRENCH ORDERLY. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TRENCH_ORDERLY
 
-Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw
+Source: https://www.youtube.com/@TRENCH_ORDERLY
 
 Licence: Unknown — uploader-confirmed rights
 
 ## Шахеди — TRENCH ORDERLY
 
-Шахеди by TRENCH ORDERLY. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw
+Шахеди by TRENCH ORDERLY. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TRENCH_ORDERLY
 
-Source: https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw
+Source: https://www.youtube.com/@TRENCH_ORDERLY
 
 Licence: Unknown — uploader-confirmed rights
 

@@ -21,6 +21,7 @@ const CORRECTED_UNKNOWN_RIGHTS = new Set([
   'trench-orderly.soundtrack.3', 'trench-orderly.soundtrack.4',
   'trench-orderly.soundtrack.5',
 ]);
+const TRENCH_ORDERLY_SOURCE = 'https://www.youtube.com/@TRENCH_ORDERLY';
 const LEGACY_IDENTITY_FIELDS = [
   'title', 'artist', 'durationSeconds', 'tags', 'source', 'fileName', 'archiveId',
   'collection', 'status', 'listeningApproval', 'gameCatalogueAdmission', 'contentId',
@@ -85,7 +86,11 @@ async function verifyLegacyUnion(catalogue, base) {
       demand(!mappedIds.has(id), `Legacy migration identity collides: ${id}`); mappedIds.add(id);
       const migrated = canonical.get(id);
       demand(migrated, `Legacy recording is missing from canonical catalogue: ${id}`);
-      for (const field of LEGACY_IDENTITY_FIELDS) demand(JSON.stringify(migrated[field]) === JSON.stringify(legacy[field]), `Legacy recording metadata differs: ${id}.${field}`);
+      for (const field of LEGACY_IDENTITY_FIELDS) {
+        if (field === 'source' && CORRECTED_UNKNOWN_RIGHTS.has(id)) {
+          demand(migrated.source === TRENCH_ORDERLY_SOURCE, `Corrected creator source differs: ${id}`);
+        } else demand(JSON.stringify(migrated[field]) === JSON.stringify(legacy[field]), `Legacy recording metadata differs: ${id}.${field}`);
+      }
       demand(migrated.audio?.bytes === legacy.audio?.bytes && migrated.audio?.sha256 === legacy.audio?.sha256, `Legacy recording bytes differ: ${id}`);
       if (CORRECTED_UNKNOWN_RIGHTS.has(id)) {
         demand(legacy.license === 'CC0 1.0 Universal' && migrated.license === 'Unknown — uploader-confirmed rights' && migrated.licenseURL === null && migrated.credit === migrated.rights?.attribution, `Legacy rights correction differs: ${id}`);

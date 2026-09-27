@@ -19,13 +19,13 @@
     },
     {
       "path": "catalogue.json",
-      "bytes": 412336,
-      "sha256": "7ea6d79e5b5bced5b892aee39f39e38515104d1a46ccfef4e68970799af5fb0a"
+      "bytes": 411860,
+      "sha256": "4092b2cdba81fd500e493f2102fb89bbf7bf10f9d09afbbd4525d2303647472e"
     },
     {
       "path": "CREDITS.md",
-      "bytes": 53142,
-      "sha256": "9e551ee738f684f9f3612cd5d9eb4a56c5aa7f9875bdc7c508bca45424d0b073"
+      "bytes": 52904,
+      "sha256": "cf468f27853f598ddb350e7f67e0898ec108171cbd6bf762533152a98d7d3317"
     },
     {
       "path": "external-deliveries.json",
@@ -524,13 +524,13 @@
     },
     {
       "path": "UPLOAD_GUIDE.md",
-      "bytes": 10066,
-      "sha256": "02e7996983cac4333e5c37768f3c525ec5034005dd71a2abb3be68e787bbca7b"
+      "bytes": 10049,
+      "sha256": "6261fde639695b8092cac01553a9a2144ce7c5398398f92a941539db15586ff3"
     },
     {
       "path": "upload-guide/index.html",
-      "bytes": 10111,
-      "sha256": "618f2e8d7f24bfa3c83cb071f33d5d46df1c5cf5e02c5223f18713c5d32c2517"
+      "bytes": 10094,
+      "sha256": "cdcc5c9ec981e83fdee3d3be2f9f141982ee59bf469918198f86230c2a1dd259"
     }
   ]
 }
