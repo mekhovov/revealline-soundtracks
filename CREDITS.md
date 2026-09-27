@@ -1759,3 +1759,9 @@ Licence: Unknown — uploader-confirmed rights
 Оператор "FPV" by AlexBust & Co. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@AlexBustCompany
 
 Licence: Unknown — uploader-confirmed rights
+
+## Оператор FPV дрона (Radio Edit)
+
+Оператор FPV дрона (Radio Edit) by DUSHEVNIY. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/channel/UCyfhGVJeiO6Rha5nhUzdxjg
+
+Licence: Unknown — uploader-confirmed rights
