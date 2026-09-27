@@ -176,6 +176,9 @@ other changes. Preserve every creator-required credit with `--attribution`.
   the audio. A song can belong to several collections.
 - `--batch-title` sets the primary public collection title. If it is omitted, the
   generated batch title remains the primary collection.
+- Default batch IDs transliterate Cyrillic collection/artist names and include an
+  exact-audio hash suffix, so unrelated folders added on the same day do not
+  collide. Use `--batch-id` only when you need a specific stable identifier.
 - `--description` explains the batch on its collection page.
 
 Use consistent spelling so existing and new songs appear under the same filter.

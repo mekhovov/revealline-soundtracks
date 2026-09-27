@@ -138,9 +138,25 @@ const escapeHTML = (value) =>
       ],
   );
 
+const CYRILLIC_SLUGS = new Map(
+  Object.entries({
+    а: "a", б: "b", в: "v", г: "h", ґ: "g", д: "d", е: "e", є: "ye",
+    ж: "zh", з: "z", и: "y", і: "i", ї: "yi", й: "y", к: "k", л: "l",
+    м: "m", н: "n", о: "o", п: "p", р: "r", с: "s", т: "t", у: "u",
+    ф: "f", х: "kh", ц: "ts", ч: "ch", ш: "sh", щ: "shch", ь: "",
+    ю: "yu", я: "ya", ё: "yo", ъ: "", ы: "y", э: "e",
+  }),
+);
+
+function transliterateForSlug(value) {
+  return [...String(value).toLowerCase()]
+    .map((character) => CYRILLIC_SLUGS.get(character) ?? character)
+    .join("");
+}
+
 function slug(value, maximum = 64) {
   return (
-    String(value)
+    transliterateForSlug(value)
       .normalize("NFKD")
       .replace(/[\u0300-\u036f]/g, "")
       .toLowerCase()
@@ -414,13 +430,6 @@ export async function createIntake(
   demand(styles.length >= 1, "Choose at least one style with --styles.");
   const collections = [...new Set(options.collections ?? [])];
   demand(collections.length <= 16, "Use at most 16 collections.");
-  const batchId =
-    options.batchId ??
-    `${slug(titleFromFile(input), 48)}-${new Date().toISOString().slice(0, 10).replaceAll("-", "")}`;
-  demand(
-    /^[a-z0-9][a-z0-9-]{0,63}$/.test(batchId),
-    "Batch ID must be lowercase letters, digits and hyphens.",
-  );
   const ids = new Map(),
     tracks = [];
   for (const file of files) {
@@ -474,6 +483,18 @@ export async function createIntake(
     tracks.reduce((sum, track) => sum + track.bytes.length, 0) <=
       MAX_BATCH_BYTES,
     "A public batch may contain at most 64 MiB of audio.",
+  );
+  const batchLabel =
+    options.batchTitle?.trim() ||
+    collections[0] ||
+    options.artist?.trim() ||
+    titleFromFile(input);
+  const batchId =
+    options.batchId ??
+    `${slug(batchLabel, 39)}-${new Date().toISOString().slice(0, 10).replaceAll("-", "")}-${tracks[0].sha256.slice(0, 8)}`;
+  demand(
+    /^[a-z0-9][a-z0-9-]{0,63}$/.test(batchId),
+    "Batch ID must be lowercase letters, digits and hyphens.",
   );
   return {
     batchId,

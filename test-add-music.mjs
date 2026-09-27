@@ -159,6 +159,27 @@ test("folder discovery is deterministic and ignores non-MP3 files", async (t) =>
   );
 });
 
+test("Cyrillic folder intake creates a readable collision-resistant batch identity", async (t) => {
+  const root = await temporary(t);
+  const folder = path.join(root, "Мос");
+  await mkdir(folder);
+  await writeFile(path.join(folder, "Пісня.mp3"), fakeMP3);
+  const result = await createIntake(
+    folder,
+    {
+      artist: "Мос",
+      source: "https://www.youtube.com/@Mos_18000",
+      license: "unknown",
+      styles: ["ФПВ", "UA"],
+      collections: ["Мос", "ФПВ"],
+      confirmRights: true,
+    },
+    { probe: async () => 120 },
+  );
+  assert.match(result.batchId, /^mos-\d{8}-[a-f0-9]{8}$/);
+  assert.equal(result.tracks[0].id, "mos.pisnya");
+});
+
 test("intake binds exact rights and produces stable unique identities", async (t) => {
   const root = await temporary(t);
   await mkdir(path.join(root, "one"));
