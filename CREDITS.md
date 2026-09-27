@@ -1801,3 +1801,9 @@ Licence: Unknown — uploader-confirmed rights
 SIVA - Москальський Череп (пісня Сергія Сіваченка) by SIVA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@SIVA_UA
 
 Licence: Unknown — uploader-confirmed rights
+
+## Закинь на донат 💸 #донат #бамбам #зсудонат #військовийгумор
+
+Закинь на донат 💸 #донат #бамбам #зсудонат #військовийгумор by Ukrainian Tik Tok. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@ukrainiantiktok
+
+Licence: Unknown — uploader-confirmed rights

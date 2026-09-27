@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 244,
-    "uniqueRecordings": 244,
+    "declaredTracks": 245,
+    "uniqueRecordings": 245,
     "duplicateAliases": 0,
-    "audioBytes": 1180890663
+    "audioBytes": 1181231129
   },
   "tracks": [
     {
@@ -11875,6 +11875,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-siva-20260927-5f622aad/5f622aad63e879cfde758aaf14420981dccdea923383d0f9ac8e328c61317dc5.mp3",
         "bytes": 3168560,
         "sha256": "5f622aad63e879cfde758aaf14420981dccdea923383d0f9ac8e328c61317dc5"
+      },
+      "aliases": []
+    },
+    {
+      "id": "ukrainian-tik-tok.zakyn-na-donat-donat-bambam-zsudonat-viyskovyyhumor",
+      "title": "Закинь на донат 💸 #донат #бамбам #зсудонат #військовийгумор",
+      "artist": "Ukrainian Tik Tok",
+      "durationSeconds": 15.25551,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@ukrainiantiktok",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Закинь на донат 💸 #донат #бамбам #зсудонат #військовийгумор by Ukrainian Tik Tok. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@ukrainiantiktok",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@ukrainiantiktok",
+        "attribution": "Закинь на донат 💸 #донат #бамбам #зсудонат #військовийгумор by Ukrainian Tik Tok. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@ukrainiantiktok",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Ukrainian Tik Tok - Закинь на донат.mp3",
+      "archiveId": "ukrainian-tik-tok-20260927-3d8d157d",
+      "collection": "Закинь на донат 💸 #донат #бамбам #зсудонат #військовийгумор",
+      "collections": [
+        "Закинь на донат 💸 #донат #бамбам #зсудонат #військовийгумор",
+        "Ukrainian Tik Tok",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-ukrainian-tik-tok-20260927-3d8d157d/3d8d157da92cc88668f0c661456e4f9239646dbf5a987dce17e010c86558a64b.mp3",
+        "bytes": 340466,
+        "sha256": "3d8d157da92cc88668f0c661456e4f9239646dbf5a987dce17e010c86558a64b"
       },
       "aliases": []
     }
