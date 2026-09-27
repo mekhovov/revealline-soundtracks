@@ -1868,3 +1868,10 @@ Licence: Unknown — uploader-confirmed rights
 ПРОКЛЯТИЙ ***, Третя Штурмова — Спортивні повітряні роботи (проєкт ЕПОХА) by ПРОКЛЯТИЙ ***, Третя Штурмова. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@proklyatiy_huy
 
 Licence: Unknown — uploader-confirmed rights
+
+## Ї**ти **сню 24/7 | Міша Крупін та Фонд Притули
+
+Ї**ти **сню 24/7 | Міша Крупін та Фонд Притули by Саргій Притула та Міша Крупін. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@Prytula
+
+
+Licence: Unknown — uploader-confirmed rights

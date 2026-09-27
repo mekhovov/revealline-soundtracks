@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 255,
-    "uniqueRecordings": 255,
+    "declaredTracks": 256,
+    "uniqueRecordings": 256,
     "duplicateAliases": 0,
-    "audioBytes": 1208172704
+    "audioBytes": 1210432372
   },
   "tracks": [
     {
@@ -12412,6 +12412,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-proklyatyy-20260927-0b92127d/0b92127dd20223f0644b9b2b4812812fb841674a36841e4a2b0eb2b0e12d408c.mp3",
         "bytes": 2926619,
         "sha256": "0b92127dd20223f0644b9b2b4812812fb841674a36841e4a2b0eb2b0e12d408c"
+      },
+      "aliases": []
+    },
+    {
+      "id": "sarhiy-prytula-ta-misha-krupin.yi-ty-snyu-24-7-misha-krupin-ta-fond-prytuly",
+      "title": "Ї**ти **сню 24/7 | Міша Крупін та Фонд Притули",
+      "artist": "Саргій Притула та Міша Крупін",
+      "durationSeconds": 135.743855,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@Prytula\n",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Ї**ти **сню 24/7 | Міша Крупін та Фонд Притули by Саргій Притула та Міша Крупін. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@Prytula\n",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@Prytula\n",
+        "attribution": "Ї**ти **сню 24/7 | Міша Крупін та Фонд Притули by Саргій Притула та Міша Крупін. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@Prytula\n",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Саргій Притула та Міша Крупін - Ї_ти _сню 24_7 _  Фонд Притули.mp3",
+      "archiveId": "sarhiy-prytula-ta-misha-krupin-20260927-3d981d47",
+      "collection": "Ї**ти **сню 24/7 | Міша Крупін та Фонд Притули",
+      "collections": [
+        "Ї**ти **сню 24/7 | Міша Крупін та Фонд Притули",
+        "Саргій Притула та Міша Крупін",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-sarhiy-prytula-ta-misha-krupin-20260927-3d981d47/3d981d479f4d5447a6806ed3ee7709b8a408d213ca8a8ae6a8b1b342461322c1.mp3",
+        "bytes": 2259668,
+        "sha256": "3d981d479f4d5447a6806ed3ee7709b8a408d213ca8a8ae6a8b1b342461322c1"
       },
       "aliases": []
     }

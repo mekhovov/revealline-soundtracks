@@ -1308,6 +1308,18 @@
           "bytes": 2926619
         }
       ]
+    },
+    {
+      "id": "audio-sarhiy-prytula-ta-misha-krupin-20260927-3d981d47",
+      "releaseTag": "audio-sarhiy-prytula-ta-misha-krupin-20260927-3d981d47",
+      "recordings": 1,
+      "audioBytes": 2259668,
+      "assets": [
+        {
+          "sha256": "3d981d479f4d5447a6806ed3ee7709b8a408d213ca8a8ae6a8b1b342461322c1",
+          "bytes": 2259668
+        }
+      ]
     }
   ]
 }
