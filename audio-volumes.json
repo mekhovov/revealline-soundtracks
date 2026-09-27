@@ -968,6 +968,18 @@
           "bytes": 4079611
         }
       ]
+    },
+    {
+      "id": "audio-pivnich-20260927-9641f728",
+      "releaseTag": "audio-pivnich-20260927-9641f728",
+      "recordings": 1,
+      "audioBytes": 2848859,
+      "assets": [
+        {
+          "sha256": "9641f728119b657b46d2e7b668e0d34d511fee75447cc133652cf98106992357",
+          "bytes": 2848859
+        }
+      ]
     }
   ]
 }

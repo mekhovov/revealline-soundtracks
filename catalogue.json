@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 222,
-    "uniqueRecordings": 222,
+    "declaredTracks": 223,
+    "uniqueRecordings": 223,
     "duplicateAliases": 0,
-    "audioBytes": 1114764695
+    "audioBytes": 1117613554
   },
   "tracks": [
     {
@@ -10762,6 +10762,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-nytso-potvorno-20260927-edad4597/edad4597c38ca22d295658d4cbe23bcf50399f0c16244b850a9383fe939124d1.mp3",
         "bytes": 4079611,
         "sha256": "edad4597c38ca22d295658d4cbe23bcf50399f0c16244b850a9383fe939124d1"
+      },
+      "aliases": []
+    },
+    {
+      "id": "pivnich.pivnich-fpv",
+      "title": "Північ - FPV",
+      "artist": "Північ",
+      "durationSeconds": 166.533515,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@EmmaPivnich",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Північ - FPV by Північ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@EmmaPivnich",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@EmmaPivnich",
+        "attribution": "Північ - FPV by Північ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@EmmaPivnich",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": " Північ - FPV.mp3",
+      "archiveId": "pivnich-20260927-9641f728",
+      "collection": "Північ - FPV",
+      "collections": [
+        "Північ - FPV",
+        "Північ",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-pivnich-20260927-9641f728/9641f728119b657b46d2e7b668e0d34d511fee75447cc133652cf98106992357.mp3",
+        "bytes": 2848859,
+        "sha256": "9641f728119b657b46d2e7b668e0d34d511fee75447cc133652cf98106992357"
       },
       "aliases": []
     }

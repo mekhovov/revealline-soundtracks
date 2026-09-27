@@ -287,9 +287,19 @@
       "tracks": 1
     },
     {
+      "id": "Північ",
+      "title": "Північ",
+      "tracks": 1
+    },
+    {
+      "id": "Північ - FPV",
+      "title": "Північ - FPV",
+      "tracks": 1
+    },
+    {
       "id": "ФПВ",
       "title": "ФПВ",
-      "tracks": 35
+      "tracks": 36
     }
   ]
 }
