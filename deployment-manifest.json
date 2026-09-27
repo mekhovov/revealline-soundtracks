@@ -1,0 +1,71 @@
+{
+  "format": "revealline-soundtrack-catalogue-deployment.v2",
+  "archiveId": "revealline-soundtracks",
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "audio-volumes.json",
+      "bytes": 26651,
+      "sha256": "9f7b2ce63017708196e8985c04856842d2893def25c267be93c02ebe1adf7b24"
+    },
+    {
+      "path": "batches.json",
+      "bytes": 6250,
+      "sha256": "1d243207df60febae270b544ab0f6eb2102e346b9348f209db050a23f718069e"
+    },
+    {
+      "path": "catalogue.json",
+      "bytes": 405967,
+      "sha256": "ba6d802998754707b78635aeaddcb6261172afa904782fedc9fc6abf1ae9fa05"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 52605,
+      "sha256": "ee6d61e480003bbb5aeffa34cc679c3a566b336cb279d2dcf11a4cea3763b162"
+    },
+    {
+      "path": "index.html",
+      "bytes": 10113,
+      "sha256": "d143637db5cb76f8accb49c38fdb14c108c6c16de3b2c8de656d40ea7520d384"
+    },
+    {
+      "path": "intake-browser.mjs",
+      "bytes": 3752,
+      "sha256": "d3653975d2ec788fbe08b95d9b48356bf035be46b506ffd04bee4a3903237a33"
+    },
+    {
+      "path": "intake/package.mjs",
+      "bytes": 9810,
+      "sha256": "b09cae51fbbf1bd7bbdd46d11f3e9f3ae0494861b0670a7c26b1cb82701ab813"
+    },
+    {
+      "path": "playback-policy.mjs",
+      "bytes": 1981,
+      "sha256": "e2c9279927120aac6d1d5ff86ec6794829b543eb6ad03838eb5238bd9f399160"
+    },
+    {
+      "path": "player.mjs",
+      "bytes": 10851,
+      "sha256": "c5a22d129afa89d60eed77f48fdbd53d38f90f578291ba66533922e9de71e384"
+    },
+    {
+      "path": "README.md",
+      "bytes": 546,
+      "sha256": "3241d0ea47ea941fed7d2546e7b2cf0bb2c7f6abbf5be9568a29461a58862b4b"
+    },
+    {
+      "path": "style.css",
+      "bytes": 7548,
+      "sha256": "76477ec25491812410b2faba8c006bb065d5228a8fe439844ac2a73c3f081526"
+    },
+    {
+      "path": "UPLOAD_GUIDE.md",
+      "bytes": 3367,
+      "sha256": "31f384d5123a464fceedb8196056db60a8c607a0d522106f50dc5e4ee53afba7"
+    }
+  ]
+}

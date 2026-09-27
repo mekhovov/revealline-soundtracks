@@ -1,0 +1,66 @@
+name: Verify, publish audio volumes, and deploy soundtracks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: soundtrack-pages-${{ github.event.pull_request.number || 'main' }}
+  cancel-in-progress: false
+
+jobs:
+  publish-volumes:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.22.2
+      - name: Verify and publish exact draft audio volumes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node intake/publish-volumes.mjs
+
+  verify:
+    needs: publish-volumes
+    if: always() && (needs.publish-volumes.result == 'success' || needs.publish-volumes.result == 'skipped')
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.22.2
+      - name: Verify catalogue, rights and deterministic Pages payload
+        run: |
+          node --test test-*.mjs
+          node verify.mjs
+          git diff --check
+      - name: Stage the exact Pages payload
+        run: node verify.mjs --stage public
+      - name: Upload verified Pages artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9
+        with:
+          path: public
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: verify
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Search and play every published RevealLine soundtrack recording in one continuous player.">
+  <title>RevealLine · All soundtracks</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="player.mjs" type="module"></script>
+  <script src="intake-browser.mjs" type="module"></script>
+</head>
+<body>
+  <a class="skip" href="#recordings">Skip to recordings</a>
+  <main>
+    <header>
+      <p class="eyebrow">REVEALLINE / SOUNDTRACK SIGNAL</p>
+      <h1>Every track.<br><span>One player.</span></h1>
+      <p class="intro" id="catalogue-summary">Loading the complete published soundtrack catalogue…</p>
+      <p class="notice">This is the canonical RevealLine soundtrack library. Exact MP3s live in immutable audio volumes; publication remains separate from listening approval and game defaults.</p>
+      <nav>
+        <a href="#recordings">Browse all songs</a>
+        <a href="#add-music">Add music</a>
+        <a href="https://mekhovov.github.io/revealline/game/">Play RevealLine ↗</a>
+        <a href="https://github.com/mekhovov/revealline-soundtracks">Soundtrack repository ↗</a>
+        <a href="catalogue.json">Public catalogue JSON</a>
+      </nav>
+    </header>
+
+    <section class="player" aria-labelledby="player-heading">
+      <div class="player-copy">
+        <p class="eyebrow" id="player-heading">NOW PLAYING</p>
+        <p id="now-playing" aria-live="polite">Choose a recording, or play the current results.</p>
+        <p id="now-source"></p>
+      </div>
+      <audio id="audio" controls preload="metadata"></audio>
+      <div class="transport">
+        <button id="play-results" type="button">▶ Play results</button>
+        <button id="pause" type="button" disabled>Pause</button>
+        <button id="next" type="button" disabled>Next →</button>
+        <label>Order
+          <select id="order">
+            <option value="shuffle">Shuffle</option>
+            <option value="ordered">One after another</option>
+          </select>
+        </label>
+        <label>Repeat
+          <select id="repeat">
+            <option value="all">All selected songs</option>
+            <option value="one">Current song</option>
+            <option value="off">Stop at the end</option>
+          </select>
+        </label>
+      </div>
+      <p id="playback-status" role="status"></p>
+    </section>
+
+    <section id="recordings" aria-label="All published recordings">
+      <div class="filters">
+        <label class="search-field">Find a song, artist, tag or collection
+          <input id="search" type="search" placeholder="Try “metal”, “YannZ” or “Shchedryk”" autocomplete="off">
+        </label>
+        <fieldset class="style-picker">
+          <legend>Music styles — choose any mix</legend>
+          <div id="styles"></div>
+          <div class="style-actions">
+            <button id="styles-all" type="button">All styles</button>
+            <button id="styles-none" type="button">Clear</button>
+          </div>
+        </fieldset>
+        <label>Collection
+          <select id="collection"><option value="">All collections</option></select>
+        </label>
+        <p id="count" role="status">Loading…</p>
+      </div>
+      <div id="tracks" aria-busy="true"></div>
+      <p id="empty" hidden>No recordings match. Try another search, style or collection.</p>
+    </section>
+
+    <section class="guide" id="add-music">
+        <p class="eyebrow">CATALOGUE INTAKE</p>
+        <h2>Add an MP3 once; play it everywhere</h2>
+        <p>
+          Prepare a rights-bound contribution entirely in this page. Files stay
+          on your device until you download the resulting
+          <code>.rlintake</code> package. The canonical archive accepts it only after the
+          exact recording source, licence and credits are verified.
+        </p>
+        <p>
+          <strong>Unknown</strong> records an uploader assertion, not an open
+          licence. Use it only when you personally confirmed public MP3
+          redistribution and browser-game playback rights. These recordings
+          remain excluded from Recording mode and show the exact evidence URL.
+        </p>
+        <form id="browser-intake-form" class="intake-form">
+          <fieldset>
+            <legend>1. Choose exact MP3s</legend>
+            <label
+              >One or more MP3 files
+              <input
+                id="intake-files"
+                type="file"
+                accept=".mp3,audio/mpeg"
+                multiple
+            /></label>
+            <label
+              >Or one folder
+              <input
+                id="intake-folder"
+                type="file"
+                accept=".mp3,audio/mpeg"
+                webkitdirectory
+                directory
+                multiple
+            /></label>
+          </fieldset>
+          <fieldset>
+            <legend>2. Describe the recording and rights</legend>
+            <label
+              >Creator fallback <input name="artist" required maxlength="160" />
+              <span>Used only when an MP3 has no artist tag; existing artist tags are preserved.</span>
+            </label>
+            <label
+              >Exact creator/source page
+              <input name="source" type="url" required maxlength="2048" placeholder="https://…"
+            /></label>
+            <label
+              >Licence
+              <select name="license" required>
+                <option value="">Choose…</option>
+                <option value="cc0">CC0 1.0</option>
+                <option value="cc-by-3.0">CC BY 3.0</option>
+                <option value="cc-by-4.0">CC BY 4.0</option>
+                <option value="cc-by-sa-3.0">CC BY-SA 3.0</option>
+                <option value="cc-by-sa-4.0">CC BY-SA 4.0</option>
+                <option value="unknown">Unknown — uploader-confirmed rights</option>
+              </select>
+            </label>
+            <label
+              >Reviewed styles
+              <input
+                name="styles"
+                required
+                maxlength="1039"
+                placeholder="metal, ukrainian, gameplay"
+            /></label>
+            <label
+              >Collections
+              <input
+                name="collections"
+                maxlength="1039"
+                placeholder="TRENCH ORDERLY, ФПВ"
+            /><span>A song can appear in several collections. The batch title is added automatically.</span></label>
+            <label
+              >Exact rights evidence URL
+              <input
+                name="rightsEvidence"
+                type="url"
+                maxlength="2048"
+                placeholder="Defaults to source page"
+            /></label>
+            <label
+              >Shared required attribution
+              <textarea
+                name="attribution"
+                rows="3"
+                maxlength="1000"
+                placeholder="Only when the same text applies to every selected file"
+              ></textarea>
+            </label>
+            <label
+              >Derivative/change notice
+              <textarea
+                name="derivativeNotice"
+                rows="3"
+                maxlength="1000"
+                placeholder="Required for CC BY-SA"
+              ></textarea>
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>3. Name the public audition batch</legend>
+            <label
+              >Collection title
+              <input
+                name="batchTitle"
+                maxlength="160"
+                placeholder="Derived from the selected file when empty"
+            /></label>
+            <label
+              >Stable batch ID
+              <input
+                name="batchId"
+                maxlength="64"
+                pattern="[a-z0-9][a-z0-9-]{0,63}"
+                placeholder="lowercase-and-hyphens"
+            /></label>
+            <label
+              >Description <textarea name="description" rows="3" maxlength="1000"></textarea>
+            </label>
+          </fieldset>
+          <label class="rights-confirm"
+            ><input name="confirmRights" type="checkbox" required /> I verified
+            that the source, licence or uploader-confirmed permission, rights evidence and styles above apply to
+            every selected recording. Files with different rights belong in
+            separate packages.</label
+          >
+          <button type="submit">Verify and prepare package</button>
+          <p id="intake-status" role="status" aria-live="polite">
+            Nothing is uploaded by this page.
+          </p>
+          <a id="intake-download" class="button-link" hidden
+            >Download verified .rlintake package</a
+          >
+        </form>
+        <ol>
+          <li>
+            Choose files or a folder, enter the exact rights details and
+            download the verified package.
+          </li>
+          <li>
+            Run the single package-admission command from the checked-in guide.
+            No metadata flags are repeated.
+          </li>
+          <li>
+            Open the archive pull request. CI verifies exact bytes, metadata,
+            duplicate hashes and catalogue output.
+          </li>
+          <li>
+            After merge, automation publishes the immutable audio volume and
+            deploys Pages. The recording then appears here and in the game.
+          </li>
+        </ol>
+        <p>
+          <a href="UPLOAD_GUIDE.md"
+            >Open the complete step-by-step upload guide →</a
+          >
+        </p>
+      </section>
+
+    <footer>
+      <p>Third-party recordings remain credited to their creators. Public availability is separate from listening approval and from the game’s standard playlists.</p>
+      <p>Audio uses immutable SHA-256 object paths. The player requests only the chosen recording; it does not download the whole catalogue.</p>
+    </footer>
+  </main>
+</body>
+</html>
