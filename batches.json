@@ -2,6 +2,11 @@
   "format": "revealline-soundtrack-collections.v2",
   "collections": [
     {
+      "id": "(AI COVER) FPV  дрон. Сонет.",
+      "title": "(AI COVER) FPV  дрон. Сонет.",
+      "tracks": 1
+    },
+    {
       "id": "414 Птахи Мадяра",
       "title": "414 Птахи Мадяра",
       "tracks": 1
@@ -9,6 +14,11 @@
     {
       "id": "414 Птахи Мадяра - легендарні Сталеві Птахи проти хробаків",
       "title": "414 Птахи Мадяра - легендарні Сталеві Птахи проти хробаків",
+      "tracks": 1
+    },
+    {
+      "id": "A'm Ukrainian",
+      "title": "A'm Ukrainian",
       "tracks": 1
     },
     {
@@ -329,7 +339,7 @@
     {
       "id": "ФПВ",
       "title": "ФПВ",
-      "tracks": 48
+      "tracks": 49
     },
     {
       "id": "Юрій Громовий",

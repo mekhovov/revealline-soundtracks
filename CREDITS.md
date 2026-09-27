@@ -1747,3 +1747,9 @@ Licence: Unknown — uploader-confirmed rights
 414 Птахи Мадяра - легендарні Сталеві Птахи проти хробаків by 414 Птахи Мадяра. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@414pm
 
 Licence: Unknown — uploader-confirmed rights
+
+## (AI COVER) FPV  дрон. Сонет.
+
+(AI COVER) FPV  дрон. Сонет. by A'm Ukrainian. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@amukrainian653
+
+Licence: Unknown — uploader-confirmed rights
