@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 246,
-    "uniqueRecordings": 246,
+    "declaredTracks": 247,
+    "uniqueRecordings": 247,
     "duplicateAliases": 0,
-    "audioBytes": 1184518712
+    "audioBytes": 1186192607
   },
   "tracks": [
     {
@@ -11977,6 +11977,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-vitold-ua-band-feat-black-d-20260927-ef37e316/ef37e31610e6fd4723c82319f34cad07c4cbb902a494a1f468bf16990d1ed64a.mp3",
         "bytes": 3287583,
         "sha256": "ef37e31610e6fd4723c82319f34cad07c4cbb902a494a1f468bf16990d1ed64a"
+      },
+      "aliases": []
+    },
+    {
+      "id": "zababura.zababura-tsey-dron-tsey-dron-za-motyvamy-pisni-tsey-son-stepana-hihy",
+      "title": "Zababura - Цей дрон, цей дрон (за мотивами пісні \"Цей сон\" Степана Гіги)",
+      "artist": "Zababura",
+      "durationSeconds": 107.48517,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@zababura",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Zababura - Цей дрон, цей дрон (за мотивами пісні \"Цей сон\" Степана Гіги) by Zababura. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@zababura",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@zababura",
+        "attribution": "Zababura - Цей дрон, цей дрон (за мотивами пісні \"Цей сон\" Степана Гіги) by Zababura. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@zababura",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Zababura - Цей дрон, цей дрон (за мотивами пісні _Цей сон_ Степана Гіги).mp3",
+      "archiveId": "zababura-20260927-222a3a77",
+      "collection": "Zababura - Цей дрон, цей дрон (за мотивами пісні \"Цей сон\" Степана Гіги)",
+      "collections": [
+        "Zababura - Цей дрон, цей дрон (за мотивами пісні \"Цей сон\" Степана Гіги)",
+        "Zababura",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-zababura-20260927-222a3a77/222a3a770ba96401eab824e82b93c8a5d3ed2f7ae02730d83f232cff6e960b3e.mp3",
+        "bytes": 1673895,
+        "sha256": "222a3a770ba96401eab824e82b93c8a5d3ed2f7ae02730d83f232cff6e960b3e"
       },
       "aliases": []
     }
