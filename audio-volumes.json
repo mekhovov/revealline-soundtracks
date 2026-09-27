@@ -1152,6 +1152,18 @@
           "bytes": 2179335
         }
       ]
+    },
+    {
+      "id": "audio-ruslan-nota-20260927-e25a39ca",
+      "releaseTag": "audio-ruslan-nota-20260927-e25a39ca",
+      "recordings": 1,
+      "audioBytes": 2780789,
+      "assets": [
+        {
+          "sha256": "e25a39ca1833313f09bc9bcbd95e6e9214fa4f38707111f7cc0f2b3c1a1d20c8",
+          "bytes": 2780789
+        }
+      ]
     }
   ]
 }
