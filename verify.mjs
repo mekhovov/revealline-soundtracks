@@ -39,7 +39,7 @@ const ROOT_STATIC_FILES = [
   'legacy/archive-02/CREDITS.md', 'legacy/archive-02/README.md',
   'legacy/archive-02/UPLOAD_GUIDE.md', 'legacy/archive-02/batches.json',
   'legacy/archive-02/catalogue.json', 'legacy/archive-02/deployment-manifest.json',
-  'playback-policy.mjs', 'player.mjs', 'style.css',
+  'playback-policy.mjs', 'player.mjs', 'style.css', 'upload-guide/index.html',
 ];
 const digest = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const demand = (value, message) => { if (!value) throw new Error(message); };

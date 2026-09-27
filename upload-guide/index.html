@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta
+      name="description"
+      content="Add one MP3 or a folder to the RevealLine soundtrack catalogue and create a verified pull request."
+    />
+    <title>RevealLine · Upload soundtrack guide</title>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      .guide-page {
+        width: min(980px, 92%);
+      }
+      .guide-page header {
+        padding-bottom: 2rem;
+      }
+      .guide-page h1 {
+        font-size: clamp(2.8rem, 8vw, 6rem);
+      }
+      .guide-page h2 {
+        margin: 0 0 0.6rem;
+        color: var(--signal);
+        font-size: clamp(1.45rem, 3vw, 2rem);
+      }
+      .guide-page h3 {
+        margin: 1.5rem 0 0.4rem;
+      }
+      .guide-step {
+        margin: 1.1rem 0;
+        padding: 1.3rem;
+        border: 1px solid var(--line);
+        background: var(--panel);
+      }
+      .guide-step p:last-child {
+        margin-bottom: 0;
+      }
+      .callout {
+        padding: 1rem 1.2rem;
+        border-left: 4px solid var(--signal);
+        background: #202716;
+      }
+      pre {
+        overflow-x: auto;
+        margin: 0.8rem 0;
+        padding: 1rem;
+        border: 1px solid #3f4a58;
+        background: #070a0e;
+        color: #e9eef5;
+        line-height: 1.55;
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      }
+      :not(pre) > code {
+        padding: 0.12rem 0.3rem;
+        background: #202731;
+        color: #fff4a8;
+      }
+      .choice-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1rem;
+      }
+      .choice-grid .guide-step {
+        margin: 0;
+      }
+      .checklist li {
+        margin: 0.55rem 0;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 0.65rem;
+        border: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        color: var(--signal);
+        background: var(--panel);
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#start">Skip to instructions</a>
+    <main class="guide-page">
+      <header>
+        <p class="eyebrow">REVEALLINE / SOUNDTRACK INTAKE</p>
+        <h1>Add songs.<br /><span>Open one PR.</span></h1>
+        <p class="intro">
+          Choose one MP3 or a folder. The intake tools validate the audio,
+          create stable metadata, upload exact hash-named assets and open the
+          catalogue pull request.
+        </p>
+        <nav aria-label="Guide navigation">
+          <a href="../#add-music">Open Add music</a>
+          <a href="../">Play all soundtracks</a>
+          <a href="https://github.com/mekhovov/revealline-soundtracks"
+            >Repository ↗</a
+          >
+          <a href="../UPLOAD_GUIDE.md">Markdown guide</a>
+        </nav>
+      </header>
+
+      <section class="guide" id="start">
+        <p class="callout">
+          Run the final command inside the canonical
+          <code>revealline-soundtracks</code> checkout. If Node says it cannot
+          find <code>intake/add-music.mjs</code>, you are in the wrong folder.
+        </p>
+
+        <h2>1. Prepare your computer once</h2>
+        <div class="guide-step">
+          <p>
+            Install Node.js 20+, <code>ffmpeg</code>/<code>ffprobe</code>, Git
+            and GitHub CLI. Authenticate with <code>gh auth login</code>, then:
+          </p>
+          <pre><code>git clone git@github.com:mekhovov/revealline-soundtracks.git
+cd revealline-soundtracks
+git switch main
+git pull --ff-only</code></pre>
+        </div>
+
+        <h2>2. Choose an intake path</h2>
+        <div class="choice-grid">
+          <article class="guide-step">
+            <h3>Browser first</h3>
+            <ol>
+              <li><a href="../#add-music">Open Add music</a>.</li>
+              <li>Choose MP3 files or a folder.</li>
+              <li>Enter rights, styles and collections.</li>
+              <li>Download the <code>.rlintake</code> package.</li>
+            </ol>
+            <pre><code>node intake/add-music.mjs \
+  "/absolute/path/to/package.rlintake" \
+  --open-pr</code></pre>
+          </article>
+
+          <article class="guide-step">
+            <h3>Direct command</h3>
+            <p>
+              Pass one MP3 or a recursive folder directly to the intake script.
+              This is fastest when the metadata applies to the whole batch.
+            </p>
+            <pre><code>node intake/add-music.mjs \
+  "/absolute/path/to/music" \
+  --source "https://creator.example/song" \
+  --artist "Artist name" \
+  --styles "metal,UA" \
+  --collections "Artist name,Gameplay" \
+  --license cc-by-4.0 \
+  --confirm-rights \
+  --open-pr</code></pre>
+          </article>
+        </div>
+
+        <h2>3. Folder example with multiple collections</h2>
+        <div class="guide-step">
+          <p>
+            This adds every MP3 below the folder and places each song in both
+            <strong>TRENCH ORDERLY</strong> and <strong>ФПВ</strong>:
+          </p>
+          <pre><code>node intake/add-music.mjs \
+  "/Users/oleksandr.mekhovov/work/my_projects/go_test/docs/research/dah-soundtracks/TRENCH ORDERLY/" \
+  --source "https://www.youtube.com/channel/UCK74qKH4LfMX7JIXIcX35qw" \
+  --artist "TRENCH ORDERLY" \
+  --description "Пісні про ФПВ" \
+  --styles "ФПВ,UA" \
+  --collections "TRENCH ORDERLY,ФПВ" \
+  --license unknown \
+  --confirm-rights \
+  --open-pr</code></pre>
+          <p>
+            Use a plain quoted URL. Do not paste Markdown link syntax and do not
+            escape <code>https://</code>.
+          </p>
+        </div>
+
+        <h2>4. Licence values</h2>
+        <div class="guide-step">
+          <table>
+            <thead>
+              <tr>
+                <th>Value</th>
+                <th>Use</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>cc0</code></td>
+                <td>CC0 1.0 Universal</td>
+              </tr>
+              <tr>
+                <td><code>cc-by-3.0</code> / <code>cc-by-4.0</code></td>
+                <td>Creative Commons Attribution</td>
+              </tr>
+              <tr>
+                <td><code>cc-by-sa-3.0</code> / <code>cc-by-sa-4.0</code></td>
+                <td>
+                  Creative Commons Attribution-ShareAlike; also provide
+                  <code>--derivative-notice</code>
+                </td>
+              </tr>
+              <tr>
+                <td><code>unknown</code></td>
+                <td>
+                  Uploader-confirmed permission. No open licence is claimed.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            A source page alone is not permission. Use
+            <code>--rights-evidence</code> when the actual permission evidence
+            differs from <code>--source</code>.
+          </p>
+        </div>
+
+        <h2>5. What happens automatically</h2>
+        <div class="guide-step">
+          <ol class="checklist">
+            <li>Every MP3 is fully decoded and measured.</li>
+            <li>Exact bytes, duration and SHA-256 are recorded.</li>
+            <li>
+              Artist, title, styles, collections and rights are generated.
+            </li>
+            <li>Hash-named audio assets are uploaded to a draft release.</li>
+            <li>A <code>codex/</code> branch is committed and pushed.</li>
+            <li>The catalogue pull request is opened.</li>
+            <li>
+              After merge, Actions publishes the assets and deploys this site.
+            </li>
+          </ol>
+          <p>
+            One intake accepts at most <strong>20 MP3s</strong> and
+            <strong>64 MiB</strong>. Split larger folders into several PRs.
+          </p>
+        </div>
+
+        <h2>6. Review and verify</h2>
+        <div class="guide-step">
+          <ol class="checklist">
+            <li>Review artist, song names, styles, collections and rights.</li>
+            <li>Wait for the PR verification workflow to pass.</li>
+            <li>Merge the PR.</li>
+            <li>
+              Open the <a href="../">public player</a>, filter the new
+              collection and play more than one track.
+            </li>
+          </ol>
+          <p>
+            The game reads the canonical catalogue dynamically. A newly merged
+            batch does not require a per-song game code change.
+          </p>
+        </div>
+
+        <h2>Troubleshooting</h2>
+        <div class="guide-step">
+          <h3>Node cannot find the script</h3>
+          <pre><code>cd /absolute/path/to/revealline-soundtracks
+git switch main
+git pull --ff-only
+node intake/add-music.mjs --help</code></pre>
+
+          <h3>The checkout is not clean</h3>
+          <p>
+            Commit or stash unrelated work before intake. The script refuses to
+            mix generated publication files with unrelated edits.
+          </p>
+
+          <h3><code>ffprobe</code> or <code>gh</code> is missing</h3>
+          <pre><code>ffprobe -version
+gh auth status</code></pre>
+        </div>
+      </section>
+
+      <footer>
+        Full details remain in
+        <a href="../UPLOAD_GUIDE.md">UPLOAD_GUIDE.md</a>. Exact audio is
+        published as immutable SHA-256-named release assets.
+      </footer>
+    </main>
+  </body>
+</html>
