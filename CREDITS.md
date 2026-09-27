@@ -1894,3 +1894,9 @@ Licence: Unknown — uploader-confirmed rights
 
 
 Licence: Unknown — uploader-confirmed rights
+
+## Кліп  "RUSORIZ"
+
+Кліп  "RUSORIZ" by Цибрр. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@tsybr
+
+Licence: Unknown — uploader-confirmed rights

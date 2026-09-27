@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 259,
-    "uniqueRecordings": 259,
+    "declaredTracks": 260,
+    "uniqueRecordings": 260,
     "duplicateAliases": 0,
-    "audioBytes": 1218519617
+    "audioBytes": 1221356449
   },
   "tracks": [
     {
@@ -12616,6 +12616,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-khvostati-lovelasy-20260927-93ba351f/93ba351fb0cdafde13e33f30bc73e9ae357bb9e16ce94da25768ef839e450a38.mp3",
         "bytes": 3041176,
         "sha256": "93ba351fb0cdafde13e33f30bc73e9ae357bb9e16ce94da25768ef839e450a38"
+      },
+      "aliases": []
+    },
+    {
+      "id": "tsybrr.klip-rusoriz",
+      "title": "Кліп  \"RUSORIZ\"",
+      "artist": "Цибрр",
+      "durationSeconds": 181.440726,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@tsybr",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Кліп  \"RUSORIZ\" by Цибрр. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@tsybr",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@tsybr",
+        "attribution": "Кліп  \"RUSORIZ\" by Цибрр. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@tsybr",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Цибрр... - RUSORIZ - Svitlana Khursenko  Співає - SUNO (ШІ).mp3",
+      "archiveId": "tsybrr-20260927-b86f77c8",
+      "collection": "Кліп  \"RUSORIZ\"",
+      "collections": [
+        "Кліп  \"RUSORIZ\"",
+        "Цибрр",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-tsybrr-20260927-b86f77c8/b86f77c8d106596fcbc24e42d58a502b0c7b1576c83b57cd5b889b62a42be4a6.mp3",
+        "bytes": 2836832,
+        "sha256": "b86f77c8d106596fcbc24e42d58a502b0c7b1576c83b57cd5b889b62a42be4a6"
       },
       "aliases": []
     }
