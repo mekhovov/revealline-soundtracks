@@ -1028,6 +1028,22 @@
           "bytes": 2262358
         }
       ]
+    },
+    {
+      "id": "audio-telebachennya-toronto-20260927-417eea94",
+      "releaseTag": "audio-telebachennya-toronto-20260927-417eea94",
+      "recordings": 2,
+      "audioBytes": 4330905,
+      "assets": [
+        {
+          "sha256": "417eea94faf4114996886dbcad58e158667df0dd94c497d847eabaf5fc64a9ba",
+          "bytes": 1923633
+        },
+        {
+          "sha256": "50869ac99f181aa46a0a8f0da99216bd45d342dc5fd5e9c8deba2c6f31c41555",
+          "bytes": 2407272
+        }
+      ]
     }
   ]
 }

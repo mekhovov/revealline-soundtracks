@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 231,
-    "uniqueRecordings": 231,
+    "declaredTracks": 233,
+    "uniqueRecordings": 233,
     "duplicateAliases": 0,
-    "audioBytes": 1146837751
+    "audioBytes": 1151168656
   },
   "tracks": [
     {
@@ -11213,6 +11213,106 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-prodyusyer-valyentin-20260927-78d37bea/d4c98f81662ac285e0c51bac2a4b3851d2c8d78b881df84c9cfdca5641b97239.mp3",
         "bytes": 2262358,
         "sha256": "d4c98f81662ac285e0c51bac2a4b3851d2c8d78b881df84c9cfdca5641b97239"
+      },
+      "aliases": []
+    },
+    {
+      "id": "telebachennya-toronto.nytso-potvorno-feat-telebachennya-toronto-fpv-letyt-rusakiv-bombyt-pre",
+      "title": "НИЦО ПОТВОРНО feat ТЕЛЕБАЧЕННЯ ТОРОНТО — FPV летить русаків бомбить💥 ПРЕМ’ЄРА КЛІПУ",
+      "artist": "Телебачення Торонто",
+      "durationSeconds": 115.008435,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@uttoronto",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "НИЦО ПОТВОРНО feat ТЕЛЕБАЧЕННЯ ТОРОНТО — FPV летить русаків бомбить💥 ПРЕМ’ЄРА КЛІПУ by Телебачення Торонто. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@uttoronto",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@uttoronto",
+        "attribution": "НИЦО ПОТВОРНО feat ТЕЛЕБАЧЕННЯ ТОРОНТО — FPV летить русаків бомбить💥 ПРЕМ’ЄРА КЛІПУ by Телебачення Торонто. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@uttoronto",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Ницо Потворно feat ТЕЛЕБАЧЕННЯ ТОРОНТО — FPV летить русаків бомбить.mp3",
+      "archiveId": "telebachennya-toronto-20260927-417eea94",
+      "collection": "Телебачення Торонто",
+      "collections": [
+        "Телебачення Торонто",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-telebachennya-toronto-20260927-417eea94/417eea94faf4114996886dbcad58e158667df0dd94c497d847eabaf5fc64a9ba.mp3",
+        "bytes": 1923633,
+        "sha256": "417eea94faf4114996886dbcad58e158667df0dd94c497d847eabaf5fc64a9ba"
+      },
+      "aliases": []
+    },
+    {
+      "id": "telebachennya-toronto.shaleniy-fpv-versiya-nytso-potvorno-haytana-cover",
+      "title": "ШАЛЕНІЙ! (FPV-ВЕРСІЯ) — НИЦО ПОТВОРНО (ГАЙТАНА COVER)",
+      "artist": "Телебачення Торонто",
+      "durationSeconds": 142.895601,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@uttoronto",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "ШАЛЕНІЙ! (FPV-ВЕРСІЯ) — НИЦО ПОТВОРНО (ГАЙТАНА COVER) by Телебачення Торонто. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@uttoronto",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@uttoronto",
+        "attribution": "ШАЛЕНІЙ! (FPV-ВЕРСІЯ) — НИЦО ПОТВОРНО (ГАЙТАНА COVER) by Телебачення Торонто. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@uttoronto",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Телебачення Торонто -  ШАЛЕНІЙ! (FPV-ВЕРСІЯ) — НИЦО ПОТВОРНО (ГАЙТАНА COVER).mp3",
+      "archiveId": "telebachennya-toronto-20260927-417eea94",
+      "collection": "Телебачення Торонто",
+      "collections": [
+        "Телебачення Торонто",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-telebachennya-toronto-20260927-417eea94/50869ac99f181aa46a0a8f0da99216bd45d342dc5fd5e9c8deba2c6f31c41555.mp3",
+        "bytes": 2407272,
+        "sha256": "50869ac99f181aa46a0a8f0da99216bd45d342dc5fd5e9c8deba2c6f31c41555"
       },
       "aliases": []
     }
