@@ -1356,6 +1356,18 @@
           "bytes": 3041176
         }
       ]
+    },
+    {
+      "id": "audio-tsybrr-20260927-b86f77c8",
+      "releaseTag": "audio-tsybrr-20260927-b86f77c8",
+      "recordings": 1,
+      "audioBytes": 2836832,
+      "assets": [
+        {
+          "sha256": "b86f77c8d106596fcbc24e42d58a502b0c7b1576c83b57cd5b889b62a42be4a6",
+          "bytes": 2836832
+        }
+      ]
     }
   ]
 }
