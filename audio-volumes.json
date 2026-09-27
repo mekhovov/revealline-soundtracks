@@ -1296,6 +1296,18 @@
           "bytes": 3949399
         }
       ]
+    },
+    {
+      "id": "audio-proklyatyy-20260927-0b92127d",
+      "releaseTag": "audio-proklyatyy-20260927-0b92127d",
+      "recordings": 1,
+      "audioBytes": 2926619,
+      "assets": [
+        {
+          "sha256": "0b92127dd20223f0644b9b2b4812812fb841674a36841e4a2b0eb2b0e12d408c",
+          "bytes": 2926619
+        }
+      ]
     }
   ]
 }

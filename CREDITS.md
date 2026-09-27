@@ -1862,3 +1862,9 @@ Licence: Unknown — uploader-confirmed rights
 «Сталевий Птах». текст&музика Bloger (414 бригада «Птахи Мадяра») by МАДЯР. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MAGYARBIRDS
 
 Licence: Unknown — uploader-confirmed rights
+
+## ПРОКЛЯТИЙ ***, Третя Штурмова — Спортивні повітряні роботи (проєкт ЕПОХА)
+
+ПРОКЛЯТИЙ ***, Третя Штурмова — Спортивні повітряні роботи (проєкт ЕПОХА) by ПРОКЛЯТИЙ ***, Третя Штурмова. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@proklyatiy_huy
+
+Licence: Unknown — uploader-confirmed rights

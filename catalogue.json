@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 254,
-    "uniqueRecordings": 254,
+    "declaredTracks": 255,
+    "uniqueRecordings": 255,
     "duplicateAliases": 0,
-    "audioBytes": 1205246085
+    "audioBytes": 1208172704
   },
   "tracks": [
     {
@@ -12360,6 +12360,58 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-madyar-20260927-5d8e57ca/5d8e57ca42b50ab463504a68cde5907f9eebcd767df18ca9b6017a782d3e2d43.mp3",
         "bytes": 3949399,
         "sha256": "5d8e57ca42b50ab463504a68cde5907f9eebcd767df18ca9b6017a782d3e2d43"
+      },
+      "aliases": []
+    },
+    {
+      "id": "proklyatyy-tretya-shturmova.proklyatyy-tretya-shturmova-sportyvni-povitryani-roboty-proyekt-epokha",
+      "title": "ПРОКЛЯТИЙ ***, Третя Штурмова — Спортивні повітряні роботи (проєкт ЕПОХА)",
+      "artist": "ПРОКЛЯТИЙ ***, Третя Штурмова",
+      "durationSeconds": 185.364898,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@proklyatiy_huy",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "ПРОКЛЯТИЙ ***, Третя Штурмова — Спортивні повітряні роботи (проєкт ЕПОХА) by ПРОКЛЯТИЙ ***, Третя Штурмова. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@proklyatiy_huy",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@proklyatiy_huy",
+        "attribution": "ПРОКЛЯТИЙ ***, Третя Штурмова — Спортивні повітряні роботи (проєкт ЕПОХА) by ПРОКЛЯТИЙ ***, Третя Штурмова. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@proklyatiy_huy",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "ПРОКЛЯТИЙ *** - Третя Штурмова - Спортивні повітряні роботи (проєкт ЕПОХА).mp3",
+      "archiveId": "proklyatyy-20260927-0b92127d",
+      "collection": "ПРОКЛЯТИЙ ***, Третя Штурмова — Спортивні повітряні роботи (проєкт ЕПОХА)",
+      "collections": [
+        "ПРОКЛЯТИЙ ***, Третя Штурмова — Спортивні повітряні роботи (проєкт ЕПОХА)",
+        "ПРОКЛЯТИЙ ***",
+        "Третя Штурмова",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-proklyatyy-20260927-0b92127d/0b92127dd20223f0644b9b2b4812812fb841674a36841e4a2b0eb2b0e12d408c.mp3",
+        "bytes": 2926619,
+        "sha256": "0b92127dd20223f0644b9b2b4812812fb841674a36841e4a2b0eb2b0e12d408c"
       },
       "aliases": []
     }
