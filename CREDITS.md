@@ -1741,3 +1741,9 @@ Licence: Unknown — uploader-confirmed rights
 Ла-ла-ла летить мій дрон. Бампер, Янович, Громовий, Тимошенко, Байдак, Лиховида, Цимбалюк, Фелікс. by Юрій Громовий. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@SuperGydron
 
 Licence: Unknown — uploader-confirmed rights
+
+## 414 Птахи Мадяра - легендарні Сталеві Птахи проти хробаків
+
+414 Птахи Мадяра - легендарні Сталеві Птахи проти хробаків by 414 Птахи Мадяра. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@414pm
+
+Licence: Unknown — uploader-confirmed rights
