@@ -1284,6 +1284,18 @@
           "bytes": 2588397
         }
       ]
+    },
+    {
+      "id": "audio-madyar-20260927-5d8e57ca",
+      "releaseTag": "audio-madyar-20260927-5d8e57ca",
+      "recordings": 1,
+      "audioBytes": 3949399,
+      "assets": [
+        {
+          "sha256": "5d8e57ca42b50ab463504a68cde5907f9eebcd767df18ca9b6017a782d3e2d43",
+          "bytes": 3949399
+        }
+      ]
     }
   ]
 }

@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 253,
-    "uniqueRecordings": 253,
+    "declaredTracks": 254,
+    "uniqueRecordings": 254,
     "duplicateAliases": 0,
-    "audioBytes": 1201296686
+    "audioBytes": 1205246085
   },
   "tracks": [
     {
@@ -12309,6 +12309,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-madyar-20260927-6c8699e9/6c8699e9cbf469c18e73031a62b72461c1e9c44eda406e1eb88619900d557c4e.mp3",
         "bytes": 2588397,
         "sha256": "6c8699e9cbf469c18e73031a62b72461c1e9c44eda406e1eb88619900d557c4e"
+      },
+      "aliases": []
+    },
+    {
+      "id": "madyar.stalevyy-ptakh-tekst-muzyka-bloger-414-bryhada-ptakhy-madyara",
+      "title": "«Сталевий Птах». текст&музика Bloger (414 бригада «Птахи Мадяра»)",
+      "artist": "МАДЯР",
+      "durationSeconds": 258.902494,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@MAGYARBIRDS",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "«Сталевий Птах». текст&музика Bloger (414 бригада «Птахи Мадяра») by МАДЯР. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MAGYARBIRDS",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@MAGYARBIRDS",
+        "attribution": "«Сталевий Птах». текст&музика Bloger (414 бригада «Птахи Мадяра») by МАДЯР. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MAGYARBIRDS",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "МАДЯР, Bloger - Сталевий Птах - текст&музика Bloger (414 бригада «Птахи Мадяра»).mp3",
+      "archiveId": "madyar-20260927-5d8e57ca",
+      "collection": "«Сталевий Птах». текст&музика Bloger (414 бригада «Птахи Мадяра»)",
+      "collections": [
+        "«Сталевий Птах». текст&музика Bloger (414 бригада «Птахи Мадяра»)",
+        "МАДЯР",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-madyar-20260927-5d8e57ca/5d8e57ca42b50ab463504a68cde5907f9eebcd767df18ca9b6017a782d3e2d43.mp3",
+        "bytes": 3949399,
+        "sha256": "5d8e57ca42b50ab463504a68cde5907f9eebcd767df18ca9b6017a782d3e2d43"
       },
       "aliases": []
     }

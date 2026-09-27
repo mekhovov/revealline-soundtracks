@@ -1856,3 +1856,9 @@ Licence: Unknown — uploader-confirmed rights
 Усюди, де не бачу, і-бачу хробаків. Знимкують Птахи Мадяра. by МАДЯР. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MAGYARBIRDS
 
 Licence: Unknown — uploader-confirmed rights
+
+## «Сталевий Птах». текст&музика Bloger (414 бригада «Птахи Мадяра»)
+
+«Сталевий Птах». текст&музика Bloger (414 бригада «Птахи Мадяра») by МАДЯР. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MAGYARBIRDS
+
+Licence: Unknown — uploader-confirmed rights
