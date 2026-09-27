@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 208,
-    "uniqueRecordings": 208,
+    "declaredTracks": 210,
+    "uniqueRecordings": 210,
     "duplicateAliases": 0,
-    "audioBytes": 1079392499
+    "audioBytes": 1083919617
   },
   "tracks": [
     {
@@ -10060,6 +10060,106 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-the-bloger-ua-20260927/328ef348415efca85f5323f380559ed42ab6b1904464f0331b9c6ec1fbac4802.mp3",
         "bytes": 3601638,
         "sha256": "328ef348415efca85f5323f380559ed42ab6b1904464f0331b9c6ec1fbac4802"
+      },
+      "aliases": []
+    },
+    {
+      "id": "s.s",
+      "title": "Гайs — Орки-помідорки (двісті тисяч)",
+      "artist": "Гайs",
+      "durationSeconds": 142.733061,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@GuysUA",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Гайs — Орки-помідорки (двісті тисяч) by Гайs. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@GuysUA",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@GuysUA",
+        "attribution": "Гайs — Орки-помідорки (двісті тисяч) by Гайs. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@GuysUA",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Гайs — Орки-помідорки (двісті тисяч).mp3",
+      "archiveId": "s-20260927",
+      "collection": "Гайs",
+      "collections": [
+        "Гайs",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-s-20260927/ed464d7cad5793b7c0197331644c52af6b614ee98e193ab7e30544790a35bdd9.mp3",
+        "bytes": 2463072,
+        "sha256": "ed464d7cad5793b7c0197331644c52af6b614ee98e193ab7e30544790a35bdd9"
+      },
+      "aliases": []
+    },
+    {
+      "id": "s.s.2",
+      "title": "Гайs — ППО (Сам не літаю і москалям не даю)",
+      "artist": "Гайs",
+      "durationSeconds": 130.565805,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@GuysUA",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Гайs — ППО (Сам не літаю і москалям не даю) by Гайs. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@GuysUA",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@GuysUA",
+        "attribution": "Гайs — ППО (Сам не літаю і москалям не даю) by Гайs. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@GuysUA",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Гайs — ППО (Сам не літаю і москалям не даю).mp3",
+      "archiveId": "s-20260927",
+      "collection": "Гайs",
+      "collections": [
+        "Гайs",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-s-20260927/c73191d9e1a388fc8d0a42031e95d6722848c9a53e1ba585f32e32fc3e78cab8.mp3",
+        "bytes": 2064046,
+        "sha256": "c73191d9e1a388fc8d0a42031e95d6722848c9a53e1ba585f32e32fc3e78cab8"
       },
       "aliases": []
     }

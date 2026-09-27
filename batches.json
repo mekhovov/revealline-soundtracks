@@ -252,9 +252,14 @@
       "tracks": 1
     },
     {
+      "id": "Гайs",
+      "title": "Гайs",
+      "tracks": 2
+    },
+    {
       "id": "ФПВ",
       "title": "ФПВ",
-      "tracks": 21
+      "tracks": 23
     }
   ]
 }
