@@ -94,9 +94,9 @@
         <p class="eyebrow">REVEALLINE / SOUNDTRACK INTAKE</p>
         <h1>Add songs.<br /><span>Open one PR.</span></h1>
         <p class="intro">
-          Choose one MP3 or a folder. The intake tools validate the audio,
-          create stable metadata, upload exact hash-named assets and open the
-          catalogue pull request.
+          Choose local MP3s or stable hosted MP3 URLs. The intake tools validate
+          delivery and audio, create hash-bound metadata and open the catalogue
+          pull request.
         </p>
         <nav aria-label="Guide navigation">
           <a href="../#add-music">Open Add music</a>
@@ -133,7 +133,7 @@ git pull --ff-only</code></pre>
             <h3>Browser first</h3>
             <ol>
               <li><a href="../#add-music">Open Add music</a>.</li>
-              <li>Choose MP3 files or a folder.</li>
+              <li>Choose MP3 files/a folder, or hosted MP3 URLs.</li>
               <li>Enter rights, styles and collections.</li>
               <li>Download the <code>.rlintake</code> package.</li>
             </ol>
@@ -155,6 +155,20 @@ git pull --ff-only</code></pre>
   --styles "metal,UA" \
   --collections "Artist name,Gameplay" \
   --license cc-by-4.0 \
+  --confirm-rights \
+  --open-pr</code></pre>
+          </article>
+          <article class="guide-step">
+            <h3>Hosted S3 or CDN URL</h3>
+            <p>The URL must be stable public HTTPS with CORS, HEAD and byte-range support. Presigned URLs are rejected.</p>
+            <pre><code>node intake/add-music.mjs \
+  --audio-url "https://bucket.s3.eu-central-1.amazonaws.com/music/song.mp3" \
+  --title "Song title" \
+  --artist "Artist" \
+  --source "https://artist.example/song" \
+  --styles "ФПВ,UA" \
+  --collections "TRENCH ORDERLY,ФПВ" \
+  --license unknown \
   --confirm-rights \
   --open-pr</code></pre>
           </article>

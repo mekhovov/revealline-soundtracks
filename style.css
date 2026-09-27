@@ -144,6 +144,11 @@ input[type='search'], select {
   padding: .7rem .8rem;
 }
 #count { margin: 0 0 .75rem; min-width: 110px; text-align: right; color: var(--muted); font-size: .86rem; }
+.result-actions { display: flex; align-items: center; justify-content: flex-end; gap: .7rem; flex-wrap: wrap; }
+.result-actions #count { margin: 0; }
+.share-fallback { overflow-wrap: anywhere; user-select: all; padding: .7rem; border: 1px solid var(--line); }
+.hosted-url-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: .7rem; padding: .8rem; border: 1px solid var(--line); }
+.hosted-url-row + .hosted-url-row { margin-top: .8rem; }
 .track {
   display: grid;
   grid-template-columns: 48px minmax(0, 1fr) minmax(150px, 200px);

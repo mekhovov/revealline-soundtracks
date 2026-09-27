@@ -28,19 +28,34 @@
       "sha256": "ee6d61e480003bbb5aeffa34cc679c3a566b336cb279d2dcf11a4cea3763b162"
     },
     {
+      "path": "external-deliveries.json",
+      "bytes": 78,
+      "sha256": "1b5f88f924218eb92e05d3dd51adc2dde4917aeebea6ef5c421bc78cd3ad8220"
+    },
+    {
+      "path": "filter-url.mjs",
+      "bytes": 2226,
+      "sha256": "131be194c5a10c4c2712eefc7fdca33bf9d5455e20df7490173faf0c4d37cc2e"
+    },
+    {
       "path": "index.html",
-      "bytes": 11319,
-      "sha256": "185a7b5511009e216bc1c0e70bf477894b6317f8e739c4d79e2de1b9325db372"
+      "bytes": 12265,
+      "sha256": "cf76d2ef5727a3f3566c87aa6ffd2071464de1a2eb18f7a2821090b1f9723155"
     },
     {
       "path": "intake-browser.mjs",
-      "bytes": 3752,
-      "sha256": "d3653975d2ec788fbe08b95d9b48356bf035be46b506ffd04bee4a3903237a33"
+      "bytes": 9027,
+      "sha256": "223f53f52911003cbcabafcdaaf8e685568a5ddbbb145921b47ab265bacf26db"
+    },
+    {
+      "path": "intake/external-url.mjs",
+      "bytes": 3053,
+      "sha256": "30de91804ca6be3f6873ca3b5a9ca14418cf83f1745128007bd7e010d6ff5244"
     },
     {
       "path": "intake/package.mjs",
-      "bytes": 9810,
-      "sha256": "b09cae51fbbf1bd7bbdd46d11f3e9f3ae0494861b0670a7c26b1cb82701ab813"
+      "bytes": 14176,
+      "sha256": "6ac97a17862847d10aa862d6c02d0fd959f0900b36e9f02b893dc0e82b6aa3e6"
     },
     {
       "path": "inventory.json",
@@ -494,28 +509,28 @@
     },
     {
       "path": "player.mjs",
-      "bytes": 14010,
-      "sha256": "f531c6b8c0053c90cede8168295ff8aef7c2b97a8214a2005ea3d6d1f55701e2"
+      "bytes": 17712,
+      "sha256": "e2faed6203748e3c32efea0b21fbc8fde5d2ce778fd059b5b5395714f5941142"
     },
     {
       "path": "README.md",
-      "bytes": 2853,
-      "sha256": "57cb2bb1562415fe05c1242c943164ea430d94dc98ec65d14844e1299b519c40"
+      "bytes": 3620,
+      "sha256": "e893e81867807586c10c2b173c6b81ed7803e73d5b4c8a4aba7ec5296a54de35"
     },
     {
       "path": "style.css",
-      "bytes": 8995,
-      "sha256": "b1ebbbee0015e1886fc19fe715f9894725cf49da3c16fe86fe6794da04258992"
+      "bytes": 9467,
+      "sha256": "c83cf2717cf36e81242b295effe52749e17e28ad946e6940b6b7d868fcaa2423"
     },
     {
       "path": "UPLOAD_GUIDE.md",
-      "bytes": 8074,
-      "sha256": "9d49fc724d50da76a3eddbd10230b18fb491e62864306992e55c6ef15fb89666"
+      "bytes": 10066,
+      "sha256": "02e7996983cac4333e5c37768f3c525ec5034005dd71a2abb3be68e787bbca7b"
     },
     {
       "path": "upload-guide/index.html",
-      "bytes": 9516,
-      "sha256": "4c6c36295a20143ba87e88f427bf0b057c31df033bd46605863b00c9a291d999"
+      "bytes": 10111,
+      "sha256": "618f2e8d7f24bfa3c83cb071f33d5d46df1c5cf5e02c5223f18713c5d32c2517"
     }
   ]
 }

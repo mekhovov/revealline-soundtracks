@@ -3,6 +3,7 @@ import { constants } from 'node:fs';
 import { copyFile, lstat, mkdir, readFile, rm, statfs, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { verifyExternalDeliveryMetadata } from './intake/external-url.mjs';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const HASH = /^[a-f0-9]{64}$/;
@@ -27,7 +28,8 @@ const LEGACY_IDENTITY_FIELDS = [
 ];
 const ROOT_STATIC_FILES = [
   '.nojekyll', 'CREDITS.md', 'README.md', 'UPLOAD_GUIDE.md', 'audio-volumes.json',
-  'batches.json', 'catalogue.json', 'index.html', 'intake-browser.mjs', 'intake/package.mjs',
+  'batches.json', 'catalogue.json', 'external-deliveries.json', 'filter-url.mjs', 'index.html',
+  'intake-browser.mjs', 'intake/external-url.mjs', 'intake/package.mjs',
   'inventory.json', 'legacy/README.md', 'legacy/archive-01/CREDITS.md',
   'legacy/archive-01/README.md', 'legacy/archive-01/catalogue.json',
   'legacy/archive-01/deployment-manifest.json',
@@ -92,8 +94,8 @@ async function verifyLegacyUnion(catalogue, base) {
       hashes.add(legacy.audio.sha256); audioBytes += legacy.audio.bytes; tracks += 1;
     }
   }
-  demand(tracks === catalogue.tracks.length && mappedIds.size === canonical.size && [...canonical.keys()].every((id) => mappedIds.has(id)), 'Canonical catalogue and legacy union differ.');
-  demand(hashes.size === catalogue.tracks.length && audioBytes === catalogue.counts?.audioBytes, 'Canonical audio and legacy union differ.');
+  demand(tracks === 194 && mappedIds.size === 194, 'Legacy union size differs.');
+  demand(hashes.size === 194 && audioBytes <= catalogue.counts?.audioBytes, 'Legacy audio preservation differs.');
   return { tracks, audioBytes };
 }
 export async function buildManifest(base = root) {
@@ -124,6 +126,19 @@ export async function verifyArchive(base = root) {
       volumeAssets.set(asset.sha256, { bytes: asset.bytes, tag: volume.releaseTag });
     }
   }
+  const externalInventory = JSON.parse(await readFile(path.join(base, 'external-deliveries.json'), 'utf8'));
+  demand(externalInventory.format === 'revealline-external-audio-deliveries.v1' && Array.isArray(externalInventory.recordings), 'External delivery inventory differs.');
+  const externalById = new Map();
+  for (const entry of externalInventory.recordings) {
+    demand(typeof entry.id === 'string' && !externalById.has(entry.id) && typeof entry.host === 'string' && entry.host === new URL(entry.url).host && Number.isSafeInteger(entry.bytes) && entry.bytes > 0 && HASH.test(entry.sha256), 'External delivery inventory entry differs.');
+    externalById.set(entry.id, entry);
+  }
+  demand(
+    externalInventory.recordings
+      .map((entry) => entry.id)
+      .every((id, index, ids) => index === 0 || ids[index - 1].localeCompare(id) < 0),
+    'External delivery inventory order differs.',
+  );
   const ids = new Set(), hashes = new Set(); let audioBytes = 0;
   for (const track of catalogue.tracks) {
     demand(typeof track.id === 'string' && track.id && !ids.has(track.id), 'Track identity differs.'); ids.add(track.id);
@@ -134,10 +149,14 @@ export async function verifyArchive(base = root) {
     demand(track.gameCatalogueAdmission === false && track.default !== true, `Admission boundary differs: ${track.id}`);
     verifyRights(track);
     const match = AUDIO_URL.exec(track.audio?.path ?? ''), asset = volumeAssets.get(track.audio?.sha256);
-    demand(match && match[2] === track.audio.sha256 && asset?.tag === match[1] && asset?.bytes === track.audio.bytes && !hashes.has(track.audio.sha256), `Audio identity differs: ${track.id}`);
+    if (track.audio?.delivery?.type === 'external-url') {
+      const url = verifyExternalDeliveryMetadata(track.audio), entry = externalById.get(track.id);
+      demand(entry && entry.url === url.href && entry.host === url.host && entry.bytes === track.audio.bytes && entry.sha256 === track.audio.sha256 && entry.verifiedAt === track.audio.delivery.verifiedAt && !asset, `External audio identity differs: ${track.id}`);
+    } else demand(match && match[2] === track.audio.sha256 && asset?.tag === match[1] && asset?.bytes === track.audio.bytes, `Audio identity differs: ${track.id}`);
+    demand(!hashes.has(track.audio.sha256), `Audio hash collides: ${track.id}`);
     hashes.add(track.audio.sha256); audioBytes += track.audio.bytes;
   }
-  demand(hashes.size === volumeAssets.size, 'Audio volumes and catalogue differ.');
+  demand(hashes.size === volumeAssets.size + externalById.size && externalById.size === catalogue.tracks.filter((track) => track.audio?.delivery?.type === 'external-url').length, 'Audio delivery inventories and catalogue differ.');
   const inventory = JSON.parse(await readFile(path.join(base, 'inventory.json'), 'utf8'));
   demand(
     inventory.format === 'revealline-soundtrack-archive.v1' &&

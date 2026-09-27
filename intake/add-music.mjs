@@ -17,6 +17,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildManifest, verifyArchive } from "../verify.mjs";
 import { readIntakePackage } from "./package.mjs";
+import { validateExternalAudioURL } from "./external-url.mjs";
+import { verifyExternalAudio } from "./verify-external.mjs";
 
 const repository = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
 const MAX_TRACK_BYTES = 100_000_000;
@@ -88,6 +90,8 @@ const LICENSES = new Map([
 export const INTAKE_USAGE = `Usage:
   node intake/add-music.mjs <mp3-or-folder> [options]
   node intake/add-music.mjs <package.rlintake> [--open-pr]
+  node intake/add-music.mjs --audio-url <https-url> --title <title> [options]
+  node intake/add-music.mjs --url-manifest <manifest.json> [options]
 
 Required options:
   --source <https-url>          Exact creator/source page
@@ -98,6 +102,8 @@ Required options:
                                 web-game playback rights were verified
 
 Metadata options:
+  --audio-url <https-url>       One stable public hosted MP3
+  --url-manifest <json>        Batch of hosted MP3 metadata rows
   --artist <name>               Required when MP3 artist tags are absent
   --title <title>               Override the title for one MP3 only
   --batch-id <id>               Stable lowercase batch identifier
@@ -114,7 +120,9 @@ One intake accepts at most 20 MP3 files and 64 MiB. A source or video URL is
 not rights evidence by itself. The unknown option records your explicit rights
 confirmation; it is not an open licence. Run this command only in a clean canonical
 checkout. A browser-created .rlintake package already contains the required
-metadata, confirmation and exact MP3 bytes; do not repeat metadata options.`;
+metadata and either exact MP3 bytes or verified external URL evidence; do not repeat
+metadata options. Hosted URLs must support public CORS, HEAD and byte ranges and
+must not be presigned or otherwise expiring.`;
 
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
 const demand = (value, message) => {
@@ -315,6 +323,8 @@ export function parseArguments(argv) {
     ["--attribution", "attribution"],
     ["--title", "title"],
     ["--derivative-notice", "derivativeNotice"],
+    ["--audio-url", "audioURL"],
+    ["--url-manifest", "urlManifest"],
   ]);
   for (let index = 0; index < argv.length; index++) {
     const value = argv[index];
@@ -338,8 +348,11 @@ export function parseArguments(argv) {
           : next;
     }
   }
-  demand(positional.length === 1, "Choose exactly one MP3 file or one folder.");
-  return { input: positional[0], options };
+  const sources = positional.length + Number(Boolean(options.audioURL)) + Number(Boolean(options.urlManifest));
+  demand(sources === 1, "Choose exactly one local input, --audio-url or --url-manifest.");
+  demand(positional.length <= 1, "Choose exactly one MP3 file or one folder.");
+  if (options.audioURL) validateExternalAudioURL(options.audioURL);
+  return { input: positional[0] ?? null, options };
 }
 
 function rightsFor(license, options, credit) {
@@ -475,6 +488,96 @@ export async function createIntake(
   };
 }
 
+async function probeExternalBytes(bytes, fileName, probe = probeDuration) {
+  const directory = await mkdtemp(path.join(os.tmpdir(), "revealline-external-probe-"));
+  try {
+    const file = path.join(directory, slug(fileName, 80) + ".mp3");
+    await writeFile(file, bytes, { flag: "wx" });
+    return await probe(file);
+  } finally {
+    await rm(directory, { recursive: true, force: true });
+  }
+}
+
+export async function createExternalIntake(
+  options,
+  { verify = verifyExternalAudio, probe = probeDuration, packagedTracks = null } = {},
+) {
+  demand(options.confirmRights === true, "Pass --confirm-rights after verifying public redistribution and web-game playback rights.");
+  demand(safeURL(options.source), "A secure exact creator/source URL is required.");
+  const license = LICENSES.get(options.license);
+  demand(license, "Use --license cc0, cc-by-3.0, cc-by-4.0, cc-by-sa-3.0, cc-by-sa-4.0 or unknown.");
+  const styles = [...new Set(options.styles ?? [])];
+  demand(styles.length >= 1, "Choose at least one style with --styles.");
+  const collections = [...new Set(options.collections ?? [])];
+  demand(collections.length <= 16, "Use at most 16 collections.");
+  let rows;
+  if (packagedTracks) rows = packagedTracks.map((track) => ({
+    audioURL: track.audioURL,
+    title: track.title,
+    artist: track.artist,
+    fileName: track.fileName,
+    expectedBytes: track.bytes,
+    expectedSha256: track.sha256,
+  }));
+  else if (options.audioURL) rows = [{ audioURL: options.audioURL, title: options.title, artist: options.artist, fileName: options.fileName }];
+  else {
+    const parsed = JSON.parse(await readFile(path.resolve(options.urlManifest), "utf8"));
+    rows = Array.isArray(parsed) ? parsed : parsed.tracks;
+  }
+  demand(Array.isArray(rows) && rows.length > 0 && rows.length <= 20, "URL manifest must contain 1–20 recordings.");
+  const tracks = [];
+  const ids = new Map();
+  for (const [index, row] of rows.entries()) {
+    const title = String(row.title ?? "").trim();
+    const artist = String(row.artist ?? options.artist ?? "").trim();
+    demand(title, `Hosted recording ${index + 1} needs a title.`);
+    demand(artist, `Hosted recording ${index + 1} needs an artist.`);
+    const result = await verify(validateExternalAudioURL(row.audioURL ?? row.url).href);
+    if (row.expectedBytes) demand(result.byteCount === row.expectedBytes, `Packaged hosted byte count changed: ${title}`);
+    if (row.expectedSha256) demand(result.sha256 === row.expectedSha256, `Packaged hosted SHA-256 changed: ${title}`);
+    const baseId = `${slug(artist, 70)}.${slug(title, 70)}`;
+    const occurrence = (ids.get(baseId) ?? 0) + 1;
+    ids.set(baseId, occurrence);
+    const credit = options.attribution?.trim() || `${title} by ${artist}. ${license.id === "UNKNOWN" ? "Rights confirmed by uploader for public redistribution and web-game playback" : license.label}. Source: ${options.source}`;
+    const fileName = String(row.fileName || `${title}.mp3`).replace(/[\\/\0]/g, "_");
+    tracks.push({
+      id: occurrence === 1 ? baseId : `${baseId}.${occurrence}`,
+      title,
+      artist,
+      fileName: /\.mp3$/i.test(fileName) ? fileName : `${fileName}.mp3`,
+      byteCount: result.byteCount,
+      sha256: result.sha256,
+      durationSeconds: await probeExternalBytes(result.bytes, fileName, probe),
+      source: options.source,
+      license: license.label,
+      licenseURL: license.url,
+      credit,
+      rights: rightsFor(license, options, credit),
+      tags: styles,
+      audioURL: result.url,
+      delivery: {
+        type: "external-url",
+        verifiedAt: result.verifiedAt,
+        rangeRequests: true,
+        cors: true,
+      },
+    });
+  }
+  const total = tracks.reduce((sum, track) => sum + track.byteCount, 0);
+  demand(total <= MAX_BATCH_BYTES, "A public batch may reference at most 64 MiB of audio.");
+  const batchId = options.batchId ?? `${slug(options.batchTitle || tracks[0].title, 48)}-${tracks[0].sha256.slice(0, 8)}`;
+  demand(/^[a-z0-9][a-z0-9-]{0,63}$/.test(batchId), "Batch ID must be lowercase letters, digits and hyphens.");
+  return {
+    batchId,
+    title: options.batchTitle?.trim() || (tracks.length === 1 ? tracks[0].title : `${tracks[0].artist} — ${tracks.length} hosted tracks`),
+    description: options.description?.trim() || `Publicly hosted music prepared from ${tracks.length} reviewed MP3 recording${tracks.length === 1 ? "" : "s"}.`,
+    collections,
+    tracks,
+    external: true,
+  };
+}
+
 function publicTrack(track, batch) {
   const collections = [...new Set([batch.title, ...batch.collections])];
   const volumeTag = `audio-${batch.batchId}`;
@@ -499,11 +602,13 @@ function publicTrack(track, batch) {
     contentId: "unknown",
     recordingModeEligible: false,
     default: false,
-    audio: {
-      path: `https://github.com/mekhovov/revealline-soundtracks/releases/download/${volumeTag}/${track.sha256}.mp3`,
-      bytes: track.bytes.length,
-      sha256: track.sha256,
-    },
+    audio: batch.external
+      ? { path: track.audioURL, bytes: track.byteCount, sha256: track.sha256, delivery: track.delivery }
+      : {
+          path: `https://github.com/mekhovov/revealline-soundtracks/releases/download/${volumeTag}/${track.sha256}.mp3`,
+          bytes: track.bytes.length,
+          sha256: track.sha256,
+        },
     aliases: [],
   };
 }
@@ -614,6 +719,7 @@ export async function withPackagedIntake(
     await packageHandle.close();
   }
   const unpacked = await readIntakePackage(new Blob([packageBytes]));
+  const external = unpacked.manifest.format === "revealline-soundtrack-intake-package.v2";
   const disk = await statFilesystem(temporaryRoot);
   demand(
     disk.bavail * disk.bsize >=
@@ -624,6 +730,13 @@ export async function withPackagedIntake(
     path.join(temporaryRoot, "revealline-soundtrack-intake-"),
   );
   try {
+    const { artist, ...metadata } = unpacked.manifest.metadata;
+    if (external)
+      return await callback(null, {
+        ...metadata,
+        artist,
+        openPR: options.openPR === true,
+      }, { packagedTracks: unpacked.tracks });
     for (const [index, track] of unpacked.tracks.entries()) {
       const directory = path.join(temporary, String(index).padStart(4, "0"));
       await mkdir(directory);
@@ -631,7 +744,6 @@ export async function withPackagedIntake(
         flag: "wx",
       });
     }
-    const { artist, ...metadata } = unpacked.manifest.metadata;
     return await callback(temporary, {
       ...metadata,
       artistFallback: artist,
@@ -697,16 +809,17 @@ async function openPullRequest(batch) {
     "catalogue.json",
     "CREDITS.md",
     "deployment-manifest.json",
+    "external-deliveries.json",
   ]);
   await run("git", ["diff", "--cached", "--check"]);
   await run("git", ["commit", "-m", `Add ${batch.title} to RevealLine Soundtracks`]);
-  await prepareDraftVolume(batch);
+  if (!batch.external) await prepareDraftVolume(batch);
   await run("git", ["push", "-u", "origin", branch]);
   const body = path.join(os.tmpdir(), `revealline-soundtracks-${process.pid}.md`);
   try {
     await writeFile(
       body,
-      `Adds ${batch.tracks.length} exact, rights-bound MP3 recording${batch.tracks.length === 1 ? "" : "s"} through the canonical automated intake. Exact audio is attached to draft release audio-${batch.batchId}; merge automation publishes that volume before Pages. Files remain listening-pending and game-unadmitted.\n`,
+      `Adds ${batch.tracks.length} exact, rights-bound MP3 recording${batch.tracks.length === 1 ? "" : "s"} through the canonical automated intake. ${batch.external ? "The stable hosted URLs, exact hashes, byte counts, CORS and range evidence are reverified by CI; no GitHub audio volume is created." : `Exact audio is attached to draft release audio-${batch.batchId}; merge automation publishes that volume before Pages.`} Files remain listening-pending and game-unadmitted.\n`,
     );
     await run("gh", [
       "pr",
@@ -726,38 +839,41 @@ async function openPullRequest(batch) {
 }
 
 async function performMusicIntake(input, options, dependencies = {}) {
-  const batch = await createIntake(input, options, dependencies);
+  const batch = options.audioURL || options.urlManifest || dependencies.packagedTracks
+    ? await createExternalIntake(options, { ...dependencies, packagedTracks: dependencies.packagedTracks })
+    : await createIntake(input, options, dependencies);
   const cataloguePath = path.join(repository, "catalogue.json");
   const batchesPath = path.join(repository, "batches.json");
   const creditsPath = path.join(repository, "CREDITS.md");
   const volumesPath = path.join(repository, "audio-volumes.json");
-  const [catalogueText, batchesText, creditsText, volumesText] = await Promise.all([
+  const externalPath = path.join(repository, "external-deliveries.json");
+  const [catalogueText, batchesText, creditsText, volumesText, externalText] = await Promise.all([
     readFile(cataloguePath, "utf8"),
     readFile(batchesPath, "utf8"),
     readFile(creditsPath, "utf8"),
     readFile(volumesPath, "utf8"),
+    readFile(externalPath, "utf8"),
   ]);
   const catalogue = JSON.parse(catalogueText);
   const batches = JSON.parse(batchesText);
   const volumes = JSON.parse(volumesText);
+  const externalDeliveries = JSON.parse(externalText);
   const volumeTag = `audio-${batch.batchId}`;
-  demand(
-    !volumes.volumes.some((volume) => volume.releaseTag === volumeTag),
-    `Batch already exists: ${batch.batchId}`,
-  );
+  if (!batch.external) demand(!volumes.volumes.some((volume) => volume.releaseTag === volumeTag), `Batch already exists: ${batch.batchId}`);
   const knownIds = new Set(catalogue.tracks.map((track) => track.id));
   const knownHashes = new Set(catalogue.tracks.map((track) => track.audio.sha256));
   for (const track of batch.tracks) {
     demand(!knownIds.has(track.id), `Recording identity already exists: ${track.id}`);
-    demand(!knownHashes.has(track.sha256), `Exact recording already exists: ${track.file}`);
+    demand(!knownHashes.has(track.sha256), `Exact recording already exists: ${track.file ?? track.audioURL}`);
     knownIds.add(track.id);
     knownHashes.add(track.sha256);
   }
   demand(catalogue.tracks.length + batch.tracks.length <= 512, "Catalogue track limit exceeded.");
-  const audioBytes = batch.tracks.reduce((sum, track) => sum + track.bytes.length, 0);
+  const audioBytes = batch.tracks.reduce((sum, track) => sum + (track.byteCount ?? track.bytes.length), 0);
   const disk = await statfs(repository);
   demand(
-    disk.bavail * disk.bsize >= MINIMUM_FREE_BYTES + audioBytes + 8 * 1024 * 1024,
+    disk.bavail * disk.bsize >=
+      MINIMUM_FREE_BYTES + (batch.external ? 0 : audioBytes) + 8 * 1024 * 1024,
     "Upload must leave at least 1 GiB free.",
   );
   const backups = new Map([
@@ -765,6 +881,7 @@ async function performMusicIntake(input, options, dependencies = {}) {
     ["batches.json", batchesText],
     ["CREDITS.md", creditsText],
     ["audio-volumes.json", volumesText],
+    ["external-deliveries.json", externalText],
   ]);
   try {
     const rows = batch.tracks.map((track) => publicTrack(track, batch));
@@ -778,15 +895,22 @@ async function performMusicIntake(input, options, dependencies = {}) {
       else batches.collections.push({ id: name, title: name, tracks: rows.length });
     }
     batches.collections.sort((left, right) => left.title.localeCompare(right.title));
-    volumes.volumes.push({
+    if (batch.external) {
+      externalDeliveries.recordings.push(...rows.map((track) => ({
+        id: track.id,
+        url: track.audio.path,
+        host: new URL(track.audio.path).host,
+        bytes: track.audio.bytes,
+        sha256: track.audio.sha256,
+        verifiedAt: track.audio.delivery.verifiedAt,
+      })));
+      externalDeliveries.recordings.sort((left, right) => left.id.localeCompare(right.id));
+    } else volumes.volumes.push({
       id: volumeTag,
       releaseTag: volumeTag,
       recordings: rows.length,
       audioBytes,
-      assets: batch.tracks.map((track) => ({
-        sha256: track.sha256,
-        bytes: track.bytes.length,
-      })),
+      assets: batch.tracks.map((track) => ({ sha256: track.sha256, bytes: track.bytes.length })),
     });
     const rootCredits = `${creditsText.trimEnd()}\n\n## ${batch.title}\n\n${batch.tracks
       .map((track) => `${track.credit}\n\nLicence: ${track.license}${track.licenseURL ? ` (${track.licenseURL})` : ""}`)
@@ -796,6 +920,7 @@ async function performMusicIntake(input, options, dependencies = {}) {
       writeFile(batchesPath, json(batches)),
       writeFile(creditsPath, rootCredits),
       writeFile(volumesPath, json(volumes)),
+      writeFile(externalPath, json(externalDeliveries)),
     ]);
     await writeFile(
       path.join(repository, "deployment-manifest.json"),
@@ -821,7 +946,7 @@ export async function automateMusicIntake(input, options, dependencies = {}) {
   try {
     lock = await open(lockPath, "wx");
     await lock.writeFile(
-      `${JSON.stringify({ pid: process.pid, input: path.resolve(input) })}\n`,
+      `${JSON.stringify({ pid: process.pid, input: input ? path.resolve(input) : options.audioURL || options.urlManifest })}\n`,
     );
   } catch (error) {
     if (error.code === "EEXIST")
@@ -836,8 +961,8 @@ export async function automateMusicIntake(input, options, dependencies = {}) {
     return await withPackagedIntake(
       input,
       options,
-      (preparedInput, preparedOptions) =>
-        performMusicIntake(preparedInput, preparedOptions, dependencies),
+      (preparedInput, preparedOptions, packaged) =>
+        performMusicIntake(preparedInput, preparedOptions, { ...dependencies, ...packaged }),
     );
   } finally {
     try {
