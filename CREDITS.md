@@ -1813,3 +1813,9 @@ Licence: Unknown — uploader-confirmed rights
 VITOLD Band Feat Black D - Дракаріс. Музичний кліп до відео "Дрон-Дракон". by VITOLD UA Band Feat Black D. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@vitold_ua
 
 Licence: Unknown — uploader-confirmed rights
+
+## Zababura - Цей дрон, цей дрон (за мотивами пісні "Цей сон" Степана Гіги)
+
+Zababura - Цей дрон, цей дрон (за мотивами пісні "Цей сон" Степана Гіги) by Zababura. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@zababura
+
+Licence: Unknown — uploader-confirmed rights
