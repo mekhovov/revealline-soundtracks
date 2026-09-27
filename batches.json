@@ -2,6 +2,16 @@
   "format": "revealline-soundtrack-collections.v2",
   "collections": [
     {
+      "id": "414 Птахи Мадяра",
+      "title": "414 Птахи Мадяра",
+      "tracks": 1
+    },
+    {
+      "id": "414 Птахи Мадяра - легендарні Сталеві Птахи проти хробаків",
+      "title": "414 Птахи Мадяра - легендарні Сталеві Птахи проти хробаків",
+      "tracks": 1
+    },
+    {
       "id": "action-metal-electro-audition-20260926",
       "title": "action-metal-electro-audition-20260926",
       "tracks": 4
@@ -319,7 +329,7 @@
     {
       "id": "ФПВ",
       "title": "ФПВ",
-      "tracks": 47
+      "tracks": 48
     },
     {
       "id": "Юрій Громовий",
