@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 238,
-    "uniqueRecordings": 238,
+    "declaredTracks": 239,
+    "uniqueRecordings": 239,
     "duplicateAliases": 0,
-    "audioBytes": 1163723394
+    "audioBytes": 1165083821
   },
   "tracks": [
     {
@@ -11568,6 +11568,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-dushevniy-20260927-e3de7914/e3de791418e27e1b0414ff0ff1973e94c86507a9ecfb3c8037a81e9f212cfac1.mp3",
         "bytes": 1738417,
         "sha256": "e3de791418e27e1b0414ff0ff1973e94c86507a9ecfb3c8037a81e9f212cfac1"
+      },
+      "aliases": []
+    },
+    {
+      "id": "expert-ukrainian-hits.dron-pes-ukrayinski-khity-ukrayinska-muzyka",
+      "title": "\"Дрон пес\" українські хіти 🇺🇦 українська музика",
+      "artist": "Expert-Ukrainian hits",
+      "durationSeconds": 73.049977,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@Expert-UkrainianHits",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "\"Дрон пес\" українські хіти 🇺🇦 українська музика by Expert-Ukrainian hits. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@Expert-UkrainianHits",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@Expert-UkrainianHits",
+        "attribution": "\"Дрон пес\" українські хіти 🇺🇦 українська музика by Expert-Ukrainian hits. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@Expert-UkrainianHits",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Expert-Ukrainian hits - Дрон пес - українські хіти.mp3",
+      "archiveId": "expert-ukrainian-hits-20260927-00139528",
+      "collection": "\"Дрон пес\" українські хіти 🇺🇦 українська музика",
+      "collections": [
+        "\"Дрон пес\" українські хіти 🇺🇦 українська музика",
+        "Expert-Ukrainian hits",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-expert-ukrainian-hits-20260927-00139528/00139528c586b94a332b2038fce86a5f21f1bab25cd79145a705d6351f02eab6.mp3",
+        "bytes": 1360427,
+        "sha256": "00139528c586b94a332b2038fce86a5f21f1bab25cd79145a705d6351f02eab6"
       },
       "aliases": []
     }
