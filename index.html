@@ -7,7 +7,7 @@
   <meta name="description" content="Search and play every published RevealLine soundtrack recording in one continuous player.">
   <title>RevealLine · All soundtracks</title>
   <link rel="stylesheet" href="style.css">
-  <script src="player.mjs?v=20260927-3" type="module"></script>
+  <script src="player.mjs?v=20260927-4" type="module"></script>
   <script src="intake-browser.mjs?v=20260927-2" type="module"></script>
 </head>
 <body>
@@ -53,6 +53,18 @@
         </label>
       </div>
       <p id="playback-status" role="status"></p>
+    </section>
+
+    <section class="featured-collection" aria-labelledby="foundation-heading">
+      <div>
+        <p class="eyebrow">FEATURED COLLECTION</p>
+        <h2 id="foundation-heading">Foundation 70</h2>
+        <p><span id="foundation-count">70</span> preserved RevealLine recordings in one continuous playlist. Choose shuffle or sequential order above, then keep listening without leaving this page.</p>
+      </div>
+      <div class="featured-actions">
+        <button id="play-foundation" type="button" disabled>▶ Play Foundation 70</button>
+        <button id="browse-foundation" type="button" disabled>Browse the 70 songs</button>
+      </div>
     </section>
 
     <section id="recordings" aria-label="All published recordings">

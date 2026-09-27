@@ -19,10 +19,14 @@ const repeat = document.querySelector("#repeat");
 const pause = document.querySelector("#pause");
 const nextButton = document.querySelector("#next");
 const playResults = document.querySelector("#play-results");
+const playFoundation = document.querySelector("#play-foundation");
+const browseFoundation = document.querySelector("#browse-foundation");
+const foundationCount = document.querySelector("#foundation-count");
 const tracksHost = document.querySelector("#tracks");
 const count = document.querySelector("#count");
 const empty = document.querySelector("#empty");
 const summary = document.querySelector("#catalogue-summary");
+const FOUNDATION_COLLECTION = "Foundation 70";
 
 let catalogue;
 let rows = [];
@@ -308,6 +312,12 @@ async function loadCatalogue() {
     }
     const collectionCount = new Set(catalogue.tracks.flatMap((track) => track.collections ?? [track.collection])).size;
     summary.textContent = `${catalogue.counts.uniqueRecordings} unique recordings across ${collectionCount} collections. Search, filter and keep them playing in one endless queue.`;
+    const foundationTracks = catalogue.tracks.filter((track) =>
+      (track.collections ?? [track.collection]).includes(FOUNDATION_COLLECTION),
+    );
+    foundationCount.textContent = String(foundationTracks.length);
+    playFoundation.disabled = foundationTracks.length === 0;
+    browseFoundation.disabled = foundationTracks.length === 0;
     refresh();
     const requested = new URL(location.href).searchParams.get("track");
     const requestedRow = rows.find((row) => row.track.id === requested);
@@ -343,6 +353,16 @@ stylesNone.addEventListener('click', () => {
 playResults.addEventListener("click", () => {
   queue = buildPlaybackQueue(visible(), { order: order.value, current: null });
   next();
+});
+playFoundation.addEventListener("click", () => {
+  showOnlyCollection(FOUNDATION_COLLECTION);
+  queue = buildPlaybackQueue(visible(), { order: order.value, current: null });
+  next();
+});
+browseFoundation.addEventListener("click", () => {
+  showOnlyCollection(FOUNDATION_COLLECTION);
+  document.querySelector("#recordings").scrollIntoView({ block: "start" });
+  collection.focus({ preventScroll: true });
 });
 nextButton.addEventListener("click", next);
 pause.addEventListener("click", () => {
