@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 241,
-    "uniqueRecordings": 241,
+    "declaredTracks": 242,
+    "uniqueRecordings": 242,
     "duplicateAliases": 0,
-    "audioBytes": 1172761979
+    "audioBytes": 1174941314
   },
   "tracks": [
     {
@@ -11721,6 +11721,58 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-neuronenko-20260927-bc0a38df/bc0a38dfb8228dd25afd469c20b4d0471ba22bd9e3c4140736c8b5b13320d384.mp3",
         "bytes": 3692480,
         "sha256": "bc0a38dfb8228dd25afd469c20b4d0471ba22bd9e3c4140736c8b5b13320d384"
+      },
+      "aliases": []
+    },
+    {
+      "id": "postman-dity-razom-z-ivanom-marunychem-ta-oleksandrom-polozhynskym.milyon-na-dron-dity-razom-z-ivanom-marunychem-ta-oleksandrom-polozhyns",
+      "title": "Мільйон на дрон: діти разом з Іваном Маруничем та Олександром Положинським збирають на Перемогу",
+      "artist": "Postman, діти разом з Іваном Маруничем та Олександром Положинським",
+      "durationSeconds": 117.051791,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@postmenUA",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Мільйон на дрон: діти разом з Іваном Маруничем та Олександром Положинським збирають на Перемогу by Postman, діти разом з Іваном Маруничем та Олександром Положинським. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@postmenUA",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@postmenUA",
+        "attribution": "Мільйон на дрон: діти разом з Іваном Маруничем та Олександром Положинським збирають на Перемогу by Postman, діти разом з Іваном Маруничем та Олександром Положинським. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@postmenUA",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Postman, діти разом з Іваном Маруничем та Олександром Положинським збирають на Перемогу - Мільйон на дрон.mp3",
+      "archiveId": "postman-20260927-0ebf9e84",
+      "collection": "Мільйон на дрон: діти разом з Іваном Маруничем та Олександром Положинським збирають на Перемогу",
+      "collections": [
+        "Мільйон на дрон: діти разом з Іваном Маруничем та Олександром Положинським збирають на Перемогу",
+        "Postman",
+        "діти разом з Іваном Маруничем та Олександром Положинським",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-postman-20260927-0ebf9e84/0ebf9e84567743acd38453df6d8ce3d3800987ca7aa13a3374524e24902c3e83.mp3",
+        "bytes": 2179335,
+        "sha256": "0ebf9e84567743acd38453df6d8ce3d3800987ca7aa13a3374524e24902c3e83"
       },
       "aliases": []
     }

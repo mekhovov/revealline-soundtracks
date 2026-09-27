@@ -1783,3 +1783,9 @@ Licence: Unknown — uploader-confirmed rights
 Neuronenko — Український FPV-дрон | Пісня про українських героїв і нищення ворога | Патріотичний хіт by Neuronenko. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@Neuronenko
 
 Licence: Unknown — uploader-confirmed rights
+
+## Мільйон на дрон: діти разом з Іваном Маруничем та Олександром Положинським збирають на Перемогу
+
+Мільйон на дрон: діти разом з Іваном Маруничем та Олександром Положинським збирають на Перемогу by Postman, діти разом з Іваном Маруничем та Олександром Положинським. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@postmenUA
+
+Licence: Unknown — uploader-confirmed rights
