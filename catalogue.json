@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 215,
-    "uniqueRecordings": 215,
+    "declaredTracks": 221,
+    "uniqueRecordings": 221,
     "duplicateAliases": 0,
-    "audioBytes": 1097807023
+    "audioBytes": 1110685084
   },
   "tracks": [
     {
@@ -10411,6 +10411,306 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-mos-20260927-0093e7e9/0093e7e90c9f7d771707c0920f3a61abc8070cda6ca42da4b11054c61268b10c.mp3",
         "bytes": 3003695,
         "sha256": "0093e7e90c9f7d771707c0920f3a61abc8070cda6ca42da4b11054c61268b10c"
+      },
+      "aliases": []
+    },
+    {
+      "id": "neyronnyy-hupach.neyronnyy-hupach-litaly-litaly-polka",
+      "title": "НЕЙРОННИЙ ГУПАЧ - Літали-літали (полька)",
+      "artist": "НЕЙРОННИЙ ГУПАЧ",
+      "durationSeconds": 143.011701,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@gupach",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "НЕЙРОННИЙ ГУПАЧ - Літали-літали (полька) by НЕЙРОННИЙ ГУПАЧ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@gupach",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@gupach",
+        "attribution": "НЕЙРОННИЙ ГУПАЧ - Літали-літали (полька) by НЕЙРОННИЙ ГУПАЧ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@gupach",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "НЕЙРОННИЙ ГУПАЧ - Літали-літали (полька).mp3",
+      "archiveId": "neyronnyy-hupach-20260927-0e70cd80",
+      "collection": "НЕЙРОННИЙ ГУПАЧ",
+      "collections": [
+        "НЕЙРОННИЙ ГУПАЧ",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-neyronnyy-hupach-20260927-0e70cd80/0e70cd808403487bce3b3898a3798099fd9b7b1e4477937603c816e7f3591b9c.mp3",
+        "bytes": 2484053,
+        "sha256": "0e70cd808403487bce3b3898a3798099fd9b7b1e4477937603c816e7f3591b9c"
+      },
+      "aliases": []
+    },
+    {
+      "id": "neyronnyy-hupach.neyronnyy-hupach-litaly-litaly-ii",
+      "title": "НЕЙРОННИЙ ГУПАЧ - Літали-літали II",
+      "artist": "НЕЙРОННИЙ ГУПАЧ",
+      "durationSeconds": 157.640272,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@gupach",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "НЕЙРОННИЙ ГУПАЧ - Літали-літали II by НЕЙРОННИЙ ГУПАЧ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@gupach",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@gupach",
+        "attribution": "НЕЙРОННИЙ ГУПАЧ - Літали-літали II by НЕЙРОННИЙ ГУПАЧ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@gupach",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "НЕЙРОННИЙ ГУПАЧ - Літали-літали II.mp3",
+      "archiveId": "neyronnyy-hupach-20260927-0e70cd80",
+      "collection": "НЕЙРОННИЙ ГУПАЧ",
+      "collections": [
+        "НЕЙРОННИЙ ГУПАЧ",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-neyronnyy-hupach-20260927-0e70cd80/a7326eabe93d54a2d8606e978517034ba242fe30d39973fb24deea49c44c733d.mp3",
+        "bytes": 2708134,
+        "sha256": "a7326eabe93d54a2d8606e978517034ba242fe30d39973fb24deea49c44c733d"
+      },
+      "aliases": []
+    },
+    {
+      "id": "neyronnyy-hupach.neyronnyy-hupach-litaly-litaly",
+      "title": "НЕЙРОННИЙ ГУПАЧ - Літали-літали",
+      "artist": "НЕЙРОННИЙ ГУПАЧ",
+      "durationSeconds": 106.556372,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@gupach",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "НЕЙРОННИЙ ГУПАЧ - Літали-літали by НЕЙРОННИЙ ГУПАЧ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@gupach",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@gupach",
+        "attribution": "НЕЙРОННИЙ ГУПАЧ - Літали-літали by НЕЙРОННИЙ ГУПАЧ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@gupach",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "НЕЙРОННИЙ ГУПАЧ - Літали-літали.mp3",
+      "archiveId": "neyronnyy-hupach-20260927-0e70cd80",
+      "collection": "НЕЙРОННИЙ ГУПАЧ",
+      "collections": [
+        "НЕЙРОННИЙ ГУПАЧ",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-neyronnyy-hupach-20260927-0e70cd80/c98d235cb99ff5d4fb471c2b8377f135c9b7a82f1ec91a7c4df632c2aede59b6.mp3",
+        "bytes": 1870781,
+        "sha256": "c98d235cb99ff5d4fb471c2b8377f135c9b7a82f1ec91a7c4df632c2aede59b6"
+      },
+      "aliases": []
+    },
+    {
+      "id": "neyronnyy-hupach.neyronnyy-hupach-pisenka-madyara-z-multfilmu-pro-barmaleyiv",
+      "title": "НЕЙРОННИЙ ГУПАЧ - Пісенька Мадяра з мультфільму про бармалеїв",
+      "artist": "НЕЙРОННИЙ ГУПАЧ",
+      "durationSeconds": 76.92771,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@gupach",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "НЕЙРОННИЙ ГУПАЧ - Пісенька Мадяра з мультфільму про бармалеїв by НЕЙРОННИЙ ГУПАЧ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@gupach",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@gupach",
+        "attribution": "НЕЙРОННИЙ ГУПАЧ - Пісенька Мадяра з мультфільму про бармалеїв by НЕЙРОННИЙ ГУПАЧ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@gupach",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "НЕЙРОННИЙ ГУПАЧ - Пісенька Мадяра з мультфільму про бармалеїв.mp3",
+      "archiveId": "neyronnyy-hupach-20260927-0e70cd80",
+      "collection": "НЕЙРОННИЙ ГУПАЧ",
+      "collections": [
+        "НЕЙРОННИЙ ГУПАЧ",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-neyronnyy-hupach-20260927-0e70cd80/7fc1d588e5027bd4a1df5f7ff9b37d128a528300878e288b16a7da38c0f25ac9.mp3",
+        "bytes": 1392123,
+        "sha256": "7fc1d588e5027bd4a1df5f7ff9b37d128a528300878e288b16a7da38c0f25ac9"
+      },
+      "aliases": []
+    },
+    {
+      "id": "neyronnyy-hupach.neyronnyy-hupach-povitryana-tryvoha",
+      "title": "НЕЙРОННИЙ ГУПАЧ - Повітряна тривога",
+      "artist": "НЕЙРОННИЙ ГУПАЧ",
+      "durationSeconds": 201.479546,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@gupach",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "НЕЙРОННИЙ ГУПАЧ - Повітряна тривога by НЕЙРОННИЙ ГУПАЧ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@gupach",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@gupach",
+        "attribution": "НЕЙРОННИЙ ГУПАЧ - Повітряна тривога by НЕЙРОННИЙ ГУПАЧ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@gupach",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "НЕЙРОННИЙ ГУПАЧ - Повітряна тривога.mp3",
+      "archiveId": "neyronnyy-hupach-20260927-0e70cd80",
+      "collection": "НЕЙРОННИЙ ГУПАЧ",
+      "collections": [
+        "НЕЙРОННИЙ ГУПАЧ",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-neyronnyy-hupach-20260927-0e70cd80/a45cb366d97648fa810a535dd29024cd45b929299b388d66d8007fd84795c49d.mp3",
+        "bytes": 3053566,
+        "sha256": "a45cb366d97648fa810a535dd29024cd45b929299b388d66d8007fd84795c49d"
+      },
+      "aliases": []
+    },
+    {
+      "id": "neyronnyy-hupach.neyronnyy-hupach-khrobaky-rozshyrena-dzhaha-dzhaha",
+      "title": "НЕЙРОННИЙ ГУПАЧ - Хробаки (розширена джага-джага)",
+      "artist": "НЕЙРОННИЙ ГУПАЧ",
+      "durationSeconds": 81.014422,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@gupach",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "НЕЙРОННИЙ ГУПАЧ - Хробаки (розширена джага-джага) by НЕЙРОННИЙ ГУПАЧ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@gupach",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@gupach",
+        "attribution": "НЕЙРОННИЙ ГУПАЧ - Хробаки (розширена джага-джага) by НЕЙРОННИЙ ГУПАЧ. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@gupach",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "НЕЙРОННИЙ ГУПАЧ - Хробаки (розширена джага-джага).mp3",
+      "archiveId": "neyronnyy-hupach-20260927-0e70cd80",
+      "collection": "НЕЙРОННИЙ ГУПАЧ",
+      "collections": [
+        "НЕЙРОННИЙ ГУПАЧ",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-neyronnyy-hupach-20260927-0e70cd80/bbc8d3e40202d66388cabc8c3e416cf08af0b7b8531531361704323ba85b748c.mp3",
+        "bytes": 1369404,
+        "sha256": "bbc8d3e40202d66388cabc8c3e416cf08af0b7b8531531361704323ba85b748c"
       },
       "aliases": []
     }
