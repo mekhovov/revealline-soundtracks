@@ -832,6 +832,46 @@
           "bytes": 3147678
         }
       ]
+    },
+    {
+      "id": "audio-the-bloger-ua-20260927",
+      "releaseTag": "audio-the-bloger-ua-20260927",
+      "recordings": 8,
+      "audioBytes": 27491566,
+      "assets": [
+        {
+          "sha256": "bef1cece660fe28d3bcfcb0e11f7e1adfd47bb7f56948b836560056123a00094",
+          "bytes": 2250538
+        },
+        {
+          "sha256": "a108d139434b5cc6254cc25718ddf5059733e4d05d334ccabf3bedce87c68e71",
+          "bytes": 2586467
+        },
+        {
+          "sha256": "4a0d62a1a78201a923f112dc0e695ac5537ae1444a96b4665fab62976c853dd7",
+          "bytes": 4092272
+        },
+        {
+          "sha256": "f12db6a6b9b12cfe55f47fd8f7643a37a2cab275918a0eb5870a4806d43934dd",
+          "bytes": 3008964
+        },
+        {
+          "sha256": "561e17ea45775729d4c164f62c9c9188fa75e18c14749c87e354d76028d59d0c",
+          "bytes": 3260192
+        },
+        {
+          "sha256": "28468f6e00c8cff1e8932cc3942a5f66b2d6dde33642b9016d62bc3dd3e8e9b8",
+          "bytes": 4630848
+        },
+        {
+          "sha256": "49f1008bd27695434a717695b4bcc30bbab3e85f306bdb2b79462135db1760cc",
+          "bytes": 4060647
+        },
+        {
+          "sha256": "328ef348415efca85f5323f380559ed42ab6b1904464f0331b9c6ec1fbac4802",
+          "bytes": 3601638
+        }
+      ]
     }
   ]
 }

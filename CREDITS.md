@@ -1583,3 +1583,37 @@ Licence: Unknown — uploader-confirmed rights
 FPV by Tarko. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@tarko_music
 
 Licence: Unknown — uploader-confirmed rights
+
+## The Bloger UA
+
+The Bloger UA - Останнє Фото (Official Video) | Саркастичний рок by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA
+
+Licence: Unknown — uploader-confirmed rights
+
+The Bloger UA - Пісенька про москаля | СКІНЧИЛАСЯ ГАСТРОЛЬ (FPV Кліп) by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA
+
+Licence: Unknown — uploader-confirmed rights
+
+The Bloger UA - Птахи СБС (Official Music Video) Присвята Силам безпілотних систем України by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA
+
+Licence: Unknown — uploader-confirmed rights
+
+The Bloger UA – Боги Небесних Трас (Official Music Video) | Гімн воїнів неба by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA
+
+Licence: Unknown — uploader-confirmed rights
+
+The Bloger UA – ЙОБЛИК (Прем'єра 2026) | Гімн операторів FPV by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA
+
+Licence: Unknown — uploader-confirmed rights
+
+The Bloger UA — Птахи назавжди. Присвята полеглим Героям by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA
+
+Licence: Unknown — uploader-confirmed rights
+
+The Bloger UA — СТАЛЕВИЙ ПТАХ (Official Music Video) | Очі та Жало by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA
+
+Licence: Unknown — uploader-confirmed rights
+
+The Bloger UA — ХРОБАЧНЯ (Official Music Video) | Дрони, ЗСУ і Зимове Сафарі 🔞 by The Bloger UA. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@TheBlogerUA
+
+Licence: Unknown — uploader-confirmed rights
