@@ -1645,3 +1645,9 @@ Licence: Unknown — uploader-confirmed rights
 Нелегка доля хробака. Трек «Жест доброї волі» (автор Мос) by МАДЯР. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@MAGYARBIRDS
 
 Licence: Unknown — uploader-confirmed rights
+
+## Мос - Клоун
+
+Мос - Клоун by Мос. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@Mos_18000
+
+Licence: Unknown — uploader-confirmed rights
