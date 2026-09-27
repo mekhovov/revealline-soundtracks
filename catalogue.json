@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 235,
-    "uniqueRecordings": 235,
+    "declaredTracks": 236,
+    "uniqueRecordings": 236,
     "duplicateAliases": 0,
-    "audioBytes": 1156481985
+    "audioBytes": 1158779745
   },
   "tracks": [
     {
@@ -11415,6 +11415,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-414-ptakhy-madyara-20260927-1b2bf1f9/1b2bf1f95d104f09b7a8ff0c176d40604210e7b4387ee5478d8b751af862ae03.mp3",
         "bytes": 4232151,
         "sha256": "1b2bf1f95d104f09b7a8ff0c176d40604210e7b4387ee5478d8b751af862ae03"
+      },
+      "aliases": []
+    },
+    {
+      "id": "a-m-ukrainian.ai-cover-fpv-dron-sonet",
+      "title": "(AI COVER) FPV  дрон. Сонет.",
+      "artist": "A'm Ukrainian",
+      "durationSeconds": 138.41415,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@amukrainian653",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "(AI COVER) FPV  дрон. Сонет. by A'm Ukrainian. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@amukrainian653",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@amukrainian653",
+        "attribution": "(AI COVER) FPV  дрон. Сонет. by A'm Ukrainian. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@amukrainian653",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "A'm Ukrainian - Родвін - (AI COVER) FPV  дрон. Сонет. Пісня на вірш _FPV  дрон. Сонет.mp3",
+      "archiveId": "a-m-ukrainian-20260927-45812cca",
+      "collection": "(AI COVER) FPV  дрон. Сонет.",
+      "collections": [
+        "(AI COVER) FPV  дрон. Сонет.",
+        "A'm Ukrainian",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-a-m-ukrainian-20260927-45812cca/45812cca6e1bf70fbf5f1df5f9c104730c9a88a89b26c284d83437d14c985b18.mp3",
+        "bytes": 2297760,
+        "sha256": "45812cca6e1bf70fbf5f1df5f9c104730c9a88a89b26c284d83437d14c985b18"
       },
       "aliases": []
     }
