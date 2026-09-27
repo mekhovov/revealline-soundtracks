@@ -1725,3 +1725,13 @@ Licence: Unknown — uploader-confirmed rights
 Продюсєр Валєнтін та гурт 'Бавовна-бавовна' презентуюсь треш-суржик-рок композицію. Нема бензину. by Продюсєр Валєнтін. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@single_deck
 
 Licence: Unknown — uploader-confirmed rights
+
+## Телебачення Торонто
+
+НИЦО ПОТВОРНО feat ТЕЛЕБАЧЕННЯ ТОРОНТО — FPV летить русаків бомбить💥 ПРЕМ’ЄРА КЛІПУ by Телебачення Торонто. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@uttoronto
+
+Licence: Unknown — uploader-confirmed rights
+
+ШАЛЕНІЙ! (FPV-ВЕРСІЯ) — НИЦО ПОТВОРНО (ГАЙТАНА COVER) by Телебачення Торонто. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@uttoronto
+
+Licence: Unknown — uploader-confirmed rights
