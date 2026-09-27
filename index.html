@@ -7,8 +7,8 @@
   <meta name="description" content="Search and play every published RevealLine soundtrack recording in one continuous player.">
   <title>RevealLine · All soundtracks</title>
   <link rel="stylesheet" href="style.css">
-  <script src="player.mjs?v=20260927-2" type="module"></script>
-  <script src="intake-browser.mjs" type="module"></script>
+  <script src="player.mjs?v=20260927-3" type="module"></script>
+  <script src="intake-browser.mjs?v=20260927-2" type="module"></script>
 </head>
 <body>
   <a class="skip" href="#recordings">Skip to recordings</a>
@@ -85,6 +85,13 @@
           on your device until you download the resulting
           <code>.rlintake</code> package. The canonical archive accepts it only after the
           exact recording source, licence and credits are verified.
+        </p>
+        <p>
+          Artist names, collections and reviewed styles become searchable,
+          clickable filters. After the archive pull request merges, publication
+          automation updates this page and the game reads the new catalogue on
+          its next refresh. No game code change or game release is needed for
+          each new song.
         </p>
         <p>
           <strong>Unknown</strong> records an uploader assertion, not an open
@@ -228,7 +235,8 @@
           </li>
           <li>
             After merge, automation publishes and verifies the versioned audio volume and
-            deploys Pages. The recording then appears here and in the game.
+            deploys Pages. The recording then appears here and in every game
+            release that includes the canonical online-catalogue integration.
           </li>
         </ol>
         <p>

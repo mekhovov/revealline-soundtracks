@@ -62,6 +62,49 @@ const visible = () => rows.filter((row) => !row.hidden);
 const selectedStyles = () =>
   [...styleChecks].filter(([, input]) => input.checked).map(([style]) => style);
 
+function showOnlyStyle(style) {
+  search.value = "";
+  collection.value = "";
+  for (const [name, input] of styleChecks) input.checked = name === style;
+  refresh();
+}
+
+function showOnlyCollection(value) {
+  search.value = "";
+  collection.value = value;
+  for (const input of styleChecks.values()) input.checked = true;
+  refresh();
+}
+
+function searchFor(value) {
+  collection.value = "";
+  for (const input of styleChecks.values()) input.checked = true;
+  search.value = value;
+  refresh();
+  search.focus({ preventScroll: true });
+}
+
+function facet(label, filter, value, className = "") {
+  const control = element("button", `filter-chip ${className}`.trim(), label);
+  control.type = "button";
+  control.setAttribute("aria-label", `Filter recordings by ${label}`);
+  control.addEventListener("click", () => filter(value));
+  return control;
+}
+
+function tagStyle(tag) {
+  const value = tag.toLocaleLowerCase();
+  if (value === "фпв" || value === "fpv") return "fpv";
+  if (value === "ua") return "ua";
+  if (value.includes("ukrain")) return "ukrainian";
+  if (value.includes("metal")) return "metal";
+  if (/synth|electro|tracker|fm|dance|techno/.test(value)) return "synth";
+  if (/chiptune|8-bit|fakebit/.test(value)) return "chiptune";
+  if (/rock|punk/.test(value)) return "rock";
+  if (/ambient|atmospher/.test(value)) return "ambient";
+  return null;
+}
+
 function refresh() {
   const term = search.value.trim().toLocaleLowerCase();
   for (const row of rows) {
@@ -163,11 +206,21 @@ function renderTrack(track, index) {
   });
 
   const main = element("div", "track-main");
-  main.append(
-    element("h2", "", track.title),
-    element("p", "artist", track.artist),
-  );
-  const labels = [...track.tags];
+  main.append(element("h2", "", track.title));
+  const artist = element("p", "artist facets");
+  artist.append(facet(track.artist, searchFor, track.artist, "artist-chip"));
+  main.append(artist);
+  const metadata = element("div", "track-facets");
+  for (const name of row.trackCollections)
+    metadata.append(facet(name, showOnlyCollection, name, "collection-chip"));
+  for (const tag of track.tags) {
+    const style = tagStyle(tag);
+    metadata.append(
+      facet(tag, style ? showOnlyStyle : searchFor, style ?? tag, "tag-chip"),
+    );
+  }
+  main.append(metadata);
+  const labels = [];
   const duration = formatDuration(track.durationSeconds);
   if (duration) labels.push(duration);
   labels.push(
@@ -195,7 +248,10 @@ function renderTrack(track, index) {
   const download = element("a", "", "MP3 ↓");
   download.href = new URL(track.audio.path, catalogue.archive.baseURL).href;
   download.download = track.fileName;
-  const creator = element("a", "", "Creator source ↗");
+  // Keep the exact recording URL wired for a future rights-reviewed download control.
+  // Public standalone MP3 downloads are intentionally hidden from the player for now.
+  download.hidden = true;
+  const creator = element("a", "creator-link", "Creator source ↗");
   creator.href = track.source;
   creator.rel = "noopener noreferrer";
   links.append(download, creator);
@@ -306,7 +362,7 @@ audio.addEventListener("pause", () => {
 audio.addEventListener("ended", () => next({ natural: true }));
 audio.addEventListener("error", () => {
   status.textContent =
-    "This recording could not load. Try Next or download its MP3.";
+    "This recording could not load. Try Next or choose another song.";
 });
 if ("mediaSession" in navigator) {
   navigator.mediaSession.setActionHandler("play", () => void audio.play());

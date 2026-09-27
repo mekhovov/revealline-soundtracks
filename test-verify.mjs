@@ -24,6 +24,21 @@ test("canonical archive preserves migrated identities and release-backed audio",
   assert.deepEqual(trench.collections, ["TRENCH ORDERLY", "ФПВ"]);
   assert.equal(trench.licenseURL, null);
   assert.equal(trench.rights.licenseId, "UNKNOWN");
+  for (const recording of catalogue.tracks) {
+    assert.ok(recording.title.trim(), `${recording.id} has a title`);
+    assert.ok(recording.artist.trim(), `${recording.id} has an artist`);
+    assert.ok(recording.collections.length, `${recording.id} has a collection`);
+    assert.ok(recording.tags.length, `${recording.id} has searchable tags`);
+  }
+});
+
+test("archive player exposes metadata filters and keeps direct downloads hidden", async () => {
+  const player = await readFile("player.mjs", "utf8");
+  assert.match(player, /facet\(track\.artist, searchFor/);
+  assert.match(player, /facet\(name, showOnlyCollection/);
+  assert.match(player, /facet\(tag, style \? showOnlyStyle : searchFor/);
+  assert.match(player, /download\.hidden = true/);
+  assert.doesNotMatch(player, /Try Next or download its MP3/);
 });
 
 test("deployment manifest is reproduced from the explicit public files", async () => {
