@@ -70,14 +70,48 @@ test("legacy archive compatibility objects remain exact canonical catalogue memb
   const review = catalogue.tracks.filter(
     ({ visibility }) => visibility === "review-only",
   );
-  const preservedFoundation = [...baseGame, ...review];
+  const baseGameReview = review.filter(({ collections }) =>
+    collections.includes("Base Game Review"),
+  );
+  const soundtrackReview = review.filter(({ collections }) =>
+    collections.includes("Soundtrack Review"),
+  );
+  const preservedFoundation = [...baseGame, ...baseGameReview];
   assert.equal(baseGame.length, 33);
-  assert.equal(review.length, 37);
+  assert.equal(baseGameReview.length, 37);
+  assert.equal(soundtrackReview.length, 21);
+  assert.equal(review.length, 58);
   assert.equal(
-    review.filter(({ collections }) =>
+    baseGameReview.filter(({ collections }) =>
       collections.includes("Heavy Metal Review"),
     ).length,
     6,
+  );
+  assert.deepEqual(
+    new Set(soundtrackReview.map(({ id }) => id)),
+    new Set([
+      "vitalezzz.curse-of-the-moon",
+      "vitalezzz.realm-of-torment",
+      "vitalezzz.shadows-awaken-within",
+      "vitalezzz.unholy-surge",
+      "ragnar-random.street-punks-fighting-to-save-the-princess",
+      "ragnar-random.rock-city-ransom",
+      "ragnar-random.nario-versus-zonik",
+      "ragnar-random.welcome-to-warp-zone",
+      "ragnar-random.here-a-captive-heart-busted",
+      "ragnar-random.the-story-so-far-fm",
+      "ragnar-random.savage-circuitboard",
+      "davidkbd.desolation",
+      "dos88.crash-landing",
+      "dos88.race-to-mars",
+      "dos88.automata-v2",
+      "dos88.city-stomper",
+      "escp.twilight-city",
+      "alexander-nakarada.trial-of-thorns",
+      "alexander-nakarada.riffs-two",
+      "alexandr-zhelanov.soul-ripper",
+      "zane-little-music.achilles",
+    ]),
   );
   assert.equal(
     catalogue.tracks.some(({ collections }) =>

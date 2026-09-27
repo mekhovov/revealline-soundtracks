@@ -152,9 +152,18 @@ export async function verifyArchive(base = root) {
     demand(Array.isArray(track.tags) && track.tags.length > 0 && track.tags.length <= 32 && track.tags.every((tag) => typeof tag === 'string' && tag.trim() === tag && tag.length > 0), `Track tags differ: ${track.id}`);
     demand(Array.isArray(track.collections) && track.collections.length > 0 && track.collections.length <= 16 && new Set(track.collections).size === track.collections.length, `Collections differ: ${track.id}`);
     demand(track.visibility === undefined || track.visibility === 'review-only', `Visibility differs: ${track.id}`);
+    const reviewCollections = ['Base Game Review', 'Heavy Metal Review', 'Soundtrack Review'];
     if (track.visibility === 'review-only') {
-      demand(track.collections.includes('Base Game Review') && !track.collections.includes('Base Game Playlist'), `Review collection differs: ${track.id}`);
-    } else demand(!track.collections.includes('Base Game Review') && !track.collections.includes('Heavy Metal Review'), `Public review boundary differs: ${track.id}`);
+      demand(
+        track.collections.some((name) => reviewCollections.includes(name)) &&
+          !track.collections.includes('Base Game Playlist'),
+        `Review collection differs: ${track.id}`,
+      );
+    } else
+      demand(
+        !track.collections.some((name) => reviewCollections.includes(name)),
+        `Public review boundary differs: ${track.id}`,
+      );
     demand(track.gameCatalogueAdmission === false && track.default !== true, `Admission boundary differs: ${track.id}`);
     verifyRights(track);
     const match = AUDIO_URL.exec(track.audio?.path ?? ''), asset = volumeAssets.get(track.audio?.sha256);
