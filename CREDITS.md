@@ -1711,3 +1711,17 @@ Licence: Unknown — uploader-confirmed rights
 🔥 Шоу Мадяра — Пісня дня (повна версія) by Пісня дня. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@pisnyadnya
 
 Licence: Unknown — uploader-confirmed rights
+
+## Продюсєр Валєнтін
+
+Продюсєр Валєнтін і гурт"Мама, зліпи снєжку" з піснею 'Заморили москаля' by Продюсєр Валєнтін. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@single_deck
+
+Licence: Unknown — uploader-confirmed rights
+
+Продюсер Валєнтів і Гурт імені Віталіка з новою піснею. 'Біла лада додається' by Продюсєр Валєнтін. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@single_deck
+
+Licence: Unknown — uploader-confirmed rights
+
+Продюсєр Валєнтін та гурт 'Бавовна-бавовна' презентуюсь треш-суржик-рок композицію. Нема бензину. by Продюсєр Валєнтін. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@single_deck
+
+Licence: Unknown — uploader-confirmed rights

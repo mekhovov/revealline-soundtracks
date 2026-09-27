@@ -1008,6 +1008,26 @@
           "bytes": 5037982
         }
       ]
+    },
+    {
+      "id": "audio-prodyusyer-valyentin-20260927-78d37bea",
+      "releaseTag": "audio-prodyusyer-valyentin-20260927-78d37bea",
+      "recordings": 3,
+      "audioBytes": 8312095,
+      "assets": [
+        {
+          "sha256": "78d37bea0b64d2ee79a7818a737e98bd491d4bdcc8154e9e7e2edf0552c1bfd8",
+          "bytes": 2897664
+        },
+        {
+          "sha256": "7d85028cd248b4b990f653d7a7432b4d6b89ab919efd1bbe7b32a4e3f41abb63",
+          "bytes": 3152073
+        },
+        {
+          "sha256": "d4c98f81662ac285e0c51bac2a4b3851d2c8d78b881df84c9cfdca5641b97239",
+          "bytes": 2262358
+        }
+      ]
     }
   ]
 }

@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 228,
-    "uniqueRecordings": 228,
+    "declaredTracks": 231,
+    "uniqueRecordings": 231,
     "duplicateAliases": 0,
-    "audioBytes": 1138525656
+    "audioBytes": 1146837751
   },
   "tracks": [
     {
@@ -11063,6 +11063,156 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-pisnya-dnya-20260927-bb25de89/4befd36da5e444577da89a12e58914695bcaaaf703a2ef788e3a675b2324f2a4.mp3",
         "bytes": 5037982,
         "sha256": "4befd36da5e444577da89a12e58914695bcaaaf703a2ef788e3a675b2324f2a4"
+      },
+      "aliases": []
+    },
+    {
+      "id": "prodyusyer-valyentin.prodyusyer-valyentin-i-hurt-mama-zlipy-snyezhku-z-pisneyu-zamoryly-mos",
+      "title": "Продюсєр Валєнтін і гурт\"Мама, зліпи снєжку\" з піснею 'Заморили москаля'",
+      "artist": "Продюсєр Валєнтін",
+      "durationSeconds": 173.82458,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@single_deck",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Продюсєр Валєнтін і гурт\"Мама, зліпи снєжку\" з піснею 'Заморили москаля' by Продюсєр Валєнтін. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@single_deck",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@single_deck",
+        "attribution": "Продюсєр Валєнтін і гурт\"Мама, зліпи снєжку\" з піснею 'Заморили москаля' by Продюсєр Валєнтін. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@single_deck",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Продюсєр Валєнтін - і гурт_Мама, зліпи снєжку_ з піснею _Заморили москаля_.mp3",
+      "archiveId": "prodyusyer-valyentin-20260927-78d37bea",
+      "collection": "Продюсєр Валєнтін",
+      "collections": [
+        "Продюсєр Валєнтін",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-prodyusyer-valyentin-20260927-78d37bea/78d37bea0b64d2ee79a7818a737e98bd491d4bdcc8154e9e7e2edf0552c1bfd8.mp3",
+        "bytes": 2897664,
+        "sha256": "78d37bea0b64d2ee79a7818a737e98bd491d4bdcc8154e9e7e2edf0552c1bfd8"
+      },
+      "aliases": []
+    },
+    {
+      "id": "prodyusyer-valyentin.prodyuser-valyentiv-i-hurt-imeni-vitalika-z-novoyu-pisneyu-bila-lada-d",
+      "title": "Продюсер Валєнтів і Гурт імені Віталіка з новою піснею. 'Біла лада додається'",
+      "artist": "Продюсєр Валєнтін",
+      "durationSeconds": 186.433016,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@single_deck",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Продюсер Валєнтів і Гурт імені Віталіка з новою піснею. 'Біла лада додається' by Продюсєр Валєнтін. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@single_deck",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@single_deck",
+        "attribution": "Продюсер Валєнтів і Гурт імені Віталіка з новою піснею. 'Біла лада додається' by Продюсєр Валєнтін. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@single_deck",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Продюсєр Валєнтін і Гурт імені Віталіка з новою піснею. _Біла лада додається_.mp3",
+      "archiveId": "prodyusyer-valyentin-20260927-78d37bea",
+      "collection": "Продюсєр Валєнтін",
+      "collections": [
+        "Продюсєр Валєнтін",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-prodyusyer-valyentin-20260927-78d37bea/7d85028cd248b4b990f653d7a7432b4d6b89ab919efd1bbe7b32a4e3f41abb63.mp3",
+        "bytes": 3152073,
+        "sha256": "7d85028cd248b4b990f653d7a7432b4d6b89ab919efd1bbe7b32a4e3f41abb63"
+      },
+      "aliases": []
+    },
+    {
+      "id": "prodyusyer-valyentin.prodyusyer-valyentin-ta-hurt-bavovna-bavovna-prezentuyus-tresh-surzhyk",
+      "title": "Продюсєр Валєнтін та гурт 'Бавовна-бавовна' презентуюсь треш-суржик-рок композицію. Нема бензину.",
+      "artist": "Продюсєр Валєнтін",
+      "durationSeconds": 142.895601,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@single_deck",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Продюсєр Валєнтін та гурт 'Бавовна-бавовна' презентуюсь треш-суржик-рок композицію. Нема бензину. by Продюсєр Валєнтін. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@single_deck",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@single_deck",
+        "attribution": "Продюсєр Валєнтін та гурт 'Бавовна-бавовна' презентуюсь треш-суржик-рок композицію. Нема бензину. by Продюсєр Валєнтін. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@single_deck",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Продюсєр Валєнтін та гурт _Бавовна-бавовна_ презентуюсь треш-суржик-рок композицію. Нема бензину.mp3",
+      "archiveId": "prodyusyer-valyentin-20260927-78d37bea",
+      "collection": "Продюсєр Валєнтін",
+      "collections": [
+        "Продюсєр Валєнтін",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-prodyusyer-valyentin-20260927-78d37bea/d4c98f81662ac285e0c51bac2a4b3851d2c8d78b881df84c9cfdca5641b97239.mp3",
+        "bytes": 2262358,
+        "sha256": "d4c98f81662ac285e0c51bac2a4b3851d2c8d78b881df84c9cfdca5641b97239"
       },
       "aliases": []
     }
