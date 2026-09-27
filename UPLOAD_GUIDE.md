@@ -2,7 +2,7 @@
 
 This is the canonical intake guide for the
 [RevealLine soundtrack library](https://mekhovov.github.io/revealline-soundtracks/).
-You can add one MP3, a folder of MP3s, or a package prepared in the browser.
+You can add one MP3, a folder of MP3s, a stable hosted MP3 URL, or a package prepared in the browser.
 After the pull request is merged, GitHub verifies and publishes the songs and
 updates the public player automatically. The game reads that catalogue, so a
 separate game change is not required for each new batch.
@@ -37,7 +37,7 @@ Change to this checkout and run the command again.
 ## Fastest option: use the web form
 
 1. Open [Add music](https://mekhovov.github.io/revealline-soundtracks/#add-music).
-2. Choose MP3 files or a folder.
+2. Choose MP3 files/a folder, or switch to **Use hosted MP3 URLs** and add one or more rows.
 3. Enter the artist, source, licence, styles and collections.
 4. Confirm the rights statement and download the `.rlintake` package.
 5. From the repository checkout, run:
@@ -46,10 +46,66 @@ Change to this checkout and run the command again.
    node intake/add-music.mjs "/absolute/path/to/package.rlintake" --open-pr
    ```
 
-The web form reads and hashes the MP3s in your browser. It does not upload them
-anywhere until the authenticated local command creates the draft release and
-pull request. GitHub Pages is a static site, so it cannot safely hold your GitHub
-credentials or create the PR itself.
+The web form reads and hashes local MP3s in your browser. For hosted URLs it
+verifies two complete downloads, CORS, range support, duration and hash, then
+creates a compact package containing only URL and identity evidence. It never
+uploads to your storage provider. GitHub Pages is a static site, so the final
+authenticated local command still creates the pull request.
+
+## Add a hosted MP3 URL
+
+```sh
+node intake/add-music.mjs \
+  --audio-url "https://example-bucket.s3.eu-central-1.amazonaws.com/music/song.mp3" \
+  --title "Song title" \
+  --artist "Artist" \
+  --source "https://artist.example/song" \
+  --styles "ФПВ,UA" \
+  --collections "TRENCH ORDERLY,ФПВ" \
+  --license unknown \
+  --confirm-rights \
+  --open-pr
+```
+
+The supplied URL is authoritative. It must be public HTTPS and stable; S3
+presigned URLs and other links with credentials, signatures or expiry tokens
+are rejected. Intake follows at most five HTTPS redirects and stores the final
+URL. CI downloads the complete file again before merge and Pages deployment.
+
+For several hosted songs, pass `--url-manifest /absolute/path/to/tracks.json`.
+The file is either a JSON array or `{ "tracks": [...] }`; every row needs
+`audioURL`, `title`, `artist`, and may include `fileName`:
+
+```json
+[
+  {
+    "audioURL": "https://example-bucket.s3.eu-central-1.amazonaws.com/music/one.mp3",
+    "title": "One",
+    "artist": "Artist",
+    "fileName": "one.mp3"
+  }
+]
+```
+
+### Minimal S3 CORS configuration
+
+Configure the bucket to allow the archive/game origin to read metadata and
+byte ranges. The object itself must have a stable public-read path through your
+chosen S3 access policy.
+
+```json
+[
+  {
+    "AllowedOrigins": ["https://mekhovov.github.io"],
+    "AllowedMethods": ["GET", "HEAD"],
+    "AllowedHeaders": ["Range"],
+    "ExposeHeaders": ["Accept-Ranges", "Content-Length", "Content-Range", "ETag"],
+    "MaxAgeSeconds": 3600
+  }
+]
+```
+
+Use the ordinary object URL, without `X-Amz-Signature` or `X-Amz-Expires`.
 
 ## Add a folder of songs
 
@@ -134,7 +190,7 @@ For each intake, the script:
 3. calculates duration, exact byte size and SHA-256;
 4. generates stable recording metadata, credits, styles and collections;
 5. updates the catalogue and deterministic deployment manifests;
-6. creates a draft GitHub Release and uploads SHA-256-named audio assets;
+6. for local audio, creates a draft GitHub Release and uploads SHA-256-named assets; for hosted audio, writes exact delivery evidence without copying bytes;
 7. creates a `codex/` branch, commits it, pushes it and opens a pull request.
 
 One intake accepts at most **20 MP3 files** and **64 MiB**. Split larger folders
@@ -210,8 +266,9 @@ gh auth status
 
 ## Storage model
 
-Git stores catalogue metadata, rights evidence, UI, tests and automation. New
+Git stores catalogue metadata, rights evidence, UI, tests and automation. Local
 MP3s are GitHub Release assets named `<sha256>.mp3` and grouped into immutable
-audio volumes. The player requests only the current recording. The original
+audio volumes. Hosted MP3s remain at the supplied URL and are pinned by byte
+count and SHA-256 in `external-deliveries.json`. The player requests only the current recording. The original
 70-track Pages object set remains an exact compatibility mirror for trusted
 offline albums; new intake never adds files to that mirror.

@@ -7,8 +7,8 @@
   <meta name="description" content="Search and play every published RevealLine soundtrack recording in one continuous player.">
   <title>RevealLine · All soundtracks</title>
   <link rel="stylesheet" href="style.css">
-  <script src="player.mjs?v=20260927-4" type="module"></script>
-  <script src="intake-browser.mjs?v=20260927-2" type="module"></script>
+  <script src="player.mjs?v=20260927-5" type="module"></script>
+  <script src="intake-browser.mjs?v=20260927-3" type="module"></script>
 </head>
 <body>
   <a class="skip" href="#recordings">Skip to recordings</a>
@@ -42,7 +42,7 @@
         <label>Order
           <select id="order">
             <option value="shuffle">Shuffle</option>
-            <option value="ordered">One after another</option>
+            <option value="sequential">One after another</option>
           </select>
         </label>
         <label>Repeat
@@ -84,7 +84,11 @@
         <label>Collection
           <select id="collection"><option value="">All collections</option></select>
         </label>
-        <p id="count" role="status">Loading…</p>
+        <div class="result-actions">
+          <p id="count" role="status">Loading…</p>
+          <button id="share-list" type="button">Share this list</button>
+        </div>
+        <p id="share-fallback" class="share-fallback" hidden tabindex="0"></p>
       </div>
       <div id="tracks" aria-busy="true"></div>
       <p id="empty" hidden>No recordings match. Try another search, style or collection.</p>
@@ -114,7 +118,12 @@
         </p>
         <form id="browser-intake-form" class="intake-form">
           <fieldset>
-            <legend>1. Choose exact MP3s</legend>
+            <legend>1. Choose the audio source</legend>
+            <label><input type="radio" name="intakeSource" value="files" checked /> Choose MP3 files</label>
+            <label><input type="radio" name="intakeSource" value="urls" /> Use hosted MP3 URLs</label>
+          </fieldset>
+          <fieldset id="intake-file-source">
+            <legend>Choose exact MP3s</legend>
             <label
               >One or more MP3 files
               <input
@@ -133,6 +142,12 @@
                 directory
                 multiple
             /></label>
+          </fieldset>
+          <fieldset id="intake-url-source" hidden>
+            <legend>Hosted MP3 URLs</legend>
+            <p>Each URL must be a stable public HTTPS MP3 with CORS and byte-range support. Presigned and expiring URLs are rejected.</p>
+            <div id="intake-url-rows"></div>
+            <button id="intake-add-url" type="button">Add another URL</button>
           </fieldset>
           <fieldset>
             <legend>2. Describe the recording and rights</legend>
@@ -235,7 +250,7 @@
         </form>
         <ol>
           <li>
-            Choose files or a folder, enter the exact rights details and
+            Choose files, a folder, or stable hosted MP3 URLs; enter the exact rights details and
             download the verified package.
           </li>
           <li>

@@ -35,6 +35,26 @@ node intake/add-music.mjs "/absolute/path/to/music" \
   --open-pr
 ```
 
+Or register one stable public hosted MP3 without copying it into GitHub:
+
+```sh
+node intake/add-music.mjs \
+  --audio-url "https://example-bucket.s3.eu-central-1.amazonaws.com/music/song.mp3" \
+  --title "Song title" \
+  --artist "Artist" \
+  --source "https://artist.example/song" \
+  --styles "ФПВ,UA" \
+  --collections "TRENCH ORDERLY,ФПВ" \
+  --license unknown \
+  --confirm-rights \
+  --open-pr
+```
+
+Hosted URLs are verified twice and must be public HTTPS, stable, CORS-enabled,
+byte-range capable and free of credentials or expiring signatures. The exact
+URL, final host, byte count, SHA-256 and verification time are committed; audio
+bytes remain on the supplied host.
+
 For uploader-confirmed permission without a published open licence, use
 `--license unknown` and retain the exact permission evidence. This value does not
 claim that other people may reuse the recording.
@@ -61,6 +81,7 @@ instructions and troubleshooting.
 ## Repository layout
 
 - `catalogue.json` — public recording metadata and immutable audio URLs.
+- `external-deliveries.json` — deterministic hash-bound evidence for hosted MP3s.
 - `intake/add-music.mjs` — local and `.rlintake` intake automation.
 - `batches/` — generated collection pages and evidence.
 - `legacy/` — exact metadata and publication evidence migrated from Archive 01

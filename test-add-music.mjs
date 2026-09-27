@@ -6,6 +6,7 @@ import test from "node:test";
 import {
   batchFiles,
   createIntake,
+  createExternalIntake,
   findMP3Files,
   INTAKE_USAGE,
   parseArguments,
@@ -38,6 +39,75 @@ test("arguments preserve the explicit rights gate and style selection", () => {
   assert.deepEqual(parsed.options.collections, ["TRENCH ORDERLY", "ФПВ"]);
   assert.equal(parsed.options.confirmRights, true);
   assert.equal(parsed.options.openPR, true);
+});
+
+test("arguments accept one hosted URL or URL manifest and reject mixed sources", () => {
+  const single = parseArguments(["--audio-url", "https://cdn.example/song.mp3", "--title", "Song"]);
+  assert.equal(single.input, null);
+  assert.equal(single.options.audioURL, "https://cdn.example/song.mp3");
+  const batch = parseArguments(["--url-manifest", "/tmp/tracks.json"]);
+  assert.equal(batch.options.urlManifest, "/tmp/tracks.json");
+  assert.throws(() => parseArguments(["/music", "--audio-url", "https://cdn.example/song.mp3"]), /exactly one/);
+});
+
+test("single hosted URL intake binds verified delivery evidence", async () => {
+  const bytes = Buffer.from(fakeMP3);
+  const result = await createExternalIntake(
+    {
+      audioURL: "https://cdn.example/song.mp3",
+      title: "External Song",
+      artist: "External Artist",
+      source: "https://creator.example/song",
+      license: "cc-by-4.0",
+      styles: ["synth"],
+      collections: ["Hosted"],
+      confirmRights: true,
+      batchId: "external-song",
+    },
+    {
+      verify: async (url) => ({
+        url,
+        bytes,
+        byteCount: bytes.length,
+        sha256: "a".repeat(64),
+        verifiedAt: "2026-09-27T00:00:00.000Z",
+        rangeRequests: true,
+        cors: true,
+      }),
+      probe: async () => 130,
+    },
+  );
+  assert.equal(result.external, true);
+  assert.equal(result.tracks[0].audioURL, "https://cdn.example/song.mp3");
+  assert.equal(result.tracks[0].delivery.type, "external-url");
+  assert.equal(result.tracks[0].durationSeconds, 130);
+});
+
+test("hosted URL manifest prepares a deterministic multi-recording batch", async (t) => {
+  const root = await temporary(t);
+  const manifest = path.join(root, "tracks.json");
+  await writeFile(manifest, JSON.stringify({ tracks: [
+    { audioURL: "https://cdn.example/one.mp3", title: "One", artist: "Artist", fileName: "one.mp3" },
+    { audioURL: "https://cdn.example/two.mp3", title: "Two", artist: "Artist", fileName: "two.mp3" },
+  ] }));
+  const result = await createExternalIntake(
+    {
+      urlManifest: manifest,
+      source: "https://creator.example/album",
+      license: "cc0",
+      styles: ["electro"],
+      collections: ["Hosted"],
+      confirmRights: true,
+      batchId: "hosted-manifest",
+      batchTitle: "Hosted manifest",
+    },
+    {
+      verify: async (url) => ({ url, bytes: Buffer.from(fakeMP3), byteCount: fakeMP3.length, sha256: url.includes("one") ? "b".repeat(64) : "c".repeat(64), verifiedAt: "2026-09-27T00:00:00.000Z", rangeRequests: true, cors: true }),
+      probe: async () => 90,
+    },
+  );
+  assert.deepEqual(result.tracks.map(({ title }) => title), ["One", "Two"]);
+  assert.equal(result.title, "Hosted manifest");
 });
 
 test("help documents the required rights gate and batch limit", () => {

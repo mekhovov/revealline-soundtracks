@@ -5,6 +5,8 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+  schedule:
+    - cron: '17 4 * * 1'
 
 permissions:
   contents: read
@@ -15,7 +17,7 @@ concurrency:
 
 jobs:
   publish-volumes:
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-24.04
     permissions:
       contents: write
@@ -31,7 +33,7 @@ jobs:
 
   verify:
     needs: publish-volumes
-    if: always() && (needs.publish-volumes.result == 'success' || needs.publish-volumes.result == 'skipped')
+    if: github.event_name != 'schedule' && always() && (needs.publish-volumes.result == 'success' || needs.publish-volumes.result == 'skipped')
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -42,6 +44,7 @@ jobs:
         run: |
           node --test test-*.mjs
           node verify.mjs
+          node intake/verify-external.mjs
           git diff --check
       - name: Stage the exact Pages payload
         run: node verify.mjs --stage public
@@ -51,7 +54,7 @@ jobs:
           path: public
 
   deploy:
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     needs: verify
     runs-on: ubuntu-24.04
     permissions:
@@ -64,3 +67,14 @@ jobs:
       - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  audit-external:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.22.2
+      - name: Report missing, inaccessible or drifted hosted MP3s
+        run: node intake/verify-external.mjs

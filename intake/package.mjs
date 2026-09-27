@@ -1,6 +1,9 @@
 const encoder = new TextEncoder();
 const decoder = new TextDecoder();
-const MAGIC = encoder.encode("RLSINTAKE/1\n");
+import { validateExternalAudioURL } from "./external-url.mjs";
+
+const MAGIC_V1 = encoder.encode("RLSINTAKE/1\n");
+const MAGIC_V2 = encoder.encode("RLSINTAKE/2\n");
 const MAX_TRACKS = 20;
 const MAX_TRACK_BYTES = 24 * 1024 * 1024;
 const MAX_BATCH_BYTES = 64 * 1024 * 1024;
@@ -222,7 +225,85 @@ export async function createIntakePackage(
   const length = new Uint8Array(4);
   new DataView(length.buffer).setUint32(0, manifestBytes.length);
   return {
-    blob: new Blob([MAGIC, length, manifestBytes, ...payloads], {
+    blob: new Blob([MAGIC_V1, length, manifestBytes, ...payloads], {
+      type: "application/vnd.revealline.soundtrack-intake",
+    }),
+    manifest,
+  };
+}
+
+export async function createExternalIntakePackage(
+  rows,
+  input,
+  { verify, isCurrent = () => true } = {},
+) {
+  const metadata = validateIntakeMetadata(input);
+  demand(typeof verify === "function", "Hosted MP3 verification is unavailable.");
+  const selected = [...(rows ?? [])];
+  demand(selected.length > 0 && selected.length <= MAX_TRACKS, "Choose 1–20 hosted MP3 URLs.");
+  const tracks = [];
+  for (const [index, row] of selected.entries()) {
+    demand(isCurrent(), "Inputs changed while the package was prepared.");
+    const title = cleanText(row.title, 160);
+    const artist = cleanText(row.artist || metadata.artist, 160);
+    const original = cleanText(row.fileName || `${title || `track-${index + 1}`}.mp3`, 255);
+    demand(title, `Enter a title for hosted recording ${index + 1}.`);
+    demand(artist, `Enter an artist for hosted recording ${index + 1}.`);
+    const fileName = safeFileName(original.endsWith(".mp3") ? original : `${original}.mp3`);
+    const requested = validateExternalAudioURL(row.audioURL).href;
+    const result = await verify(requested);
+    demand(isCurrent(), "Inputs changed while the package was prepared.");
+    demand(
+      result &&
+        validateExternalAudioURL(result.url).href &&
+        Number.isSafeInteger(result.bytes) &&
+        result.bytes > 0 &&
+        result.bytes <= MAX_BATCH_BYTES &&
+        /^[a-f0-9]{64}$/.test(result.sha256) &&
+        Number.isFinite(result.durationSeconds) &&
+        result.durationSeconds > 0 &&
+        result.rangeRequests === true &&
+        result.cors === true,
+      `Hosted MP3 verification evidence differs: ${title}`,
+    );
+    tracks.push({
+      title,
+      artist,
+      fileName,
+      bytes: result.bytes,
+      sha256: result.sha256,
+      durationSeconds: result.durationSeconds,
+      audioURL: validateExternalAudioURL(result.url).href,
+      delivery: {
+        type: "external-url",
+        verifiedAt: result.verifiedAt,
+        rangeRequests: true,
+        cors: true,
+      },
+    });
+  }
+  demand(
+    tracks.reduce((total, track) => total + track.bytes, 0) <= MAX_BATCH_BYTES,
+    "One package is limited to 64 MiB of referenced audio.",
+  );
+  if (!metadata.batchTitle)
+    metadata.batchTitle = tracks.length === 1 ? tracks[0].title : `${metadata.artist} — ${tracks.length} hosted tracks`;
+  if (!metadata.batchId)
+    metadata.batchId = `${slug(metadata.batchTitle)}-${tracks[0].sha256.slice(0, 8)}`;
+  validateIntakeMetadata(metadata);
+  const manifest = {
+    format: "revealline-soundtrack-intake-package.v2",
+    createdAt: new Date().toISOString(),
+    metadata,
+    tracks,
+    audioBytes: 0,
+    referencedAudioBytes: tracks.reduce((total, track) => total + track.bytes, 0),
+  };
+  const manifestBytes = encoder.encode(`${JSON.stringify(manifest, null, 2)}\n`);
+  const length = new Uint8Array(4);
+  new DataView(length.buffer).setUint32(0, manifestBytes.length);
+  return {
+    blob: new Blob([MAGIC_V2, length, manifestBytes], {
       type: "application/vnd.revealline.soundtrack-intake",
     }),
     manifest,
@@ -236,27 +317,23 @@ export async function readIntakePackage(source) {
     "Intake package size is invalid.",
   );
   const bytes = new Uint8Array(await source.arrayBuffer());
-  demand(bytes.length > MAGIC.length + 4, "Intake package is truncated.");
-  demand(
-    MAGIC.every((value, index) => bytes[index] === value),
-    "Intake package signature differs.",
+  const magic = [MAGIC_V1, MAGIC_V2].find((candidate) =>
+    candidate.every((value, index) => bytes[index] === value),
   );
+  demand(magic && bytes.length > magic.length + 4, "Intake package signature differs or is truncated.");
   const manifestLength = new DataView(
     bytes.buffer,
-    bytes.byteOffset + MAGIC.length,
+    bytes.byteOffset + magic.length,
     4,
   ).getUint32(0);
-  const manifestStart = MAGIC.length + 4;
+  const manifestStart = magic.length + 4;
   const payloadStart = manifestStart + manifestLength;
   demand(payloadStart <= bytes.length, "Intake package manifest is truncated.");
   const manifest = JSON.parse(
     decoder.decode(bytes.subarray(manifestStart, payloadStart)),
   );
-  demand(
-    manifest.format === "revealline-soundtrack-intake-package.v1" &&
-      Array.isArray(manifest.tracks),
-    "Unsupported intake package.",
-  );
+  const external = manifest.format === "revealline-soundtrack-intake-package.v2";
+  demand((external || manifest.format === "revealline-soundtrack-intake-package.v1") && Array.isArray(manifest.tracks), "Unsupported intake package.");
   const metadata = validateIntakeMetadata(manifest.metadata ?? {});
   demand(
     manifest.tracks.length > 0 && manifest.tracks.length <= MAX_TRACKS,
@@ -264,8 +341,30 @@ export async function readIntakePackage(source) {
   );
   const tracks = [];
   let total = 0;
+  let referencedTotal = 0;
   for (const track of manifest.tracks) {
     const fileName = safeFileName(track.fileName);
+    if (external) {
+      demand(
+        cleanText(track.title, 160) &&
+          cleanText(track.artist, 160) &&
+          Number.isSafeInteger(track.bytes) &&
+          track.bytes > 0 &&
+          track.bytes <= MAX_BATCH_BYTES &&
+          /^[a-f0-9]{64}$/.test(track.sha256) &&
+          Number.isFinite(track.durationSeconds) &&
+          track.durationSeconds > 0 &&
+          track.delivery?.type === "external-url" &&
+          /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?Z$/.test(track.delivery?.verifiedAt ?? "") &&
+          track.delivery?.rangeRequests === true &&
+          track.delivery?.cors === true,
+        `Hosted intake metadata differs: ${fileName}`,
+      );
+      validateExternalAudioURL(track.audioURL);
+      tracks.push({ ...track, fileName });
+      referencedTotal += track.bytes;
+      continue;
+    }
     demand(
       Number.isInteger(track.offset) &&
         Number.isInteger(track.bytes) &&
@@ -299,13 +398,17 @@ export async function readIntakePackage(source) {
     tracks.push({ ...track, fileName, audio });
     total += track.bytes;
   }
-  demand(
-    payloadStart + total === bytes.length,
-    "Intake package has undeclared trailing bytes.",
-  );
+  demand(payloadStart + total === bytes.length, "Intake package has undeclared trailing bytes.");
   demand(
     total === manifest.audioBytes && total <= MAX_BATCH_BYTES,
     "Intake package byte total differs.",
   );
+  if (external)
+    demand(
+      total === 0 &&
+        referencedTotal === manifest.referencedAudioBytes &&
+        referencedTotal <= MAX_BATCH_BYTES,
+      "Hosted intake referenced-audio total differs.",
+    );
   return { manifest: { ...manifest, metadata }, tracks };
 }

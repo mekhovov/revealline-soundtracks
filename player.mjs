@@ -4,6 +4,7 @@ import {
   matchesStyles,
   stylesOf,
 } from './playback-policy.mjs';
+import { parseFilterURL, serializeFilterURL } from './filter-url.mjs';
 
 const audio = document.querySelector("#audio");
 const now = document.querySelector("#now-playing");
@@ -24,6 +25,8 @@ const browseFoundation = document.querySelector("#browse-foundation");
 const foundationCount = document.querySelector("#foundation-count");
 const tracksHost = document.querySelector("#tracks");
 const count = document.querySelector("#count");
+const shareList = document.querySelector("#share-list");
+const shareFallback = document.querySelector("#share-fallback");
 const empty = document.querySelector("#empty");
 const summary = document.querySelector("#catalogue-summary");
 const FOUNDATION_COLLECTION = "Foundation 70";
@@ -31,8 +34,12 @@ const FOUNDATION_COLLECTION = "Foundation 70";
 let catalogue;
 let rows = [];
 let current = null;
+let selectedTrackId = "";
 let queue = [];
 let generation = 0;
+let activeArtist = "";
+let restoringURL = false;
+const failedRows = new Set();
 const styleChecks = new Map();
 
 const text = (node, value) => {
@@ -66,25 +73,50 @@ const visible = () => rows.filter((row) => !row.hidden);
 const selectedStyles = () =>
   [...styleChecks].filter(([, input]) => input.checked).map(([style]) => style);
 
+const filterState = () => {
+  const styles = selectedStyles();
+  return {
+    q: search.value,
+    artist: activeArtist,
+    collection: collection.value,
+    styles: styles.length === styleChecks.size ? null : styles,
+    order: order.value,
+    repeat: repeat.value,
+    track: current?.track.id ?? selectedTrackId,
+  };
+};
+
+function syncURL(mode = "replace") {
+  if (restoringURL) return;
+  const url = serializeFilterURL(location.href, filterState(), [...styleChecks.keys()]);
+  history[mode === "push" ? "pushState" : "replaceState"](null, "", url);
+}
+
 function showOnlyStyle(style) {
+  activeArtist = "";
   search.value = "";
   collection.value = "";
   for (const [name, input] of styleChecks) input.checked = name === style;
   refresh();
+  syncURL("push");
 }
 
 function showOnlyCollection(value) {
+  activeArtist = "";
   search.value = "";
   collection.value = value;
   for (const input of styleChecks.values()) input.checked = true;
   refresh();
+  syncURL("push");
 }
 
 function searchFor(value) {
+  activeArtist = value;
   collection.value = "";
   for (const input of styleChecks.values()) input.checked = true;
-  search.value = value;
+  search.value = "";
   refresh();
+  syncURL("push");
   search.focus({ preventScroll: true });
 }
 
@@ -114,6 +146,7 @@ function refresh() {
   for (const row of rows) {
     row.hidden =
       !row.dataset.search.includes(term) ||
+      (activeArtist && row.track.artist !== activeArtist) ||
       !matchesStyles(row.trackStyles, selectedStyles()) ||
       (collection.value && !row.trackCollections.includes(collection.value));
   }
@@ -125,8 +158,8 @@ function refresh() {
 }
 
 function refill({ after = current } = {}) {
-  queue = buildPlaybackQueue(visible(), {
-    order: order.value,
+  queue = buildPlaybackQueue(visible().filter((row) => !failedRows.has(row)), {
+    order: order.value === "sequential" ? "ordered" : order.value,
     current: after,
     wrap: repeat.value === 'all',
   });
@@ -142,18 +175,29 @@ function updateMediaSession(track) {
   });
 }
 
-async function play(row) {
+function disposePlayback() {
+  generation += 1;
+  audio.pause();
+  audio.removeAttribute("src");
+  audio.removeAttribute("crossorigin");
+  audio.load();
+}
+
+async function play(row, { historyMode = "push" } = {}) {
   const request = ++generation;
   if (current) current.removeAttribute("data-active");
   current = row;
+  selectedTrackId = row.track.id;
   const track = row.track;
   row.dataset.active = "true";
   pause.disabled = false;
   nextButton.disabled = false;
   queue = queue.filter((candidate) => candidate !== row);
   audio.pause();
-  audio.removeAttribute('crossorigin');
+  if (track.audio?.delivery?.type === "external-url") audio.crossOrigin = "anonymous";
+  else audio.removeAttribute("crossorigin");
   audio.src = new URL(track.audio.path, catalogue.archive.baseURL).href;
+  audio.load();
   now.textContent = `${track.title} · ${track.artist}`;
   nowSource.replaceChildren();
   const source = element("a", "", `Source: ${track.collection}`);
@@ -162,11 +206,7 @@ async function play(row) {
   nowSource.append(source);
   status.textContent = "Loading selected recording…";
   updateMediaSession(track);
-  history.replaceState(
-    null,
-    "",
-    `?track=${encodeURIComponent(track.id)}#recordings`,
-  );
+  syncURL(historyMode);
   try {
     await audio.play();
   } catch {
@@ -180,7 +220,7 @@ function next({ natural = false } = {}) {
   if (natural && repeat.value === 'one' && current) return void play(current);
   if (!queue.length && repeat.value === 'all') refill();
   const row = queue.shift();
-  if (row) void play(row);
+  if (row) void play(row, { historyMode: "replace" });
   else
     status.textContent = visible().length
       ? 'The selected queue has finished.'
@@ -264,7 +304,7 @@ function renderTrack(track, index) {
     license.href = track.licenseURL;
     license.rel = "license";
     links.append(license);
-  } else links.append(element('span', 'rights-label', track.license));
+  }
   row.append(playButton, main, links);
   return row;
 }
@@ -305,7 +345,10 @@ async function loadCatalogue() {
       input.type = 'checkbox';
       input.value = style;
       input.checked = true;
-      input.addEventListener('change', refresh);
+      input.addEventListener('change', () => {
+        refresh();
+        syncURL("push");
+      });
       styleChecks.set(style, input);
       choice.append(input, document.createTextNode(label));
       stylesHost.append(choice);
@@ -318,9 +361,21 @@ async function loadCatalogue() {
     foundationCount.textContent = String(foundationTracks.length);
     playFoundation.disabled = foundationTracks.length === 0;
     browseFoundation.disabled = foundationTracks.length === 0;
+    restoringURL = true;
+    const restored = parseFilterURL(location.href, [...styleChecks.keys()]);
+    search.value = restored.q;
+    activeArtist = restored.artist;
+    collection.value = [...collection.options].some((option) => option.value === restored.collection) ? restored.collection : "";
+    order.value = restored.order;
+    repeat.value = restored.repeat;
+    if (restored.styles !== null)
+      for (const [style, input] of styleChecks) input.checked = restored.styles.includes(style);
     refresh();
-    const requested = new URL(location.href).searchParams.get("track");
+    restoringURL = false;
+    const requested = restored.track;
     const requestedRow = rows.find((row) => row.track.id === requested);
+    selectedTrackId = requestedRow?.track.id ?? "";
+    syncURL("replace");
     if (requestedRow) {
       requestedRow.scrollIntoView({ block: "center" });
       requestedRow.querySelector("button").focus({ preventScroll: true });
@@ -334,29 +389,43 @@ async function loadCatalogue() {
   }
 }
 
-search.addEventListener("input", refresh);
-collection.addEventListener("change", refresh);
+search.addEventListener("input", () => {
+  activeArtist = "";
+  refresh();
+  syncURL("replace");
+});
+collection.addEventListener("change", () => {
+  activeArtist = "";
+  refresh();
+  syncURL("push");
+});
 order.addEventListener("change", () => {
   queue = [];
+  syncURL("push");
 });
 repeat.addEventListener("change", () => {
   queue = [];
+  syncURL("push");
 });
 stylesAll.addEventListener('click', () => {
   for (const input of styleChecks.values()) input.checked = true;
   refresh();
+  syncURL("push");
 });
 stylesNone.addEventListener('click', () => {
   for (const input of styleChecks.values()) input.checked = false;
   refresh();
+  syncURL("push");
 });
 playResults.addEventListener("click", () => {
-  queue = buildPlaybackQueue(visible(), { order: order.value, current: null });
+  failedRows.clear();
+  queue = buildPlaybackQueue(visible(), { order: order.value === "sequential" ? "ordered" : order.value, current: null });
   next();
 });
 playFoundation.addEventListener("click", () => {
   showOnlyCollection(FOUNDATION_COLLECTION);
-  queue = buildPlaybackQueue(visible(), { order: order.value, current: null });
+  failedRows.clear();
+  queue = buildPlaybackQueue(visible(), { order: order.value === "sequential" ? "ordered" : order.value, current: null });
   next();
 });
 browseFoundation.addEventListener("click", () => {
@@ -381,8 +450,44 @@ audio.addEventListener("pause", () => {
 });
 audio.addEventListener("ended", () => next({ natural: true }));
 audio.addEventListener("error", () => {
-  status.textContent =
-    "This recording could not load. Try Next or choose another song.";
+  if (!current) return;
+  const failed = current;
+  failedRows.add(failed);
+  disposePlayback();
+  status.textContent = `Could not load ${failed.track.title}. Continuing with another available recording…`;
+  current = null;
+  if (!queue.length) refill({ after: failed });
+  next();
+});
+shareList.addEventListener("click", async () => {
+  const url = serializeFilterURL(location.href, filterState(), [...styleChecks.keys()]).href;
+  try {
+    if (navigator.share) await navigator.share({ title: "RevealLine soundtracks", url });
+    else if (navigator.clipboard) {
+      await navigator.clipboard.writeText(url);
+      status.textContent = "Shareable soundtrack list link copied.";
+    } else throw new Error("clipboard unavailable");
+  } catch (error) {
+    if (error?.name === "AbortError") return;
+    shareFallback.textContent = url;
+    shareFallback.hidden = false;
+    shareFallback.focus();
+  }
+});
+window.addEventListener("popstate", () => {
+  if (!catalogue) return;
+  const restored = parseFilterURL(location.href, [...styleChecks.keys()]);
+  restoringURL = true;
+  search.value = restored.q;
+  activeArtist = restored.artist;
+  collection.value = restored.collection;
+  order.value = restored.order;
+  repeat.value = restored.repeat;
+  for (const [style, input] of styleChecks) input.checked = restored.styles === null || restored.styles.includes(style);
+  const restoredRow = rows.find((row) => row.track.id === restored.track);
+  selectedTrackId = restoredRow?.track.id ?? "";
+  refresh();
+  restoringURL = false;
 });
 if ("mediaSession" in navigator) {
   navigator.mediaSession.setActionHandler("play", () => void audio.play());
