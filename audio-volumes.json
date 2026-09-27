@@ -816,6 +816,22 @@
           "bytes": 3742554
         }
       ]
+    },
+    {
+      "id": "audio-tarko-20260927",
+      "releaseTag": "audio-tarko-20260927",
+      "recordings": 2,
+      "audioBytes": 6378088,
+      "assets": [
+        {
+          "sha256": "500f1c35200fa3f5e89d5125770a7a64f55078e6c542530d5cda27386bf90b1f",
+          "bytes": 3230410
+        },
+        {
+          "sha256": "4f70b5eccd5d055badc2a520e4e22c1d7019446486924cdd6347545a1f458d65",
+          "bytes": 3147678
+        }
+      ]
     }
   ]
 }

@@ -1573,3 +1573,13 @@ Licence: Unknown — uploader-confirmed rights
 Ribson - Дрони by Ribson. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@ribson.official
 
 Licence: Unknown — uploader-confirmed rights
+
+## Tarko
+
+Tarko - FPV (official video) by Tarko. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@tarko_music
+
+Licence: Unknown — uploader-confirmed rights
+
+FPV by Tarko. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@tarko_music
+
+Licence: Unknown — uploader-confirmed rights

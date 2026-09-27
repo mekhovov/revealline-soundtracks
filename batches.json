@@ -222,6 +222,11 @@
       "tracks": 1
     },
     {
+      "id": "Tarko",
+      "title": "Tarko",
+      "tracks": 2
+    },
+    {
       "id": "Techno DRIVE!!! V2 audition",
       "title": "Techno DRIVE!!! V2 audition",
       "tracks": 1
@@ -244,7 +249,7 @@
     {
       "id": "ФПВ",
       "title": "ФПВ",
-      "tracks": 11
+      "tracks": 13
     }
   ]
 }

@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 198,
-    "uniqueRecordings": 198,
+    "declaredTracks": 200,
+    "uniqueRecordings": 200,
     "duplicateAliases": 0,
-    "audioBytes": 1045522845
+    "audioBytes": 1051900933
   },
   "tracks": [
     {
@@ -9560,6 +9560,106 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-ribson-20260927/17185c9266ed947e97ce954986eacdf2da36c836528945af2e41db0e7a5982f2.mp3",
         "bytes": 3742554,
         "sha256": "17185c9266ed947e97ce954986eacdf2da36c836528945af2e41db0e7a5982f2"
+      },
+      "aliases": []
+    },
+    {
+      "id": "tarko.tarko-fpv-official-video",
+      "title": "Tarko - FPV (official video)",
+      "artist": "Tarko",
+      "durationSeconds": 196.649796,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@tarko_music",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Tarko - FPV (official video) by Tarko. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@tarko_music",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@tarko_music",
+        "attribution": "Tarko - FPV (official video) by Tarko. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@tarko_music",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Tarko - FPV official video.mp3",
+      "archiveId": "tarko-20260927",
+      "collection": "Tarko",
+      "collections": [
+        "Tarko",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-tarko-20260927/500f1c35200fa3f5e89d5125770a7a64f55078e6c542530d5cda27386bf90b1f.mp3",
+        "bytes": 3230410,
+        "sha256": "500f1c35200fa3f5e89d5125770a7a64f55078e6c542530d5cda27386bf90b1f"
+      },
+      "aliases": []
+    },
+    {
+      "id": "tarko.fpv",
+      "title": "FPV",
+      "artist": "Tarko",
+      "durationSeconds": 183.576961,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@tarko_music",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "FPV by Tarko. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@tarko_music",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@tarko_music",
+        "attribution": "FPV by Tarko. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@tarko_music",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Tarko - FPV.mp3",
+      "archiveId": "tarko-20260927",
+      "collection": "Tarko",
+      "collections": [
+        "Tarko",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-tarko-20260927/4f70b5eccd5d055badc2a520e4e22c1d7019446486924cdd6347545a1f458d65.mp3",
+        "bytes": 3147678,
+        "sha256": "4f70b5eccd5d055badc2a520e4e22c1d7019446486924cdd6347545a1f458d65"
       },
       "aliases": []
     }
