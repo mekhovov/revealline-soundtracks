@@ -9,6 +9,7 @@ export const DEFAULT_FILTER_STATE = Object.freeze({
   order: "shuffle",
   repeat: "all",
   track: "",
+  review: "",
 });
 
 const unique = (values) => [...new Set(values.filter(Boolean))];
@@ -32,6 +33,7 @@ export function parseFilterURL(input, knownStyles = []) {
     order: ORDER.has(order) ? order : DEFAULT_FILTER_STATE.order,
     repeat: REPEAT.has(repeat) ? repeat : DEFAULT_FILTER_STATE.repeat,
     track: params.get("track")?.trim() ?? "",
+    review: params.get("review")?.trim() ?? "",
   };
 }
 
@@ -49,6 +51,7 @@ export function serializeFilterURL(input, state, knownStyles = []) {
   if (state.order && state.order !== DEFAULT_FILTER_STATE.order) params.set("order", state.order);
   if (state.repeat && state.repeat !== DEFAULT_FILTER_STATE.repeat) params.set("repeat", state.repeat);
   if (state.track?.trim()) params.set("track", state.track.trim());
+  if (state.review?.trim()) params.set("review", state.review.trim());
   url.search = params.toString();
   url.hash = "recordings";
   return url;

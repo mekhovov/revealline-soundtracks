@@ -5,6 +5,7 @@ import {
   stylesOf,
 } from './playback-policy.mjs';
 import { parseFilterURL, serializeFilterURL } from './filter-url.mjs';
+import { REVIEW_ACCESS_KEY, tracksForView } from './review-policy.mjs';
 
 const audio = document.querySelector("#audio");
 const now = document.querySelector("#now-playing");
@@ -23,13 +24,17 @@ const playResults = document.querySelector("#play-results");
 const playFoundation = document.querySelector("#play-foundation");
 const browseFoundation = document.querySelector("#browse-foundation");
 const foundationCount = document.querySelector("#foundation-count");
+const featuredCollection = document.querySelector("#featured-collection");
+const reviewNotice = document.querySelector("#review-notice");
 const tracksHost = document.querySelector("#tracks");
 const count = document.querySelector("#count");
 const shareList = document.querySelector("#share-list");
 const shareFallback = document.querySelector("#share-fallback");
 const empty = document.querySelector("#empty");
 const summary = document.querySelector("#catalogue-summary");
-const FOUNDATION_COLLECTION = "Foundation 70";
+const FOUNDATION_COLLECTION = "Base Game Playlist";
+const requestedReview = new URL(location.href).searchParams.get("review") ?? "";
+const reviewMode = requestedReview === REVIEW_ACCESS_KEY;
 
 let catalogue;
 let rows = [];
@@ -83,6 +88,7 @@ const filterState = () => {
     order: order.value,
     repeat: repeat.value,
     track: current?.track.id ?? selectedTrackId,
+    review: reviewMode ? REVIEW_ACCESS_KEY : "",
   };
 };
 
@@ -200,7 +206,11 @@ async function play(row, { historyMode = "push" } = {}) {
   audio.load();
   now.textContent = `${track.title} · ${track.artist}`;
   nowSource.replaceChildren();
-  const source = element("a", "", `Source: ${track.collection}`);
+  const source = element(
+    "a",
+    "",
+    `Source: ${(track.collections ?? [track.collection])[0]}`,
+  );
   source.href = track.source;
   source.rel = "noopener noreferrer";
   nowSource.append(source);
@@ -316,8 +326,12 @@ async function loadCatalogue() {
     catalogue = await response.json();
     if (catalogue.format !== "revealline-public-soundtrack-catalogue.v1")
       throw new Error("Unsupported catalogue");
+    const displayedTracks = tracksForView(catalogue.tracks, requestedReview);
+    featuredCollection.hidden = reviewMode;
+    reviewNotice.hidden = !reviewMode;
+    if (reviewMode) document.title = "RevealLine · Unlisted soundtrack review";
     const fragment = document.createDocumentFragment();
-    rows = catalogue.tracks.map((track, index) => {
+    rows = displayedTracks.map((track, index) => {
       const row = renderTrack(track, index);
       fragment.append(row);
       return row;
@@ -325,7 +339,7 @@ async function loadCatalogue() {
     tracksHost.replaceChildren(fragment);
     tracksHost.setAttribute("aria-busy", "false");
     const sourceCounts = new Map();
-    for (const track of catalogue.tracks)
+    for (const track of displayedTracks)
       for (const name of track.collections ?? [track.collection])
         sourceCounts.set(name, (sourceCounts.get(name) ?? 0) + 1);
     for (const [name, total] of [...sourceCounts].sort(([left], [right]) =>
@@ -353,9 +367,11 @@ async function loadCatalogue() {
       choice.append(input, document.createTextNode(label));
       stylesHost.append(choice);
     }
-    const collectionCount = new Set(catalogue.tracks.flatMap((track) => track.collections ?? [track.collection])).size;
-    summary.textContent = `${catalogue.counts.uniqueRecordings} unique recordings across ${collectionCount} collections. Search, filter and keep them playing in one endless queue.`;
-    const foundationTracks = catalogue.tracks.filter((track) =>
+    const collectionCount = new Set(displayedTracks.flatMap((track) => track.collections ?? [track.collection])).size;
+    summary.textContent = reviewMode
+      ? `${displayedTracks.length} review-only recordings across ${collectionCount} collections. These tracks are excluded from the public catalogue and default playlists.`
+      : `${displayedTracks.length} public recordings across ${collectionCount} collections. Search, filter and keep them playing in one endless queue.`;
+    const foundationTracks = displayedTracks.filter((track) =>
       (track.collections ?? [track.collection]).includes(FOUNDATION_COLLECTION),
     );
     foundationCount.textContent = String(foundationTracks.length);

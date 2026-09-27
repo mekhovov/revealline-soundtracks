@@ -17,6 +17,7 @@ test("Unicode artist, collection and style filters round trip", () => {
   assert.deepEqual(parseFilterURL(url, styles), {
     q: "ніч", artist: "TRENCH ORDERLY", collection: "ФПВ", styles: ["fpv", "ua"],
     order: "sequential", repeat: "off", track: "trench-orderly.song",
+    review: "",
   });
   assert.equal(url.hash, "#recordings");
 });
@@ -33,4 +34,16 @@ test("existing track-only links remain valid", () => {
   const state = parseFilterURL("https://example.test/?track=artist.song", styles);
   assert.equal(state.track, "artist.song");
   assert.equal(state.styles, null);
+  assert.equal(state.review, "");
+});
+
+test("unlisted review access survives share-link serialization", () => {
+  const url = serializeFilterURL("https://example.test/", {
+    styles: null,
+    order: "shuffle",
+    repeat: "all",
+    review: "base-game-holdback-20260927",
+  }, styles);
+  assert.equal(url.searchParams.get("review"), "base-game-holdback-20260927");
+  assert.equal(parseFilterURL(url, styles).review, "base-game-holdback-20260927");
 });

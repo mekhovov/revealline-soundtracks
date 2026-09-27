@@ -14,13 +14,13 @@
     },
     {
       "path": "batches.json",
-      "bytes": 14619,
-      "sha256": "d8af74638eff14ae6ea9f80d434ed6e2908109f8c68787b7499972c746f213f8"
+      "bytes": 14814,
+      "sha256": "e13aeae4a1d9ef975b0a0e9bf8291751024da9890a5d92a56be5904cf287b27b"
     },
     {
       "path": "catalogue.json",
-      "bytes": 547848,
-      "sha256": "ed988c03ea6cec41c1f4317befde494f1849c84ee19358402ec1388d3aab0eda"
+      "bytes": 547289,
+      "sha256": "902915b0f884ec3c7e7806adf1d7729723891f46c784b5d6549887705ff9bd5d"
     },
     {
       "path": "CREDITS.md",
@@ -34,13 +34,13 @@
     },
     {
       "path": "filter-url.mjs",
-      "bytes": 2226,
-      "sha256": "131be194c5a10c4c2712eefc7fdca33bf9d5455e20df7490173faf0c4d37cc2e"
+      "bytes": 2359,
+      "sha256": "3a6158a6cb9b2561609b7ea03df5588009bb1dbf4a0dd84ba5d1cccaa9cefb34"
     },
     {
       "path": "index.html",
-      "bytes": 12265,
-      "sha256": "cf76d2ef5727a3f3566c87aa6ffd2071464de1a2eb18f7a2821090b1f9723155"
+      "bytes": 12485,
+      "sha256": "b12741988221a835afe01e3dc68a18a088d72da79e80bd170101527e52118063"
     },
     {
       "path": "intake-browser.mjs",
@@ -509,8 +509,8 @@
     },
     {
       "path": "player.mjs",
-      "bytes": 17712,
-      "sha256": "e2faed6203748e3c32efea0b21fbc8fde5d2ce778fd059b5b5395714f5941142"
+      "bytes": 18579,
+      "sha256": "4239a69f4ee9df3b44dc237069c7b880bd22968a4a99e2668d5c2615cd8f3b7d"
     },
     {
       "path": "README.md",
@@ -518,9 +518,14 @@
       "sha256": "e893e81867807586c10c2b173c6b81ed7803e73d5b4c8a4aba7ec5296a54de35"
     },
     {
+      "path": "review-policy.mjs",
+      "bytes": 354,
+      "sha256": "0bc82b038413d1d9847e730b72ec43bc1507946665f77dfc39751cc08c738efd"
+    },
+    {
       "path": "style.css",
-      "bytes": 9467,
-      "sha256": "c83cf2717cf36e81242b295effe52749e17e28ad946e6940b6b7d868fcaa2423"
+      "bytes": 9671,
+      "sha256": "f8ae6dc51e4ea84b1ceceb9153eb67e284d1938466c9755734ef578410413732"
     },
     {
       "path": "UPLOAD_GUIDE.md",
