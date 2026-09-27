@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 214,
-    "uniqueRecordings": 214,
+    "declaredTracks": 215,
+    "uniqueRecordings": 215,
     "duplicateAliases": 0,
-    "audioBytes": 1094803328
+    "audioBytes": 1097807023
   },
   "tracks": [
     {
@@ -10360,6 +10360,57 @@
         "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-soundtrack-20260927/9cf9912bbd80d3e304e555f45a33a94dc9cd0b8924e4bc4771e659e133422cc8.mp3",
         "bytes": 1800709,
         "sha256": "9cf9912bbd80d3e304e555f45a33a94dc9cd0b8924e4bc4771e659e133422cc8"
+      },
+      "aliases": []
+    },
+    {
+      "id": "mos.mos-kloun",
+      "title": "Мос - Клоун",
+      "artist": "Мос",
+      "durationSeconds": 168.553651,
+      "tags": [
+        "ФПВ",
+        "UA",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://www.youtube.com/@Mos_18000",
+      "license": "Unknown — uploader-confirmed rights",
+      "licenseURL": null,
+      "credit": "Мос - Клоун by Мос. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@Mos_18000",
+      "rights": {
+        "licenseId": "UNKNOWN",
+        "licenseVersion": null,
+        "licenseURL": null,
+        "rightsEvidenceURL": "https://www.youtube.com/@Mos_18000",
+        "attribution": "Мос - Клоун by Мос. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@Mos_18000",
+        "derivativeChangeNotice": "Exact submitted MP3 bytes retained; no archive changes declared.",
+        "shareAlike": {
+          "required": null,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        },
+        "permissionBasis": "uploader-confirmed-public-redistribution-and-web-playback"
+      },
+      "fileName": "Мос - Клоун.mp3",
+      "archiveId": "mos-20260927-0093e7e9",
+      "collection": "Мос - Клоун",
+      "collections": [
+        "Мос - Клоун",
+        "Мос",
+        "ФПВ"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "https://github.com/mekhovov/revealline-soundtracks/releases/download/audio-mos-20260927-0093e7e9/0093e7e90c9f7d771707c0920f3a61abc8070cda6ca42da4b11054c61268b10c.mp3",
+        "bytes": 3003695,
+        "sha256": "0093e7e90c9f7d771707c0920f3a61abc8070cda6ca42da4b11054c61268b10c"
       },
       "aliases": []
     }

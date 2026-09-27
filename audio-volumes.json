@@ -912,6 +912,18 @@
           "bytes": 1800709
         }
       ]
+    },
+    {
+      "id": "audio-mos-20260927-0093e7e9",
+      "releaseTag": "audio-mos-20260927-0093e7e9",
+      "recordings": 1,
+      "audioBytes": 3003695,
+      "assets": [
+        {
+          "sha256": "0093e7e90c9f7d771707c0920f3a61abc8070cda6ca42da4b11054c61268b10c",
+          "bytes": 3003695
+        }
+      ]
     }
   ]
 }
