@@ -75,6 +75,9 @@ export async function verifyArchive(base = root) {
   const ids = new Set(), hashes = new Set(); let audioBytes = 0;
   for (const track of catalogue.tracks) {
     demand(typeof track.id === 'string' && track.id && !ids.has(track.id), 'Track identity differs.'); ids.add(track.id);
+    demand(typeof track.title === 'string' && track.title.trim() === track.title && track.title.length > 0, `Track title differs: ${track.id}`);
+    demand(typeof track.artist === 'string' && track.artist.trim() === track.artist && track.artist.length > 0, `Track artist differs: ${track.id}`);
+    demand(Array.isArray(track.tags) && track.tags.length > 0 && track.tags.length <= 32 && track.tags.every((tag) => typeof tag === 'string' && tag.trim() === tag && tag.length > 0), `Track tags differ: ${track.id}`);
     demand(Array.isArray(track.collections) && track.collections.length > 0 && track.collections.length <= 16 && track.collections.includes(track.collection), `Collections differ: ${track.id}`);
     demand(track.gameCatalogueAdmission === false && track.default !== true, `Admission boundary differs: ${track.id}`);
     verifyRights(track);
