@@ -1344,6 +1344,18 @@
           "bytes": 2420684
         }
       ]
+    },
+    {
+      "id": "audio-khvostati-lovelasy-20260927-93ba351f",
+      "releaseTag": "audio-khvostati-lovelasy-20260927-93ba351f",
+      "recordings": 1,
+      "audioBytes": 3041176,
+      "assets": [
+        {
+          "sha256": "93ba351fb0cdafde13e33f30bc73e9ae357bb9e16ce94da25768ef839e450a38",
+          "bytes": 3041176
+        }
+      ]
     }
   ]
 }

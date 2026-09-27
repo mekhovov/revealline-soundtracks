@@ -1887,3 +1887,10 @@ Licence: Unknown — uploader-confirmed rights
 Пісня про дрон - Бабка Йожка by Українські пісні - Pisni.ua. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@-Pisniua
 
 Licence: Unknown — uploader-confirmed rights
+
+## ДРОНИ БДЖОЛИ – офіційний кліп | Українська сатира про війну | Хвостаті Ловеласи
+
+ДРОНИ БДЖОЛИ – офіційний кліп | Українська сатира про війну | Хвостаті Ловеласи by Хвостаті Ловеласи. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@KhvostatiLovelasy
+
+
+Licence: Unknown — uploader-confirmed rights
