@@ -1260,6 +1260,18 @@
           "bytes": 1027835
         }
       ]
+    },
+    {
+      "id": "audio-ivan-hanzera-20260927-56ccb8cf",
+      "releaseTag": "audio-ivan-hanzera-20260927-56ccb8cf",
+      "recordings": 1,
+      "audioBytes": 1983489,
+      "assets": [
+        {
+          "sha256": "56ccb8cf806d141b891f1febe44e3261227ddcf010a4dba172fc94be51c37b49",
+          "bytes": 1983489
+        }
+      ]
     }
   ]
 }
