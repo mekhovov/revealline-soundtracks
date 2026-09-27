@@ -1,0 +1,203 @@
+import assert from "node:assert/strict";
+import { mkdtemp, mkdir, rm, writeFile } from "node:fs/promises";
+import os from "node:os";
+import path from "node:path";
+import test from "node:test";
+import {
+  batchFiles,
+  createIntake,
+  findMP3Files,
+  INTAKE_USAGE,
+  parseArguments,
+} from "./intake/add-music.mjs";
+
+const fakeMP3 = Buffer.from([0xff, 0xfb, 0x90, 0x64, 0, 0, 0, 0]);
+
+async function temporary(t) {
+  const root = await mkdtemp(path.join(os.tmpdir(), "archive02-intake-test-"));
+  t.after(() => rm(root, { recursive: true, force: true }));
+  return root;
+}
+
+test("arguments preserve the explicit rights gate and style selection", () => {
+  const parsed = parseArguments([
+    "/music",
+    "--source",
+    "https://creator.example/album",
+    "--license",
+    "cc-by-4.0",
+    "--styles",
+    "synthwave, electro,gameplay",
+    "--collections",
+    "TRENCH ORDERLY, ФПВ",
+    "--confirm-rights",
+    "--open-pr",
+  ]);
+  assert.equal(parsed.input, "/music");
+  assert.deepEqual(parsed.options.styles, ["synthwave", "electro", "gameplay"]);
+  assert.deepEqual(parsed.options.collections, ["TRENCH ORDERLY", "ФПВ"]);
+  assert.equal(parsed.options.confirmRights, true);
+  assert.equal(parsed.options.openPR, true);
+});
+
+test("help documents the required rights gate and batch limit", () => {
+  assert.match(INTAKE_USAGE, /--confirm-rights/);
+  assert.match(INTAKE_USAGE, /at most 20 MP3 files/);
+  assert.match(INTAKE_USAGE, /not rights evidence by itself/);
+  assert.match(INTAKE_USAGE, /package\.rlintake/);
+  assert.match(INTAKE_USAGE, /unknown/);
+});
+
+test("unknown rights keep the explicit uploader confirmation and collections", async (t) => {
+  const root = await temporary(t);
+  const file = path.join(root, "song.mp3");
+  await writeFile(file, fakeMP3);
+  const result = await createIntake(
+    file,
+    {
+      artist: "TRENCH ORDERLY",
+      source: "https://www.youtube.com/channel/example",
+      license: "unknown",
+      styles: ["ФПВ", "UA"],
+      collections: ["TRENCH ORDERLY", "ФПВ"],
+      confirmRights: true,
+      batchId: "unknown-rights-test",
+    },
+    { probe: async () => 120 },
+  );
+  assert.equal(result.tracks[0].licenseURL, null);
+  assert.equal(result.tracks[0].rights.licenseId, "UNKNOWN");
+  assert.equal(
+    result.tracks[0].rights.permissionBasis,
+    "uploader-confirmed-public-redistribution-and-web-playback",
+  );
+  assert.deepEqual(result.collections, ["TRENCH ORDERLY", "ФПВ"]);
+});
+
+test("folder discovery is deterministic and ignores non-MP3 files", async (t) => {
+  const root = await temporary(t);
+  await mkdir(path.join(root, "nested"));
+  await Promise.all([
+    writeFile(path.join(root, "z.mp3"), fakeMP3),
+    writeFile(path.join(root, "a.MP3"), fakeMP3),
+    writeFile(path.join(root, "notes.txt"), "ignore"),
+    writeFile(path.join(root, "nested", "m.mp3"), fakeMP3),
+  ]);
+  assert.deepEqual(
+    (await findMP3Files(root)).map((file) => path.relative(root, file)),
+    ["a.MP3", "nested/m.mp3", "z.mp3"],
+  );
+});
+
+test("intake binds exact rights and produces stable unique identities", async (t) => {
+  const root = await temporary(t);
+  await mkdir(path.join(root, "one"));
+  await mkdir(path.join(root, "two"));
+  await writeFile(path.join(root, "one", "Night Drive.mp3"), fakeMP3);
+  await writeFile(
+    path.join(root, "two", "Night Drive.mp3"),
+    Buffer.concat([fakeMP3, Buffer.from([1])]),
+  );
+  const result = await createIntake(
+    root,
+    {
+      artist: "Test Artist",
+      source: "https://creator.example/album",
+      license: "cc-by-4.0",
+      styles: ["synthwave", "gameplay"],
+      confirmRights: true,
+      batchId: "test-night-drive",
+    },
+    { probe: async () => 180.5 },
+  );
+  assert.deepEqual(
+    result.tracks.map((track) => track.id),
+    ["test-artist.night-drive", "test-artist.night-drive.2"],
+  );
+  assert.equal(result.tracks[0].rights.licenseId, "CC-BY");
+  assert.equal(
+    result.tracks[0].rights.rightsEvidenceURL,
+    "https://creator.example/album",
+  );
+  assert.equal(result.tracks[0].durationSeconds, 180.5);
+});
+
+test("intake refuses missing rights confirmation and incomplete ShareAlike evidence", async (t) => {
+  const root = await temporary(t);
+  const file = path.join(root, "song.mp3");
+  await writeFile(file, fakeMP3);
+  const base = {
+    artist: "Artist",
+    title: "Song",
+    source: "https://creator.example/song",
+    styles: ["metal"],
+    batchId: "rights-test",
+  };
+  await assert.rejects(
+    createIntake(
+      file,
+      { ...base, license: "cc-by-4.0" },
+      { probe: async () => 1 },
+    ),
+    /--confirm-rights/,
+  );
+  await assert.rejects(
+    createIntake(
+      file,
+      { ...base, license: "cc-by-sa-4.0", confirmRights: true },
+      { probe: async () => 1 },
+    ),
+    /--derivative-notice/,
+  );
+  const shareAlike = await createIntake(
+    file,
+    {
+      ...base,
+      license: "cc-by-sa-4.0",
+      confirmRights: true,
+      rightsEvidence: "https://creator.example/song#license",
+      derivativeNotice: "Exact creator MP3 bytes retained.",
+    },
+    { probe: async () => 1 },
+  );
+  assert.equal(
+    shareAlike.tracks[0].rights.rightsEvidenceURL,
+    "https://creator.example/song#license",
+  );
+  assert.equal(shareAlike.tracks[0].rights.shareAlike.required, true);
+});
+
+test("batch pages surface exact attribution and derivative notices", () => {
+  const files = batchFiles({
+    title: "Licensed audition",
+    description: "Full listening review.",
+    tracks: [
+      {
+        title: "Night < Drive",
+        artist: "Artist & Company",
+        sha256: "a".repeat(64),
+        source: "https://creator.example/song?a=1&b=2",
+        licenseURL: "https://creativecommons.org/licenses/by/3.0/",
+        license: "CC BY 3.0 Unported",
+        credit: "MUSIC BY ARTIST https://creator.example/",
+        rights: {
+          derivativeChangeNotice:
+            "Converted from the creator OGG and loudness-normalized.",
+        },
+      },
+    ],
+  });
+  const page = files.get("index.html");
+  assert.match(page, /MUSIC BY ARTIST https:\/\/creator\.example\//);
+  assert.match(
+    page,
+    /Changes: Converted from the creator OGG and loudness-normalized\./,
+  );
+  assert.match(page, /Night &lt; Drive/);
+  assert.match(page, /Artist &amp; Company/);
+  assert.match(page, /song\?a=1&amp;b=2/);
+  assert.match(
+    files.get("CREDITS.md"),
+    /Changes: Converted from the creator OGG and loudness-normalized\./,
+  );
+});
