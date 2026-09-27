@@ -29,8 +29,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 10142,
-      "sha256": "0f1dd330e90f4631a8e15eece1b27df3033f88a03b5091bc482572b307d3ec72"
+      "bytes": 10155,
+      "sha256": "7b49207bf84b5bbed1e23e12dda9357ca973a72a18a9c5a7b7b517df154f48db"
     },
     {
       "path": "intake-browser.mjs",
