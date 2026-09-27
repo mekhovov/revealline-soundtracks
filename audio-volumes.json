@@ -1320,6 +1320,18 @@
           "bytes": 2259668
         }
       ]
+    },
+    {
+      "id": "audio-surenzh-20260927-cdba5db4",
+      "releaseTag": "audio-surenzh-20260927-cdba5db4",
+      "recordings": 1,
+      "audioBytes": 2625385,
+      "assets": [
+        {
+          "sha256": "cdba5db44c8417af7271bec25909ab1f0e40944ca7b530ed9c064aa3d7fcd3ed",
+          "bytes": 2625385
+        }
+      ]
     }
   ]
 }
