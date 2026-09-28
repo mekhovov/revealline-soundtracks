@@ -599,9 +599,8 @@ export async function createExternalIntake(
   };
 }
 
-function publicTrack(track, batch) {
+export function publicTrack(track, batch) {
   const collections = [...new Set([batch.title, ...batch.collections])];
-  const volumeTag = `audio-${batch.batchId}`;
   return {
     id: track.id,
     title: track.title,
@@ -626,7 +625,7 @@ function publicTrack(track, batch) {
     audio: batch.external
       ? { path: track.audioURL, bytes: track.byteCount, sha256: track.sha256, delivery: track.delivery }
       : {
-          path: `https://github.com/mekhovov/revealline-soundtracks/releases/download/${volumeTag}/${track.sha256}.mp3`,
+          path: `objects/${track.sha256}.mp3`,
           bytes: track.bytes.length,
           sha256: track.sha256,
         },

@@ -1,7 +1,11 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
-import { buildManifest, verifyArchive } from "./verify.mjs";
+import {
+  buildManifest,
+  releaseAssetBytes,
+  verifyArchive,
+} from "./verify.mjs";
 
 test("canonical archive preserves migrated identities and release-backed audio", async () => {
   const result = await verifyArchive();
@@ -22,10 +26,7 @@ test("canonical archive preserves migrated identities and release-backed audio",
     track.audio.sha256,
     "9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9",
   );
-  assert.match(
-    track.audio.path,
-    /github\.com\/mekhovov\/revealline-soundtracks\/releases\/download/,
-  );
+  assert.equal(track.audio.path, `objects/${track.audio.sha256}.mp3`);
   const trench = catalogue.tracks.find(
     ({ id }) => id === "trench-orderly.soundtrack.2",
   );
@@ -150,4 +151,62 @@ test("deployment manifest is reproduced from the explicit public files", async (
     await readFile("deployment-manifest.json", "utf8"),
   );
   assert.deepEqual(committed, expected);
+});
+
+test("every public release-backed recording is materialized in the Pages payload", async () => {
+  const catalogue = JSON.parse(await readFile("catalogue.json", "utf8"));
+  const manifest = await buildManifest();
+  const files = new Map(manifest.files.map((entry) => [entry.path, entry]));
+  const publicTracks = catalogue.tracks.filter(
+    ({ visibility, audio }) =>
+      visibility !== "review-only" && audio.delivery?.type !== "external-url",
+  );
+
+  assert.equal(publicTracks.length, 202);
+  for (const track of publicTracks) {
+    assert.equal(track.audio.path, `objects/${track.audio.sha256}.mp3`);
+    assert.deepEqual(files.get(track.audio.path), {
+      path: track.audio.path,
+      bytes: track.audio.bytes,
+      sha256: track.audio.sha256,
+    });
+  }
+  assert.ok(
+    manifest.files.reduce((sum, file) => sum + file.bytes, 0) <=
+      950 * 1024 * 1024,
+  );
+});
+
+test("draft release assets are resolved through the authenticated GitHub API", async () => {
+  const sha256 = "e".repeat(64);
+  const bytes = Uint8Array.from([1, 2, 3]);
+  const requests = [];
+  const result = await releaseAssetBytes(
+    "audio-test",
+    sha256,
+    async (url, options) => {
+      requests.push({ url, options });
+      if (requests.length === 1) {
+        return new Response(
+          JSON.stringify({
+            assets: [
+              {
+                name: `${sha256}.mp3`,
+                url: "https://api.github.com/repos/example/assets/1",
+              },
+            ],
+          }),
+          { status: 200, headers: { "content-type": "application/json" } },
+        );
+      }
+      return new Response(bytes, { status: 200 });
+    },
+    "test-token",
+  );
+
+  assert.deepEqual(result, bytes);
+  assert.equal(requests.length, 2);
+  assert.match(requests[0].url, /releases\/tags\/audio-test$/);
+  assert.equal(requests[0].options.headers.Authorization, "Bearer test-token");
+  assert.equal(requests[1].options.headers.Accept, "application/octet-stream");
 });

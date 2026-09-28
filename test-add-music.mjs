@@ -10,6 +10,7 @@ import {
   findMP3Files,
   INTAKE_USAGE,
   parseArguments,
+  publicTrack,
 } from "./intake/add-music.mjs";
 
 const fakeMP3 = Buffer.from([0xff, 0xfb, 0x90, 0x64, 0, 0, 0, 0]);
@@ -81,6 +82,40 @@ test("single hosted URL intake binds verified delivery evidence", async () => {
   assert.equal(result.tracks[0].audioURL, "https://cdn.example/song.mp3");
   assert.equal(result.tracks[0].delivery.type, "external-url");
   assert.equal(result.tracks[0].durationSeconds, 130);
+});
+
+test("new local recordings use immutable Pages object URLs", async () => {
+  const bytes = Buffer.from(fakeMP3);
+  const sha256 = "d".repeat(64);
+  const track = publicTrack(
+    {
+      id: "artist.song",
+      title: "Song",
+      artist: "Artist",
+      durationSeconds: 90,
+      tags: ["synth"],
+      source: "https://creator.example/song",
+      license: "CC0 1.0 Universal",
+      licenseURL: "https://creativecommons.org/publicdomain/zero/1.0/",
+      credit: "Song by Artist.",
+      rights: {},
+      fileName: "song.mp3",
+      sha256,
+      bytes,
+    },
+    {
+      title: "Collection",
+      collections: ["Synth"],
+      batchId: "collection",
+      external: false,
+    },
+  );
+
+  assert.deepEqual(track.audio, {
+    path: `objects/${sha256}.mp3`,
+    bytes: bytes.length,
+    sha256,
+  });
 });
 
 test("hosted URL manifest prepares a deterministic multi-recording batch", async (t) => {
