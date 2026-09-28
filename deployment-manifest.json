@@ -19,8 +19,8 @@
     },
     {
       "path": "catalogue.json",
-      "bytes": 574365,
-      "sha256": "3622f50d4741ebcf955b3479816a555a07f1b034216ba873b691acf5810e77e1"
+      "bytes": 567666,
+      "sha256": "95034116dbf50c5f862f1c2c9081d993f8e68b158a8c3808c93ee32e1bba8c2c"
     },
     {
       "path": "CREDITS.md",
@@ -193,6 +193,11 @@
       "sha256": "13ac89fa8e5b12b78c872f981376315d0b9d33829ab85f259972be54913f8239"
     },
     {
+      "path": "objects/1d2614956debbbd54ce30bca449315f7771e84ac487d525333e23630ed54d9e3.mp3",
+      "bytes": 2817204,
+      "sha256": "1d2614956debbbd54ce30bca449315f7771e84ac487d525333e23630ed54d9e3"
+    },
+    {
       "path": "objects/27849453fb457c39726138ddd9974aa35307e713b9b04262edc09c05a1808b21.mp3",
       "bytes": 4630905,
       "sha256": "27849453fb457c39726138ddd9974aa35307e713b9b04262edc09c05a1808b21"
@@ -283,6 +288,11 @@
       "sha256": "5126faf85adffc64f22a4cd176b84ed47b6014c03328ba8380fdb24efca11f90"
     },
     {
+      "path": "objects/515f5806573a0737f3c609b48895a09137289e1510e673b66ecca72c574f7aa2.mp3",
+      "bytes": 2947481,
+      "sha256": "515f5806573a0737f3c609b48895a09137289e1510e673b66ecca72c574f7aa2"
+    },
+    {
       "path": "objects/53f4aabfa0b926af5c23af9a33c8d5c93b86780004d09cc2276bbad964d4c022.mp3",
       "bytes": 2573792,
       "sha256": "53f4aabfa0b926af5c23af9a33c8d5c93b86780004d09cc2276bbad964d4c022"
@@ -301,6 +311,11 @@
       "path": "objects/5ddd44a06548f11ec5bdfe81cc51e863ade55f753ccfede58d9848a4d154ba06.mp3",
       "bytes": 2881410,
       "sha256": "5ddd44a06548f11ec5bdfe81cc51e863ade55f753ccfede58d9848a4d154ba06"
+    },
+    {
+      "path": "objects/5e7b33426088ade0a9345102d3ceb1ec38c43c09535e2288c6e1e032e1cee5a0.mp3",
+      "bytes": 2070360,
+      "sha256": "5e7b33426088ade0a9345102d3ceb1ec38c43c09535e2288c6e1e032e1cee5a0"
     },
     {
       "path": "objects/63082bcdf83c78759205dc0bdb86584c9d2e2afb31000721d56dd129982b88cb.mp3",
@@ -363,6 +378,11 @@
       "sha256": "8b46f7e941447e929c09cbe64921e963e4bc6ab3962332e42c070dc9de9c67e1"
     },
     {
+      "path": "objects/8ddb7eb4f274fa64e1ccc8f438f6483d80b755a04cc903079fd13474db11f0c7.mp3",
+      "bytes": 2851069,
+      "sha256": "8ddb7eb4f274fa64e1ccc8f438f6483d80b755a04cc903079fd13474db11f0c7"
+    },
+    {
       "path": "objects/93634c4c3d76558d0b4c80740883223c2d68cc0a095142c420107b2f8b08d037.mp3",
       "bytes": 3890364,
       "sha256": "93634c4c3d76558d0b4c80740883223c2d68cc0a095142c420107b2f8b08d037"
@@ -376,6 +396,16 @@
       "path": "objects/9ce237e3111768fe0fd4e2d9322bd36f03500ed4d46fd49d11dcf0b503c4fc01.mp3",
       "bytes": 9898235,
       "sha256": "9ce237e3111768fe0fd4e2d9322bd36f03500ed4d46fd49d11dcf0b503c4fc01"
+    },
+    {
+      "path": "objects/9d7e478a3682783da745f96b6c44864c2639a468bce7a24e8f5a8e7c6bf70e77.mp3",
+      "bytes": 2771102,
+      "sha256": "9d7e478a3682783da745f96b6c44864c2639a468bce7a24e8f5a8e7c6bf70e77"
+    },
+    {
+      "path": "objects/9eef10e0b20b4ef35341fd9f906a615a9f94c327ec7e57d25c939b13b9ec98f9.mp3",
+      "bytes": 3314294,
+      "sha256": "9eef10e0b20b4ef35341fd9f906a615a9f94c327ec7e57d25c939b13b9ec98f9"
     },
     {
       "path": "objects/9fd1c9a97740411e7dcaebdc9af17ab017cf070a82089a48503765a24b7bedf4.mp3",
@@ -493,6 +523,11 @@
       "sha256": "f03927dbb34fca2946b4d156523e24d8ada69fbf390ed522597b9fbaedbf09a6"
     },
     {
+      "path": "objects/f8d1c2797031fdf2f673c798b0bb19b0ff0a0ba72212e9d8f577c5b625db0c6e.mp3",
+      "bytes": 2693052,
+      "sha256": "f8d1c2797031fdf2f673c798b0bb19b0ff0a0ba72212e9d8f577c5b625db0c6e"
+    },
+    {
       "path": "objects/f97ea7ef15cff0de647b8116a8e917827268559b35f3bf3cad58ad901132b49f.mp3",
       "bytes": 2972525,
       "sha256": "f97ea7ef15cff0de647b8116a8e917827268559b35f3bf3cad58ad901132b49f"
@@ -508,9 +543,14 @@
       "sha256": "e2c9279927120aac6d1d5ff86ec6794829b543eb6ad03838eb5238bd9f399160"
     },
     {
+      "path": "playback-recovery.mjs",
+      "bytes": 442,
+      "sha256": "f79c19abb6d77f1226a01d62fe71c9e23e3c1d4ee700493e5a8e05e719b4cf0b"
+    },
+    {
       "path": "player.mjs",
-      "bytes": 18579,
-      "sha256": "4239a69f4ee9df3b44dc237069c7b880bd22968a4a99e2668d5c2615cd8f3b7d"
+      "bytes": 19941,
+      "sha256": "b123acd8759049ca1652c4ffb6a364a2358025cc4bfddcb9b7ea0991611b7196"
     },
     {
       "path": "README.md",
