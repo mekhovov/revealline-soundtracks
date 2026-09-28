@@ -19,8 +19,8 @@
     },
     {
       "path": "catalogue.json",
-      "bytes": 556206,
-      "sha256": "d3b4011a4ac13732181772cbb7cd46da5cb04ad3ec0adf6d7b9f8cb24bac0a95"
+      "bytes": 556116,
+      "sha256": "ba0960e11279ca55d1acc402265dfe3b85c7a97bbcf8c06d920af6cd98e2aabf"
     },
     {
       "path": "CREDITS.md",
@@ -39,8 +39,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 12485,
-      "sha256": "b12741988221a835afe01e3dc68a18a088d72da79e80bd170101527e52118063"
+      "bytes": 12680,
+      "sha256": "61b4c300437ad2aae6b8e90be5f1ecf84fe3db4f7f1c1543c1df3c7f9f3d4209"
     },
     {
       "path": "intake-browser.mjs",
@@ -1164,8 +1164,8 @@
     },
     {
       "path": "playback-policy.mjs",
-      "bytes": 1981,
-      "sha256": "e2c9279927120aac6d1d5ff86ec6794829b543eb6ad03838eb5238bd9f399160"
+      "bytes": 1273,
+      "sha256": "d807c72caaa1991012bde3d61ac281917ef485026b0dc59873c3fd3c5c54ef33"
     },
     {
       "path": "playback-recovery.mjs",
@@ -1174,8 +1174,8 @@
     },
     {
       "path": "player.mjs",
-      "bytes": 19941,
-      "sha256": "b123acd8759049ca1652c4ffb6a364a2358025cc4bfddcb9b7ea0991611b7196"
+      "bytes": 19530,
+      "sha256": "f362c32fb50c6396ca69d4e9e94596800f951f92b87ff043c119bf7a0c301d8d"
     },
     {
       "path": "README.md",
@@ -1188,9 +1188,14 @@
       "sha256": "0bc82b038413d1d9847e730b72ec43bc1507946665f77dfc39751cc08c738efd"
     },
     {
+      "path": "style-taxonomy.mjs",
+      "bytes": 2436,
+      "sha256": "8f24c1a126b30e3b17b1ab65cefa9f9fadc0dd3e973eeb641585b00715700c72"
+    },
+    {
       "path": "style.css",
-      "bytes": 9671,
-      "sha256": "f8ae6dc51e4ea84b1ceceb9153eb67e284d1938466c9755734ef578410413732"
+      "bytes": 9766,
+      "sha256": "34259833657e490de9f0b0c2cdaa440b0145b2ad4fb5c7b47d410bacf221d04d"
     },
     {
       "path": "UPLOAD_GUIDE.md",

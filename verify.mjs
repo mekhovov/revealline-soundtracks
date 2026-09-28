@@ -23,6 +23,11 @@ const CORRECTED_UNKNOWN_RIGHTS = new Set([
   'trench-orderly.soundtrack.5',
 ]);
 const TRENCH_ORDERLY_SOURCE = 'https://www.youtube.com/@TRENCH_ORDERLY';
+const REMOVED_INCORRECT_FPV_TAGS = new Set([
+  'emma-ma.megasong', 'hydrogene.determination',
+  'vitalezzz.silver-bullet', 'vitalezzz.devoted-guard',
+  'mintodog.heavy-battle-2', 'kistol.untitled-metal-track',
+]);
 const LEGACY_IDENTITY_FIELDS = [
   'title', 'artist', 'durationSeconds', 'tags', 'source', 'fileName', 'archiveId',
   'collection', 'status', 'listeningApproval', 'gameCatalogueAdmission', 'contentId',
@@ -43,7 +48,8 @@ const ROOT_STATIC_FILES = [
   'legacy/archive-02/CREDITS.md', 'legacy/archive-02/README.md',
   'legacy/archive-02/UPLOAD_GUIDE.md', 'legacy/archive-02/batches.json',
   'legacy/archive-02/catalogue.json', 'legacy/archive-02/deployment-manifest.json',
-  'playback-policy.mjs', 'player.mjs', 'review-policy.mjs', 'style.css', 'upload-guide/index.html',
+  'playback-policy.mjs', 'player.mjs', 'review-policy.mjs', 'style-taxonomy.mjs',
+  'style.css', 'upload-guide/index.html',
   'playback-recovery.mjs',
 ];
 const digest = (bytes) => createHash('sha256').update(bytes).digest('hex');
@@ -134,6 +140,8 @@ async function verifyLegacyUnion(catalogue, base) {
       for (const field of LEGACY_IDENTITY_FIELDS) {
         if (field === 'source' && CORRECTED_UNKNOWN_RIGHTS.has(id)) {
           demand(migrated.source === TRENCH_ORDERLY_SOURCE, `Corrected creator source differs: ${id}`);
+        } else if (field === 'tags' && REMOVED_INCORRECT_FPV_TAGS.has(id)) {
+          demand(JSON.stringify(migrated.tags) === JSON.stringify(legacy.tags.filter((tag) => tag.toLowerCase() !== 'fpv')), `Curated recording tags differ: ${id}`);
         } else demand(JSON.stringify(migrated[field]) === JSON.stringify(legacy[field]), `Legacy recording metadata differs: ${id}.${field}`);
       }
       demand(migrated.audio?.bytes === legacy.audio?.bytes && migrated.audio?.sha256 === legacy.audio?.sha256, `Legacy recording bytes differ: ${id}`);

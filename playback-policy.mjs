@@ -1,27 +1,11 @@
-export const STYLE_GROUPS = Object.freeze([
-  ['fpv', 'ФПВ'],
-  ['ua', 'UA'],
-  ['metal', 'Metal'],
-  ['synth', 'Synth & electronic'],
-  ['ukrainian', 'Ukrainian'],
-  ['chiptune', 'Chiptune'],
-  ['rock', 'Rock'],
-  ['ambient', 'Ambient'],
-  ['other', 'Other'],
-]);
+import { STYLE_GROUPS as STYLE_DEFINITIONS, canonicalStyles } from './style-taxonomy.mjs';
+
+export const STYLE_GROUPS = Object.freeze(
+  STYLE_DEFINITIONS.map(({ id, label }) => Object.freeze([id, label])),
+);
 
 export function stylesOf(track) {
-  const value = (track?.tags ?? []).join(' ').toLowerCase();
-  const styles = [];
-  if (/(^|\s|[,·])фпв($|\s|[,·])|\bfpv\b/.test(value)) styles.push('fpv');
-  if (/(^|\s|[,·])ua($|\s|[,·])/.test(value)) styles.push('ua');
-  if (value.includes('ukrain') || styles.includes('ua')) styles.push('ukrainian');
-  if (value.includes('metal')) styles.push('metal');
-  if (/synth|electro|tracker|fm|dance|techno/.test(value)) styles.push('synth');
-  if (/chiptune|8-bit|fakebit/.test(value)) styles.push('chiptune');
-  if (/rock|punk/.test(value)) styles.push('rock');
-  if (/ambient|atmospher/.test(value)) styles.push('ambient');
-  return styles.length ? [...new Set(styles)] : ['other'];
+  return canonicalStyles(track?.tags);
 }
 
 export function matchesStyles(trackStyles, selectedStyles) {

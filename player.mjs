@@ -4,6 +4,7 @@ import {
   matchesStyles,
   stylesOf,
 } from './playback-policy.mjs';
+import { styleForTag } from './style-taxonomy.mjs';
 import { parseFilterURL, serializeFilterURL } from './filter-url.mjs';
 import { REVIEW_ACCESS_KEY, tracksForView } from './review-policy.mjs';
 import {
@@ -142,16 +143,7 @@ function facet(label, filter, value, className = "") {
 }
 
 function tagStyle(tag) {
-  const value = tag.toLocaleLowerCase();
-  if (value === "фпв" || value === "fpv") return "fpv";
-  if (value === "ua") return "ua";
-  if (value.includes("ukrain")) return "ukrainian";
-  if (value.includes("metal")) return "metal";
-  if (/synth|electro|tracker|fm|dance|techno/.test(value)) return "synth";
-  if (/chiptune|8-bit|fakebit/.test(value)) return "chiptune";
-  if (/rock|punk/.test(value)) return "rock";
-  if (/ambient|atmospher/.test(value)) return "ambient";
-  return null;
+  return styleForTag(tag);
 }
 
 function refresh() {
