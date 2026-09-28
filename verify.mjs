@@ -62,6 +62,49 @@ async function exactFile(base, entry) {
   demand(file.bytes === entry.bytes, `Byte count differs: ${entry.path}`);
   demand(digest(bytes) === entry.sha256, `SHA-256 differs: ${entry.path}`);
 }
+async function exactFileIfPresent(base, entry) {
+  try {
+    await exactFile(base, entry);
+    return true;
+  } catch (error) {
+    if (error?.code === 'ENOENT') return false;
+    throw error;
+  }
+}
+export async function releaseAssetBytes(
+  releaseTag,
+  sha256,
+  request,
+  token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN,
+) {
+  if (token) {
+    const apiHeaders = {
+      Accept: 'application/vnd.github+json',
+      Authorization: `Bearer ${token}`,
+      'X-GitHub-Api-Version': '2022-11-28',
+    };
+    const releaseResponse = await request(
+      `https://api.github.com/repos/mekhovov/revealline-soundtracks/releases/tags/${releaseTag}`,
+      { headers: apiHeaders, redirect: 'error' },
+    );
+    demand(releaseResponse?.ok, `Audio release is unavailable: ${releaseTag}`);
+    const release = await releaseResponse.json();
+    const asset = release.assets?.find(({ name }) => name === `${sha256}.mp3`);
+    demand(asset?.url, `Audio release asset is unavailable: ${releaseTag}/${sha256}.mp3`);
+    const assetResponse = await request(asset.url, {
+      headers: { ...apiHeaders, Accept: 'application/octet-stream' },
+      redirect: 'follow',
+    });
+    demand(assetResponse?.ok, `Audio release asset is unavailable: ${releaseTag}/${sha256}.mp3`);
+    return new Uint8Array(await assetResponse.arrayBuffer());
+  }
+  const response = await request(
+    `https://github.com/mekhovov/revealline-soundtracks/releases/download/${releaseTag}/${sha256}.mp3`,
+    { redirect: 'follow' },
+  );
+  demand(response?.ok, `Audio release asset is unavailable: ${releaseTag}/${sha256}.mp3`);
+  return new Uint8Array(await response.arrayBuffer());
+}
 function verifyRights(track) {
   demand(safeHTTPS(track.source) && safeHTTPS(track.rights?.rightsEvidenceURL), `Rights evidence differs: ${track.id}`);
   demand(track.credit === track.rights?.attribution, `Attribution differs: ${track.id}`);
@@ -106,26 +149,41 @@ async function verifyLegacyUnion(catalogue, base) {
   return { tracks, audioBytes };
 }
 export async function buildManifest(base = root) {
-  const files = [];
-  const inventory = JSON.parse(await readFile(path.join(base, 'inventory.json'), 'utf8'));
+  const files = new Map();
   const catalogue = JSON.parse(await readFile(path.join(base, 'catalogue.json'), 'utf8'));
-  const pagesAudio = catalogue.tracks
-    .map((track) => track.audio?.path)
-    .filter((relative) => PAGES_AUDIO.test(relative));
-  const publicFiles = [
-    ...new Set([
-      ...ROOT_STATIC_FILES,
-      ...inventory.files.map(({ path: relative }) => relative),
-      ...pagesAudio,
-    ]),
-  ];
-  for (const relative of publicFiles) {
+  const staticFiles = new Set(ROOT_STATIC_FILES);
+  for (const relative of staticFiles) {
     const file = await ordinaryFile(base, relative), bytes = await readFile(file.absolute);
-    files.push({ path: relative, bytes: file.bytes, sha256: digest(bytes) });
+    files.set(relative, { path: relative, bytes: file.bytes, sha256: digest(bytes) });
   }
-  return { format: 'revealline-soundtrack-catalogue-deployment.v2', archiveId: 'revealline-soundtracks', files: files.sort((a,b)=>a.path.localeCompare(b.path)) };
+  for (const track of catalogue.tracks) {
+    if (!PAGES_AUDIO.test(track.audio?.path ?? '')) continue;
+    const entry = {
+      path: track.audio.path,
+      bytes: track.audio.bytes,
+      sha256: track.audio.sha256,
+    };
+    const existing = files.get(entry.path);
+    if (existing)
+      demand(
+        existing.bytes === entry.bytes && existing.sha256 === entry.sha256,
+        `Pages audio manifest differs: ${track.id}`,
+      );
+    else {
+      await exactFileIfPresent(base, entry);
+      files.set(entry.path, entry);
+    }
+  }
+  return {
+    format: 'revealline-soundtrack-catalogue-deployment.v2',
+    archiveId: 'revealline-soundtracks',
+    files: [...files.values()].sort((a,b)=>a.path.localeCompare(b.path)),
+  };
 }
-export async function verifyArchive(base = root) {
+export async function verifyArchive(
+  base = root,
+  { publicStage = false } = {},
+) {
   const catalogueBytes = await readFile(path.join(base, 'catalogue.json'));
   demand(catalogueBytes.length <= 1024 * 1024, 'Catalogue exceeds its byte limit.');
   const catalogue = JSON.parse(catalogueBytes);
@@ -189,7 +247,7 @@ export async function verifyArchive(base = root) {
         pages[1] === track.audio.sha256 && asset?.bytes === track.audio.bytes,
         `Pages audio identity differs: ${track.id}`,
       );
-      await exactFile(base, {
+      await exactFileIfPresent(base, {
         path: track.audio.path,
         bytes: track.audio.bytes,
         sha256: track.audio.sha256,
@@ -226,7 +284,8 @@ export async function verifyArchive(base = root) {
       'Legacy compatibility object differs.',
     );
     compatibilityHashes.add(file.sha256);
-    await exactFile(base, file);
+    if (publicStage) await exactFileIfPresent(base, file);
+    else await exactFile(base, file);
   }
   const legacyRelease = JSON.parse(
     await readFile(path.join(base, 'legacy/archive-01/release/assets.json'), 'utf8'),
@@ -260,18 +319,47 @@ export async function verifyArchive(base = root) {
   demand(catalogue.counts?.declaredTracks === catalogue.tracks.length && catalogue.counts?.uniqueRecordings === catalogue.tracks.length && catalogue.counts?.duplicateAliases === 0 && catalogue.counts?.audioBytes === audioBytes, 'Catalogue counts differ.');
   const expected = await buildManifest(base), manifest = JSON.parse(await readFile(path.join(base, 'deployment-manifest.json'), 'utf8'));
   demand(JSON.stringify(manifest) === JSON.stringify(expected), 'Deployment manifest is stale.');
-  for (const entry of manifest.files) await exactFile(base, entry);
+  demand(
+    manifest.files.reduce((sum, file) => sum + file.bytes, 0) <= 950 * 1024 * 1024,
+    'Public Pages payload exceeds 950 MiB.',
+  );
+  for (const entry of manifest.files) {
+    if (publicStage) await exactFile(base, entry);
+    else await exactFileIfPresent(base, entry);
+  }
   return { tracks: catalogue.tracks.length, compatibilityTracks: compatibilityHashes.size, legacyUnionTracks: legacyUnion.tracks, legacyUnionBytes: legacyUnion.audioBytes, audioBytes, publicBytes: manifest.files.reduce((sum,file)=>sum+file.bytes,0), manifest };
 }
-export async function stageArchive(destination, base = root) {
+export async function stageArchive(destination, base = root, { request = globalThis.fetch } = {}) {
   const verified = await verifyArchive(base), target = path.resolve(destination);
   demand(target !== path.resolve(base), 'Staging destination must differ from the repository.');
   const disk = await statfs(path.dirname(target));
   demand(disk.bavail * disk.bsize >= 1024 ** 3 + verified.publicBytes, 'Staging must leave at least 1 GiB free.');
   await rm(target, { recursive: true, force: true }); await mkdir(target, { recursive: true });
-  for (const entry of verified.manifest.files) { const output = path.join(target, entry.path); await mkdir(path.dirname(output), { recursive: true }); await copyFile(path.join(base, entry.path), output, constants.COPYFILE_EXCL); }
+  const volumes = JSON.parse(await readFile(path.join(base, 'audio-volumes.json'), 'utf8'));
+  const releases = new Map(
+    volumes.volumes.flatMap((volume) =>
+      volume.assets.map((asset) => [asset.sha256, volume.releaseTag]),
+    ),
+  );
+  for (const entry of verified.manifest.files) {
+    const output = path.join(target, entry.path);
+    await mkdir(path.dirname(output), { recursive: true });
+    try {
+      await copyFile(path.join(base, entry.path), output, constants.COPYFILE_EXCL);
+    } catch (error) {
+      const match = PAGES_AUDIO.exec(entry.path), releaseTag = match && releases.get(match[1]);
+      if (error?.code !== 'ENOENT' || !releaseTag) throw error;
+      const bytes = await releaseAssetBytes(releaseTag, match[1], request);
+      demand(
+        bytes.byteLength === entry.bytes && digest(bytes) === entry.sha256,
+        `Pages audio source differs: ${entry.path}`,
+      );
+      await writeFile(output, bytes, { flag: 'wx' });
+    }
+    await exactFile(target, entry);
+  }
   await copyFile(path.join(base, 'deployment-manifest.json'), path.join(target, 'deployment-manifest.json'));
-  return verifyArchive(target);
+  return verifyArchive(target, { publicStage: true });
 }
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const args = process.argv.slice(2);
