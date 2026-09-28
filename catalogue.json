@@ -5605,8 +5605,9 @@
         }
       },
       "collections": [
-        "synth-second-directions-audition-20260925"
-      ]
+        "Soundtrack Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "davidkbd.quantum-ripples-of-sound",
@@ -6373,8 +6374,9 @@
       },
       "aliases": [],
       "collections": [
-        "metal-purgatory3-audition-20260925"
-      ]
+        "Soundtrack Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "davidkbd.visceral-vengeance",
@@ -6663,8 +6665,9 @@
       },
       "aliases": [],
       "collections": [
-        "metal-energy-audition-20260926"
-      ]
+        "Soundtrack Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "beetlemuse.nox-venator",
@@ -8022,8 +8025,9 @@
       },
       "aliases": [],
       "collections": [
-        "Hit the Womp electro audition"
-      ]
+        "Soundtrack Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "tricks-traps.ripped-apart",
@@ -8178,8 +8182,9 @@
       },
       "aliases": [],
       "collections": [
-        "Lost in the Snow Wave — synthwave audition"
-      ]
+        "Soundtrack Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "of-far-different-nature.bouncer",
@@ -8532,8 +8537,9 @@
       },
       "aliases": [],
       "collections": [
-        "Metallic Mistress industrial-metal audition"
-      ]
+        "Soundtrack Review"
+      ],
+      "visibility": "review-only"
     },
     {
       "id": "clearside.sandblaster",

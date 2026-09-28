@@ -84,8 +84,8 @@ test("legacy archive compatibility objects remain exact canonical catalogue memb
   const preservedFoundation = [...baseGame, ...baseGameReview];
   assert.equal(baseGame.length, 33);
   assert.equal(baseGameReview.length, 37);
-  assert.equal(soundtrackReview.length, 21);
-  assert.equal(review.length, 58);
+  assert.equal(soundtrackReview.length, 27);
+  assert.equal(review.length, 64);
   assert.equal(
     baseGameReview.filter(({ collections }) =>
       collections.includes("Heavy Metal Review"),
@@ -116,6 +116,12 @@ test("legacy archive compatibility objects remain exact canonical catalogue memb
       "alexander-nakarada.riffs-two",
       "alexandr-zhelanov.soul-ripper",
       "zane-little-music.achilles",
+      "davidkbd.the-slicing-strain",
+      "hatmix.lost-in-the-snow-wave",
+      "glitchart-technodono-tricksntraps-davidkbd.hit-the-womp-mix",
+      "davidkbd.time-warp",
+      "foxsynergy.metallic-mistress",
+      "esiltir.calamity",
     ]),
   );
   assert.equal(
@@ -162,7 +168,7 @@ test("every public release-backed recording is materialized in the Pages payload
       visibility !== "review-only" && audio.delivery?.type !== "external-url",
   );
 
-  assert.equal(publicTracks.length, 202);
+  assert.equal(publicTracks.length, 196);
   for (const track of publicTracks) {
     assert.equal(track.audio.path, `objects/${track.audio.sha256}.mp3`);
     assert.deepEqual(files.get(track.audio.path), {
