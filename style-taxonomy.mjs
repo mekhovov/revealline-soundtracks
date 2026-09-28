@@ -1,9 +1,9 @@
 export const STYLE_GROUPS = Object.freeze([
   Object.freeze({ id: "synth", label: "Synth" }),
   Object.freeze({ id: "metal", label: "Metal" }),
-  Object.freeze({ id: "electronic", label: "Electronic" }),
   Object.freeze({ id: "chiptune", label: "Chiptune & 8-bit" }),
   Object.freeze({ id: "rock", label: "Rock" }),
+  Object.freeze({ id: "electronic", label: "Electronic" }),
   Object.freeze({ id: "ambient", label: "Ambient" }),
   Object.freeze({ id: "fusion", label: "Fusion" }),
   Object.freeze({ id: "other", label: "Other" }),

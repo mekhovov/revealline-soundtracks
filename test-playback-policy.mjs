@@ -4,7 +4,7 @@ import { STYLE_GROUPS, stylesOf } from './playback-policy.mjs';
 
 test('player styles are ordered for gameplay while Ukrainian and FPV remain last', () => {
   assert.deepEqual(STYLE_GROUPS.map(([id]) => id), [
-    'synth', 'metal', 'electronic', 'chiptune', 'rock', 'ambient',
+    'synth', 'metal', 'chiptune', 'rock', 'electronic', 'ambient',
     'fusion', 'other', 'ukrainian', 'fpv',
   ]);
 });
