@@ -180,7 +180,10 @@ export async function buildManifest(base = root) {
     files: [...files.values()].sort((a,b)=>a.path.localeCompare(b.path)),
   };
 }
-export async function verifyArchive(base = root) {
+export async function verifyArchive(
+  base = root,
+  { publicStage = false } = {},
+) {
   const catalogueBytes = await readFile(path.join(base, 'catalogue.json'));
   demand(catalogueBytes.length <= 1024 * 1024, 'Catalogue exceeds its byte limit.');
   const catalogue = JSON.parse(catalogueBytes);
@@ -281,7 +284,8 @@ export async function verifyArchive(base = root) {
       'Legacy compatibility object differs.',
     );
     compatibilityHashes.add(file.sha256);
-    await exactFile(base, file);
+    if (publicStage) await exactFileIfPresent(base, file);
+    else await exactFile(base, file);
   }
   const legacyRelease = JSON.parse(
     await readFile(path.join(base, 'legacy/archive-01/release/assets.json'), 'utf8'),
@@ -319,7 +323,10 @@ export async function verifyArchive(base = root) {
     manifest.files.reduce((sum, file) => sum + file.bytes, 0) <= 950 * 1024 * 1024,
     'Public Pages payload exceeds 950 MiB.',
   );
-  for (const entry of manifest.files) await exactFileIfPresent(base, entry);
+  for (const entry of manifest.files) {
+    if (publicStage) await exactFile(base, entry);
+    else await exactFileIfPresent(base, entry);
+  }
   return { tracks: catalogue.tracks.length, compatibilityTracks: compatibilityHashes.size, legacyUnionTracks: legacyUnion.tracks, legacyUnionBytes: legacyUnion.audioBytes, audioBytes, publicBytes: manifest.files.reduce((sum,file)=>sum+file.bytes,0), manifest };
 }
 export async function stageArchive(destination, base = root, { request = globalThis.fetch } = {}) {
@@ -352,7 +359,7 @@ export async function stageArchive(destination, base = root, { request = globalT
     await exactFile(target, entry);
   }
   await copyFile(path.join(base, 'deployment-manifest.json'), path.join(target, 'deployment-manifest.json'));
-  return verifyArchive(target);
+  return verifyArchive(target, { publicStage: true });
 }
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const args = process.argv.slice(2);
