@@ -8,6 +8,7 @@ import { verifyExternalDeliveryMetadata } from './intake/external-url.mjs';
 const root = path.dirname(fileURLToPath(import.meta.url));
 const HASH = /^[a-f0-9]{64}$/;
 const AUDIO_URL = /^https:\/\/github\.com\/mekhovov\/revealline-soundtracks\/releases\/download\/(audio-[a-z0-9-]+)\/([a-f0-9]{64})\.mp3$/;
+const PAGES_AUDIO = /^objects\/([a-f0-9]{64})\.mp3$/;
 const LICENSES = new Map([
   ['https://creativecommons.org/publicdomain/zero/1.0/', { id: 'CC0', version: '1.0', shareAlike: false }],
   ['https://creativecommons.org/licenses/by/3.0/', { id: 'CC-BY', version: '3.0', shareAlike: false }],
@@ -43,6 +44,7 @@ const ROOT_STATIC_FILES = [
   'legacy/archive-02/UPLOAD_GUIDE.md', 'legacy/archive-02/batches.json',
   'legacy/archive-02/catalogue.json', 'legacy/archive-02/deployment-manifest.json',
   'playback-policy.mjs', 'player.mjs', 'review-policy.mjs', 'style.css', 'upload-guide/index.html',
+  'playback-recovery.mjs',
 ];
 const digest = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const demand = (value, message) => { if (!value) throw new Error(message); };
@@ -106,7 +108,17 @@ async function verifyLegacyUnion(catalogue, base) {
 export async function buildManifest(base = root) {
   const files = [];
   const inventory = JSON.parse(await readFile(path.join(base, 'inventory.json'), 'utf8'));
-  const publicFiles = [...ROOT_STATIC_FILES, ...inventory.files.map(({ path: relative }) => relative)];
+  const catalogue = JSON.parse(await readFile(path.join(base, 'catalogue.json'), 'utf8'));
+  const pagesAudio = catalogue.tracks
+    .map((track) => track.audio?.path)
+    .filter((relative) => PAGES_AUDIO.test(relative));
+  const publicFiles = [
+    ...new Set([
+      ...ROOT_STATIC_FILES,
+      ...inventory.files.map(({ path: relative }) => relative),
+      ...pagesAudio,
+    ]),
+  ];
   for (const relative of publicFiles) {
     const file = await ordinaryFile(base, relative), bytes = await readFile(file.absolute);
     files.push({ path: relative, bytes: file.bytes, sha256: digest(bytes) });
@@ -166,11 +178,30 @@ export async function verifyArchive(base = root) {
       );
     demand(track.gameCatalogueAdmission === false && track.default !== true, `Admission boundary differs: ${track.id}`);
     verifyRights(track);
-    const match = AUDIO_URL.exec(track.audio?.path ?? ''), asset = volumeAssets.get(track.audio?.sha256);
+    const match = AUDIO_URL.exec(track.audio?.path ?? ''),
+      pages = PAGES_AUDIO.exec(track.audio?.path ?? ''),
+      asset = volumeAssets.get(track.audio?.sha256);
     if (track.audio?.delivery?.type === 'external-url') {
       const url = verifyExternalDeliveryMetadata(track.audio), entry = externalById.get(track.id);
       demand(entry && entry.url === url.href && entry.host === url.host && entry.bytes === track.audio.bytes && entry.sha256 === track.audio.sha256 && entry.verifiedAt === track.audio.delivery.verifiedAt && !asset, `External audio identity differs: ${track.id}`);
-    } else demand(match && match[2] === track.audio.sha256 && asset?.tag === match[1] && asset?.bytes === track.audio.bytes, `Audio identity differs: ${track.id}`);
+    } else if (pages) {
+      demand(
+        pages[1] === track.audio.sha256 && asset?.bytes === track.audio.bytes,
+        `Pages audio identity differs: ${track.id}`,
+      );
+      await exactFile(base, {
+        path: track.audio.path,
+        bytes: track.audio.bytes,
+        sha256: track.audio.sha256,
+      });
+    } else
+      demand(
+        match &&
+          match[2] === track.audio.sha256 &&
+          asset?.tag === match[1] &&
+          asset?.bytes === track.audio.bytes,
+        `Audio identity differs: ${track.id}`,
+      );
     demand(!hashes.has(track.audio.sha256), `Audio hash collides: ${track.id}`);
     hashes.add(track.audio.sha256); audioBytes += track.audio.bytes;
   }

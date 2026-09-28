@@ -6,6 +6,10 @@ import {
 } from './playback-policy.mjs';
 import { parseFilterURL, serializeFilterURL } from './filter-url.mjs';
 import { REVIEW_ACCESS_KEY, tracksForView } from './review-policy.mjs';
+import {
+  mediaEventBelongsToPlayback,
+  shouldAdvanceAfterMediaFailure,
+} from './playback-recovery.mjs';
 
 const audio = document.querySelector("#audio");
 const now = document.querySelector("#now-playing");
@@ -44,6 +48,9 @@ let queue = [];
 let generation = 0;
 let activeArtist = "";
 let restoringURL = false;
+let activePlayback = null;
+let consecutiveMediaFailures = 0;
+let pendingAdvance = null;
 const failedRows = new Set();
 const styleChecks = new Map();
 
@@ -182,6 +189,7 @@ function updateMediaSession(track) {
 }
 
 function disposePlayback() {
+  activePlayback = null;
   generation += 1;
   audio.pause();
   audio.removeAttribute("src");
@@ -189,7 +197,13 @@ function disposePlayback() {
   audio.load();
 }
 
+function cancelPendingAdvance() {
+  if (pendingAdvance !== null) clearTimeout(pendingAdvance);
+  pendingAdvance = null;
+}
+
 async function play(row, { historyMode = "push" } = {}) {
+  cancelPendingAdvance();
   const request = ++generation;
   if (current) current.removeAttribute("data-active");
   current = row;
@@ -202,7 +216,9 @@ async function play(row, { historyMode = "push" } = {}) {
   audio.pause();
   if (track.audio?.delivery?.type === "external-url") audio.crossOrigin = "anonymous";
   else audio.removeAttribute("crossorigin");
-  audio.src = new URL(track.audio.path, catalogue.archive.baseURL).href;
+  const playbackURL = new URL(track.audio.path, catalogue.archive.baseURL).href;
+  audio.src = playbackURL;
+  activePlayback = { request, row, url: playbackURL };
   audio.load();
   now.textContent = `${track.title} · ${track.artist}`;
   nowSource.replaceChildren();
@@ -253,6 +269,8 @@ function renderTrack(track, index) {
     `Play ${track.title} by ${track.artist}`,
   );
   playButton.addEventListener("click", () => {
+    consecutiveMediaFailures = 0;
+    failedRows.delete(row);
     queue = [];
     void play(row);
     refill({ after: row });
@@ -434,11 +452,13 @@ stylesNone.addEventListener('click', () => {
   syncURL("push");
 });
 playResults.addEventListener("click", () => {
+  consecutiveMediaFailures = 0;
   failedRows.clear();
   queue = buildPlaybackQueue(visible(), { order: order.value === "sequential" ? "ordered" : order.value, current: null });
   next();
 });
 playFoundation.addEventListener("click", () => {
+  consecutiveMediaFailures = 0;
   showOnlyCollection(FOUNDATION_COLLECTION);
   failedRows.clear();
   queue = buildPlaybackQueue(visible(), { order: order.value === "sequential" ? "ordered" : order.value, current: null });
@@ -458,22 +478,54 @@ pause.addEventListener("click", () => {
     });
 });
 audio.addEventListener("play", () => {
+  consecutiveMediaFailures = 0;
   pause.textContent = "Pause";
   status.textContent = "";
 });
 audio.addEventListener("pause", () => {
   pause.textContent = "Resume";
 });
-audio.addEventListener("ended", () => next({ natural: true }));
+audio.addEventListener("ended", () => {
+  if (
+    mediaEventBelongsToPlayback({
+      active: activePlayback,
+      row: current,
+      currentSrc: audio.currentSrc,
+      src: audio.src,
+    })
+  )
+    next({ natural: true });
+});
 audio.addEventListener("error", () => {
-  if (!current) return;
+  if (
+    !mediaEventBelongsToPlayback({
+      active: activePlayback,
+      row: current,
+      currentSrc: audio.currentSrc,
+      src: audio.src,
+    })
+  )
+    return;
   const failed = current;
+  consecutiveMediaFailures += 1;
   failedRows.add(failed);
   disposePlayback();
-  status.textContent = `Could not load ${failed.track.title}. Continuing with another available recording…`;
   current = null;
   if (!queue.length) refill({ after: failed });
-  next();
+  if (
+    shouldAdvanceAfterMediaFailure({
+      consecutiveFailures: consecutiveMediaFailures,
+      remaining: queue.length,
+    })
+  ) {
+    status.textContent = `Could not load ${failed.track.title}. Trying another available recording…`;
+    pendingAdvance = setTimeout(() => {
+      pendingAdvance = null;
+      next();
+    }, 600);
+  } else {
+    status.textContent = `Could not load ${failed.track.title}. Automatic skipping stopped so the player remains usable. Choose another song or press Next.`;
+  }
 });
 shareList.addEventListener("click", async () => {
   const url = serializeFilterURL(location.href, filterState(), [...styleChecks.keys()]).href;

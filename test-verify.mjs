@@ -37,6 +37,10 @@ test("canonical archive preserves migrated identities and release-backed audio",
   );
   assert.equal(trench.licenseURL, null);
   assert.equal(trench.rights.licenseId, "UNKNOWN");
+  assert.equal(
+    trench.audio.path,
+    `objects/${trench.audio.sha256}.mp3`,
+  );
   const duplicate = catalogue.tracks.find(
     ({ id }) => id === "peachtea.last-stand-lets-go.ee3bed8e",
   );
