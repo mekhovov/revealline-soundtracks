@@ -35,7 +35,7 @@ const CURATED_TRACK_METADATA = new Map([
       sha256: '24bfa4c75bcf80b3a81c3329a414221eebb8db650309aeb14935104d7ad36f70',
       tags: [
         'synth90s', 'synthwave', 'outrun', 'electronic', 'racing', 'arcade',
-        'gameplay', 'high energy', 'listening pending',
+        'gameplay', 'high energy', 'owner-approved',
       ],
     },
   ],
@@ -45,7 +45,7 @@ const CURATED_TRACK_METADATA = new Map([
       sha256: '9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9',
       tags: [
         'synth90s', 'synthwave', 'retrowave', 'outrun', 'electronic', 'racing',
-        'gameplay', 'high energy', 'listening pending',
+        'gameplay', 'high energy', 'owner-approved',
       ],
     },
   ],
@@ -55,7 +55,7 @@ const CURATED_TRACK_METADATA = new Map([
       sha256: '991084035ebf50e3a27833148f57de8db7930e54b6ab549162f825efcfeae94d',
       tags: [
         'metal', 'heavy riffs', 'gameplay', 'high energy',
-        'owner-approved direction', 'listening pending',
+        'owner-approved direction', 'owner-approved',
       ],
     },
   ],
@@ -65,7 +65,7 @@ const CURATED_TRACK_METADATA = new Map([
       sha256: 'ccd3b29e315ca6db5871f709baeea9b9a08bc1d5915382f44338d592402e32c0',
       tags: [
         'metal', 'heavy riffs', 'gameplay', 'high energy',
-        'owner-approved direction', 'listening pending',
+        'owner-approved direction', 'owner-approved',
       ],
     },
   ],
@@ -75,7 +75,7 @@ const CURATED_TRACK_METADATA = new Map([
       sha256: 'c3efaac83f71f4fcd9d2e5d3a752507893c1950ac5db6be7bced5e1bb71e2fae',
       tags: [
         'metal', 'heavy riffs', 'gameplay', 'high energy',
-        'owner-approved direction', 'listening pending',
+        'owner-approved direction', 'owner-approved',
       ],
     },
   ],
@@ -86,7 +86,7 @@ const CURATED_TRACK_METADATA = new Map([
       tags: [
         'metal', 'rhythmic metal', 'groove', 'djent', 'industrial metal',
         'combat loop', 'gameplay', 'high energy', 'owner-approved direction',
-        'listening pending',
+        'owner-approved',
       ],
     },
   ],
@@ -97,7 +97,7 @@ const CURATED_TRACK_METADATA = new Map([
       tags: [
         'metal', 'rhythmic metal', 'groove', 'djent', 'doom metal',
         'boss loop', 'boss cue', 'owner-approved direction',
-        'listening pending',
+        'owner-approved',
       ],
     },
   ],
@@ -107,10 +107,24 @@ const CURATED_TRACK_METADATA = new Map([
       sha256: 'd4147214e221be28f19d6c6c38afc8d3cf0289a0dc6ac579b26574a0c571bc58',
       tags: [
         'metal', 'ukrainian', 'Shchedryk adaptation', 'fusion', 'menu',
-        'gameplay', 'owner-approved benchmark', 'listening pending',
+        'gameplay', 'owner-approved benchmark', 'owner-approved',
       ],
     },
   ],
+]);
+const OWNER_APPROVAL = 'owner-approved-2026-09-29';
+const OWNER_APPROVED_TRACKS = new Map([
+  ['bogart-vgm.retroracing-nightlife', '24bfa4c75bcf80b3a81c3329a414221eebb8db650309aeb14935104d7ad36f70'],
+  ['wekont.runner2088', '9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9'],
+  ['davidkbd.agony-space-deep', '991084035ebf50e3a27833148f57de8db7930e54b6ab549162f825efcfeae94d'],
+  ['davidkbd.god-of-darkness', 'ccd3b29e315ca6db5871f709baeea9b9a08bc1d5915382f44338d592402e32c0'],
+  ['davidkbd.suffocation', 'c3efaac83f71f4fcd9d2e5d3a752507893c1950ac5db6be7bced5e1bb71e2fae'],
+  ['yannz.pixel-damnation', 'a4f87f13d432a75d9bd852f88ab575ad1b0bec050e23650cef1c817ad4328bde'],
+  ['yannz.revenges-waiting', 'a5d0198843a7cef37f1919a094e99dc7b33c5fcac799f265eeaac647db9effec'],
+  ['alexander-nakarada.carol-of-the-bells-metal-version', 'd4147214e221be28f19d6c6c38afc8d3cf0289a0dc6ac579b26574a0c571bc58'],
+  ['ukrainian-air-force-band.oi-u-luzi-chervona-kalyna', 'b66443c810c6b660c8a34fcb4c150db3161a1f4c944330c5cec7da38efe8f760'],
+  ['zoretsvit-kalyna.a-v-kryvoho-tantsia', '2a24726d5171a6b297dd1758dc1d874f5ad7582de4d61e514a1b896abc9fc608'],
+  ['kate-orange.oi-khodyt-son', '834a3daa124cca05924f29586d83d98d8a3f0a90fddc5c7e7d42d08e1994a52f'],
 ]);
 const LEGACY_IDENTITY_FIELDS = [
   'title', 'artist', 'durationSeconds', 'tags', 'source', 'fileName', 'archiveId',
@@ -230,6 +244,19 @@ async function verifyLegacyUnion(catalogue, base) {
             migrated.audio?.sha256 === curated.sha256 &&
               JSON.stringify(migrated.tags) === JSON.stringify(curated.tags),
             `Curated recording metadata differs: ${id}`,
+          );
+        } else if (field === 'tags' && OWNER_APPROVED_TRACKS.has(id)) {
+          demand(
+            migrated.audio?.sha256 === OWNER_APPROVED_TRACKS.get(id) &&
+              JSON.stringify(migrated.tags) ===
+                JSON.stringify([...legacy.tags.filter((tag) => tag !== 'listening pending'), 'owner-approved']),
+            `Owner-approved recording tags differ: ${id}`,
+          );
+        } else if (field === 'listeningApproval' && OWNER_APPROVED_TRACKS.has(id)) {
+          demand(
+            migrated.audio?.sha256 === OWNER_APPROVED_TRACKS.get(id) &&
+              migrated.listeningApproval === OWNER_APPROVAL,
+            `Owner-approved recording status differs: ${id}`,
           );
         } else if (field === 'tags' && REMOVED_INCORRECT_FPV_TAGS.has(id)) {
           demand(JSON.stringify(migrated.tags) === JSON.stringify(legacy.tags.filter((tag) => tag.toLowerCase() !== 'fpv')), `Curated recording tags differ: ${id}`);
