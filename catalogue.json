@@ -4895,9 +4895,14 @@
       "durationSeconds": 162.2898,
       "tags": [
         "synth90s",
-        "audition",
-        "listening pending",
-        "gameplay"
+        "synthwave",
+        "outrun",
+        "electronic",
+        "racing",
+        "arcade",
+        "gameplay",
+        "high energy",
+        "listening pending"
       ],
       "source": "https://opengameart.org/content/retroracing-nightlife",
       "license": "CC BY 4.0 International",
@@ -4933,6 +4938,7 @@
         }
       },
       "collections": [
+        "Synthwave & Electro — owner-approved directions",
         "synth-approved-directions-audition-20260925"
       ]
     },
@@ -7775,11 +7781,13 @@
       "durationSeconds": 97.12325,
       "tags": [
         "synth90s",
+        "synthwave",
         "retrowave",
         "outrun",
         "electronic",
+        "racing",
         "gameplay",
-        "audition",
+        "high energy",
         "listening pending"
       ],
       "source": "https://freemusicarchive.org/music/wekont/single/runner2088mp3/",
@@ -7816,6 +7824,7 @@
       },
       "aliases": [],
       "collections": [
+        "Synthwave & Electro — owner-approved directions",
         "runner2088 retrowave audition"
       ]
     },
