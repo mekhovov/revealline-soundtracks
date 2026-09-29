@@ -48,6 +48,29 @@ test("canonical archive preserves migrated identities and release-backed audio",
   assert.ok(bogart.tags.includes("racing"));
   assert.equal(bogart.listeningApproval, "not-reviewed");
   assert.equal(bogart.gameCatalogueAdmission, false);
+  const metalDirections = [
+    "davidkbd.agony-space-deep",
+    "davidkbd.god-of-darkness",
+    "davidkbd.suffocation",
+    "yannz.pixel-damnation",
+    "yannz.revenges-waiting",
+  ].map((id) => catalogue.tracks.find((recording) => recording.id === id));
+  assert.ok(metalDirections.every(Boolean));
+  for (const recording of metalDirections) {
+    assert.ok(
+      recording.collections.includes("Metal — owner-approved directions"),
+    );
+    assert.ok(recording.tags.includes("owner-approved direction"));
+    assert.ok(recording.tags.includes("listening pending"));
+    assert.equal(recording.listeningApproval, "not-reviewed");
+    assert.equal(recording.gameCatalogueAdmission, false);
+    assert.notEqual(recording.default, true);
+  }
+  assert.ok(
+    metalDirections
+      .find(({ id }) => id === "yannz.pixel-damnation")
+      .tags.includes("rhythmic metal"),
+  );
   assert.equal(
     track.audio.sha256,
     "9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9",
