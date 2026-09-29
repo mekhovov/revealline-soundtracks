@@ -71,6 +71,19 @@ test("canonical archive preserves migrated identities and release-backed audio",
       .find(({ id }) => id === "yannz.pixel-damnation")
       .tags.includes("rhythmic metal"),
   );
+  const shchedryk = catalogue.tracks.find(
+    ({ id }) => id === "alexander-nakarada.carol-of-the-bells-metal-version",
+  );
+  assert.deepEqual(shchedryk.collections, [
+    "Ukrainian — owner-approved benchmark",
+    "ukrainian-shchedryk-20260924",
+  ]);
+  assert.ok(shchedryk.tags.includes("Shchedryk adaptation"));
+  assert.ok(shchedryk.tags.includes("owner-approved benchmark"));
+  assert.ok(shchedryk.tags.includes("listening pending"));
+  assert.equal(shchedryk.listeningApproval, "not-reviewed");
+  assert.equal(shchedryk.gameCatalogueAdmission, false);
+  assert.notEqual(shchedryk.default, true);
   assert.equal(
     track.audio.sha256,
     "9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9",

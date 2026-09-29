@@ -3908,9 +3908,13 @@
       "durationSeconds": 270.027755,
       "tags": [
         "metal",
-        "Ukrainian melody",
+        "ukrainian",
         "Shchedryk adaptation",
-        "ukrainian"
+        "fusion",
+        "menu",
+        "gameplay",
+        "owner-approved benchmark",
+        "listening pending"
       ],
       "source": "https://creatorchords.com/music/carol-of-the-bells-metal-version/",
       "license": "CC BY 4.0 International",
@@ -3945,6 +3949,7 @@
         }
       },
       "collections": [
+        "Ukrainian — owner-approved benchmark",
         "ukrainian-shchedryk-20260924"
       ]
     },

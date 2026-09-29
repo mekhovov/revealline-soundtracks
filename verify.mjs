@@ -101,6 +101,16 @@ const CURATED_TRACK_METADATA = new Map([
       ],
     },
   ],
+  [
+    'alexander-nakarada.carol-of-the-bells-metal-version',
+    {
+      sha256: 'd4147214e221be28f19d6c6c38afc8d3cf0289a0dc6ac579b26574a0c571bc58',
+      tags: [
+        'metal', 'ukrainian', 'Shchedryk adaptation', 'fusion', 'menu',
+        'gameplay', 'owner-approved benchmark', 'listening pending',
+      ],
+    },
+  ],
 ]);
 const LEGACY_IDENTITY_FIELDS = [
   'title', 'artist', 'durationSeconds', 'tags', 'source', 'fileName', 'archiveId',
