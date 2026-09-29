@@ -28,6 +28,28 @@ const REMOVED_INCORRECT_FPV_TAGS = new Set([
   'vitalezzz.silver-bullet', 'vitalezzz.devoted-guard',
   'mintodog.heavy-battle-2', 'kistol.untitled-metal-track',
 ]);
+const CURATED_SYNTH_METADATA = new Map([
+  [
+    'bogart-vgm.retroracing-nightlife',
+    {
+      sha256: '24bfa4c75bcf80b3a81c3329a414221eebb8db650309aeb14935104d7ad36f70',
+      tags: [
+        'synth90s', 'synthwave', 'outrun', 'electronic', 'racing', 'arcade',
+        'gameplay', 'high energy', 'listening pending',
+      ],
+    },
+  ],
+  [
+    'wekont.runner2088',
+    {
+      sha256: '9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9',
+      tags: [
+        'synth90s', 'synthwave', 'retrowave', 'outrun', 'electronic', 'racing',
+        'gameplay', 'high energy', 'listening pending',
+      ],
+    },
+  ],
+]);
 const LEGACY_IDENTITY_FIELDS = [
   'title', 'artist', 'durationSeconds', 'tags', 'source', 'fileName', 'archiveId',
   'collection', 'status', 'listeningApproval', 'gameCatalogueAdmission', 'contentId',
@@ -140,6 +162,13 @@ async function verifyLegacyUnion(catalogue, base) {
       for (const field of LEGACY_IDENTITY_FIELDS) {
         if (field === 'source' && CORRECTED_UNKNOWN_RIGHTS.has(id)) {
           demand(migrated.source === TRENCH_ORDERLY_SOURCE, `Corrected creator source differs: ${id}`);
+        } else if (field === 'tags' && CURATED_SYNTH_METADATA.has(id)) {
+          const curated = CURATED_SYNTH_METADATA.get(id);
+          demand(
+            migrated.audio?.sha256 === curated.sha256 &&
+              JSON.stringify(migrated.tags) === JSON.stringify(curated.tags),
+            `Curated synth metadata differs: ${id}`,
+          );
         } else if (field === 'tags' && REMOVED_INCORRECT_FPV_TAGS.has(id)) {
           demand(JSON.stringify(migrated.tags) === JSON.stringify(legacy.tags.filter((tag) => tag.toLowerCase() !== 'fpv')), `Curated recording tags differ: ${id}`);
         } else demand(JSON.stringify(migrated[field]) === JSON.stringify(legacy[field]), `Legacy recording metadata differs: ${id}.${field}`);

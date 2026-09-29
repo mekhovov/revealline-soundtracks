@@ -22,6 +22,32 @@ test("canonical archive preserves migrated identities and release-backed audio",
   assert.equal(track.gameCatalogueAdmission, false);
   assert.equal(track.default, false);
   assert.equal(track.recordingModeEligible, false);
+  assert.deepEqual(track.collections, [
+    "Synthwave & Electro — owner-approved directions",
+    "runner2088 retrowave audition",
+  ]);
+  assert.deepEqual(track.tags, [
+    "synth90s",
+    "synthwave",
+    "retrowave",
+    "outrun",
+    "electronic",
+    "racing",
+    "gameplay",
+    "high energy",
+    "listening pending",
+  ]);
+  const bogart = catalogue.tracks.find(
+    ({ id }) => id === "bogart-vgm.retroracing-nightlife",
+  );
+  assert.deepEqual(bogart.collections, [
+    "Synthwave & Electro — owner-approved directions",
+    "synth-approved-directions-audition-20260925",
+  ]);
+  assert.ok(bogart.tags.includes("synthwave"));
+  assert.ok(bogart.tags.includes("racing"));
+  assert.equal(bogart.listeningApproval, "not-reviewed");
+  assert.equal(bogart.gameCatalogueAdmission, false);
   assert.equal(
     track.audio.sha256,
     "9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9",
