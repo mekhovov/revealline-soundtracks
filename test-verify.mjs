@@ -18,11 +18,12 @@ test("canonical archive preserves migrated identities and release-backed audio",
   const track = catalogue.tracks.find(({ id }) => id === "wekont.runner2088");
   assert.ok(track);
   assert.equal(track.id, "wekont.runner2088");
-  assert.equal(track.listeningApproval, "not-reviewed");
+  assert.equal(track.listeningApproval, "owner-approved-2026-09-29");
   assert.equal(track.gameCatalogueAdmission, false);
   assert.equal(track.default, false);
   assert.equal(track.recordingModeEligible, false);
   assert.deepEqual(track.collections, [
+    "Synthwave & Electro — approved",
     "Synthwave & Electro — owner-approved directions",
     "runner2088 retrowave audition",
   ]);
@@ -35,18 +36,19 @@ test("canonical archive preserves migrated identities and release-backed audio",
     "racing",
     "gameplay",
     "high energy",
-    "listening pending",
+    "owner-approved",
   ]);
   const bogart = catalogue.tracks.find(
     ({ id }) => id === "bogart-vgm.retroracing-nightlife",
   );
   assert.deepEqual(bogart.collections, [
+    "Synthwave & Electro — approved",
     "Synthwave & Electro — owner-approved directions",
     "synth-approved-directions-audition-20260925",
   ]);
   assert.ok(bogart.tags.includes("synthwave"));
   assert.ok(bogart.tags.includes("racing"));
-  assert.equal(bogart.listeningApproval, "not-reviewed");
+  assert.equal(bogart.listeningApproval, "owner-approved-2026-09-29");
   assert.equal(bogart.gameCatalogueAdmission, false);
   const metalDirections = [
     "davidkbd.agony-space-deep",
@@ -60,9 +62,11 @@ test("canonical archive preserves migrated identities and release-backed audio",
     assert.ok(
       recording.collections.includes("Metal — owner-approved directions"),
     );
+    assert.ok(recording.collections.includes("Metal — approved"));
     assert.ok(recording.tags.includes("owner-approved direction"));
-    assert.ok(recording.tags.includes("listening pending"));
-    assert.equal(recording.listeningApproval, "not-reviewed");
+    assert.ok(recording.tags.includes("owner-approved"));
+    assert.ok(!recording.tags.includes("listening pending"));
+    assert.equal(recording.listeningApproval, "owner-approved-2026-09-29");
     assert.equal(recording.gameCatalogueAdmission, false);
     assert.notEqual(recording.default, true);
   }
@@ -75,13 +79,15 @@ test("canonical archive preserves migrated identities and release-backed audio",
     ({ id }) => id === "alexander-nakarada.carol-of-the-bells-metal-version",
   );
   assert.deepEqual(shchedryk.collections, [
+    "Ukrainian — approved",
     "Ukrainian — owner-approved benchmark",
     "ukrainian-shchedryk-20260924",
   ]);
   assert.ok(shchedryk.tags.includes("Shchedryk adaptation"));
   assert.ok(shchedryk.tags.includes("owner-approved benchmark"));
-  assert.ok(shchedryk.tags.includes("listening pending"));
-  assert.equal(shchedryk.listeningApproval, "not-reviewed");
+  assert.ok(shchedryk.tags.includes("owner-approved"));
+  assert.ok(!shchedryk.tags.includes("listening pending"));
+  assert.equal(shchedryk.listeningApproval, "owner-approved-2026-09-29");
   assert.equal(shchedryk.gameCatalogueAdmission, false);
   assert.notEqual(shchedryk.default, true);
   const ukrainianCulturalReview = [
@@ -94,7 +100,9 @@ test("canonical archive preserves migrated identities and release-backed audio",
     assert.ok(
       recording.collections.includes("Ukrainian — cultural review queue"),
     );
-    assert.equal(recording.listeningApproval, "not-reviewed");
+    assert.ok(recording.collections.includes("Ukrainian — approved"));
+    assert.ok(recording.tags.includes("owner-approved"));
+    assert.equal(recording.listeningApproval, "owner-approved-2026-09-29");
     assert.equal(recording.gameCatalogueAdmission, false);
     assert.notEqual(recording.default, true);
   }
