@@ -84,6 +84,20 @@ test("canonical archive preserves migrated identities and release-backed audio",
   assert.equal(shchedryk.listeningApproval, "not-reviewed");
   assert.equal(shchedryk.gameCatalogueAdmission, false);
   assert.notEqual(shchedryk.default, true);
+  const ukrainianCulturalReview = [
+    "ukrainian-air-force-band.oi-u-luzi-chervona-kalyna",
+    "zoretsvit-kalyna.a-v-kryvoho-tantsia",
+    "kate-orange.oi-khodyt-son",
+  ].map((id) => catalogue.tracks.find((recording) => recording.id === id));
+  assert.ok(ukrainianCulturalReview.every(Boolean));
+  for (const recording of ukrainianCulturalReview) {
+    assert.ok(
+      recording.collections.includes("Ukrainian — cultural review queue"),
+    );
+    assert.equal(recording.listeningApproval, "not-reviewed");
+    assert.equal(recording.gameCatalogueAdmission, false);
+    assert.notEqual(recording.default, true);
+  }
   assert.equal(
     track.audio.sha256,
     "9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9",
