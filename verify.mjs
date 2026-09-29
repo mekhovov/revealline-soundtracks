@@ -28,7 +28,7 @@ const REMOVED_INCORRECT_FPV_TAGS = new Set([
   'vitalezzz.silver-bullet', 'vitalezzz.devoted-guard',
   'mintodog.heavy-battle-2', 'kistol.untitled-metal-track',
 ]);
-const CURATED_SYNTH_METADATA = new Map([
+const CURATED_TRACK_METADATA = new Map([
   [
     'bogart-vgm.retroracing-nightlife',
     {
@@ -46,6 +46,58 @@ const CURATED_SYNTH_METADATA = new Map([
       tags: [
         'synth90s', 'synthwave', 'retrowave', 'outrun', 'electronic', 'racing',
         'gameplay', 'high energy', 'listening pending',
+      ],
+    },
+  ],
+  [
+    'davidkbd.agony-space-deep',
+    {
+      sha256: '991084035ebf50e3a27833148f57de8db7930e54b6ab549162f825efcfeae94d',
+      tags: [
+        'metal', 'heavy riffs', 'gameplay', 'high energy',
+        'owner-approved direction', 'listening pending',
+      ],
+    },
+  ],
+  [
+    'davidkbd.god-of-darkness',
+    {
+      sha256: 'ccd3b29e315ca6db5871f709baeea9b9a08bc1d5915382f44338d592402e32c0',
+      tags: [
+        'metal', 'heavy riffs', 'gameplay', 'high energy',
+        'owner-approved direction', 'listening pending',
+      ],
+    },
+  ],
+  [
+    'davidkbd.suffocation',
+    {
+      sha256: 'c3efaac83f71f4fcd9d2e5d3a752507893c1950ac5db6be7bced5e1bb71e2fae',
+      tags: [
+        'metal', 'heavy riffs', 'gameplay', 'high energy',
+        'owner-approved direction', 'listening pending',
+      ],
+    },
+  ],
+  [
+    'yannz.pixel-damnation',
+    {
+      sha256: 'a4f87f13d432a75d9bd852f88ab575ad1b0bec050e23650cef1c817ad4328bde',
+      tags: [
+        'metal', 'rhythmic metal', 'groove', 'djent', 'industrial metal',
+        'combat loop', 'gameplay', 'high energy', 'owner-approved direction',
+        'listening pending',
+      ],
+    },
+  ],
+  [
+    'yannz.revenges-waiting',
+    {
+      sha256: 'a5d0198843a7cef37f1919a094e99dc7b33c5fcac799f265eeaac647db9effec',
+      tags: [
+        'metal', 'rhythmic metal', 'groove', 'djent', 'doom metal',
+        'boss loop', 'boss cue', 'owner-approved direction',
+        'listening pending',
       ],
     },
   ],
@@ -162,12 +214,12 @@ async function verifyLegacyUnion(catalogue, base) {
       for (const field of LEGACY_IDENTITY_FIELDS) {
         if (field === 'source' && CORRECTED_UNKNOWN_RIGHTS.has(id)) {
           demand(migrated.source === TRENCH_ORDERLY_SOURCE, `Corrected creator source differs: ${id}`);
-        } else if (field === 'tags' && CURATED_SYNTH_METADATA.has(id)) {
-          const curated = CURATED_SYNTH_METADATA.get(id);
+        } else if (field === 'tags' && CURATED_TRACK_METADATA.has(id)) {
+          const curated = CURATED_TRACK_METADATA.get(id);
           demand(
             migrated.audio?.sha256 === curated.sha256 &&
               JSON.stringify(migrated.tags) === JSON.stringify(curated.tags),
-            `Curated synth metadata differs: ${id}`,
+            `Curated recording metadata differs: ${id}`,
           );
         } else if (field === 'tags' && REMOVED_INCORRECT_FPV_TAGS.has(id)) {
           demand(JSON.stringify(migrated.tags) === JSON.stringify(legacy.tags.filter((tag) => tag.toLowerCase() !== 'fpv')), `Curated recording tags differ: ${id}`);
