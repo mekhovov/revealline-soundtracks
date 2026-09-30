@@ -157,13 +157,14 @@ Supported values are:
 | `cc-by-4.0`    | Creative Commons Attribution 4.0                          |
 | `cc-by-sa-3.0` | Creative Commons Attribution-ShareAlike 3.0               |
 | `cc-by-sa-4.0` | Creative Commons Attribution-ShareAlike 4.0               |
-| `unknown`      | Uploader-confirmed permission; no open licence is claimed |
+| `unknown`      | Quarantine only; excluded from archive playback and the game |
 
-Use `--license unknown` only when you have separately verified public MP3
-redistribution and browser-game playback permission. Supply the exact evidence
-with `--rights-evidence` when it differs from `--source`. Unknown-licence tracks
-are excluded from Recording mode and the public player does not present
-“unknown” as a reusable licence.
+`--license unknown` retains the intake in quarantine. It does not publish the
+song in the catalogue, public or review lists, direct track links, or the game.
+New local MP3 bytes remain in an unpublished draft volume; keep your originals.
+Metadata remains in the public Git repository. Supply exact licence evidence
+with `--rights-evidence` before requesting publication; an uploader confirmation
+does not turn an unknown licence into an eligible one.
 
 CC BY-SA intake also requires `--derivative-notice` describing any conversion or
 other changes. Preserve every creator-required credit with `--attribution`.
@@ -193,14 +194,18 @@ For each intake, the script:
 3. calculates duration, exact byte size and SHA-256;
 4. generates stable recording metadata, credits, styles and collections;
 5. updates the catalogue and deterministic deployment manifests;
-6. for local audio, uploads SHA-256-named assets to a draft, verifies exact sizes and hashes, then publishes it as a non-latest prerelease for read-only PR checks; for hosted audio, writes exact delivery evidence without copying bytes;
+6. for local audio, uploads SHA-256-named assets to a draft and verifies exact sizes and hashes; known-licence batches become non-latest prereleases for read-only PR checks, while unknown-licence batches stay unpublished; hosted audio writes exact delivery evidence without copying bytes;
 7. creates a `codex/` branch, commits it, pushes it and opens a pull request.
 
-**Public visibility:** with `--open-pr`, MP3 assets become public before the
+**Public visibility:** with `--open-pr`, known-licence MP3 assets become public before the
 catalogue PR is merged. Only upload audio you have permission to redistribute.
 The player and game catalogue still wait for a reviewed merge and deployment.
 Matching existing assets are reused without replacement; conflicting or extra
 assets stop publication. External URL intake does not create a GitHub release.
+Unknown-licence batches remain quarantined after merge and cannot be played.
+The generated Pages catalogue, credits, volume metadata and audio objects omit
+them. Existing public Git history and immutable release assets are preserved;
+this is a playback/deployment exclusion, not deletion or access control for Git.
 
 One intake accepts at most **20 MP3 files** and **64 MiB**. Split larger folders
 into several PRs. The same exact audio hash cannot be silently added twice.

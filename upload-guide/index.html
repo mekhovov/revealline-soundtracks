@@ -230,7 +230,7 @@ git pull --ff-only</code></pre>
               <tr>
                 <td><code>unknown</code></td>
                 <td>
-                  Uploader-confirmed permission. No open licence is claimed.
+                  Quarantine only. Never included in public or review playback, direct links, or the game.
                 </td>
               </tr>
             </tbody>
@@ -250,7 +250,7 @@ git pull --ff-only</code></pre>
             <li>
               Artist, title, styles, collections and rights are generated.
             </li>
-            <li>Hash-named audio assets are uploaded, verified by exact size and SHA-256, then published as a non-latest prerelease.</li>
+            <li>Hash-named audio assets are uploaded and verified by exact size and SHA-256. Known-licence batches become non-latest prereleases; unknown-licence batches stay in unpublished drafts.</li>
             <li>A <code>codex/</code> branch is committed and pushed.</li>
             <li>The catalogue pull request is opened.</li>
             <li>
@@ -258,10 +258,17 @@ git pull --ff-only</code></pre>
             </li>
           </ol>
           <p>
-            <strong>MP3 assets become public before catalogue review.</strong>
+            <strong>Known-licence MP3 assets become public before catalogue review.</strong>
             Only upload audio you have permission to redistribute. The player and
             game catalogue wait for a reviewed merge and deployment. Matching
             assets are reused without replacement; conflicting assets stop publication.
+          </p>
+          <p>
+            <code>--license unknown</code> retains metadata in quarantine without
+            making the songs playable, even after merge. Keep the original files.
+            Pages omits unknown/missing licences and their audio objects. Public
+            Git history and existing immutable release assets remain preserved;
+            this does not make those historical files private.
           </p>
           <p>
             One intake accepts at most <strong>20 MP3s</strong> and

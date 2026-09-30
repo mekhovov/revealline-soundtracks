@@ -1,6 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { spawn } from 'node:child_process';
 import { promoteAudioVolume } from './audio-volume.mjs';
+import { publicVolumeTags } from '../licensing-policy.mjs';
 
 const repo = process.env.GITHUB_REPOSITORY || 'mekhovov/revealline-soundtracks';
 const token = process.env.GH_TOKEN;
@@ -17,7 +18,13 @@ const manifest = JSON.parse(await readFile(new URL('../audio-volumes.json', impo
 if (manifest.format !== 'revealline-soundtrack-audio-volumes.v1' || !Array.isArray(manifest.volumes)) {
   throw new Error('Audio volume manifest is invalid.');
 }
+const catalogue = JSON.parse(await readFile(new URL('../catalogue.json', import.meta.url), 'utf8'));
+const eligible = publicVolumeTags(catalogue, manifest);
 for (const volume of manifest.volumes) {
+  if (!eligible.has(volume.releaseTag)) {
+    console.log(`Preserved ${volume.releaseTag} without promotion; it contains quarantined recordings.`);
+    continue;
+  }
   const action = await promoteAudioVolume(volume, { repo, run });
   console.log(`${action[0].toUpperCase()}${action.slice(1)} ${volume.releaseTag}.`);
 }

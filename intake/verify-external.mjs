@@ -3,6 +3,7 @@ import { lookup } from "node:dns/promises";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { hasPublishedLicense } from "../licensing-policy.mjs";
 import {
   hasMP3Signature,
   isPrivateAddress,
@@ -131,12 +132,15 @@ export async function auditExternalInventory(
 ) {
   const inventory = JSON.parse(await readFile(path.join(base, "external-deliveries.json"), "utf8"));
   demand(inventory.format === "revealline-external-audio-deliveries.v1", "External delivery inventory format differs.");
-  for (const entry of inventory.recordings) {
+  const catalogue = JSON.parse(await readFile(path.join(base, "catalogue.json"), "utf8"));
+  const allowed = new Set(catalogue.tracks.filter(hasPublishedLicense).map((track) => track.id));
+  const recordings = inventory.recordings.filter((entry) => allowed.has(entry.id));
+  for (const entry of recordings) {
     const result = await verifyExternalAudio(entry.url, dependencies);
     demand(result.byteCount === entry.bytes, `External byte count drifted: ${entry.id}`);
     demand(result.sha256 === entry.sha256, `External SHA-256 drifted: ${entry.id}`);
   }
-  return { recordings: inventory.recordings.length };
+  return { recordings: recordings.length };
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url))

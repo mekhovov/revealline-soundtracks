@@ -35,7 +35,7 @@ node intake/add-music.mjs "/absolute/path/to/music" \
   --open-pr
 ```
 
-With `--open-pr`, local MP3 assets become **public before catalogue review**, after
+With `--open-pr`, known-licence local MP3 assets become **public before catalogue review**, after
 exact size and SHA-256 verification. Read-only PR checks can then verify complete
 audio. Merging promotes the same assets and deploys the catalogue; rejected PRs
 never add songs to the public player or game.
@@ -50,7 +50,7 @@ node intake/add-music.mjs \
   --source "https://artist.example/song" \
   --styles "ФПВ,UA" \
   --collections "TRENCH ORDERLY,ФПВ" \
-  --license unknown \
+  --license cc-by-4.0 \
   --confirm-rights \
   --open-pr
 ```
@@ -60,9 +60,11 @@ byte-range capable and free of credentials or expiring signatures. The exact
 URL, final host, byte count, SHA-256 and verification time are committed; audio
 bytes remain on the supplied host.
 
-For uploader-confirmed permission without a published open licence, use
-`--license unknown` and retain the exact permission evidence. This value does not
-claim that other people may reuse the recording.
+Use `--license unknown` only for **quarantine**. Its source metadata is retained
+in Git, and new local audio is held in an unpublished draft volume. It never
+enters the deployed catalogue, player, review view, direct track links or game.
+Keep your original files and obtain recording-specific licence evidence before
+requesting publication. An uploader assertion does not bypass this boundary.
 
 The [browser form](https://mekhovov.github.io/revealline-soundtracks/#add-music)
 can prepare the same metadata and audio as a `.rlintake` package. Finish it with:
@@ -76,7 +78,7 @@ GitHub credentials, so the final authenticated command remains local.
 
 When a PR merges, GitHub Actions verifies and publishes its exact audio assets,
 updates the catalogue and deploys Pages automatically. RevealLine loads the
-canonical catalogue dynamically, so newly merged songs do not need a separate
+licensed catalogue projection dynamically, so newly merged licensed songs do not need a separate
 game change.
 
 Read [the complete guide](UPLOAD_GUIDE.md) for prerequisites, single-file and
@@ -85,7 +87,9 @@ instructions and troubleshooting.
 
 ## Repository layout
 
-- `catalogue.json` — public recording metadata and immutable audio URLs.
+- `catalogue.json` — complete source metadata, including quarantined records.
+- `licensing-policy.mjs` — known-licence eligibility shared by deployment and player.
+- `verify.mjs` — generates the licensed Pages catalogue and inventories without changing source records.
 - `external-deliveries.json` — deterministic hash-bound evidence for hosted MP3s.
 - `intake/add-music.mjs` — local and `.rlintake` intake automation.
 - `batches/` — generated collection pages and evidence.
@@ -99,3 +103,16 @@ repositories to become read-only after the canonical game integration is
 publicly qualified.
 
 Add all new music here.
+
+## Quarantine and historical records
+
+Pages serves a deterministic licensed projection at `catalogue.json`, not the
+complete repository file. Missing/unknown licence records and their Pages MP3
+objects are omitted, including records whose old legacy catalogue incorrectly
+claimed CC0. The 70 known-licensed installer files and their pinned metadata stay
+unchanged. Licensed songs held for musical review remain available in review mode.
+
+This removes playback from the current archive and game integration. It does
+**not** make the public Git repository, old commits or immutable GitHub Release
+assets private or delete them. Those records are preserved for a separate later
+extraction; no replacement repository is created by this change.
