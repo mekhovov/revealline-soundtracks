@@ -23,10 +23,10 @@
     }
   ],
   "counts": {
-    "declaredTracks": 260,
-    "uniqueRecordings": 260,
+    "declaredTracks": 261,
+    "uniqueRecordings": 261,
     "duplicateAliases": 0,
-    "audioBytes": 1221356449
+    "audioBytes": 1225243827
   },
   "tracks": [
     {
@@ -12745,6 +12745,62 @@
         "sha256": "b86f77c8d106596fcbc24e42d58a502b0c7b1576c83b57cd5b889b62a42be4a6"
       },
       "aliases": []
+    },
+    {
+      "id": "wekont.runner2088-game-mix",
+      "title": "runner2088 (Game mix)",
+      "artist": "wekont",
+      "durationSeconds": 97.123265,
+      "tags": [
+        "synth90s",
+        "synthwave",
+        "retrowave",
+        "outrun",
+        "electronic",
+        "racing",
+        "gameplay",
+        "technical derivative",
+        "audition",
+        "listening pending"
+      ],
+      "source": "https://freemusicarchive.org/music/wekont/single/runner2088mp3/",
+      "license": "CC BY 4.0 International",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "runner2088 by wekont. CC BY 4.0 International: https://creativecommons.org/licenses/by/4.0/. Source: https://freemusicarchive.org/music/wekont/single/runner2088mp3/. Changes for Game mix: constant -1.6 dB gain reduction and 320 kb/s MP3 re-encoding; no arrangement or duration changes. Original creator recording preserved unchanged.",
+      "rights": {
+        "licenseId": "CC-BY",
+        "licenseVersion": "4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+        "rightsEvidenceURL": "https://freemusicarchive.org/music/wekont/single/runner2088mp3/",
+        "attribution": "runner2088 by wekont. CC BY 4.0 International: https://creativecommons.org/licenses/by/4.0/. Source: https://freemusicarchive.org/music/wekont/single/runner2088mp3/. Changes for Game mix: constant -1.6 dB gain reduction and 320 kb/s MP3 re-encoding; no arrangement or duration changes. Original creator recording preserved unchanged.",
+        "derivativeChangeNotice": "Derived from the creator-published MP3, SHA-256 9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9. Applied constant -1.6 dB gain reduction and re-encoded stereo MP3 at 44.1 kHz / 320 kb/s with FFmpeg 9.0.2 and libmp3lame. No trimming, looping, dynamic compression, limiting, remix or arrangement change. Original recording remains unchanged. No lossless original was found in the retained intake.",
+        "shareAlike": {
+          "required": false,
+          "deliveryLicenseId": null,
+          "deliveryLicenseVersion": null,
+          "deliveryLicenseURL": null
+        }
+      },
+      "fileName": "runner2088-game-mix.mp3",
+      "archiveId": "runner2088-game-mix-20260930",
+      "collection": "runner2088 Game mix — technical derivative",
+      "collections": [
+        "runner2088 Game mix — technical derivative",
+        "Soundtrack Review"
+      ],
+      "status": "licensed-preview",
+      "listeningApproval": "not-reviewed",
+      "gameCatalogueAdmission": false,
+      "contentId": "unknown",
+      "recordingModeEligible": false,
+      "default": false,
+      "audio": {
+        "path": "objects/528e7ebe15c91bc686ab9cdfadb4085ebd64b907f795282f7f9c817a46c672ba.mp3",
+        "bytes": 3887378,
+        "sha256": "528e7ebe15c91bc686ab9cdfadb4085ebd64b907f795282f7f9c817a46c672ba"
+      },
+      "aliases": [],
+      "visibility": "review-only"
     }
   ]
 }

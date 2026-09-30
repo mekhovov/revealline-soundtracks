@@ -1,0 +1,211 @@
+[
+  {
+    "file": "runner2088-original.mp3",
+    "bytes": 3884999,
+    "sha256": "9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9",
+    "fullFileDecoded": true,
+    "measurement": {
+      "input_i": "-15.34",
+      "input_tp": "0.45",
+      "input_lra": "7.20",
+      "input_thresh": "-25.36",
+      "output_i": "-15.33",
+      "output_tp": "-1.00",
+      "output_lra": "3.70",
+      "output_thresh": "-25.33",
+      "normalization_type": "dynamic",
+      "target_offset": "-0.67"
+    },
+    "decodedFrames": 4283136,
+    "decodedDurationSeconds": 97.12326530612245,
+    "probe": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "mp3",
+          "codec_long_name": "MP3 (MPEG audio layer 3)",
+          "codec_type": "audio",
+          "codec_tag_string": "[0][0][0][0]",
+          "codec_tag": "0x0000",
+          "mime_codec_string": "mp4a.40.34",
+          "sample_fmt": "fltp",
+          "sample_rate": "44100",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bits_per_sample": 0,
+          "initial_padding": 0,
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/14112000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 1370603304,
+          "duration": "97.123250",
+          "bit_rate": "320000",
+          "disposition": {
+            "default": 0,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          }
+        }
+      ],
+      "format": {
+        "filename": "runner2088-original.mp3",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mp3",
+        "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+        "start_time": "0.000000",
+        "duration": "97.123250",
+        "size": "3884999",
+        "bit_rate": "320005",
+        "probe_score": 52,
+        "tags": {
+          "TBPM": "89",
+          "encoded_by": "LAME in FL Studio 20",
+          "date": "2025"
+        }
+      }
+    },
+    "measureCommand": [
+      "ffmpeg",
+      "-hide_banner",
+      "-v",
+      "info",
+      "-xerror",
+      "-nostdin",
+      "-i",
+      "runner2088-original.mp3",
+      "-af",
+      "loudnorm=I=-16:TP=-1:LRA=11:print_format=json",
+      "-f",
+      "null",
+      "-"
+    ]
+  },
+  {
+    "file": "runner2088-game-mix.mp3",
+    "bytes": 3887378,
+    "sha256": "528e7ebe15c91bc686ab9cdfadb4085ebd64b907f795282f7f9c817a46c672ba",
+    "fullFileDecoded": true,
+    "measurement": {
+      "input_i": "-16.94",
+      "input_tp": "-1.14",
+      "input_lra": "7.20",
+      "input_thresh": "-26.96",
+      "output_i": "-15.33",
+      "output_tp": "-1.00",
+      "output_lra": "3.70",
+      "output_thresh": "-25.33",
+      "normalization_type": "dynamic",
+      "target_offset": "-0.67"
+    },
+    "decodedFrames": 4283136,
+    "decodedDurationSeconds": 97.12326530612245,
+    "probe": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "mp3",
+          "codec_long_name": "MP3 (MPEG audio layer 3)",
+          "codec_type": "audio",
+          "codec_tag_string": "[0][0][0][0]",
+          "codec_tag": "0x0000",
+          "mime_codec_string": "mp4a.40.34",
+          "sample_fmt": "fltp",
+          "sample_rate": "44100",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bits_per_sample": 0,
+          "initial_padding": 0,
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/14112000",
+          "start_pts": 353600,
+          "start_time": "0.025057",
+          "duration_ts": 1370603520,
+          "duration": "97.123265",
+          "bit_rate": "320000",
+          "disposition": {
+            "default": 0,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "encoder": "Lavc63.1."
+          }
+        }
+      ],
+      "format": {
+        "filename": "runner2088-game-mix.mp3",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mp3",
+        "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+        "start_time": "0.025057",
+        "duration": "97.123265",
+        "size": "3887378",
+        "bit_rate": "320201",
+        "probe_score": 52,
+        "tags": {
+          "TBPM": "89",
+          "artist": "wekont",
+          "encoder": "Lavf63.1.102",
+          "title": "runner2088 (Game mix)",
+          "encoded_by": "FFmpeg 9.0.2 / libmp3lame; RevealLine technical derivative",
+          "comment": "CC BY 4.0; gain -1.6 dB and MP3 re-encode from original 9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9; no arrangement changes",
+          "date": "2025"
+        }
+      }
+    },
+    "measureCommand": [
+      "ffmpeg",
+      "-hide_banner",
+      "-v",
+      "info",
+      "-xerror",
+      "-nostdin",
+      "-i",
+      "runner2088-game-mix.mp3",
+      "-af",
+      "loudnorm=I=-16:TP=-1:LRA=11:print_format=json",
+      "-f",
+      "null",
+      "-"
+    ]
+  }
+]

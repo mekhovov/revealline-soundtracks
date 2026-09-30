@@ -138,7 +138,8 @@ const LEGACY_IDENTITY_FIELDS = [
 ];
 const ROOT_STATIC_FILES = [
   '.nojekyll', 'CREDITS.md', 'README.md', 'UPLOAD_GUIDE.md', 'audio-volumes.json',
-  'admissions/approved-synth-metal-20260930.json', 'batches.json', 'catalogue.json',
+  'admissions/approved-synth-metal-20260930.json',
+  'admissions/runner2088-game-mix-20260930.json', 'batches.json', 'catalogue.json',
   'external-deliveries.json', 'filter-url.mjs', 'index.html',
   'intake-browser.mjs', 'intake/external-url.mjs', 'intake/package.mjs',
   'inventory.json', 'legacy/README.md', 'legacy/archive-01/CREDITS.md',
@@ -340,6 +341,24 @@ export function verifyApprovedInventory(inventory, catalogue) {
     seen.add(file.sha256);
   }
 }
+export function verifyRunner2088Inventory(inventory, catalogue) {
+  const track = catalogue.tracks.find(({ id }) => id === 'wekont.runner2088-game-mix');
+  const sha256 = '528e7ebe15c91bc686ab9cdfadb4085ebd64b907f795282f7f9c817a46c672ba';
+  demand(
+    track?.audio?.sha256 === sha256 && track.audio.bytes === 3887378 &&
+      track.audio.path === `objects/${sha256}.mp3`,
+    'runner2088 derivative recording identity differs.',
+  );
+  demand(
+    inventory?.format === 'revealline-soundtrack-archive.v1' &&
+      inventory.id === 'runner2088-game-mix-20260930' &&
+      Array.isArray(inventory.files) && inventory.files.length === 1 &&
+      inventory.files[0]?.sha256 === sha256 &&
+      inventory.files[0].bytes === track.audio.bytes &&
+      inventory.files[0].path === track.audio.path,
+    'runner2088 derivative inventory differs.',
+  );
+}
 export async function verifyArchive(
   base = root,
   { publicStage = false } = {},
@@ -426,6 +445,10 @@ export async function verifyArchive(
   demand(hashes.size === volumeAssets.size + externalById.size && externalById.size === catalogue.tracks.filter((track) => track.audio?.delivery?.type === 'external-url').length, 'Audio delivery inventories and catalogue differ.');
   verifyApprovedInventory(
     JSON.parse(await readFile(path.join(base, 'admissions/approved-synth-metal-20260930.json'), 'utf8')),
+    catalogue,
+  );
+  verifyRunner2088Inventory(
+    JSON.parse(await readFile(path.join(base, 'admissions/runner2088-game-mix-20260930.json'), 'utf8')),
     catalogue,
   );
   const inventory = JSON.parse(await readFile(path.join(base, 'inventory.json'), 'utf8'));
