@@ -126,6 +126,11 @@ const OWNER_APPROVED_TRACKS = new Map([
   ['zoretsvit-kalyna.a-v-kryvoho-tantsia', '2a24726d5171a6b297dd1758dc1d874f5ad7582de4d61e514a1b896abc9fc608'],
   ['kate-orange.oi-khodyt-son', '834a3daa124cca05924f29586d83d98d8a3f0a90fddc5c7e7d42d08e1994a52f'],
 ]);
+const APPROVED_SYNTH_METAL_IDS = [
+  'bogart-vgm.retroracing-nightlife', 'wekont.runner2088',
+  'davidkbd.agony-space-deep', 'davidkbd.god-of-darkness',
+  'davidkbd.suffocation', 'yannz.pixel-damnation', 'yannz.revenges-waiting',
+];
 const LEGACY_IDENTITY_FIELDS = [
   'title', 'artist', 'durationSeconds', 'tags', 'source', 'fileName', 'archiveId',
   'collection', 'status', 'listeningApproval', 'gameCatalogueAdmission', 'contentId',
@@ -133,7 +138,8 @@ const LEGACY_IDENTITY_FIELDS = [
 ];
 const ROOT_STATIC_FILES = [
   '.nojekyll', 'CREDITS.md', 'README.md', 'UPLOAD_GUIDE.md', 'audio-volumes.json',
-  'batches.json', 'catalogue.json', 'external-deliveries.json', 'filter-url.mjs', 'index.html',
+  'admissions/approved-synth-metal-20260930.json', 'batches.json', 'catalogue.json',
+  'external-deliveries.json', 'filter-url.mjs', 'index.html',
   'intake-browser.mjs', 'intake/external-url.mjs', 'intake/package.mjs',
   'inventory.json', 'legacy/README.md', 'legacy/archive-01/CREDITS.md',
   'legacy/archive-01/README.md', 'legacy/archive-01/catalogue.json',
@@ -306,6 +312,34 @@ export async function buildManifest(base = root) {
     files: [...files.values()].sort((a,b)=>a.path.localeCompare(b.path)),
   };
 }
+export function verifyApprovedInventory(inventory, catalogue) {
+  demand(
+    inventory?.format === 'revealline-soundtrack-archive.v1' &&
+      inventory.id === 'approved-synth-metal-20260930' &&
+      Array.isArray(inventory.files) &&
+      inventory.files.length === APPROVED_SYNTH_METAL_IDS.length,
+    'Approved soundtrack inventory differs.',
+  );
+  const expected = new Map(APPROVED_SYNTH_METAL_IDS.map((id) => {
+    const track = catalogue.tracks.find((entry) => entry.id === id);
+    demand(
+      track?.audio?.sha256 === OWNER_APPROVED_TRACKS.get(id),
+      `Approved soundtrack recording identity differs: ${id}`,
+    );
+    return [track.audio.sha256, track.audio];
+  }));
+  const seen = new Set();
+  for (const file of inventory.files) {
+    const audio = expected.get(file.sha256);
+    demand(
+      audio && !seen.has(file.sha256) &&
+        file.path === `objects/${file.sha256}.mp3` &&
+        file.path === audio.path && file.bytes === audio.bytes,
+      'Approved soundtrack inventory object differs.',
+    );
+    seen.add(file.sha256);
+  }
+}
 export async function verifyArchive(
   base = root,
   { publicStage = false } = {},
@@ -390,6 +424,10 @@ export async function verifyArchive(
     hashes.add(track.audio.sha256); audioBytes += track.audio.bytes;
   }
   demand(hashes.size === volumeAssets.size + externalById.size && externalById.size === catalogue.tracks.filter((track) => track.audio?.delivery?.type === 'external-url').length, 'Audio delivery inventories and catalogue differ.');
+  verifyApprovedInventory(
+    JSON.parse(await readFile(path.join(base, 'admissions/approved-synth-metal-20260930.json'), 'utf8')),
+    catalogue,
+  );
   const inventory = JSON.parse(await readFile(path.join(base, 'inventory.json'), 'utf8'));
   demand(
     inventory.format === 'revealline-soundtrack-archive.v1' &&

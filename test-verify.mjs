@@ -5,6 +5,7 @@ import {
   buildManifest,
   releaseAssetBytes,
   verifyArchive,
+  verifyApprovedInventory,
 } from "./verify.mjs";
 
 test("canonical archive preserves migrated identities and release-backed audio", async () => {
@@ -299,4 +300,68 @@ test("draft release assets are resolved through the authenticated GitHub API", a
   assert.match(requests[0].url, /releases\/tags\/audio-test$/);
   assert.equal(requests[0].options.headers.Authorization, "Bearer test-token");
   assert.equal(requests[1].options.headers.Accept, "application/octet-stream");
+});
+
+test("approved synth and metal inventory binds only the seven selected exact recordings", async () => {
+  const inventory = JSON.parse(
+    await readFile("admissions/approved-synth-metal-20260930.json", "utf8"),
+  );
+  const catalogue = JSON.parse(await readFile("catalogue.json", "utf8"));
+  verifyApprovedInventory(inventory, catalogue);
+  assert.equal(inventory.files.length, 7);
+  for (const file of inventory.files) {
+    const track = catalogue.tracks.find(
+      ({ audio }) => audio.sha256 === file.sha256,
+    );
+    assert.ok(track);
+    assert.notEqual(track.visibility, "review-only");
+    assert.equal(track.listeningApproval, "owner-approved-2026-09-29");
+    assert.equal(track.gameCatalogueAdmission, false);
+    assert.notEqual(track.default, true);
+    assert.equal(track.rights.licenseId, "CC-BY");
+    assert.equal(track.recordingModeEligible, false);
+  }
+});
+
+test("approved inventory rejects altered, repeated and unrelated recording identities", async () => {
+  const original = JSON.parse(
+    await readFile("admissions/approved-synth-metal-20260930.json", "utf8"),
+  );
+  const catalogue = JSON.parse(await readFile("catalogue.json", "utf8"));
+  for (const mutate of [
+    (value) => {
+      value.files[0].bytes += 1;
+    },
+    (value) => {
+      value.files[0].sha256 = "f".repeat(64);
+    },
+    (value) => {
+      value.files[0].path = "../objects/song.mp3";
+    },
+    (value) => {
+      value.files[0] = value.files[1];
+    },
+    (value) => {
+      value.files.pop();
+    },
+    (value) => {
+      value.files[0] = catalogue.tracks.find(
+        ({ id }) => id === "davidkbd.desolation",
+      ).audio;
+    },
+  ]) {
+    const inventory = structuredClone(original);
+    mutate(inventory);
+    assert.throws(
+      () => verifyApprovedInventory(inventory, catalogue),
+      /Approved soundtrack inventory/,
+    );
+  }
+  const alteredCatalogue = structuredClone(catalogue);
+  alteredCatalogue.tracks.find(({ id }) => id === "wekont.runner2088").audio.sha256 =
+    "f".repeat(64);
+  assert.throws(
+    () => verifyApprovedInventory(original, alteredCatalogue),
+    /recording identity differs/,
+  );
 });
