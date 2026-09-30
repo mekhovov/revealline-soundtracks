@@ -131,6 +131,14 @@ const APPROVED_SYNTH_METAL_IDS = [
   'davidkbd.agony-space-deep', 'davidkbd.god-of-darkness',
   'davidkbd.suffocation', 'yannz.pixel-damnation', 'yannz.revenges-waiting',
 ];
+const METAL_NEXT_RECORDINGS = [
+  ['davidkbd.solar-storm', 'f970376312c518988ce53f963432c2bd86b039655a80ca0118a33bf2a3515fec', 7234081],
+  ['davidkbd.galactic-battle', '263567383813e1cfa75952436e1eb9cbfa2556a73d60499da0cccb0a5f0c3343', 7243276],
+  ['davidkbd.orbital-assault', '89c01c9f646c48bd6a1656bfa45a4b5af28a766b1d5f155f104a7902f628b5d9', 5954290],
+  ['davidkbd.mutilations-melody', '00bcd6d67615f6dfa51cd1e03361a3fc8de7a742aec1ca9336ed56bfe231228c', 4264899],
+  ['davidkbd.bone-grinders-ballad', 'e8c8670b02b6322c19e37ac993a7713a631af93a0bb997a0ef9c1e75c926ea04', 4015795],
+  ['davidkbd.city-limits-crash', '7cc21044e1c8b23b9e71af8bf5a9d143ca8de8b6e8898fe930bc78811493a442', 3330342],
+];
 const LEGACY_IDENTITY_FIELDS = [
   'title', 'artist', 'durationSeconds', 'tags', 'source', 'fileName', 'archiveId',
   'collection', 'status', 'listeningApproval', 'gameCatalogueAdmission', 'contentId',
@@ -139,6 +147,7 @@ const LEGACY_IDENTITY_FIELDS = [
 const ROOT_STATIC_FILES = [
   '.nojekyll', 'CREDITS.md', 'README.md', 'UPLOAD_GUIDE.md', 'audio-volumes.json',
   'admissions/approved-synth-metal-20260930.json',
+  'admissions/metal-next-20260930.json',
   'admissions/runner2088-game-mix-20260930.json', 'batches.json', 'catalogue.json',
   'external-deliveries.json', 'filter-url.mjs', 'index.html',
   'intake-browser.mjs', 'intake/external-url.mjs', 'intake/package.mjs',
@@ -359,6 +368,31 @@ export function verifyRunner2088Inventory(inventory, catalogue) {
     'runner2088 derivative inventory differs.',
   );
 }
+export function verifyMetalNextInventory(inventory, catalogue) {
+  demand(
+    inventory?.format === 'revealline-soundtrack-archive.v1' &&
+      inventory.id === 'metal-next-20260930' &&
+      Array.isArray(inventory.files) &&
+      inventory.files.length === METAL_NEXT_RECORDINGS.length,
+    'Next metal inventory differs.',
+  );
+  for (const [index, [id, sha256, bytes]] of METAL_NEXT_RECORDINGS.entries()) {
+    const tracks = catalogue.tracks.filter((track) => track.id === id);
+    const track = tracks[0];
+    const audioPath = `objects/${sha256}.mp3`;
+    demand(
+      tracks.length === 1 && track.visibility !== 'review-only' &&
+        track.audio?.sha256 === sha256 && track.audio.bytes === bytes &&
+        track.audio.path === audioPath,
+      `Next metal recording identity or public visibility differs: ${id}`,
+    );
+    const file = inventory.files[index];
+    demand(
+      file?.sha256 === sha256 && file.bytes === bytes && file.path === audioPath,
+      `Next metal inventory object differs: ${id}`,
+    );
+  }
+}
 export async function verifyArchive(
   base = root,
   { publicStage = false } = {},
@@ -449,6 +483,10 @@ export async function verifyArchive(
   );
   verifyRunner2088Inventory(
     JSON.parse(await readFile(path.join(base, 'admissions/runner2088-game-mix-20260930.json'), 'utf8')),
+    catalogue,
+  );
+  verifyMetalNextInventory(
+    JSON.parse(await readFile(path.join(base, 'admissions/metal-next-20260930.json'), 'utf8')),
     catalogue,
   );
   const inventory = JSON.parse(await readFile(path.join(base, 'inventory.json'), 'utf8'));

@@ -1,0 +1,36 @@
+{
+  "format": "revealline-soundtrack-archive.v1",
+  "id": "metal-next-20260930",
+  "files": [
+    {
+      "path": "objects/f970376312c518988ce53f963432c2bd86b039655a80ca0118a33bf2a3515fec.mp3",
+      "bytes": 7234081,
+      "sha256": "f970376312c518988ce53f963432c2bd86b039655a80ca0118a33bf2a3515fec"
+    },
+    {
+      "path": "objects/263567383813e1cfa75952436e1eb9cbfa2556a73d60499da0cccb0a5f0c3343.mp3",
+      "bytes": 7243276,
+      "sha256": "263567383813e1cfa75952436e1eb9cbfa2556a73d60499da0cccb0a5f0c3343"
+    },
+    {
+      "path": "objects/89c01c9f646c48bd6a1656bfa45a4b5af28a766b1d5f155f104a7902f628b5d9.mp3",
+      "bytes": 5954290,
+      "sha256": "89c01c9f646c48bd6a1656bfa45a4b5af28a766b1d5f155f104a7902f628b5d9"
+    },
+    {
+      "path": "objects/00bcd6d67615f6dfa51cd1e03361a3fc8de7a742aec1ca9336ed56bfe231228c.mp3",
+      "bytes": 4264899,
+      "sha256": "00bcd6d67615f6dfa51cd1e03361a3fc8de7a742aec1ca9336ed56bfe231228c"
+    },
+    {
+      "path": "objects/e8c8670b02b6322c19e37ac993a7713a631af93a0bb997a0ef9c1e75c926ea04.mp3",
+      "bytes": 4015795,
+      "sha256": "e8c8670b02b6322c19e37ac993a7713a631af93a0bb997a0ef9c1e75c926ea04"
+    },
+    {
+      "path": "objects/7cc21044e1c8b23b9e71af8bf5a9d143ca8de8b6e8898fe930bc78811493a442.mp3",
+      "bytes": 3330342,
+      "sha256": "7cc21044e1c8b23b9e71af8bf5a9d143ca8de8b6e8898fe930bc78811493a442"
+    }
+  ]
+}

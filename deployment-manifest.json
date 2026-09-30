@@ -13,6 +13,11 @@
       "sha256": "64f0e2ac28718af710fc20702519dfa171fe4020a56037242795027c8f1d5caa"
     },
     {
+      "path": "admissions/metal-next-20260930.json",
+      "bytes": 1383,
+      "sha256": "9e92ce2757f17568ff9753be21f07268314490153520273eb2034ef06534c560"
+    },
+    {
       "path": "admissions/runner2088-game-mix-20260930.json",
       "bytes": 322,
       "sha256": "16e36e2316a0b9685bcae326f03c30191823a86064f3e94d9b3aab08129ee6e8"
