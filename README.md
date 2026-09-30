@@ -102,7 +102,10 @@ Release assets. Exact legacy metadata and evidence allow the two old archive
 repositories to become read-only after the canonical game integration is
 publicly qualified.
 
-Add all new music here.
+Add licensed game soundtracks here. The separately enabled
+[FPV archive](https://github.com/mekhovov/revealline-soundtracks-fpv) owns the
+73 recordings transferred on 1 October 2026; it is not part of the game's default
+main catalogue.
 
 ## Quarantine and historical records
 
@@ -114,5 +117,15 @@ unchanged. Licensed songs held for musical review remain available in review mod
 
 This removes playback from the current archive and game integration. It does
 **not** make the public Git repository, old commits or immutable GitHub Release
-assets private or delete them. Those records are preserved for a separate later
-extraction; no replacement repository is created by this change.
+assets private or delete them. The transferred recordings have been removed from
+the current catalogue, active volume listings and checked-in MP3 objects. Their
+exact identities remain in the source-only
+[transfer receipt](migrations/fpv-20261001/inventory.json). Original commits and
+immutable release assets are retained as historical evidence. Seven legacy
+Archive 02 records are accounted for by this receipt; the other 187 historical
+recordings and all 70 licensed installer bindings remain here unchanged.
+
+The FPV site is a separate catalogue. In a game version supporting Music sources,
+add `https://mekhovov.github.io/revealline-soundtracks-fpv/` explicitly, then choose
+that source alone or mix it with this archive. Source separation does not change
+a recording's licence or grant Recording-mode, download or export permission.

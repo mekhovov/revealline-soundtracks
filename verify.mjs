@@ -5,6 +5,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { verifyExternalDeliveryMetadata } from './intake/external-url.mjs';
 import { hasPublishedLicense, projectCatalogue } from './licensing-policy.mjs';
+import { assertNoTransferredRecordings, transferredRecordings } from './source-transfer.mjs';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const HASH = /^[a-f0-9]{64}$/;
@@ -242,7 +243,7 @@ async function verifyLegacyUnion(catalogue, base) {
     JSON.parse(await readFile(path.join(base, 'legacy/archive-01/catalogue.json'), 'utf8')),
     JSON.parse(await readFile(path.join(base, 'legacy/archive-02/catalogue.json'), 'utf8')),
   ];
-  demand(sources.every(({ tracks }) => Array.isArray(tracks)) && sources[0].tracks.length === 163 && sources[1].tracks.length === 31, 'Legacy catalogue evidence differs.');
+  demand(sources.every(({ tracks }) => Array.isArray(tracks)) && sources[0].tracks.length === 163 && sources[1].tracks.length === 24, 'Legacy catalogue evidence differs.');
   const canonical = new Map(catalogue.tracks.map((track) => [track.id, track]));
   const mappedIds = new Set(), hashes = new Set(); let tracks = 0, audioBytes = 0;
   for (const source of sources) {
@@ -287,8 +288,11 @@ async function verifyLegacyUnion(catalogue, base) {
       hashes.add(legacy.audio.sha256); audioBytes += legacy.audio.bytes; tracks += 1;
     }
   }
-  demand(tracks === 194 && mappedIds.size === 194, 'Legacy union size differs.');
-  demand(hashes.size === 194 && audioBytes <= catalogue.counts?.audioBytes, 'Legacy audio preservation differs.');
+  const transfers = (await transferredRecordings()).filter((entry) => CORRECTED_UNKNOWN_RIGHTS.has(entry.id));
+  demand(transfers.length === 7 && tracks + transfers.length === 194 && mappedIds.size === 187, 'Legacy union and FPV transfer size differ.');
+  demand(hashes.size === 187 && audioBytes <= catalogue.counts?.audioBytes &&
+    audioBytes + transfers.reduce((sum, entry) => sum + entry.bytes, 0) === 1032879700,
+    'Legacy audio preservation and FPV transfer differ.');
   return { tracks, audioBytes };
 }
 const jsonBytes = (value) => Buffer.from(`${JSON.stringify(value, null, 2)}\n`);
@@ -485,6 +489,7 @@ export async function verifyArchive(
   demand(Array.isArray(catalogue.tracks) && catalogue.tracks.length <= 512, 'Catalogue track limit exceeded.');
   const volumes = JSON.parse(await readFile(path.join(base, 'audio-volumes.json'), 'utf8'));
   demand(volumes.format === 'revealline-soundtrack-audio-volumes.v1' && Array.isArray(volumes.volumes), 'Audio volumes differ.');
+  await assertNoTransferredRecordings(catalogue, volumes);
   const volumeAssets = new Map();
   for (const volume of volumes.volumes) {
     demand(/^audio-[a-z0-9-]+$/.test(volume.releaseTag) && Array.isArray(volume.assets) && volume.assets.length <= 1000, 'Audio volume identity differs.');
