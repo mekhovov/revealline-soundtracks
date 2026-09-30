@@ -133,7 +133,8 @@ const LEGACY_IDENTITY_FIELDS = [
 ];
 const ROOT_STATIC_FILES = [
   '.nojekyll', 'CREDITS.md', 'README.md', 'UPLOAD_GUIDE.md', 'audio-volumes.json',
-  'batches.json', 'catalogue.json', 'external-deliveries.json', 'filter-url.mjs', 'index.html',
+  'admissions/approved-synth-metal-20260930.json', 'batches.json', 'catalogue.json',
+  'external-deliveries.json', 'filter-url.mjs', 'index.html',
   'intake-browser.mjs', 'intake/external-url.mjs', 'intake/package.mjs',
   'inventory.json', 'legacy/README.md', 'legacy/archive-01/CREDITS.md',
   'legacy/archive-01/README.md', 'legacy/archive-01/catalogue.json',

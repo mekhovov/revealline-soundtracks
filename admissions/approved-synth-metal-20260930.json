@@ -1,0 +1,41 @@
+{
+  "format": "revealline-soundtrack-archive.v1",
+  "id": "approved-synth-metal-20260930",
+  "files": [
+    {
+      "path": "objects/24bfa4c75bcf80b3a81c3329a414221eebb8db650309aeb14935104d7ad36f70.mp3",
+      "bytes": 5199456,
+      "sha256": "24bfa4c75bcf80b3a81c3329a414221eebb8db650309aeb14935104d7ad36f70"
+    },
+    {
+      "path": "objects/991084035ebf50e3a27833148f57de8db7930e54b6ab549162f825efcfeae94d.mp3",
+      "bytes": 9048860,
+      "sha256": "991084035ebf50e3a27833148f57de8db7930e54b6ab549162f825efcfeae94d"
+    },
+    {
+      "path": "objects/9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9.mp3",
+      "bytes": 3884999,
+      "sha256": "9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9"
+    },
+    {
+      "path": "objects/a4f87f13d432a75d9bd852f88ab575ad1b0bec050e23650cef1c817ad4328bde.mp3",
+      "bytes": 4302515,
+      "sha256": "a4f87f13d432a75d9bd852f88ab575ad1b0bec050e23650cef1c817ad4328bde"
+    },
+    {
+      "path": "objects/a5d0198843a7cef37f1919a094e99dc7b33c5fcac799f265eeaac647db9effec.mp3",
+      "bytes": 1538133,
+      "sha256": "a5d0198843a7cef37f1919a094e99dc7b33c5fcac799f265eeaac647db9effec"
+    },
+    {
+      "path": "objects/c3efaac83f71f4fcd9d2e5d3a752507893c1950ac5db6be7bced5e1bb71e2fae.mp3",
+      "bytes": 6880488,
+      "sha256": "c3efaac83f71f4fcd9d2e5d3a752507893c1950ac5db6be7bced5e1bb71e2fae"
+    },
+    {
+      "path": "objects/ccd3b29e315ca6db5871f709baeea9b9a08bc1d5915382f44338d592402e32c0.mp3",
+      "bytes": 6281970,
+      "sha256": "ccd3b29e315ca6db5871f709baeea9b9a08bc1d5915382f44338d592402e32c0"
+    }
+  ]
+}
