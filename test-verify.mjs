@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 import { tracksForView } from "./review-policy.mjs";
@@ -8,6 +9,7 @@ import {
   verifyArchive,
   verifyApprovedInventory,
   verifyRunner2088Inventory,
+  verifyMetalNextInventory,
 } from "./verify.mjs";
 
 test("canonical archive preserves migrated identities and release-backed audio", async () => {
@@ -402,6 +404,81 @@ test("runner2088 derivative remains a separate review-only recording with exact 
   assert.ok(Number(derivative.measurement.input_i) >= -17);
   assert.ok(Number(derivative.measurement.input_i) <= -15);
   assert.ok(Number(derivative.measurement.input_tp) <= -1);
+});
+
+test("next metal inventory publishes the six pinned recordings without admission or approval", async () => {
+  const bytes = await readFile("admissions/metal-next-20260930.json");
+  const inventory = JSON.parse(bytes);
+  const catalogue = JSON.parse(await readFile("catalogue.json", "utf8"));
+  const before = structuredClone(catalogue);
+  verifyMetalNextInventory(inventory, catalogue);
+  assert.equal(bytes.length, 1383);
+  assert.equal(
+    createHash("sha256").update(bytes).digest("hex"),
+    "9e92ce2757f17568ff9753be21f07268314490153520273eb2034ef06534c560",
+  );
+  const tracks = inventory.files.map((file) => catalogue.tracks.find(
+    ({ audio }) => audio.sha256 === file.sha256,
+  ));
+  assert.deepEqual(tracks.map(({ id }) => id), [
+    "davidkbd.solar-storm", "davidkbd.galactic-battle",
+    "davidkbd.orbital-assault", "davidkbd.mutilations-melody",
+    "davidkbd.bone-grinders-ballad", "davidkbd.city-limits-crash",
+  ]);
+  for (const track of tracks) {
+    assert.notEqual(track.visibility, "review-only");
+    assert.equal(track.listeningApproval, "not-reviewed");
+    assert.equal(track.gameCatalogueAdmission, false);
+    assert.equal(track.default, false);
+    assert.equal(track.recordingModeEligible, false);
+  }
+  assert.deepEqual(catalogue, before);
+  const manifest = await buildManifest();
+  assert.deepEqual(
+    manifest.files.find(({ path }) => path === "admissions/metal-next-20260930.json"),
+    {
+      path: "admissions/metal-next-20260930.json", bytes: 1383,
+      sha256: "9e92ce2757f17568ff9753be21f07268314490153520273eb2034ef06534c560",
+    },
+  );
+});
+
+test("next metal inventory rejects identity, membership and review-only substitutions", async () => {
+  const original = JSON.parse(await readFile("admissions/metal-next-20260930.json", "utf8"));
+  const catalogue = JSON.parse(await readFile("catalogue.json", "utf8"));
+  const hidden = catalogue.tracks.find(({ id }) => id === "davidkbd.the-slicing-strain");
+  assert.equal(hidden.visibility, "review-only");
+  for (const mutate of [
+    (value) => { value.format = "other-format"; },
+    (value) => { value.id = "other-batch"; },
+    (value) => { value.files.pop(); },
+    (value) => { value.files.push(value.files[0]); },
+    (value) => { value.files[0] = value.files[1]; },
+    (value) => { value.files[0] = hidden.audio; },
+    (value) => { value.files[0].bytes += 1; },
+    (value) => { value.files[0].sha256 = "f".repeat(64); },
+    (value) => { value.files[0].path = "../objects/song.mp3"; },
+  ]) {
+    const inventory = structuredClone(original);
+    mutate(inventory);
+    assert.throws(() => verifyMetalNextInventory(inventory, catalogue), /Next metal inventory/);
+  }
+  for (const file of original.files) {
+    for (const mutate of [
+      (track) => { track.id = "substituted-recording"; },
+      (track) => { track.audio.sha256 = "f".repeat(64); },
+      (track) => { track.audio.bytes += 1; },
+      (track) => { track.audio.path = "objects/other.mp3"; },
+      (track) => { track.visibility = "review-only"; },
+    ]) {
+      const altered = structuredClone(catalogue);
+      mutate(altered.tracks.find(({ audio }) => audio.sha256 === file.sha256));
+      assert.throws(() => verifyMetalNextInventory(original, altered), /recording identity or public visibility differs/);
+    }
+  }
+  const duplicate = structuredClone(catalogue);
+  duplicate.tracks.push(duplicate.tracks.find(({ id }) => id === "davidkbd.solar-storm"));
+  assert.throws(() => verifyMetalNextInventory(original, duplicate), /recording identity or public visibility differs/);
 });
 
 test("runner2088 derivative inventory rejects original substitution and changed identity", async () => {
