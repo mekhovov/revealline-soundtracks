@@ -1194,8 +1194,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3620,
-      "sha256": "e893e81867807586c10c2b173c6b81ed7803e73d5b4c8a4aba7ec5296a54de35"
+      "bytes": 3929,
+      "sha256": "cdc74aa7074b2d261442488732dda524dbaa6921575f1ef675df13f6bef7fe24"
     },
     {
       "path": "review-policy.mjs",
@@ -1214,13 +1214,13 @@
     },
     {
       "path": "UPLOAD_GUIDE.md",
-      "bytes": 10285,
-      "sha256": "3b6e56823888d5f512987cff96072f75f72eed872fad0b6b006bda288de35b1f"
+      "bytes": 10802,
+      "sha256": "eb0961c61e9015d5cee2f3f35a264696eebf897900b0dd5a562532d032ed0f23"
     },
     {
       "path": "upload-guide/index.html",
-      "bytes": 10400,
-      "sha256": "3a9622b0e14ce4dd94b4c929243b6990be0a411c88bcb355a0fd632a921c9d2f"
+      "bytes": 10863,
+      "sha256": "54c128b4688d6fed99b2c7c7dccdfa429b279efa89e3718bbbea8c205b206efe"
     }
   ]
 }

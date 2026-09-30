@@ -19,6 +19,7 @@ import { buildManifest, verifyArchive } from "../verify.mjs";
 import { readIntakePackage } from "./package.mjs";
 import { validateExternalAudioURL } from "./external-url.mjs";
 import { verifyExternalAudio } from "./verify-external.mjs";
+import { assertReleaseVolume, RELEASE_VOLUME_FIELDS } from "./audio-volume.mjs";
 
 const repository = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
 const MAX_TRACK_BYTES = 100_000_000;
@@ -113,7 +114,7 @@ Metadata options:
   --attribution <text>          Exact required credit
   --rights-evidence <https-url> Exact licence/permission evidence
   --derivative-notice <text>    Required for CC BY-SA intake
-  --open-pr                     Commit, push and open an archive PR
+  --open-pr                     Publish verified audio, commit/push and open a PR
   -h, --help                    Show this help
 
 One intake accepts at most 20 MP3 files and 64 MiB. A source or video URL is
@@ -122,7 +123,9 @@ confirmation; it is not an open licence. Run this command only in a clean canoni
 checkout. A browser-created .rlintake package already contains the required
 metadata and either exact MP3 bytes or verified external URL evidence; do not repeat
 metadata options. Hosted URLs must support public CORS, HEAD and byte ranges and
-must not be presigned or otherwise expiring.`;
+must not be presigned or otherwise expiring. With --open-pr, local MP3 assets
+become public in a verified prerelease before catalogue review. The public player
+and game catalogue change only after the PR is merged and deployed.`;
 
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
 const demand = (value, message) => {
@@ -774,39 +777,68 @@ export async function withPackagedIntake(
   }
 }
 
-async function prepareDraftVolume(batch) {
+export async function preparePublicVolume(
+  batch,
+  { runCommand = run, temporaryRoot = os.tmpdir() } = {},
+) {
+  const repo = "mekhovov/revealline-soundtracks";
   const tag = `audio-${batch.batchId}`;
-  let exists = true;
-  try {
-    await run("gh", ["release", "view", tag, "--json", "isDraft"], { capture: true });
-  } catch {
-    exists = false;
-  }
-  if (!exists)
-    await run("gh", [
-      "release",
-      "create",
-      tag,
-      "--draft",
-      "--target",
-      "main",
-      "--title",
-      `${batch.title} · immutable audio volume`,
-      "--notes",
-      "Exact SHA-256-named MP3 assets. Catalogue publication remains subject to pull-request review.",
+  const volume = {
+    releaseTag: tag,
+    assets: batch.tracks.map((track) => {
+      demand(hash(track.bytes) === track.sha256, `Local audio hash differs: ${track.sha256}`);
+      return { sha256: track.sha256, bytes: track.bytes.length };
+    }),
+  };
+  assertReleaseVolume(
+    { tagName: tag, isDraft: true, isPrerelease: false, assets: [] },
+    volume,
+    { allowMissing: true },
+  );
+  const gh = (args) => runCommand("gh", [...args, "--repo", repo], { capture: true });
+  const view = async () => JSON.parse(await gh([
+    "release", "view", tag, "--json", RELEASE_VOLUME_FIELDS,
+  ]));
+  // A successful list distinguishes absence from authentication/network failures.
+  // A concurrent creation still fails safely: uploads never use --clobber.
+  const releases = JSON.parse(await gh([
+    "release", "list", "--limit", "1000", "--json", "tagName",
+  ]));
+  demand(Array.isArray(releases), "Could not list audio releases.");
+  if (!releases.some((release) => release.tagName === tag))
+    await gh([
+      "release", "create", tag, "--draft", "--target", "main", "--title",
+      `${batch.title} · immutable audio volume`, "--notes",
+      "Exact SHA-256-named MP3 assets. Published for read-only PR verification before catalogue admission; listening and game-default approval remain separate.",
     ]);
-  const temporary = await mkdtemp(path.join(os.tmpdir(), "revealline-release-assets-"));
-  try {
-    const assets = [];
-    for (const track of batch.tracks) {
-      const target = path.join(temporary, `${track.sha256}.mp3`);
-      await writeFile(target, track.bytes, { flag: "wx" });
-      assets.push(target);
+  let release = await view();
+  const { missingAssets } = assertReleaseVolume(release, volume, { allowMissing: true });
+  if (missingAssets.length) {
+    const temporary = await mkdtemp(path.join(temporaryRoot, "revealline-release-assets-"));
+    try {
+      const tracks = new Map(batch.tracks.map((track) => [track.sha256, track]));
+      const assets = [];
+      for (const asset of missingAssets) {
+        const target = path.join(temporary, `${asset.sha256}.mp3`);
+        await writeFile(target, tracks.get(asset.sha256).bytes, { flag: "wx" });
+        assets.push(target);
+      }
+      await gh(["release", "upload", tag, ...assets]);
+    } finally {
+      await rm(temporary, { recursive: true, force: true });
     }
-    await run("gh", ["release", "upload", tag, ...assets]);
-  } finally {
-    await rm(temporary, { recursive: true, force: true });
+    release = await view();
   }
+  assertReleaseVolume(release, volume);
+  if (release.isDraft) {
+    await gh([
+      "release", "edit", tag, "--draft=false", "--prerelease=true", "--latest=false",
+    ]);
+    release = await view();
+    assertReleaseVolume(release, volume);
+    demand(!release.isDraft && release.isPrerelease, `Audio prerelease was not published: ${tag}`);
+  }
+  return volume;
 }
 
 async function openPullRequest(batch) {
@@ -833,13 +865,13 @@ async function openPullRequest(batch) {
   ]);
   await run("git", ["diff", "--cached", "--check"]);
   await run("git", ["commit", "-m", `Add ${batch.title} to RevealLine Soundtracks`]);
-  if (!batch.external) await prepareDraftVolume(batch);
+  if (!batch.external) await preparePublicVolume(batch);
   await run("git", ["push", "-u", "origin", branch]);
   const body = path.join(os.tmpdir(), `revealline-soundtracks-${process.pid}.md`);
   try {
     await writeFile(
       body,
-      `Adds ${batch.tracks.length} exact, rights-bound MP3 recording${batch.tracks.length === 1 ? "" : "s"} through the canonical automated intake. ${batch.external ? "The stable hosted URLs, exact hashes, byte counts, CORS and range evidence are reverified by CI; no GitHub audio volume is created." : `Exact audio is attached to draft release audio-${batch.batchId}; merge automation publishes that volume before Pages.`} Files remain listening-pending and game-unadmitted.\n`,
+      `Adds ${batch.tracks.length} exact, rights-bound MP3 recording${batch.tracks.length === 1 ? "" : "s"} through the canonical automated intake. ${batch.external ? "The stable hosted URLs, exact hashes, byte counts, CORS and range evidence are reverified by CI; no GitHub audio volume is created." : `Exact audio is publicly available in verified prerelease audio-${batch.batchId} so read-only PR checks can verify its bytes. Merge automation promotes that volume before catalogue deployment; it does not replace assets.`} Files remain listening-pending and game-unadmitted.\n`,
     );
     await run("gh", [
       "pr",
