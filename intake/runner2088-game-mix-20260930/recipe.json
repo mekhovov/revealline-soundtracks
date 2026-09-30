@@ -1,0 +1,97 @@
+{
+  "format": "revealline-audio-derivative-recipe.v1",
+  "preparedAt": "2026-09-30T16:28:08Z",
+  "original": {
+    "id": "wekont.runner2088",
+    "fileName": "runner2088-original.mp3",
+    "bytes": 3884999,
+    "sha256": "9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9"
+  },
+  "derivative": {
+    "id": "wekont.runner2088-game-mix",
+    "fileName": "runner2088-game-mix.mp3",
+    "bytes": 3887378,
+    "sha256": "528e7ebe15c91bc686ab9cdfadb4085ebd64b907f795282f7f9c817a46c672ba"
+  },
+  "renderer": {
+    "name": "FFmpeg",
+    "version": "9.0.2",
+    "codec": "libmp3lame",
+    "libraryVersions": {
+      "libavutil": "61.1.102",
+      "libavcodec": "63.1.102",
+      "libavformat": "63.1.102",
+      "libavfilter": "12.1.102",
+      "libswresample": "7.1.102"
+    }
+  },
+  "command": [
+    "ffmpeg",
+    "-hide_banner",
+    "-v",
+    "info",
+    "-xerror",
+    "-nostdin",
+    "-n",
+    "-i",
+    "runner2088-original.mp3",
+    "-map",
+    "0:a:0",
+    "-map_metadata",
+    "0",
+    "-af",
+    "volume=-1.6dB:precision=double",
+    "-c:a",
+    "libmp3lame",
+    "-b:a",
+    "320k",
+    "-ar",
+    "44100",
+    "-ac",
+    "2",
+    "-id3v2_version",
+    "3",
+    "-metadata",
+    "title=runner2088 (Game mix)",
+    "-metadata",
+    "artist=wekont",
+    "-metadata",
+    "encoded_by=FFmpeg 9.0.2 / libmp3lame; RevealLine technical derivative",
+    "-metadata",
+    "comment=CC BY 4.0; gain -1.6 dB and MP3 re-encode from original 9924c6163116b0db94cc0c1878542d2576aac02051dd25f6ebb3b9767869cef9; no arrangement changes",
+    "runner2088-game-mix.mp3"
+  ],
+  "targets": {
+    "integratedLUFS": {
+      "minimum": -17,
+      "maximum": -15
+    },
+    "truePeakDbTP": {
+      "maximum": -1
+    }
+  },
+  "result": {
+    "fullFileDecoded": true,
+    "integratedLUFS": -16.94,
+    "truePeakDbTP": -1.14,
+    "decodedFrames": 4283136,
+    "sampleRate": 44100,
+    "channels": 2
+  },
+  "approvalScope": "Original composition owner-approved; derivative technical preparation only. No listening or device approval asserted.",
+  "pendingChecks": [
+    "fullTrack",
+    "repeatedSession",
+    "inGameTransition",
+    "warningAudibility",
+    "mono",
+    "smallSpeakers",
+    "physicalDevice",
+    "publicDelivery",
+    "trustedGameAdmission"
+  ],
+  "reproduction": {
+    "sameRenderer": true,
+    "separateRenderMatchedSha256": "528e7ebe15c91bc686ab9cdfadb4085ebd64b907f795282f7f9c817a46c672ba"
+  }
+}

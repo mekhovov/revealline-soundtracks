@@ -13,24 +13,29 @@
       "sha256": "64f0e2ac28718af710fc20702519dfa171fe4020a56037242795027c8f1d5caa"
     },
     {
+      "path": "admissions/runner2088-game-mix-20260930.json",
+      "bytes": 322,
+      "sha256": "16e36e2316a0b9685bcae326f03c30191823a86064f3e94d9b3aab08129ee6e8"
+    },
+    {
       "path": "audio-volumes.json",
-      "bytes": 43641,
-      "sha256": "62204473a4ede641c723598637c44a150a0a647f5455ba592882940abc7c3aea"
+      "bytes": 43975,
+      "sha256": "734e42c0adeda455eee2b8c62b509e0353ebfed57cf7798d63556bf5a1c1d0bf"
     },
     {
       "path": "batches.json",
-      "bytes": 18332,
-      "sha256": "a70fde779e09b644e95025b4a304b53399189979cbfd14707fd9fe237f58530c"
+      "bytes": 18486,
+      "sha256": "5579b9a980f8d4b0829ddb8b20b5ff662c4d290b7b46acf8bbcb7f306ef22d16"
     },
     {
       "path": "catalogue.json",
-      "bytes": 558040,
-      "sha256": "f31a8db15e0f369f86d8b0e5dd7be0daa2e3eb2767a0c8330c4800200b42e9e1"
+      "bytes": 561012,
+      "sha256": "c746c7da0940684186f5c3277396b47c5c14868f865b4e4656fa432177cf2019"
     },
     {
       "path": "CREDITS.md",
-      "bytes": 74539,
-      "sha256": "dd893fc934fa1e7510e6966c4c9fe762e35684bd775797e6cada01997bd2dc7f"
+      "bytes": 75004,
+      "sha256": "0f4adee84869f479a0b3c0e7eaa93931cf9d0720a9930755f92fb4e4a658abc0"
     },
     {
       "path": "external-deliveries.json",
@@ -521,6 +526,11 @@
       "path": "objects/519df08420964790ef3f8cacc3cb107b83f598f38dcee9388eeeeb752e8b485f.mp3",
       "bytes": 7961330,
       "sha256": "519df08420964790ef3f8cacc3cb107b83f598f38dcee9388eeeeb752e8b485f"
+    },
+    {
+      "path": "objects/528e7ebe15c91bc686ab9cdfadb4085ebd64b907f795282f7f9c817a46c672ba.mp3",
+      "bytes": 3887378,
+      "sha256": "528e7ebe15c91bc686ab9cdfadb4085ebd64b907f795282f7f9c817a46c672ba"
     },
     {
       "path": "objects/53f4aabfa0b926af5c23af9a33c8d5c93b86780004d09cc2276bbad964d4c022.mp3",

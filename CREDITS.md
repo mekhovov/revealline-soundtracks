@@ -1900,3 +1900,9 @@ Licence: Unknown — uploader-confirmed rights
 Кліп  "RUSORIZ" by Цибрр. Rights confirmed by uploader for public redistribution and web-game playback. Source: https://www.youtube.com/@tsybr
 
 Licence: Unknown — uploader-confirmed rights
+
+## runner2088 Game mix — technical derivative
+
+runner2088 by wekont. CC BY 4.0 International: https://creativecommons.org/licenses/by/4.0/. Source: https://freemusicarchive.org/music/wekont/single/runner2088mp3/. Changes for Game mix: constant -1.6 dB gain reduction and 320 kb/s MP3 re-encoding; no arrangement or duration changes. Original creator recording preserved unchanged.
+
+Licence: CC BY 4.0 International (https://creativecommons.org/licenses/by/4.0/)

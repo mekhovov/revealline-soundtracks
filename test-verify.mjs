@@ -1,11 +1,13 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
+import { tracksForView } from "./review-policy.mjs";
 import {
   buildManifest,
   releaseAssetBytes,
   verifyArchive,
   verifyApprovedInventory,
+  verifyRunner2088Inventory,
 } from "./verify.mjs";
 
 test("canonical archive preserves migrated identities and release-backed audio", async () => {
@@ -169,8 +171,8 @@ test("legacy archive compatibility objects remain exact canonical catalogue memb
   const preservedFoundation = [...baseGame, ...baseGameReview];
   assert.equal(baseGame.length, 33);
   assert.equal(baseGameReview.length, 37);
-  assert.equal(soundtrackReview.length, 27);
-  assert.equal(review.length, 64);
+  assert.equal(soundtrackReview.length, 28);
+  assert.equal(review.length, 65);
   assert.equal(
     baseGameReview.filter(({ collections }) =>
       collections.includes("Heavy Metal Review"),
@@ -207,6 +209,7 @@ test("legacy archive compatibility objects remain exact canonical catalogue memb
       "davidkbd.time-warp",
       "foxsynergy.metallic-mistress",
       "esiltir.calamity",
+      "wekont.runner2088-game-mix",
     ]),
   );
   assert.equal(
@@ -364,4 +367,59 @@ test("approved inventory rejects altered, repeated and unrelated recording ident
     () => verifyApprovedInventory(original, alteredCatalogue),
     /recording identity differs/,
   );
+});
+
+test("runner2088 derivative remains a separate review-only recording with exact technical evidence", async () => {
+  const catalogue = JSON.parse(await readFile("catalogue.json", "utf8"));
+  const track = catalogue.tracks.find(({ id }) => id === "wekont.runner2088-game-mix");
+  const original = catalogue.tracks.find(({ id }) => id === "wekont.runner2088");
+  const inventory = JSON.parse(await readFile("admissions/runner2088-game-mix-20260930.json", "utf8"));
+  verifyRunner2088Inventory(inventory, catalogue);
+  assert.equal(track.title, "runner2088 (Game mix)");
+  assert.equal(track.visibility, "review-only");
+  assert.equal(track.listeningApproval, "not-reviewed");
+  assert.equal(track.gameCatalogueAdmission, false);
+  assert.equal(track.recordingModeEligible, false);
+  assert.equal(track.default, false);
+  assert.equal(track.contentId, "unknown");
+  assert.ok(!tracksForView(catalogue.tracks).includes(track));
+  assert.ok(tracksForView(catalogue.tracks).includes(original));
+  const batches = JSON.parse(await readFile("batches.json", "utf8"));
+  assert.equal(
+    batches.collections.find(({ id }) => id === "Soundtrack Review").tracks,
+    catalogue.tracks.filter(({ collections }) => collections.includes("Soundtrack Review")).length,
+  );
+  assert.equal(track.source, original.source);
+  assert.equal(track.licenseURL, original.licenseURL);
+  assert.ok(track.rights.derivativeChangeNotice.includes(original.audio.sha256));
+  assert.ok(track.credit.includes("-1.6 dB"));
+  const [source, derivative] = JSON.parse(await readFile("intake/runner2088-game-mix-20260930/measurements.json", "utf8"));
+  assert.equal(source.sha256, original.audio.sha256);
+  assert.equal(derivative.sha256, track.audio.sha256);
+  assert.equal(derivative.bytes, track.audio.bytes);
+  assert.equal(source.decodedFrames, derivative.decodedFrames);
+  assert.equal(derivative.fullFileDecoded, true);
+  assert.ok(Number(derivative.measurement.input_i) >= -17);
+  assert.ok(Number(derivative.measurement.input_i) <= -15);
+  assert.ok(Number(derivative.measurement.input_tp) <= -1);
+});
+
+test("runner2088 derivative inventory rejects original substitution and changed identity", async () => {
+  const catalogue = JSON.parse(await readFile("catalogue.json", "utf8"));
+  const original = JSON.parse(await readFile("admissions/runner2088-game-mix-20260930.json", "utf8"));
+  for (const mutate of [
+    (value) => { value.files[0].bytes += 1; },
+    (value) => { value.files[0].sha256 = "f".repeat(64); },
+    (value) => { value.files[0].path = "../objects/song.mp3"; },
+    (value) => { value.files.push(value.files[0]); },
+    (value) => { value.files = []; },
+    (value) => { value.files[0] = catalogue.tracks.find(({ id }) => id === "wekont.runner2088").audio; },
+  ]) {
+    const inventory = structuredClone(original);
+    mutate(inventory);
+    assert.throws(() => verifyRunner2088Inventory(inventory, catalogue), /derivative inventory differs/);
+  }
+  const alteredCatalogue = structuredClone(catalogue);
+  alteredCatalogue.tracks.find(({ id }) => id === "wekont.runner2088-game-mix").audio.sha256 = "f".repeat(64);
+  assert.throws(() => verifyRunner2088Inventory(original, alteredCatalogue), /recording identity differs/);
 });
