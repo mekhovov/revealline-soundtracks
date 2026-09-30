@@ -7,9 +7,16 @@ import test from "node:test";
 import { hasPublishedLicense, projectCatalogue, publicVolumeTags } from "./licensing-policy.mjs";
 import { tracksForView, REVIEW_ACCESS_KEY } from "./review-policy.mjs";
 import { buildManifest, publicDocuments } from "./verify.mjs";
+import { publishVolumes } from "./intake/publish-volumes.mjs";
+import { transferredRecordings, assertNoTransferredRecordings } from "./source-transfer.mjs";
 
 const readJSON = async (name) => JSON.parse(await readFile(name, "utf8"));
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
+const unknownFixture = (known) => ({ ...structuredClone(known), id: "future.unknown-intake",
+  license: "Unknown — uploader-confirmed rights", licenseURL: null,
+  rights: { ...known.rights, licenseId: "UNKNOWN", licenseVersion: null, licenseURL: null },
+  audio: { ...known.audio, sha256: "e".repeat(64) },
+});
 
 test("missing, unknown and inconsistent licences cannot enter either player view", async () => {
   const catalogue = await readJSON("catalogue.json");
@@ -34,17 +41,14 @@ test("public projection removes quarantined identities and keeps licensed review
   const before = structuredClone(source);
   const projected = projectCatalogue(source);
   const excluded = source.tracks.filter((track) => !hasPublishedLicense(track));
-  assert.ok(source.tracks.length >= 261);
-  assert.ok(excluded.length >= 73);
-  assert.ok(excluded.reduce((sum, track) => sum + track.audio.bytes, 0) >= 207941311);
+  assert.ok(source.tracks.length >= 188);
+  assert.equal(excluded.length, 0);
   assert.equal(projected.tracks.length, source.tracks.length - excluded.length);
   assert.equal(tracksForView(source.tracks).length, projected.tracks.length - 65);
   assert.equal(tracksForView(source.tracks, REVIEW_ACCESS_KEY).length, 65);
   assert.deepEqual(projectCatalogue(projected), projected);
   assert.deepEqual(source, before);
-  const future = structuredClone(excluded[0]);
-  future.id = "future.unknown-intake";
-  future.audio.sha256 = "e".repeat(64);
+  const future = unknownFixture(source.tracks[0]);
   assert.deepEqual(projectCatalogue({ ...source, tracks: [...source.tracks, future] }), projected);
   const publicIds = new Set(projected.tracks.map((track) => track.id));
   for (const track of excluded) {
@@ -55,7 +59,7 @@ test("public projection removes quarantined identities and keeps licensed review
 
 test("Pages JSON, legacy labels and manifests cannot re-expose quarantined audio", async () => {
   const source = await readJSON("catalogue.json");
-  const excluded = source.tracks.filter((track) => !hasPublishedLicense(track));
+  const excluded = (await transferredRecordings()).map((entry) => ({ id: entry.id, audio: entry }));
   const excludedIds = new Set(excluded.map((track) => track.id));
   const excludedHashes = new Set(excluded.map((track) => track.audio.sha256));
   const documents = await publicDocuments();
@@ -69,13 +73,14 @@ test("Pages JSON, legacy labels and manifests cannot re-expose quarantined audio
     for (const sha256 of excludedHashes) assert.ok(!text.includes(sha256), `${file.path}: ${sha256}`);
   }
   const legacySource = await readJSON("legacy/archive-02/catalogue.json");
-  const obsoleteCC0 = legacySource.tracks.filter((track) => excludedHashes.has(track.audio.sha256));
-  assert.equal(obsoleteCC0.length, 7);
-  assert.ok(obsoleteCC0.every((track) => track.license === "CC0 1.0 Universal"));
-  const legacyPublic = JSON.parse(documents.get("legacy/archive-02/catalogue.json"));
+  assert.equal(legacySource.tracks.filter((track) => excludedHashes.has(track.audio.sha256)).length, 0);
+  const obsoleteCC0 = { ...structuredClone(legacySource.tracks[0]), id: excluded[0].id,
+    audio: excluded[0].audio, license: "CC0 1.0 Universal" };
+  assert.equal(projectCatalogue({ ...legacySource, tracks: [obsoleteCC0] }, new Set(source.tracks.map((track) => track.audio.sha256))).tracks.length, 0);
+  const legacyPublic = JSON.parse(documents.get("legacy/archive-02/catalogue.json") ?? await readFile("legacy/archive-02/catalogue.json"));
   assert.equal(legacyPublic.tracks.length, 24);
   assert.ok(legacyPublic.tracks.every((track) => !excludedIds.has(track.id)));
-  const legacyBatches = JSON.parse(documents.get("legacy/archive-02/batches.json"));
+  const legacyBatches = JSON.parse(documents.get("legacy/archive-02/batches.json") ?? await readFile("legacy/archive-02/batches.json"));
   assert.ok(!legacyBatches.batches.some((entry) => entry.id === "trench-orderly-20260927"));
   assert.equal(legacyBatches.batches.reduce((sum, entry) => sum + entry.tracks, 0), legacyPublic.tracks.length);
   for (const file of manifest.files) {
@@ -131,10 +136,42 @@ test("projected metadata rebuilds the exact deployment manifest without source-o
 test("merge publication skips unknown-only and mixed audio volumes without deleting them", async () => {
   const catalogue = await readJSON("catalogue.json");
   const known = catalogue.tracks.find(hasPublishedLicense);
-  const unknown = catalogue.tracks.find((track) => !hasPublishedLicense(track));
+  const unknown = unknownFixture(known);
   const volume = (releaseTag, tracks) => ({ releaseTag, assets: tracks.map(({ audio }) => audio) });
   const volumes = { volumes: [volume("known", [known]), volume("unknown", [unknown]), volume("mixed", [known, unknown])] };
   const before = structuredClone(volumes);
   assert.deepEqual([...publicVolumeTags(catalogue, volumes)], ["known"]);
   assert.deepEqual(volumes, before);
+});
+
+test("exact FPV source-transfer receipt prevents accidental catalogue reintroduction", async () => {
+  const rows = await transferredRecordings();
+  assert.equal(rows.length, 73);
+  assert.equal(new Set(rows.map((row) => row.sha256)).size, 73);
+  assert.equal(rows.reduce((sum, row) => sum + row.bytes, 0), 207941311);
+  const catalogue = await readJSON("catalogue.json");
+  const volumes = await readJSON("audio-volumes.json");
+  await assertNoTransferredRecordings(catalogue, volumes);
+  await assert.rejects(assertNoTransferredRecordings({ ...catalogue, tracks: [...catalogue.tracks, { id: rows[0].id }] }, volumes), /transferred FPV/);
+  await assert.rejects(assertNoTransferredRecordings(catalogue, { volumes: [{ assets: [{ sha256: rows[0].sha256 }] }] }), /transferred FPV/);
+});
+
+
+test("main publisher never mutates the historical mixed foundation release after transfer", async () => {
+  const catalogue = await readJSON("catalogue.json"), manifest = await readJSON("audio-volumes.json");
+  const calls = [], notices = [];
+  await publishVolumes(catalogue, manifest, { repo: "mekhovov/revealline-soundtracks",
+    report: (line) => notices.push(line),
+    run: async (args) => {
+      calls.push(args);
+      assert.equal(args[1], "view", "Existing retained releases must not be mutated");
+      assert.notEqual(args[2], "audio-foundation-20260927");
+      const volume = manifest.volumes.find((entry) => entry.releaseTag === args[2]);
+      return JSON.stringify({ tagName: volume.releaseTag, isDraft: false, isPrerelease: false,
+        assets: volume.assets.map((asset) => ({ name: `${asset.sha256}.mp3`, size: asset.bytes,
+          state: "uploaded", digest: `sha256:${asset.sha256}` })) });
+    },
+  });
+  assert.ok(notices.some((line) => line.startsWith("Preserved historical audio-foundation-20260927")));
+  assert.equal(calls.length, 1, "The separate runner2088 volume remains verified");
 });

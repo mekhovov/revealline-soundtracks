@@ -17,8 +17,8 @@ test("canonical archive preserves migrated identities and release-backed audio",
   const result = await verifyArchive();
   assert.ok(result.tracks >= 1);
   assert.equal(result.compatibilityTracks, 70);
-  assert.equal(result.legacyUnionTracks, 194);
-  assert.equal(result.legacyUnionBytes, 1_032_879_700);
+  assert.equal(result.legacyUnionTracks, 187);
+  assert.equal(result.legacyUnionBytes, 1_013_415_138);
   assert.ok(result.audioBytes >= 3_884_999);
   const catalogue = JSON.parse(await readFile("catalogue.json", "utf8"));
   const track = catalogue.tracks.find(({ id }) => id === "wekont.runner2088");
@@ -120,18 +120,7 @@ test("canonical archive preserves migrated identities and release-backed audio",
   const trench = catalogue.tracks.find(
     ({ id }) => id === "trench-orderly.soundtrack.2",
   );
-  assert.deepEqual(trench.collections, ["TRENCH ORDERLY", "ФПВ"]);
-  assert.equal(trench.source, "https://www.youtube.com/@TRENCH_ORDERLY");
-  assert.equal(
-    trench.rights.rightsEvidenceURL,
-    "https://www.youtube.com/@TRENCH_ORDERLY",
-  );
-  assert.equal(trench.licenseURL, null);
-  assert.equal(trench.rights.licenseId, "UNKNOWN");
-  assert.equal(
-    trench.audio.path,
-    `objects/${trench.audio.sha256}.mp3`,
-  );
+  assert.equal(trench, undefined, "Transferred recordings must not remain in the main catalogue");
   const duplicate = catalogue.tracks.find(
     ({ id }) => id === "peachtea.last-stand-lets-go.ee3bed8e",
   );

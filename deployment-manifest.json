@@ -1019,8 +1019,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5096,
-      "sha256": "3ccf5c4e683139ee6747f340368b259dfbef10005c93fbc728c0e8f55f9b4ef7"
+      "bytes": 6002,
+      "sha256": "3a87e6a941a8e95e71079f3d722bbb57e645902f26d413d60e4ca33773c4467a"
     },
     {
       "path": "review-policy.mjs",
