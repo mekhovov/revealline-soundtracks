@@ -20,8 +20,8 @@ git switch main
 git pull --ff-only
 ```
 
-Add one MP3 or a recursive folder, then let the script create the branch, draft
-audio release and pull request:
+Add one MP3 or a recursive folder, then let the script create the branch, verified
+audio prerelease and catalogue pull request:
 
 ```sh
 node intake/add-music.mjs "/absolute/path/to/music" \
@@ -34,6 +34,11 @@ node intake/add-music.mjs "/absolute/path/to/music" \
   --confirm-rights \
   --open-pr
 ```
+
+With `--open-pr`, local MP3 assets become **public before catalogue review**, after
+exact size and SHA-256 verification. Read-only PR checks can then verify complete
+audio. Merging promotes the same assets and deploys the catalogue; rejected PRs
+never add songs to the public player or game.
 
 Or register one stable public hosted MP3 without copying it into GitHub:
 

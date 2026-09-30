@@ -198,7 +198,7 @@ export async function releaseAssetBytes(
       `https://api.github.com/repos/mekhovov/revealline-soundtracks/releases/tags/${releaseTag}`,
       { headers: apiHeaders, redirect: 'error' },
     );
-    demand(releaseResponse?.ok, `Audio release is unavailable: ${releaseTag}`);
+    demand(releaseResponse?.ok, `Audio release is unavailable: ${releaseTag}. Publish its verified audio prerelease through intake before opening the catalogue PR; draft assets are not readable by PR CI.`);
     const release = await releaseResponse.json();
     const asset = release.assets?.find(({ name }) => name === `${sha256}.mp3`);
     demand(asset?.url, `Audio release asset is unavailable: ${releaseTag}/${sha256}.mp3`);

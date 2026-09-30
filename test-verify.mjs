@@ -271,7 +271,7 @@ test("every public release-backed recording is materialized in the Pages payload
   );
 });
 
-test("draft release assets are resolved through the authenticated GitHub API", async () => {
+test("published release assets are resolved through the read-only GitHub API", async () => {
   const sha256 = "e".repeat(64);
   const bytes = Uint8Array.from([1, 2, 3]);
   const requests = [];
@@ -422,4 +422,14 @@ test("runner2088 derivative inventory rejects original substitution and changed 
   const alteredCatalogue = structuredClone(catalogue);
   alteredCatalogue.tracks.find(({ id }) => id === "wekont.runner2088-game-mix").audio.sha256 = "f".repeat(64);
   assert.throws(() => verifyRunner2088Inventory(original, alteredCatalogue), /recording identity differs/);
+});
+
+
+test("draft or missing release fails with intake guidance before any asset download", async () => {
+  const requests = [];
+  await assert.rejects(() => releaseAssetBytes("audio-draft", "e".repeat(64), async (url) => {
+    requests.push(url);
+    return new Response("Not Found", { status: 404 });
+  }, "read-only-token"), /Publish its verified audio prerelease.*draft assets are not readable by PR CI/);
+  assert.equal(requests.length, 1);
 });

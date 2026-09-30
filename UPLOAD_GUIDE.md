@@ -193,8 +193,14 @@ For each intake, the script:
 3. calculates duration, exact byte size and SHA-256;
 4. generates stable recording metadata, credits, styles and collections;
 5. updates the catalogue and deterministic deployment manifests;
-6. for local audio, creates a draft GitHub Release and uploads SHA-256-named assets; for hosted audio, writes exact delivery evidence without copying bytes;
+6. for local audio, uploads SHA-256-named assets to a draft, verifies exact sizes and hashes, then publishes it as a non-latest prerelease for read-only PR checks; for hosted audio, writes exact delivery evidence without copying bytes;
 7. creates a `codex/` branch, commits it, pushes it and opens a pull request.
+
+**Public visibility:** with `--open-pr`, MP3 assets become public before the
+catalogue PR is merged. Only upload audio you have permission to redistribute.
+The player and game catalogue still wait for a reviewed merge and deployment.
+Matching existing assets are reused without replacement; conflicting or extra
+assets stop publication. External URL intake does not create a GitHub release.
 
 One intake accepts at most **20 MP3 files** and **64 MiB**. Split larger folders
 into several PRs. The same exact audio hash cannot be silently added twice.
@@ -210,8 +216,8 @@ On the pull request:
 
 After merge, GitHub Actions automatically:
 
-- verifies the exact draft-release assets against the catalogue hashes;
-- publishes the matching audio volume;
+- verifies the exact public prerelease assets against the catalogue sizes and hashes;
+- promotes the matching audio volume without replacing assets or tags;
 - rebuilds and verifies the deterministic Pages payload;
 - deploys the unified public player.
 
