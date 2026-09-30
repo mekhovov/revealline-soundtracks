@@ -75,6 +75,9 @@ test("Pages JSON, legacy labels and manifests cannot re-expose quarantined audio
   const legacyPublic = JSON.parse(documents.get("legacy/archive-02/catalogue.json"));
   assert.equal(legacyPublic.tracks.length, 24);
   assert.ok(legacyPublic.tracks.every((track) => !excludedIds.has(track.id)));
+  const legacyBatches = JSON.parse(documents.get("legacy/archive-02/batches.json"));
+  assert.ok(!legacyBatches.batches.some((entry) => entry.id === "trench-orderly-20260927"));
+  assert.equal(legacyBatches.batches.reduce((sum, entry) => sum + entry.tracks, 0), legacyPublic.tracks.length);
   for (const file of manifest.files) {
     const bytes = documents.get(file.path);
     if (bytes) assert.deepEqual({ bytes: bytes.length, sha256: hash(bytes) },

@@ -333,6 +333,15 @@ export async function publicDocuments(base = root) {
       const projected = projectCatalogue(legacy, hashes);
       documents.set(name, jsonBytes(projected));
       documents.set(name.replace('catalogue.json', 'CREDITS.md'), publicCredits(projected.tracks));
+      const batchName = name.replace('catalogue.json', 'batches.json');
+      const legacyBatches = await readJSON(batchName);
+      const batchCounts = new Map();
+      for (const track of projected.tracks)
+        batchCounts.set(track.archiveId, (batchCounts.get(track.archiveId) ?? 0) + 1);
+      documents.set(batchName, jsonBytes({ ...legacyBatches,
+        batches: legacyBatches.batches.filter((entry) => batchCounts.has(entry.id))
+          .map((entry) => ({ ...entry, tracks: batchCounts.get(entry.id) })),
+      }));
     }
   }
   for (const name of ['legacy/archive-01/deployment-manifest.json']) {

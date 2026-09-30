@@ -134,8 +134,8 @@
     },
     {
       "path": "legacy/archive-02/batches.json",
-      "bytes": 4536,
-      "sha256": "1e5f2b0759276e02db034233620d4d5adbfa0c7a29210296776fe08ba95d18bc"
+      "bytes": 4383,
+      "sha256": "9c5b8a96198d5a24cba3a6fbfde1188db3a40c28056c33d709eb45cfa8c3ad04"
     },
     {
       "path": "legacy/archive-02/catalogue.json",
