@@ -4,6 +4,7 @@ import { copyFile, lstat, mkdir, readFile, rm, statfs, writeFile } from 'node:fs
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { verifyExternalDeliveryMetadata } from './intake/external-url.mjs';
+import { hasPublishedLicense, projectCatalogue } from './licensing-policy.mjs';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const HASH = /^[a-f0-9]{64}$/;
@@ -161,8 +162,8 @@ const ROOT_STATIC_FILES = [
   'legacy/archive-01/release/public-albums.json',
   'legacy/archive-02/CREDITS.md', 'legacy/archive-02/README.md',
   'legacy/archive-02/UPLOAD_GUIDE.md', 'legacy/archive-02/batches.json',
-  'legacy/archive-02/catalogue.json', 'legacy/archive-02/deployment-manifest.json',
-  'playback-policy.mjs', 'player.mjs', 'review-policy.mjs', 'style-taxonomy.mjs',
+  'legacy/archive-02/catalogue.json',
+  'playback-policy.mjs', 'player.mjs', 'review-policy.mjs', 'licensing-policy.mjs', 'style-taxonomy.mjs',
   'style.css', 'upload-guide/index.html',
   'playback-recovery.mjs',
 ];
@@ -290,13 +291,73 @@ async function verifyLegacyUnion(catalogue, base) {
   demand(hashes.size === 194 && audioBytes <= catalogue.counts?.audioBytes, 'Legacy audio preservation differs.');
   return { tracks, audioBytes };
 }
+const jsonBytes = (value) => Buffer.from(`${JSON.stringify(value, null, 2)}\n`);
+const publicCredits = (tracks) => Buffer.from(`# RevealLine soundtrack credits\n\nOnly recordings with a known published licence are included in this deployment.\n\n${tracks.map((track) => `## ${track.title} — ${track.artist}\n\n${track.credit}\n\nSource: ${track.source}\n\nLicence: ${track.license} (${track.licenseURL})`).join('\n\n')}\n`);
+
+export async function publicDocuments(base = root) {
+  const readJSON = async (name) => JSON.parse(await readFile(path.join(base, name), 'utf8'));
+  const catalogue = projectCatalogue(await readJSON('catalogue.json'));
+  const hashes = new Set(catalogue.tracks.map((track) => track.audio.sha256));
+  const ids = new Set(catalogue.tracks.map((track) => track.id));
+  const documents = new Map([
+    ['catalogue.json', jsonBytes(catalogue)],
+    ['CREDITS.md', publicCredits(catalogue.tracks)],
+  ]);
+  const batches = await readJSON('batches.json');
+  const counts = new Map();
+  for (const track of catalogue.tracks)
+    for (const name of track.collections) counts.set(name, (counts.get(name) ?? 0) + 1);
+  documents.set('batches.json', jsonBytes({
+    ...batches,
+    collections: batches.collections.filter((entry) => counts.has(entry.id))
+      .map((entry) => ({ ...entry, tracks: counts.get(entry.id) })),
+  }));
+  const volumes = await readJSON('audio-volumes.json');
+  documents.set('audio-volumes.json', jsonBytes({
+    ...volumes,
+    volumes: volumes.volumes.map((volume) => {
+      const assets = volume.assets.filter((asset) => hashes.has(asset.sha256));
+      return { ...volume, recordings: assets.length,
+        audioBytes: assets.reduce((sum, asset) => sum + asset.bytes, 0), assets };
+    }).filter((volume) => volume.assets.length),
+  }));
+  const external = await readJSON('external-deliveries.json');
+  documents.set('external-deliveries.json', jsonBytes({
+    ...external, recordings: external.recordings.filter((entry) => ids.has(entry.id)),
+  }));
+  // Canonical hashes win over stale legacy licence labels (including old CC0 claims).
+  // Leave unaffected installer documents byte-identical for frozen game readers.
+  for (const name of ['legacy/archive-01/catalogue.json', 'legacy/archive-02/catalogue.json']) {
+    const legacy = await readJSON(name);
+    if (legacy.tracks.some((track) => !hashes.has(track.audio.sha256))) {
+      const projected = projectCatalogue(legacy, hashes);
+      documents.set(name, jsonBytes(projected));
+      documents.set(name.replace('catalogue.json', 'CREDITS.md'), publicCredits(projected.tracks));
+    }
+  }
+  for (const name of ['legacy/archive-01/deployment-manifest.json']) {
+    const legacy = await readJSON(name);
+    const prefix = name.slice(0, name.lastIndexOf('/') + 1);
+    const files = legacy.files.filter((entry) => !entry.path.endsWith('.mp3') || hashes.has(entry.sha256))
+      .map((entry) => {
+        const replacement = documents.get(prefix + entry.path);
+        return replacement ? { ...entry, bytes: replacement.length, sha256: digest(replacement) } : entry;
+      });
+    if (JSON.stringify(files) !== JSON.stringify(legacy.files))
+      documents.set(name, jsonBytes({ ...legacy, files }));
+  }
+  return documents;
+}
+
 export async function buildManifest(base = root) {
   const files = new Map();
-  const catalogue = JSON.parse(await readFile(path.join(base, 'catalogue.json'), 'utf8'));
+  const documents = await publicDocuments(base);
+  const catalogue = JSON.parse(documents.get('catalogue.json'));
   const staticFiles = new Set(ROOT_STATIC_FILES);
   for (const relative of staticFiles) {
-    const file = await ordinaryFile(base, relative), bytes = await readFile(file.absolute);
-    files.set(relative, { path: relative, bytes: file.bytes, sha256: digest(bytes) });
+    const file = await ordinaryFile(base, relative);
+    const bytes = documents.get(relative) ?? await readFile(file.absolute);
+    files.set(relative, { path: relative, bytes: bytes.length, sha256: digest(bytes) });
   }
   for (const track of catalogue.tracks) {
     if (!PAGES_AUDIO.test(track.audio?.path ?? '')) continue;
@@ -315,6 +376,16 @@ export async function buildManifest(base = root) {
       await exactFileIfPresent(base, entry);
       files.set(entry.path, entry);
     }
+  }
+  const installer = JSON.parse(await readFile(path.join(base, 'inventory.json'), 'utf8'));
+  const licensedHashes = new Set(catalogue.tracks.map((track) => track.audio.sha256));
+  for (const entry of installer.files) {
+    demand(licensedHashes.has(entry.sha256), `Installer references quarantined audio: ${entry.path}`);
+    const existing = files.get(entry.path);
+    demand(!existing || (existing.bytes === entry.bytes && existing.sha256 === entry.sha256),
+      `Installer audio identity differs: ${entry.path}`);
+    await exactFileIfPresent(base, entry);
+    files.set(entry.path, entry);
   }
   return {
     format: 'revealline-soundtrack-catalogue-deployment.v2',
@@ -449,6 +520,7 @@ export async function verifyArchive(
       );
     demand(track.gameCatalogueAdmission === false && track.default !== true, `Admission boundary differs: ${track.id}`);
     verifyRights(track);
+    if (publicStage) demand(hasPublishedLicense(track), `Unlicensed recording reached public stage: ${track.id}`);
     const match = AUDIO_URL.exec(track.audio?.path ?? ''),
       pages = PAGES_AUDIO.exec(track.audio?.path ?? ''),
       asset = volumeAssets.get(track.audio?.sha256);
@@ -540,7 +612,7 @@ export async function verifyArchive(
     );
     legacyReleaseNames.add(asset.name);
   }
-  const legacyUnion = await verifyLegacyUnion(catalogue, base);
+  const legacyUnion = publicStage ? { tracks: null, audioBytes: null } : await verifyLegacyUnion(catalogue, base);
   demand(catalogue.counts?.declaredTracks === catalogue.tracks.length && catalogue.counts?.uniqueRecordings === catalogue.tracks.length && catalogue.counts?.duplicateAliases === 0 && catalogue.counts?.audioBytes === audioBytes, 'Catalogue counts differ.');
   const expected = await buildManifest(base), manifest = JSON.parse(await readFile(path.join(base, 'deployment-manifest.json'), 'utf8'));
   demand(JSON.stringify(manifest) === JSON.stringify(expected), 'Deployment manifest is stale.');
@@ -548,9 +620,10 @@ export async function verifyArchive(
     manifest.files.reduce((sum, file) => sum + file.bytes, 0) <= 950 * 1024 * 1024,
     'Public Pages payload exceeds 950 MiB.',
   );
+  const projected = await publicDocuments(base);
   for (const entry of manifest.files) {
     if (publicStage) await exactFile(base, entry);
-    else await exactFileIfPresent(base, entry);
+    else if (!projected.has(entry.path)) await exactFileIfPresent(base, entry);
   }
   return { tracks: catalogue.tracks.length, compatibilityTracks: compatibilityHashes.size, legacyUnionTracks: legacyUnion.tracks, legacyUnionBytes: legacyUnion.audioBytes, audioBytes, publicBytes: manifest.files.reduce((sum,file)=>sum+file.bytes,0), manifest };
 }
@@ -566,11 +639,14 @@ export async function stageArchive(destination, base = root, { request = globalT
       volume.assets.map((asset) => [asset.sha256, volume.releaseTag]),
     ),
   );
+  const documents = await publicDocuments(base);
   for (const entry of verified.manifest.files) {
     const output = path.join(target, entry.path);
     await mkdir(path.dirname(output), { recursive: true });
     try {
-      await copyFile(path.join(base, entry.path), output, constants.COPYFILE_EXCL);
+      if (documents.has(entry.path))
+        await writeFile(output, documents.get(entry.path), { flag: 'wx' });
+      else await copyFile(path.join(base, entry.path), output, constants.COPYFILE_EXCL);
     } catch (error) {
       const match = PAGES_AUDIO.exec(entry.path), releaseTag = match && releases.get(match[1]);
       if (error?.code !== 'ENOENT' || !releaseTag) throw error;

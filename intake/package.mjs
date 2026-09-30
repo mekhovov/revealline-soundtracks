@@ -94,7 +94,7 @@ export function validateIntakeMetadata(input) {
   demand(safeURL(metadata.source), "Enter a secure exact creator/source URL.");
   demand(
     LICENSES.has(metadata.license),
-    "Choose a supported licence or uploader-confirmed unknown rights.",
+    "Choose a supported licence, or unknown for quarantine without publication.",
   );
   demand(metadata.artist, "Enter the artist or creator name.");
   demand(metadata.styles.length, "Enter at least one reviewed music style.");

@@ -20,6 +20,7 @@ import { readIntakePackage } from "./package.mjs";
 import { validateExternalAudioURL } from "./external-url.mjs";
 import { verifyExternalAudio } from "./verify-external.mjs";
 import { assertReleaseVolume, RELEASE_VOLUME_FIELDS } from "./audio-volume.mjs";
+import { hasPublishedLicense } from "../licensing-policy.mjs";
 
 const repository = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
 const MAX_TRACK_BYTES = 100_000_000;
@@ -118,13 +119,15 @@ Metadata options:
   -h, --help                    Show this help
 
 One intake accepts at most 20 MP3 files and 64 MiB. A source or video URL is
-not rights evidence by itself. The unknown option records your explicit rights
-confirmation; it is not an open licence. Run this command only in a clean canonical
+not rights evidence by itself. The unknown option retains metadata in quarantine;
+it never publishes playable catalogue entries or audio. Run this command only in a clean canonical
 checkout. A browser-created .rlintake package already contains the required
 metadata and either exact MP3 bytes or verified external URL evidence; do not repeat
 metadata options. Hosted URLs must support public CORS, HEAD and byte ranges and
 must not be presigned or otherwise expiring. With --open-pr, local MP3 assets
-become public in a verified prerelease before catalogue review. The public player
+with known licences become public in a verified prerelease before catalogue review.
+Unknown-licence local audio stays in an unpublished draft volume; keep your originals.
+The public player
 and game catalogue change only after the PR is merged and deployed.`;
 
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
@@ -783,6 +786,7 @@ export async function preparePublicVolume(
 ) {
   const repo = "mekhovov/revealline-soundtracks";
   const tag = `audio-${batch.batchId}`;
+  const publish = batch.tracks.every(hasPublishedLicense);
   const volume = {
     releaseTag: tag,
     assets: batch.tracks.map((track) => {
@@ -809,9 +813,12 @@ export async function preparePublicVolume(
     await gh([
       "release", "create", tag, "--draft", "--target", "main", "--title",
       `${batch.title} · immutable audio volume`, "--notes",
-      "Exact SHA-256-named MP3 assets. Published for read-only PR verification before catalogue admission; listening and game-default approval remain separate.",
+      publish
+        ? "Exact SHA-256-named MP3 assets. Published for read-only PR verification before catalogue admission; listening and game-default approval remain separate."
+        : "Quarantined audio: no known published licence. Keep this volume as an unpublished draft. It is excluded from Pages, playback and review links.",
     ]);
   let release = await view();
+  demand(publish || release.isDraft, `Quarantined audio volume must stay unpublished: ${tag}`);
   const { missingAssets } = assertReleaseVolume(release, volume, { allowMissing: true });
   if (missingAssets.length) {
     const temporary = await mkdtemp(path.join(temporaryRoot, "revealline-release-assets-"));
@@ -830,7 +837,7 @@ export async function preparePublicVolume(
     release = await view();
   }
   assertReleaseVolume(release, volume);
-  if (release.isDraft) {
+  if (publish && release.isDraft) {
     await gh([
       "release", "edit", tag, "--draft=false", "--prerelease=true", "--latest=false",
     ]);
@@ -842,6 +849,7 @@ export async function preparePublicVolume(
 }
 
 async function openPullRequest(batch) {
+  const quarantined = !batch.tracks.every(hasPublishedLicense);
   let branch = await run("git", ["branch", "--show-current"], {
     capture: true,
   });
@@ -871,7 +879,9 @@ async function openPullRequest(batch) {
   try {
     await writeFile(
       body,
-      `Adds ${batch.tracks.length} exact, rights-bound MP3 recording${batch.tracks.length === 1 ? "" : "s"} through the canonical automated intake. ${batch.external ? "The stable hosted URLs, exact hashes, byte counts, CORS and range evidence are reverified by CI; no GitHub audio volume is created." : `Exact audio is publicly available in verified prerelease audio-${batch.batchId} so read-only PR checks can verify its bytes. Merge automation promotes that volume before catalogue deployment; it does not replace assets.`} Files remain listening-pending and game-unadmitted.\n`,
+      quarantined
+        ? `Retains ${batch.tracks.length} recording${batch.tracks.length === 1 ? "" : "s"} in source metadata quarantine because no known published licence is recorded. These entries are excluded from every deployed catalogue, direct/review link and Pages audio object. ${batch.external ? "External URLs are preserved as metadata only." : `Exact uploaded audio stays in unpublished draft audio-${batch.batchId}; merge automation must not publish it.`} Keep local originals. No listening or game admission is granted.\n`
+        : `Adds ${batch.tracks.length} exact, rights-bound MP3 recording${batch.tracks.length === 1 ? "" : "s"} through the canonical automated intake. ${batch.external ? "The stable hosted URLs, exact hashes, byte counts, CORS and range evidence are reverified by CI; no GitHub audio volume is created." : `Exact audio is publicly available in verified prerelease audio-${batch.batchId} so read-only PR checks can verify its bytes. Merge automation promotes that volume before catalogue deployment; it does not replace assets.`} Files remain listening-pending and game-unadmitted.\n`,
     );
     await run("gh", [
       "pr",
@@ -988,7 +998,10 @@ async function performMusicIntake(input, options, dependencies = {}) {
     throw error;
   }
   if (options.openPR) await openPullRequest(batch);
-  return { batchId: batch.batchId, tracks: batch.tracks.length, audioBytes };
+  return {
+    batchId: batch.batchId, tracks: batch.tracks.length, audioBytes,
+    quarantined: !batch.tracks.every(hasPublishedLicense),
+  };
 }
 
 export async function automateMusicIntake(input, options, dependencies = {}) {
@@ -1037,7 +1050,7 @@ if (
       const { input, options } = parseArguments(argv);
       const result = await automateMusicIntake(input, options);
       console.log(
-        `Prepared ${result.tracks} recording(s) in ${result.batchId}.${options.openPR ? " Pull request opened." : ""}`,
+        `Prepared ${result.tracks} recording(s) in ${result.batchId}.${result.quarantined ? " Quarantined: no known published licence. These songs will not appear in the archive, review links or game. Keep your original files." : ""}${options.openPR ? " Pull request opened." : ""}`,
       );
     } catch (error) {
       console.error(`Soundtrack intake failed: ${error.message}`);

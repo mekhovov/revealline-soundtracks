@@ -9,6 +9,9 @@ const tracks = [Buffer.from("exact MP3 A"), Buffer.from("exact MP3 B")].map(
   (bytes) => ({
     bytes,
     sha256: createHash("sha256").update(bytes).digest("hex"),
+    license: "CC0 1.0 Universal",
+    licenseURL: "https://creativecommons.org/publicdomain/zero/1.0/",
+    rights: { licenseId: "CC0", licenseVersion: "1.0", licenseURL: "https://creativecommons.org/publicdomain/zero/1.0/" },
   }),
 );
 const batch = { batchId: "test", title: "Test", tracks };
@@ -109,6 +112,23 @@ test("a partial draft uploads only missing exact members", async () => {
   assert.equal(gh.uploadPaths.length, 1);
   assert.equal(path.basename(gh.uploadPaths[0]), `${tracks[1].sha256}.mp3`);
   assert.equal(gh.release().isDraft, false);
+});
+
+test("unknown or missing licence audio remains in an exact unpublished draft", async () => {
+  for (const change of [
+    { license: "Unknown — uploader-confirmed rights", licenseURL: null, rights: { licenseId: "UNKNOWN" } },
+    { license: undefined, licenseURL: undefined, rights: undefined },
+  ]) {
+    const quarantine = { ...batch, tracks: tracks.map((track) => ({ ...track, ...change })) };
+    const gh = github();
+    await preparePublicVolume(quarantine, gh);
+    assert.equal(gh.release().isDraft, true);
+    assert.equal(gh.release().assets.length, tracks.length);
+    assert.ok(!gh.operations.includes("edit"));
+    const published = github(complete({ isDraft: false, isPrerelease: true }));
+    await assert.rejects(preparePublicVolume(quarantine, published), /must stay unpublished/);
+    assert.deepEqual(published.operations, ["list", "view"]);
+  }
 });
 
 test("existing matching public prerelease or final release is reused without mutation", async () => {

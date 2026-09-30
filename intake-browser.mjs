@@ -174,7 +174,7 @@ form.addEventListener("submit", async (event) => {
     download.href = preparedURL;
     download.download = `${prepared.manifest.metadata.batchId || "revealline-soundtrack-intake"}.rlintake`;
     download.hidden = false;
-    status.textContent = `${prepared.manifest.tracks.length} recording${prepared.manifest.tracks.length === 1 ? "" : "s"} verified. Download the metadata package and open its archive PR.`;
+    status.textContent = `${prepared.manifest.tracks.length} recording${prepared.manifest.tracks.length === 1 ? "" : "s"} verified. ${prepared.manifest.metadata.license === "unknown" ? "Quarantine only: these songs will not become playable in the archive or game. Keep the original files. " : ""}Download the metadata package and open its archive PR.`;
     download.focus();
   } catch (error) {
     if (generation.isCurrent(token)) status.textContent = error.message;
