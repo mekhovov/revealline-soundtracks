@@ -147,7 +147,8 @@ const LEGACY_IDENTITY_FIELDS = [
   'recordingModeEligible', 'default', 'aliases',
 ];
 const ROOT_STATIC_FILES = [
-  '.nojekyll', 'CREDITS.md', 'README.md', 'UPLOAD_GUIDE.md', 'audio-volumes.json',
+  '.nojekyll', 'CREDITS.md', 'README.md', 'UPLOAD_GUIDE.md', 'access-entry.mjs',
+  'access-gate.css', 'access-gate.mjs', 'audio-volumes.json',
   'admissions/approved-synth-metal-20260930.json',
   'admissions/metal-next-20260930.json',
   'admissions/runner2088-game-mix-20260930.json', 'batches.json', 'catalogue.json',

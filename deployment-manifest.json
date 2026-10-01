@@ -8,6 +8,21 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "access-entry.mjs",
+      "bytes": 152,
+      "sha256": "581f980b29c3443fc15d47a5a38b0725374914ea9c063f354096c94b5e11c63d"
+    },
+    {
+      "path": "access-gate.css",
+      "bytes": 1763,
+      "sha256": "a275bd057f78c6a5bf8f0747485aac01532ef0d2f807db7ac31e9f4561336160"
+    },
+    {
+      "path": "access-gate.mjs",
+      "bytes": 4718,
+      "sha256": "cf38c8fc0504ef02ff51bba93992971142affc19de820d7a0a99a3c6a1310be3"
+    },
+    {
       "path": "admissions/approved-synth-metal-20260930.json",
       "bytes": 1607,
       "sha256": "64f0e2ac28718af710fc20702519dfa171fe4020a56037242795027c8f1d5caa"
@@ -54,8 +69,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 12674,
-      "sha256": "f63040c7a008e81b585b6075c5a686b6145a96f52d524c9e30a83ebc700574be"
+      "bytes": 13077,
+      "sha256": "670d5c67b9ba1a1c05b20782059ee25aeb7baa6b87563ad6702b9c808392f4fc"
     },
     {
       "path": "intake-browser.mjs",
@@ -1044,8 +1059,8 @@
     },
     {
       "path": "upload-guide/index.html",
-      "bytes": 11389,
-      "sha256": "f9456ebe1daf154e43d6caac0d03374bff649b0f4f0798377a6e7230d3189df6"
+      "bytes": 11931,
+      "sha256": "6e2d4372b1c197c6c4e20381d5b37911cb201d386ef2df666134774659bb2b62"
     }
   ]
 }
